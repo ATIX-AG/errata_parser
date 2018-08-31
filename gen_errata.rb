@@ -5,6 +5,8 @@ require 'json'
 require 'yaml'
 require 'date'
 
+require_relative 'parse_dsalist'
+
 
 URGENCY_PRIO = [
   "not yet assigned",
@@ -12,43 +14,48 @@ URGENCY_PRIO = [
   "medium",
   "high"
 ]
+SCOPE_PRIO = [
+  "local",
+  "remote"
+]
 
 
-class Erratum < Hash
-  def scope=(s)
-    case self.fetch("scope", nil)
-    when nil
-      self["scope"] = s unless s.nil?
-    when "local"
-      self["scope"] = s if s =~ /remote/i
-    end
+def get_max_prio_idx(map, old, new)
+  old ||= -1
+  idx = map.index { |x| new =~ /#{x}/ }
+  if idx.nil?
+    old
+  else
+    [ old, idx ].max
   end
 end
 
 
-def gen_errata(dsa_list, cve_list)
+def gen_debian_errata(dsa_list, cve_list)
   errata = Hash.new
 
   dsa_list.each do |dsa|
-    erratum = Erratum.new()
+    dsa = dsa.to_h if dsa.kind_of? DSA
+    erratum = Hash.new()
     erratum["title"] = "#{dsa["package"]} -- #{dsa["type"]}"
-    erratum["issued"] = Date.strptime(dsa["date"], "%d %b %Y")
+    #erratum["issued"] = Date.strptime(dsa["date"], "%d %b %Y")
+    erratum["issued"] = dsa["date"]
     erratum["cves"] = dsa["cve"] if dsa.has_key? "cve"
     erratum["affected_source_package"] = dsa["package"]
 
     description = []
     packages = {}
-    severity = 0
 
     if dsa.has_key? "cve" and dsa["cve"].length > 0
       cves = dsa["cve"].map{ |c| cve_list[dsa["package"]]&.fetch(c, nil)&.merge("name" => c) }
       cves.delete_if { |cve| cve.nil? }
 
       debianbugs = Array.new
-      scope = nil
+      scope_idx = -1
+      severity_idx = -1
       cves.each do |cve|
         debianbugs << cve["debianbug"] if cve.has_key? "debianbug"
-        erratum.scope = cve.fetch("scope", nil)
+        scope_idx = get_max_prio_idx(SCOPE_PRIO, scope_idx, cve.fetch("scope", nil))
         description << cve["description"]
 
         cve["releases"].each do |rel,data|
@@ -59,11 +66,12 @@ def gen_errata(dsa_list, cve_list)
               :version => data["fixed_version"]
             }
 
-            severity_local = URGENCY_PRIO.index { |x| data["urgency"] =~ /#{x}/ }
-            severity = [ severity, severity_local ].max unless severity_local.nil?
+            severity_idx = get_max_prio_idx(URGENCY_PRIO, severity_idx, data["urgency"])
           end
         end
 
+        erratum["scope"] = SCOPE_PRIO[scope_idx]
+        erratum["severity"] = URGENCY_PRIO[severity_idx]
 
       end
 
@@ -77,7 +85,6 @@ def gen_errata(dsa_list, cve_list)
       end
       erratum["dbts_bugs"] = debianbugs unless debianbugs.empty?
       erratum["description"] = description.delete_if{ |d| d.nil? or d.empty? }.join("\n\n")
-      erratum["severity"] = URGENCY_PRIO[severity]
 
     end
 
@@ -117,8 +124,10 @@ def download_file_cached(url, path, force=false)
     open path, 'w' do |io|
       io.write res.body
     end
+    return res.body
   elsif res.is_a? Net::HTTPNotModified
     # Use already downloaded version
+    return File.read path
   else
     # raise Exception if response != SUCCESS
     res.value()
@@ -155,10 +164,14 @@ def add_binary_packages(errata, package_json_path)
 end
 
 if __FILE__ == $0
-  download_file_cached("https://security-tracker.debian.org/tracker/data/json", "test_data/cve.json")
-  warn File.read("test_data/cve.json")[0,255]
-  #errata = gen_errata(JSON.parse(File.read("test.json")), JSON.parse(File.read("test_data/cve.json")))
-  #add_binary_packages(errata, "packages.json")
-  #puts errata.to_yaml
+  dsa_list = download_file_cached("https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list", "test_data/dsa.list")
+  cve_file = download_file_cached("https://security-tracker.debian.org/tracker/data/json", "test_data/cve.json")
+  #warn File.read("test_data/cve.json")[0,255]
+  errata = gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
+  add_binary_packages(errata, "packages.json")
+
+  # filter empty package-lists
+  errata.delete_if { |k,x| x["packages"].nil? or x["packages"].empty? }
+  puts errata.to_yaml
 end
 
