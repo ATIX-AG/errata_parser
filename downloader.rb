@@ -1,4 +1,5 @@
 require 'net/https'
+require 'date'
 
 HTTPDEBUG = false
 
@@ -17,8 +18,11 @@ module Downloader
       uri.port,
       use_ssl: uri.scheme == 'https'
     ) do |http|
-      req.each_header do |h|
-        warn "HEADER-REQ: #{h}: #{req[h]}" if HTTPDEBUG
+      if HTTPDEBUG
+        warn "DOWNLOAD #{uri}"
+        req.each_header do |h|
+          warn "HEADER-REQ: #{h}: #{req[h]}"
+        end
       end
       http.request(req)
     end

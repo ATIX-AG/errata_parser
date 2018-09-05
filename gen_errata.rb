@@ -38,6 +38,13 @@ class ParserException < RuntimeError
 end
 
 class DebianErrataParser
+  attr_reader :info_state, :info_state_cmplt
+
+  def initialize
+    @info_state = :init
+    @info_state_cmplt = 1
+  end
+
   def get_max_prio_idx(map, old, new)
     old ||= -1
     idx = map.index { |x| new =~ /#{x}/ }
@@ -51,7 +58,13 @@ class DebianErrataParser
   def gen_debian_errata(dsa_list, cve_list)
     errata = {}
 
+    @info_state = :gen_errata
+    info_step = 1.0 / dsa_list.length
+    @info_state_cmplt = 0
+
     dsa_list.each do |dsa|
+      @info_state_cmplt += info_step
+
       dsa = dsa.to_h if dsa.is_a? DSA
       erratum = {}
       erratum['title'] = "#{dsa['package']} -- #{dsa['type']}"
@@ -126,10 +139,11 @@ class DebianErrataParser
       erratum = usn.select { |dat| dict.include? dat }
       erratum['issued'] = Time.at(usn['timestamp']).strftime('%d %b %Y')
       packages = []
-      packages_arch = {}
+      #packages_arch = {}
+      packages_arch = []
       usn['releases'].each do |rel,dat|
         next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
-        packages_arch[rel] = {}
+        #packages_arch[rel] = {}
         dat['binaries'].each do |pkg,info|
           begin
             raise ParserException.new('Package without version information', id, rel, pkg) unless info.key? 'version'
@@ -152,7 +166,7 @@ class DebianErrataParser
         dat['archs'].each do |arch_name,arch|
           next if arch_name == 'source'
           next unless arch_name == 'all' || architecture_whitelist.nil? || architecture_whitelist.include?(arch_name)
-          packages_arch[rel][arch_name] = []
+          #packages_arch[rel][arch_name] = []
 
           archs << arch_name
           arch['urls'].each_key do |url|
@@ -162,8 +176,8 @@ class DebianErrataParser
             else
               arch_bins[match['pkg_name']] = [] unless arch_bins.key? match['pkg_name']
               arch_bins[match['pkg_name']] << match.named_captures
-              #packages_arch << {
-              packages_arch[rel][arch_name] << {
+              packages_arch << {
+              #packages_arch[rel][arch_name] << {
                 'name' => match['pkg_name'],
                 'version' => match['version'],
                 'arch' => match['arch'],
@@ -187,22 +201,31 @@ class DebianErrataParser
     errata
   end
 
-  def add_binary_packages(errata, package_json_path)
-    packages = JSON.parse(File.read(package_json_path))
+  def add_binary_packages_from_file(errata, package_json_path)
+    add_binary_packages(errata, JSON.parse(File.read(package_json_path)))
+  end
 
+  def add_binary_packages(errata, packages)
+    @info_state = :add_binaries
+    @info_state_cmplt = 0
+    info_step = 1.0 / errata.length
     errata.each do |_name,erratum|
+      @info_state_cmplt += info_step
       next if erratum['packages'].nil?
-      new = []
+      new = {}
       erratum['packages'].each do |p|
         # FIXME hardcoded release
         release = 'stretch'
         if p['release'] == release
+          new[p['release']] = {} unless new.key? p['release']
           if packages.key? p['name']
-            packages[p['name']].each_value do |arch|
+            packages[p['name']].each do |arch_name,arch|
+              new[p['release']][arch_name] = [] unless new[p['release']].key? arch_name
+
               arch.each do |deb|
                 # version from packages must be 'greater or equal' to the version requested by DSA
                 if Debian::Dpkg.compare_versions deb['version'], 'ge', p['version']
-                  new.append(deb.clone)
+                  new[p['release']][arch_name].append(deb.clone)
                 else
                   warn "Skipping #{deb['name']} because available version is smaller than fixed version: #{deb['version']} < #{p['version']}"
                 end
@@ -221,13 +244,26 @@ if $PROGRAM_NAME == __FILE__
 
   type = ARGV[0]
   parser = DebianErrataParser.new
+  thr = Thread.new do
+    STDERR.puts
+    line = ''
+    loop do
+      # clean line
+      STDERR.print "#{' '*line.length}\r"
+
+      line = "#{(parser.info_state_cmplt * 100).round}% #{parser.info_state}"
+      STDERR.print "#{line}\r"
+      sleep 0.1
+    end
+  end
+
   if type == 'debian'
     ## Debian
     dsa_list = download_file_cached('https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list', 'test_data/dsa.list')
     cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', 'test_data/cve.json')
     #warn File.read("test_data/cve.json")[0,255]
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
-    parser.add_binary_packages(errata, 'packages_everything.json')
+    parser.add_binary_packages_from_file(errata, 'packages_everything.json')
 
     # filter empty package-lists
     errata.delete_if { |_k, x| x['packages'].nil? || x['packages'].empty? }
@@ -245,5 +281,7 @@ if $PROGRAM_NAME == __FILE__
     errata = download_file_cached('http://localhost/', '/tmp/test')
   end
 
+
   puts errata.to_yaml
+  #puts errata.to_json
 end

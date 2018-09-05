@@ -1,4 +1,5 @@
 require 'debian'
+require 'time'
 
 require_relative 'downloader'
 
@@ -82,6 +83,8 @@ class DebRelease
   def get_package(component, architecture)
     rel_path = "#{component}/binary-#{architecture}"
     paths = @files.keys.select { |path| path.start_with? "#{rel_path}/Packages" }
+    # sort-reverse to prefer Packages.xz files before .gz and plain-files
+    paths = paths.sort.reverse
     raise 'base_url not set' if @base_url.nil?
 
     cache_dir = create_cache rel_path
@@ -102,7 +105,7 @@ class DebRelease
             f << XZ.decompress(data)
           when 'packages.gz'
             require 'zlib'
-            f << Zlib::Inflate.inflate(data)
+            f << Zlib.gunzip(data)
           else
             f << data
           end
@@ -111,6 +114,8 @@ class DebRelease
       rescue StandardError => e
         warn "#{e} for #{p.inspect}"
         File.unlink path if File.exist? path
+      ensure
+        File.unlink plainfile if plainfile && File.exist?(plainfile)
       end
     end
   end
