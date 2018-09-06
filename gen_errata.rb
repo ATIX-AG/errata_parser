@@ -2,7 +2,7 @@
 
 require 'json'
 require 'yaml'
-require 'date'
+require 'time'
 require 'debian'
 
 require_relative 'parse_dsalist'
@@ -10,6 +10,7 @@ require_relative 'downloader'
 
 URGENCY_PRIO = [
   'not yet assigned',
+  'unimportant',
   'low',
   'medium',
   'high'
@@ -37,6 +38,137 @@ class ParserException < RuntimeError
   end
 end
 
+class Erratum
+  attr_accessor :title, :name, :cves, :package, :fixed_version, :description
+  attr_accessor :dbts_bugs
+
+  def initialize
+    @cves = []
+    @packages = []
+    @dbts_bugs = []
+    @severity_idx = -1
+    @scope_idx = -1
+  end
+
+  def issued=(date)
+    @issued = Time.parse date
+  end
+
+  def issued
+    @issued.strftime('%d %b %Y')
+  end
+
+  def add_cve(cve)
+    raise "Invalid CVE number #{cve}" unless cve =~ /CVE-\d{4,}-\d+/
+    @cves << cve
+  end
+
+  def add_package(name, version, architecture: nil, release: nil, component: nil)
+    hsh = {
+      name: name,
+      version: version,
+      architecture: architecture,
+      release: release,
+      component: component
+    }
+    @packages << hsh unless @packages.include? hsh
+  end
+
+  def replace_packages
+    new_data = []
+    @packages.each do |p|
+      new_data_p = yield p
+      if new_data_p.nil?
+        new_data << p
+      elsif new_data_p.is_a?(Hash)
+        new_data << new_data_p
+      elsif new_data_p.is_a?(Array)
+        new_data.concat new_data_p
+      else
+        raise "Invalid return-type #{new_data_p.class.name}"
+      end
+    end
+    @packages = new_data
+  end
+
+  def packages
+    res = []
+    @packages.each do |p|
+      new = {
+        'name' => p[:name],
+        'version' => p[:version]
+      }
+      # only add these values if set
+      new['architecture'] = p[:architecture] if p[:architecture]
+      new['component'] = p[:component] if p[:component]
+      new['release'] = p[:release] if p[:release]
+      res << new
+    end
+    res
+  end
+
+  def severity=(severity)
+    @severity_idx = priorized_value(@severity_idx, severity, URGENCY_PRIO, 'Severity')
+  end
+
+  def severity
+    URGENCY_PRIO[@severity_idx] unless @severity_idx == -1
+  end
+
+  def scope=(scope)
+    @scope_idx = priorized_value(@scope_idx, scope, SCOPE_PRIO, 'scope')
+  end
+
+  def scope
+    SCOPE_PRIO[@scope_idx] unless @scope_idx == -1
+  end
+
+  def add_debian_bug(dbts)
+    @dbts_bugs << dbts
+  end
+
+  def to_h
+    hsh = {
+      'name' => name,
+      'title' => title,
+      'issued' => issued,
+      'affected_source_package' => package,
+      'packages' => packages,
+      'description' => description
+    }
+    hsh['cves'] = cves.clone
+    hsh['severity'] = severity if severity
+    hsh['scope'] = scope if scope
+    hsh['dbts_bugs'] = @dbts_bugs unless @dbts_bugs.nil? || @dbts_bugs.empty?
+    hsh
+  end
+
+  def to_yaml
+    to_h.clone.to_yaml
+  end
+
+  private
+
+  ### Helper
+  #TODO too static, what if a new value is introduced?
+  # returns index of new in list, if the new is greater than old_idx
+  # otherwise it returns the old_idx
+  # Parameters:
+  #   old_idx: Integer old index
+  #   new:     String (or whatever element-type list has)
+  #   list:    Array of possible values
+  #   name:    convenient name for the value (for Exceptions)
+  def priorized_value(old_idx, new, list, name='value')
+    # skip if it was empty
+    return old_idx if new.nil? || new.empty?
+    new_idx = list.index new
+    raise "UNKNOWN #{name} #{new.inspect} should be one of #{list.inspect}" if new_idx.nil?
+    return new_idx if old_idx.nil? || new_idx > old_idx
+    old_idx
+  end
+end
+
+# ErrataParser
 class DebianErrataParser
   attr_reader :info_state, :info_state_cmplt
 
@@ -45,14 +177,32 @@ class DebianErrataParser
     @info_state_cmplt = 1
   end
 
-  def get_max_prio_idx(map, old, new)
-    old ||= -1
-    idx = map.index { |x| new =~ /#{x}/ }
-    if idx.nil?
-      old
-    else
-      [old, idx].max
+  # find additional information for DSA's CVEs in cve_list
+  # Adds to erratum:
+  #   description: concatenation of all CVE-descriptions
+  #   scope: the thread-scope ('local' of 'remote')
+  #   severity: severity of the threat (e.g. 'medium')
+  #   dbts_list: list of Debian Bug Tracking System IDs
+  def add_cve_information(erratum, dsa, cve_list)
+    description = []
+    dsa.cve.each do |c|
+      next unless cve_list.key?(dsa.package) &&
+                  cve_list[dsa.package].key?(c)
+
+      cve = cve_list[dsa.package][c]
+
+      erratum.add_debian_bug cve['debianbug'] if cve.key? 'debianbug'
+      erratum.scope = cve.fetch('scope', nil)
+      description << cve['description']
+
+      cve['releases'].each do |rel,data|
+        next if !dsa.versions.key?(rel) || data['status'] != 'resolved'
+        # WORKAROUND: currently DSA severities include '**' at the end
+        erratum.severity = data['urgency'].delete('*')
+      end
     end
+
+    erratum.description = description.delete_if { |d| d.nil? || d.empty? }.join("\n\n")
   end
 
   def gen_debian_errata(dsa_list, cve_list)
@@ -65,65 +215,22 @@ class DebianErrataParser
     dsa_list.each do |dsa|
       @info_state_cmplt += info_step
 
-      dsa = dsa.to_h if dsa.is_a? DSA
-      erratum = {}
-      erratum['title'] = "#{dsa['package']} -- #{dsa['type']}"
-      #erratum['issued'] = Date.strptime(dsa['date'], '%d %b %Y')
-      erratum['issued'] = dsa['date']
-      erratum['cves'] = dsa['cve'] if dsa.key? 'cve'
-      erratum['affected_source_package'] = dsa['package']
+      erratum = Erratum.new
+      erratum.name = dsa.id
+      erratum.title = "#{dsa.package} -- #{dsa.type}"
+      erratum.issued = dsa.date
+      dsa.cve.each { |c| erratum.add_cve c } if dsa.cve
+      erratum.package = dsa.package
 
-      description = []
-      packages = {}
-
-      if dsa.key?('cve') && !dsa['cve'].empty?
-        #cves = dsa['cve'].map{ |c| cve_list[dsa['package']]&.fetch(c, nil)&.merge('name' => c) }
-        cves = dsa['cve'].map do |c|
-          if cve_list.key?(dsa['package']) && cve_list[dsa['package']].key?(c) && cve_list[dsa['package']][c].is_a?(Hash)
-            cve_list[dsa['package']][c].merge('name' => c)
-          end
+      dsa.versions.each do |rel,pkg_dat|
+        pkg_dat.each do |pkg_name,pkg_version|
+          erratum.add_package(pkg_name, pkg_version, release: rel)
         end
-        cves.delete_if(&:nil?)
-
-        debianbugs = []
-        scope_idx = -1
-        severity_idx = -1
-        cves.each do |cve|
-          debianbugs << cve['debianbug'] if cve.key? 'debianbug'
-          scope_idx = get_max_prio_idx(SCOPE_PRIO, scope_idx, cve.fetch('scope', nil))
-          description << cve['description']
-
-          cve['releases'].each do |rel,data|
-            next if data['status'] != 'resolved'
-            packages[rel] = { version: nil } unless packages.key? rel
-
-            packages[rel] = {
-              version: data['fixed_version']
-            }
-
-            severity_idx = get_max_prio_idx(URGENCY_PRIO, severity_idx, data['urgency'])
-          end
-
-          erratum['scope'] = SCOPE_PRIO[scope_idx]
-          erratum['severity'] = URGENCY_PRIO[severity_idx]
-        end
-
-        erratum['packages'] = []
-        packages.each do |rel,data|
-          erratum['packages'].append(
-            'name' => dsa['package'],
-            'version' => data[:version],
-            'release' => rel
-          )
-        end
-        erratum['dbts_bugs'] = debianbugs unless debianbugs.empty?
-        erratum['description'] = description.delete_if { |d| d.nil? || d.empty? }.join("\n\n")
-
       end
 
-      errata[dsa['name']] = erratum
-      #warn erratum.inspect
-      #break
+      add_cve_information(erratum, dsa, cve_list) unless dsa.cve_empty?
+
+      errata[dsa.id] = erratum
     end
     errata
   end
@@ -177,7 +284,6 @@ class DebianErrataParser
               arch_bins[match['pkg_name']] = [] unless arch_bins.key? match['pkg_name']
               arch_bins[match['pkg_name']] << match.named_captures
               packages_arch << {
-              #packages_arch[rel][arch_name] << {
                 'name' => match['pkg_name'],
                 'version' => match['version'],
                 'arch' => match['arch'],
@@ -205,35 +311,39 @@ class DebianErrataParser
     add_binary_packages(errata, JSON.parse(File.read(package_json_path)))
   end
 
-  def add_binary_packages(errata, packages)
+  def add_binary_packages(errata, packages, releases=['stretch'])
     @info_state = :add_binaries
     @info_state_cmplt = 0
     info_step = 1.0 / errata.length
+
     errata.each do |_name,erratum|
       @info_state_cmplt += info_step
-      next if erratum['packages'].nil?
-      new = {}
-      erratum['packages'].each do |p|
-        # FIXME hardcoded release
-        release = 'stretch'
-        if p['release'] == release
-          new[p['release']] = {} unless new.key? p['release']
-          if packages.key? p['name']
-            packages[p['name']].each do |arch_name,arch|
-              new[p['release']][arch_name] = [] unless new[p['release']].key? arch_name
 
+      next if erratum.packages.empty?
+      erratum.replace_packages do |p|
+        new = []
+        if releases.include? p[:release]
+          if packages.key? p[:name]
+            packages[p[:name]].each do |_arch_name,arch|
               arch.each do |deb|
                 # version from packages must be 'greater or equal' to the version requested by DSA
-                if Debian::Dpkg.compare_versions deb['version'], 'ge', p['version']
-                  new[p['release']][arch_name].append(deb.clone)
+                if Debian::Dpkg.compare_versions deb['version'], 'ge', p[:version]
+                  new << {
+                    name: deb['name'],
+                    version: deb['version'],
+                    architecture: deb['arch'],
+                    release: deb['release'],
+                    component: deb['comp']
+                  }
                 else
-                  warn "Skipping #{deb['name']} because available version is smaller than fixed version: #{deb['version']} < #{p['version']}"
+                  warn "Skipping #{deb['name']} because available version is smaller than fixed version: #{deb['version']} < #{p[:version]}"
                 end
               end
             end
           end
         end
-        erratum['packages'] = new
+        # return new value to append to package list in erratum
+        new
       end
     end
   end
@@ -244,12 +354,12 @@ if $PROGRAM_NAME == __FILE__
 
   type = ARGV[0]
   parser = DebianErrataParser.new
-  thr = Thread.new do
+  Thread.new do
     STDERR.puts
     line = ''
     loop do
       # clean line
-      STDERR.print "#{' '*line.length}\r"
+      STDERR.print "#{' ' * line.length}\r"
 
       line = "#{(parser.info_state_cmplt * 100).round}% #{parser.info_state}"
       STDERR.print "#{line}\r"
@@ -266,7 +376,7 @@ if $PROGRAM_NAME == __FILE__
     parser.add_binary_packages_from_file(errata, 'packages_everything.json')
 
     # filter empty package-lists
-    errata.delete_if { |_k, x| x['packages'].nil? || x['packages'].empty? }
+    #errata.delete_if { |_k, x| x['packages'].nil? || x['packages'].empty? }
 
   elsif type == 'ubuntu'
     ## Ubuntu
@@ -281,7 +391,10 @@ if $PROGRAM_NAME == __FILE__
     errata = download_file_cached('http://localhost/', '/tmp/test')
   end
 
-
-  puts errata.to_yaml
+  hsh = {}
+  errata.each do |k,v|
+    hsh[k] = v.to_h
+  end
+  puts hsh.to_yaml
   #puts errata.to_json
 end
