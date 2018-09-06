@@ -129,15 +129,21 @@ class DebRelease
     architectures.each do |arch|
       components.each do |comp|
         rel.get_package(comp, arch).each do |p,d|
+          # necessary because sometimes 'all'-packages are also in the binary Packlage-files
+          architecture = d.info['Architecture'] if d.fields.include? 'Architecture'
+          architecture = arch if architecture.nil?
+
           packages[d.source] = {} unless packages.key? d.source
-          packages[d.source][arch] = [] unless packages[d.source].key? arch
-          packages[d.source][arch] << {
+          packages[d.source][architecture] = [] unless packages[d.source].key? architecture
+          packages[d.source][architecture] << {
             'name' => p,
             'version' => d.version,
-            'arch' => arch,
+            'arch' => architecture,
             'comp' => comp,
             'release' => rel.release_name
           }
+          # make sure we do not have duplicates
+          packages[d.source][architecture].uniq!
         end
       end
     end
