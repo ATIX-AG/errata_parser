@@ -1,8 +1,8 @@
 require 'json'
 
-REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9\-]+)\s*(?<package_name>\S+)\s*-*\s*(?<typ>.*)$/
+REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9\-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/
 REGEX_CVE_LINE = /\s+{(?<cves>[^}]*)}/
-REGEX_REL_LINE = /\s+\[(?<release>[^\]]*)\]\s*-\s*(?<package_name>\S+)\s*(?<version>\S*)/
+REGEX_REL_LINE = /\s+\[(?<release>[^\]]*)\]\s*-\s*(?<package>\S+)\s*(?<version>\S*)/
 REGEX_NOT_LINE = /\s+NOTE:/
 
 # Base-Parser Exception
@@ -61,11 +61,13 @@ class DSA
     ignore_empty_cve: true
   }.freeze
 
-  def initialize(date:, ident:, typ:, package_name:)
+  attr_reader :date, :id, :type, :package, :versions, :cve
+
+  def initialize(date:, ident:, typ:, package:)
     @date = date
     @id = ident
     @type = typ
-    @package_name = package_name
+    @package = package
     @versions = {}
     @cve = []
   end
@@ -78,13 +80,13 @@ class DSA
     (@cve.nil? || @cve.empty?)
   end
 
-  def add_release(release:, package_name:, version:)
+  def add_release(release:, package:, version:)
     @versions[release] = {} unless @versions.key? release
-    @versions[release][package_name] = version
+    @versions[release][package] = version
   end
 
   def pp
-    puts("#{@id} from #{@date} for #{@package_name}")
+    puts("#{@id} from #{@date} for #{@package}")
     puts("  CVE: #{@cve}")
     @versions.each_key do |rel|
       puts("\t#{rel}")
@@ -101,7 +103,7 @@ class DSA
       'name' => @id,
       'date' => @date,
       'type' => @type,
-      'package' => @package_name,
+      'package' => @package,
       'cve' => @cve,
       'versions' => @versions
     }
