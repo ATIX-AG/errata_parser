@@ -51,7 +51,9 @@ class Erratum
   end
 
   def issued=(date)
-    @issued = Time.parse date
+    @issued = Time.parse date if date.is_a? String
+    @issued = Time.at date if date.is_a? Numeric
+    @issued = date if date.is_a? Time
   end
 
   def issued
@@ -235,74 +237,61 @@ class DebianErrataParser
     errata
   end
 
+  def add_packages_ubuntu(erratum, release, data, architecture_whitelist)
+    data['archs'].each do |arch_name,arch|
+      next if arch_name == 'source'
+      next unless arch_name == 'all' || architecture_whitelist.nil? || architecture_whitelist.include?(arch_name)
+
+      arch['urls'].each_key do |url|
+        match = %r{/(?<pkg_name>[^/_]*)_(?<version>[^_/]+)_(?<arch>[^_/]+)\.[ud]?deb}.match(url)
+        if match.nil?
+          warn "URL did not match: #{url}"
+        else
+          erratum.add_package(
+            match['pkg_name'],
+            match['version'],
+            architecture: match['arch'],
+            release: release
+          )
+        end
+      end
+    end
+  end
+
   def gen_ubuntu_errata(usn_db, release_whitelist=nil, architecture_whitelist=nil)
-    dict = [
-      'title',
-      'description',
-      'cves'
-    ]
+    @info_state = :gen_errata
+    info_step = 1.0 / usn_db.length
+    @info_state_cmplt = 0
+
     errata = {}
     usn_db.each do |id,usn|
-      erratum = usn.select { |dat| dict.include? dat }
-      erratum['issued'] = Time.at(usn['timestamp']).strftime('%d %b %Y')
-      packages = []
-      #packages_arch = {}
-      packages_arch = []
-      usn['releases'].each do |rel,dat|
-        next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
-        #packages_arch[rel] = {}
-        dat['binaries'].each do |pkg,info|
+      @info_state_cmplt += info_step
+      begin
+        erratum = Erratum.new
+        erratum.title = usn['title']
+        erratum.description = usn['description']
+        usn['cves'].each do |cve|
           begin
-            raise ParserException.new('Package without version information', id, rel, pkg) unless info.key? 'version'
-            packages << {
-              'name' => pkg,
-              'version' => info['version'],
-              'release' => rel
-            }
+            erratum.add_cve cve
           rescue RuntimeError => e
-            warn e
+            raise unless e.message.start_with? 'Invalid CVE'
           end
         end
-
-        unless dat.key?('archs')
-          warn "USN-#{id} has no architectures for release #{rel}"
-          next
-        end
-        arch_bins = {}
-        archs = []
-        dat['archs'].each do |arch_name,arch|
-          next if arch_name == 'source'
-          next unless arch_name == 'all' || architecture_whitelist.nil? || architecture_whitelist.include?(arch_name)
-          #packages_arch[rel][arch_name] = []
-
-          archs << arch_name
-          arch['urls'].each_key do |url|
-            match = %r{/(?<pkg_name>[^/_]*)_(?<version>[^_/]+)_(?<arch>[^_/]+)\.[ud]?deb}.match(url)
-            if match.nil?
-              warn "URL did not match: #{url}"
-            else
-              arch_bins[match['pkg_name']] = [] unless arch_bins.key? match['pkg_name']
-              arch_bins[match['pkg_name']] << match.named_captures
-              packages_arch << {
-                'name' => match['pkg_name'],
-                'version' => match['version'],
-                'arch' => match['arch'],
-                'release' => rel
-              }
-            end
+        erratum.issued = usn['timestamp']
+        usn['releases'].each do |rel,dat|
+          next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
+          unless dat.key?('archs')
+            warn "USN-#{id} has no architectures for release #{rel}"
+            next
           end
+          add_packages_ubuntu(erratum, rel, dat, architecture_whitelist)
         end
-        ###TEST START
-        #arch_bins.each do |k,v|
-        #  archs_local = v.map { |x| x['arch'] }
-        #  warn "USN-#{id}: Too few versions of '#{k}' (missing: #{archs_local & archs})" if v.length != archs.length
-        #end
-        ###TEST END
+        # ignore errata without package-information
+        #next if erratum.packages.empty?
+        errata["USN-#{id}"] = erratum
+      rescue StandardError => e
+        raise "#{e} at USN-#{id}"
       end
-      next if packages.empty?
-      #erratum['packages'] = packages
-      erratum['packages'] = packages_arch
-      errata["USN-#{id}"] = erratum
     end
     errata
   end
