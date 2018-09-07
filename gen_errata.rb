@@ -149,6 +149,10 @@ class Erratum
     to_h.clone.to_yaml
   end
 
+  def to_json(options = {})
+    to_h.to_json(options = {})
+  end
+
   private
 
   ### Helper
@@ -177,6 +181,14 @@ class DebianErrataParser
   def initialize
     @info_state = :init
     @info_state_cmplt = 1
+
+    # Erratum might apply to packages of more than one release (e.g. stretch and jessie)
+    # This option keeps source-package version for release that has not been processed by
+    # add_binary_packages(), which makes it easier to make another run of
+    # add_binary_packages() with another release's packages.
+    # Setting this to false makes it easier to remove Errata not applicable for the
+    # release, packages were added for, by removing all Errata with packages == []
+    @option_keep_unsupported_source_packages = false
   end
 
   # find additional information for DSA's CVEs in cve_list
@@ -270,11 +282,13 @@ class DebianErrataParser
         erratum = Erratum.new
         erratum.title = usn['title']
         erratum.description = usn['description']
-        usn['cves'].each do |cve|
-          begin
-            erratum.add_cve cve
-          rescue RuntimeError => e
-            raise unless e.message.start_with? 'Invalid CVE'
+        if usn.key? 'cves'
+          usn['cves'].each do |cve|
+            begin
+              erratum.add_cve cve
+            rescue RuntimeError => e
+              raise unless e.message.start_with? 'Invalid CVE'
+            end
           end
         end
         erratum.issued = usn['timestamp']
@@ -287,20 +301,26 @@ class DebianErrataParser
           add_packages_ubuntu(erratum, rel, dat, architecture_whitelist)
         end
         # ignore errata without package-information
-        #next if erratum.packages.empty?
+        next if erratum.packages.empty?
         errata["USN-#{id}"] = erratum
       rescue StandardError => e
-        raise "#{e} at USN-#{id}"
+        warn "At USN-#{id}:"
+        raise
       end
     end
     errata
   end
 
-  def add_binary_packages_from_file(errata, package_json_path)
-    add_binary_packages(errata, JSON.parse(File.read(package_json_path)))
+  def add_binary_packages_from_file(errata, package_json_path, releases=nil, architecture_whitelist=nil)
+    add_binary_packages(
+      errata,
+      JSON.parse(File.read(package_json_path)),
+      releases: releases,
+      architecture_whitelist: architecture_whitelist
+    )
   end
 
-  def add_binary_packages(errata, packages, releases=['stretch'])
+  def add_binary_packages(errata, packages, releases:['stretch'], architecture_whitelist:nil)
     @info_state = :add_binaries
     @info_state_cmplt = 0
     info_step = 1.0 / errata.length
@@ -311,10 +331,12 @@ class DebianErrataParser
       next if erratum.packages.empty?
       erratum.replace_packages do |p|
         new = []
-        if releases.include? p[:release]
+        if releases.nil? || releases.include?(p[:release])
           if packages.key? p[:name]
-            packages[p[:name]].each do |_arch_name,arch|
+            packages[p[:name]].each do |arch_name,arch|
+              next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
               arch.each do |deb|
+                next if p[:release] != deb['release']
                 # version from packages must be 'greater or equal' to the version requested by DSA
                 if Debian::Dpkg.compare_versions deb['version'], 'ge', p[:version]
                   new << {
@@ -330,9 +352,16 @@ class DebianErrataParser
               end
             end
           end
+          # return new value to append to package list in erratum
+          new
+        else
+          # wrong release-name, keep old value?
+          if @option_keep_unsupported_source_packages
+            p
+          else
+            new
+          end
         end
-        # return new value to append to package list in erratum
-        new
       end
     end
   end
@@ -362,27 +391,35 @@ if $PROGRAM_NAME == __FILE__
     cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', 'test_data/cve.json')
     #warn File.read("test_data/cve.json")[0,255]
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
-    parser.add_binary_packages_from_file(errata, 'packages_everything.json')
+    #parser.add_binary_packages_from_file(errata, 'packages_everything.json')
+    parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['stretch'], ['amd64'])
 
     # filter empty package-lists
     #errata.delete_if { |_k, x| x['packages'].nil? || x['packages'].empty? }
 
   elsif type == 'ubuntu'
     ## Ubuntu
-    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json', 'test_data/database.json')
-    usn_db = File.read('test_data/database.json')
+    require 'bzip2/ffi'
+    require 'stringio'
+
+    HTTPDEBUG = true
+    usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', 'test_data/database.json.bz2')
+    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', 'test_data/database-all.json.bz2')
+    #usn_db = File.read('test_data/database.json')
     # TODO verify checksum
     #verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
 
-    errata = parser.gen_ubuntu_errata(JSON.parse(usn_db), ['bionic'], ['amd64'])
+    errata = parser.gen_ubuntu_errata JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), ['bionic'], ['amd64']
 
   else
     errata = download_file_cached('http://localhost/', '/tmp/test')
   end
 
   hsh = {}
-  errata.each do |k,v|
-    hsh[k] = v.to_h
+  errata.keys.each do |k|
+  #errata.keys.sort.each do |k|
+    # remove Errata without packages
+    hsh[k] = errata[k].to_h unless errata[k].packages.empty?
   end
   puts hsh.to_yaml
   #puts errata.to_json

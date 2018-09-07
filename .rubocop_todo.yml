@@ -43,17 +43,6 @@ Layout/SpaceInsideBlockBraces:
 Metrics/AbcSize:
   Max: 68
 
-# Offense count: 5
-# Configuration parameters: CountComments, ExcludedMethods.
-# ExcludedMethods: refine
-Metrics/BlockLength:
-  Max: 54
-
-# Offense count: 1
-# Configuration parameters: CountBlocks.
-Metrics/BlockNesting:
-  Max: 4
-
 # Offense count: 2
 # Configuration parameters: CountComments.
 Metrics/ClassLength:
@@ -67,10 +56,6 @@ Metrics/CyclomaticComplexity:
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
   Max: 62
-
-# Offense count: 4
-Metrics/PerceivedComplexity:
-  Max: 14
 
 # Offense count: 2
 # Cop supports --auto-correct.

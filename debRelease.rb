@@ -155,7 +155,7 @@ if $PROGRAM_NAME == __FILE__
   require 'json'
 
   HTTPDEBUG = true
-  packages = DebRelease.get_all_packages 'http://security.debian.org/debian-security', 'stretch/updates'
+  packages = DebRelease.get_all_packages 'http://security.debian.org/debian-security', 'stretch/updates', ['amd64', 'all']
 
   puts JSON.dump packages
 
