@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'debian'
 require 'time'
 
@@ -126,6 +128,7 @@ class DebRelease
     packages = {}
     architectures = rel.data['architectures'] + ['all'] if architectures.nil?
     components = Debian::COMPONENT if components.nil?
+    warn "Loading architectures: #{architectures.inspect} components: #{components.inspect}"
     architectures.each do |arch|
       components.each do |comp|
         rel.get_package(comp, arch).each do |p,d|
@@ -155,7 +158,7 @@ if $PROGRAM_NAME == __FILE__
   require 'json'
 
   HTTPDEBUG = true
-  packages = DebRelease.get_all_packages 'http://security.debian.org/debian-security', 'stretch/updates', ['amd64', 'all']
+  packages = DebRelease.get_all_packages 'http://security.debian.org/debian-security', 'stretch/updates', nil, ['amd64', 'all']
 
   puts JSON.dump packages
 
