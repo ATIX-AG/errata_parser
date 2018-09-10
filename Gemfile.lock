@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bzip2-ffi (1.0.0)
+      ffi (~> 1.0)
+    ffi (1.9.25)
+    power_assert (1.1.3)
+    ruby-debian (0.3.8)
+    ruby-xz (1.0.0)
+    test-unit (3.2.8)
+      power_assert
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bzip2-ffi (~> 1.0)
+  ruby-debian (~> 0.3.8)
+  ruby-xz (~> 1.0)
+  test-unit (~> 3.2)
+
+BUNDLED WITH
+   1.16.1
