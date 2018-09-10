@@ -2,10 +2,11 @@
 
 require 'debian'
 require 'time'
+require 'pathname'
 
 require_relative 'downloader'
 
-TEMPDIR = '/tmp/errataparser_cache'.freeze
+TEMPDIR = '/tmp/errataparser_cache/debian'.freeze
 
 class DebRelease
   include Downloader
@@ -31,14 +32,10 @@ class DebRelease
   end
 
   def create_cache(subdir='')
-    dir = "#{TEMPDIR}/#{URI(@base_url).hostname}/#{subdir}"
-    created = ''
-    dir.split('/').each do |d|
-      next if d.empty?
-      created += "/#{d}"
-      Dir.mkdir created unless Dir.exist? created
-    end
-    created
+    dir = Pathname.new(File.join(TEMPDIR, @suite, URI(@base_url).hostname, subdir))
+    dir.mkpath
+
+    dir
   end
 
   def release_name

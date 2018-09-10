@@ -4,10 +4,12 @@ require 'json'
 require 'yaml'
 require 'time'
 require 'debian'
+require 'pathname'
 
 require_relative 'parse_dsalist'
 require_relative 'downloader'
 
+TEMPDIR = '/tmp/errataparser_cache'.freeze
 URGENCY_PRIO = [
   'not yet assigned',
   'unimportant',
@@ -396,8 +398,10 @@ if $PROGRAM_NAME == __FILE__
   case type
   when 'debian'
     ## Debian
-    dsa_list = download_file_cached('https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list', 'test_data/dsa.list')
-    cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', 'test_data/cve.json')
+    tempdir = Pathname.new(File.join(TEMPDIR, 'debian'))
+    tempdir.mkpath
+    dsa_list = download_file_cached('https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list', File.join(tempdir, 'dsa.list'))
+    cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', File.join(tempdir, 'cve.json'))
     #warn File.read("test_data/cve.json")[0,255]
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
     #parser.add_binary_packages_from_file(errata, 'packages_everything.json')
@@ -417,8 +421,11 @@ if $PROGRAM_NAME == __FILE__
     require 'bzip2/ffi'
     require 'stringio'
 
+    tempdir = Pathname.new(File.join(TEMPDIR, 'ubuntu'))
+    tempdir.mkpath
+
     HTTPDEBUG = true
-    usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', 'test_data/database.json.bz2')
+    usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', File.join(tempdir, 'database.json.bz2'))
     #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', 'test_data/database-all.json.bz2')
     #usn_db = File.read('test_data/database.json.bz2')
 
