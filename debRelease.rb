@@ -152,7 +152,33 @@ if $PROGRAM_NAME == __FILE__
   require 'json'
 
   HTTPDEBUG = true
-  packages = DebRelease.get_all_packages 'http://security.debian.org/debian-security', 'stretch/updates', nil, ['amd64', 'all']
+  suites = [
+    'jessie/updates',
+    'stretch/updates',
+    'buster/updates'
+  ]
+  threads = []
+  pckgs = []
+  suites.each do |s|
+    threads << Thread.new do
+      pckgs << DebRelease.get_all_packages('http://security.debian.org/debian-security', s)#, nil, ['amd64', 'all']
+    end
+  end
+
+  threads.each do |t|
+    t.join
+  end
+
+  packages = {}
+  pckgs.each do |p|
+    p.each do |pkg_name,pkg|
+      packages[pkg_name] = {} unless packages.key? pkg_name
+      pkg.each do |arch_name, arch|
+        packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
+        packages[pkg_name][arch_name].concat arch
+      end
+    end
+  end
 
   puts JSON.dump packages
 
