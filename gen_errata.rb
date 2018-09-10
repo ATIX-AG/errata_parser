@@ -393,7 +393,8 @@ if $PROGRAM_NAME == __FILE__
     end
   end
 
-  if type == 'debian'
+  case type
+  when 'debian'
     ## Debian
     dsa_list = download_file_cached('https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list', 'test_data/dsa.list')
     cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', 'test_data/cve.json')
@@ -405,22 +406,38 @@ if $PROGRAM_NAME == __FILE__
     # filter empty package-lists
     #errata.delete_if { |_k, x| x['packages'].nil? || x['packages'].empty? }
 
-  elsif type == 'ubuntu'
+  when 'debian_test_record'
+    dsa_list = File.read('test/data/dsa.list')
+    cve_file = File.read('test/data/cve.json')
+    errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
+    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything.json', ['stretch'], ['amd64'])
+
+  when 'ubuntu'
     ## Ubuntu
     require 'bzip2/ffi'
     require 'stringio'
 
     HTTPDEBUG = true
-    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', 'test_data/database.json.bz2')
+    usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', 'test_data/database.json.bz2')
     #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', 'test_data/database-all.json.bz2')
-    usn_db = File.read('test_data/database.json.bz2')
+    #usn_db = File.read('test_data/database.json.bz2')
+
     # TODO verify checksum
     #verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
 
     errata = parser.gen_ubuntu_errata JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), ['bionic'], ['amd64']
 
+  when 'ubuntu_test_record'
+    require 'bzip2/ffi'
+    require 'stringio'
+
+    usn_db_f = File.open('test/data/database.json.bz2', 'rb')
+    errata = parser.gen_ubuntu_errata JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), ['bionic'], ['amd64']
+    usn_db_f.close
+
   else
-    errata = download_file_cached('http://localhost/', '/tmp/test')
+    warn "Unsupported option #{type}"
+    exit 1
   end
 
   hsh = {}

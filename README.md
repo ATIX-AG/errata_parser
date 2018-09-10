@@ -86,5 +86,15 @@ For Debian, the packages-data must be fetched from the repository first.
     bundle exec gen_errata.rb ubuntu > errata_ubuntu.yaml
 
 
+### Testing
+
+    bundle exec ruby test/gen_errata.rb
+
+#### Re-Record Errata for test
+
+    bundle exec gen_errata.rb debian_test_record > test/data/debian.yaml
+    bundle exec gen_errata.rb ubuntu_test_record > test/data/ubuntu.yaml
+
+
 ---
 [^ubuntujsonformat]: see <https://blueprints.launchpad.net/ubuntu/+spec/security-p-usn-database-format>
