@@ -65,15 +65,12 @@ class DebRelease
                   value.strip
                 end
         @data[key] = store
+      elsif (fileinfo = RE_FILES.match(line))
+        @files[fileinfo['path']] = {} unless @files.key? fileinfo['path']
+        @files[fileinfo['path']]['size'] = fileinfo['size']
+        @files[fileinfo['path']][state] = fileinfo['digest']
       else
-        fileinfo = RE_FILES.match(line)
-        if fileinfo
-          @files[fileinfo['path']] = {} unless @files.key? fileinfo['path']
-          @files[fileinfo['path']]['size'] = fileinfo['size']
-          @files[fileinfo['path']][state] = fileinfo['digest']
-        else
-          warn "line could not be matched: #{line.inspect}"
-        end
+        warn "line could not be matched: #{line.inspect}"
       end
     end
   end

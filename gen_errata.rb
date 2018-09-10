@@ -150,7 +150,7 @@ class Erratum
   end
 
   def to_json(options = {})
-    to_h.to_json(options = {})
+    to_h.to_json(options)
   end
 
   private
@@ -303,7 +303,7 @@ class DebianErrataParser
         # ignore errata without package-information
         next if erratum.packages.empty?
         errata["USN-#{id}"] = erratum
-      rescue StandardError => e
+      rescue StandardError
         warn "At USN-#{id}:"
         raise
       end
@@ -320,7 +320,7 @@ class DebianErrataParser
     )
   end
 
-  def add_binary_packages(errata, packages, releases:['stretch'], architecture_whitelist:nil)
+  def add_binary_packages(errata, packages, releases: ['stretch'], architecture_whitelist: nil)
     @info_state = :add_binaries
     @info_state_cmplt = 0
     info_step = 1.0 / errata.length
@@ -333,37 +333,45 @@ class DebianErrataParser
         new = []
         if releases.nil? || releases.include?(p[:release])
           if packages.key? p[:name]
-            packages[p[:name]].each do |arch_name,arch|
-              next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
-              arch.each do |deb|
-                next if p[:release] != deb['release']
-                # version from packages must be 'greater or equal' to the version requested by DSA
-                if Debian::Dpkg.compare_versions deb['version'], 'ge', p[:version]
-                  new << {
-                    name: deb['name'],
-                    version: deb['version'],
-                    architecture: deb['arch'],
-                    release: deb['release'],
-                    component: deb['comp']
-                  }
-                else
-                  warn "Skipping #{deb['name']} because available version is smaller than fixed version: #{deb['version']} < #{p[:version]}"
-                end
-              end
-            end
+            new = get_binary_packages_for_erratum_package(
+              p,
+              packages[p[:name]],
+              architecture_whitelist
+            )
           end
           # return new value to append to package list in erratum
           new
-        else
+        elsif @option_keep_unsupported_source_packages
           # wrong release-name, keep old value?
-          if @option_keep_unsupported_source_packages
-            p
-          else
-            new
-          end
+          p
+        else
+          new
         end
       end
     end
+  end
+
+  def get_binary_packages_for_erratum_package(pkg, packages, architecture_whitelist)
+    res = []
+    packages.each do |arch_name,arch|
+      next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
+      arch.each do |deb|
+        next if pkg[:release] != deb['release']
+        # version from packages must be 'greater or equal' to the version requested by DSA
+        if Debian::Dpkg.compare_versions deb['version'], 'ge', pkg[:version]
+          res << {
+            name: deb['name'],
+            version: deb['version'],
+            architecture: deb['arch'],
+            release: deb['release'],
+            component: deb['comp']
+          }
+        else
+          warn "Skipping #{deb['name']} because available version is smaller than fixed version: #{deb['version']} < #{pkg[:version]}"
+        end
+      end
+    end
+    res
   end
 end
 
@@ -403,9 +411,9 @@ if $PROGRAM_NAME == __FILE__
     require 'stringio'
 
     HTTPDEBUG = true
-    usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', 'test_data/database.json.bz2')
+    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', 'test_data/database.json.bz2')
     #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', 'test_data/database-all.json.bz2')
-    #usn_db = File.read('test_data/database.json')
+    usn_db = File.read('test_data/database.json.bz2')
     # TODO verify checksum
     #verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
 
@@ -416,8 +424,8 @@ if $PROGRAM_NAME == __FILE__
   end
 
   hsh = {}
-  errata.keys.each do |k|
   #errata.keys.sort.each do |k|
+  errata.keys.each do |k|
     # remove Errata without packages
     hsh[k] = errata[k].to_h unless errata[k].packages.empty?
   end
