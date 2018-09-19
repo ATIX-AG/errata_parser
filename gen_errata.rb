@@ -9,7 +9,6 @@ require 'pathname'
 require_relative 'parse_dsalist'
 require_relative 'downloader'
 
-TEMPDIR = '/tmp/errataparser_cache'.freeze
 URGENCY_PRIO = [
   'not yet assigned',
   'unimportant',
@@ -219,7 +218,7 @@ class DebianErrataParser
       erratum.scope = cve.fetch('scope', nil)
       description << cve['description']
 
-      cve['releases'].each do |rel,data|
+      cve['releases'].each do |rel, data|
         next if !dsa.versions.key?(rel) || data['status'] != 'resolved'
         # WORKAROUND: currently DSA severities include '**' at the end
         erratum.severity = data['urgency'].delete('*')
@@ -246,8 +245,8 @@ class DebianErrataParser
       dsa.cve.each { |c| erratum.add_cve c } if dsa.cve
       erratum.package = dsa.package
 
-      dsa.versions.each do |rel,pkg_dat|
-        pkg_dat.each do |pkg_name,pkg_version|
+      dsa.versions.each do |rel, pkg_dat|
+        pkg_dat.each do |pkg_name, pkg_version|
           erratum.add_package(pkg_name, pkg_version, release: rel)
         end
       end
@@ -260,7 +259,7 @@ class DebianErrataParser
   end
 
   def add_packages_ubuntu(erratum, release, data, architecture_whitelist)
-    data['archs'].each do |arch_name,arch|
+    data['archs'].each do |arch_name, arch|
       next if arch_name == 'source'
       next unless arch_name == 'all' || architecture_whitelist.nil? || architecture_whitelist.include?(arch_name)
 
@@ -286,7 +285,7 @@ class DebianErrataParser
     @info_state_cmplt = 0
 
     errata = {}
-    usn_db.each do |id,usn|
+    usn_db.each do |id, usn|
       @info_state_cmplt += info_step
       begin
         erratum = Erratum.new
@@ -302,7 +301,7 @@ class DebianErrataParser
           end
         end
         erratum.issued = usn['timestamp']
-        usn['releases'].each do |rel,dat|
+        usn['releases'].each do |rel, dat|
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
           unless dat.key?('archs')
             warn "USN-#{id} has no architectures for release #{rel}"
@@ -335,7 +334,7 @@ class DebianErrataParser
     @info_state_cmplt = 0
     info_step = 1.0 / errata.length
 
-    errata.each do |_name,erratum|
+    errata.each do |_name, erratum|
       @info_state_cmplt += info_step
 
       next if erratum.packages.empty?
@@ -363,7 +362,7 @@ class DebianErrataParser
 
   def get_binary_packages_for_erratum_package(pkg, packages, architecture_whitelist)
     res = []
-    packages.each do |arch_name,arch|
+    packages.each do |arch_name, arch|
       next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
       arch.each do |deb|
         next if pkg[:release] != deb['release']
@@ -386,6 +385,7 @@ class DebianErrataParser
 end
 
 if $PROGRAM_NAME == __FILE__
+  TEMPDIR = '/tmp/errataparser_cache'.freeze
   extend Downloader
 
   type = ARGV[0]

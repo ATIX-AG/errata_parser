@@ -6,10 +6,12 @@ require 'pathname'
 
 require_relative 'downloader'
 
-TEMPDIR = '/tmp/errataparser_cache/debian'.freeze
-
 class DebRelease
   include Downloader
+
+  # rubocop:disable Style/ClassVars
+  @@tempdir = '/tmp/errataparser_cache/debian'
+  # rubocop:enable Style/ClassVars
 
   attr_reader :data, :files
   attr_accessor :suite, :base_url
@@ -32,7 +34,7 @@ class DebRelease
   end
 
   def create_cache(subdir='')
-    dir = Pathname.new(File.join(TEMPDIR, @suite, URI(@base_url).hostname, subdir))
+    dir = Pathname.new(File.join(@@tempdir, @suite, URI(@base_url).hostname, subdir))
     dir.mkpath
 
     dir
@@ -47,7 +49,7 @@ class DebRelease
     release_text.each_line do |line|
       if line[0] !~ /\s/
         state = nil
-        key,value = line.split ':'
+        key, value = line.split ':'
         key = key.strip.downcase
 
         store = case key
@@ -116,16 +118,19 @@ class DebRelease
     end
   end
 
+  def self.tempdir=(dirname)
+    @@tempdir = dirname
+  end
+
   def self.get_all_packages(uri, suite, components=nil, architectures=nil)
-    rel = new uri, suite
+    rel = new(uri, suite)
 
     packages = {}
     architectures = rel.data['architectures'] + ['all'] if architectures.nil?
     components = Debian::COMPONENT if components.nil?
-    warn "Loading architectures: #{architectures.inspect} components: #{components.inspect}"
     architectures.each do |arch|
       components.each do |comp|
-        rel.get_package(comp, arch).each do |p,d|
+        rel.get_package(comp, arch).each do |p, d|
           # necessary because sometimes 'all'-packages are also in the binary Packlage-files
           architecture = d.info['Architecture'] if d.fields.include? 'Architecture'
           architecture = arch if architecture.nil?
@@ -161,17 +166,15 @@ if $PROGRAM_NAME == __FILE__
   pckgs = []
   suites.each do |s|
     threads << Thread.new do
-      pckgs << DebRelease.get_all_packages('http://security.debian.org/debian-security', s)#, nil, ['amd64', 'all']
+      pckgs << DebRelease.get_all_packages('http://security.debian.org/debian-security', s) # , nil, ['amd64', 'all']
     end
   end
 
-  threads.each do |t|
-    t.join
-  end
+  threads.each(&:join)
 
   packages = {}
   pckgs.each do |p|
-    p.each do |pkg_name,pkg|
+    p.each do |pkg_name, pkg|
       packages[pkg_name] = {} unless packages.key? pkg_name
       pkg.each do |arch_name, arch|
         packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
@@ -182,7 +185,7 @@ if $PROGRAM_NAME == __FILE__
 
   puts JSON.dump packages
 
-  #rel.get_package('main', 'amd64').each do |p,d|
+  #rel.get_package('main', 'amd64').each do |p, d|
   #  puts p.inspect
   #  puts "#{d.source} @ #{d.version}"
   #end

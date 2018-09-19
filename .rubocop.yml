@@ -1,1 +1,48 @@
+Style/WordArray:
+  EnforcedStyle: brackets
+
+# not my style ;-)
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: False
+
+# exclude Gemfile, because it is auto-generated
+Layout/SpaceInsideBlockBraces:
+  Exclude:
+    - 'Gemfile'
+Style/StringLiterals:
+  Exclude:
+    - 'Gemfile'
+
+# we want that for better
+Style/TrailingCommaInHashLiteral:
+  Enabled: False
+
+Metrics/CyclomaticComplexity:
+  Max: 13
+
+Metrics/LineLength:
+  Max: 159
+
+Metrics/ClassLength:
+  Max: 160
+
+Metrics/MethodLength:
+  Max: 43
+
+Metrics/BlockLength:
+  Max: 32
+
+Metrics/AbcSize:
+  Max: 42
+
+Metrics/BlockNesting:
+  Max: 4
+
+Metrics/PerceivedComplexity:
+  Max: 14
+
+Style/ClassVars:
+  Exclude:
+    - 'debRelease.rb'
+
 inherit_from: .rubocop_todo.yml
