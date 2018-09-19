@@ -231,7 +231,7 @@ class DebianErrataParser
   end
 
   def gen_debian_errata(dsa_list, cve_list)
-    errata = {}
+    errata = []
 
     @info_state = :gen_errata
     info_step = 1.0 / dsa_list.length
@@ -255,7 +255,7 @@ class DebianErrataParser
 
       add_cve_information(erratum, dsa, cve_list) unless dsa.cve_empty?
 
-      errata[dsa.id] = erratum
+      errata << erratum
     end
     errata
   end
@@ -286,11 +286,13 @@ class DebianErrataParser
     info_step = 1.0 / usn_db.length
     @info_state_cmplt = 0
 
-    errata = {}
+    errata = []
     usn_db.each do |id, usn|
       @info_state_cmplt += info_step
+      name = "USN-#{id}"
       begin
         erratum = Erratum.new
+        erratum.name = name
         erratum.title = usn['title']
         erratum.description = usn['description']
         if usn.key? 'cves'
@@ -306,16 +308,16 @@ class DebianErrataParser
         usn['releases'].each do |rel, dat|
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
           unless dat.key?('archs')
-            warn "USN-#{id} has no architectures for release #{rel}"
+            warn "#{name} has no architectures for release #{rel}"
             next
           end
           add_packages_ubuntu(erratum, rel, dat, architecture_whitelist)
         end
         # ignore errata without package-information
         next if erratum.packages.empty?
-        errata["USN-#{id}"] = erratum
+        errata << erratum
       rescue StandardError
-        warn "At USN-#{id}:"
+        warn "At #{name}:"
         raise
       end
     end
@@ -336,7 +338,7 @@ class DebianErrataParser
     @info_state_cmplt = 0
     info_step = 1.0 / errata.length
 
-    errata.each do |_name, erratum|
+    errata.each do |erratum|
       @info_state_cmplt += info_step
 
       next if erratum.packages.empty?
@@ -418,7 +420,7 @@ if $PROGRAM_NAME == __FILE__
     parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['stretch'], ['amd64'])
 
     # filter empty package-lists
-    #errata.delete_if { |_k, x| x['packages'].nil? || x['packages'].empty? }
+    #errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
 
   when 'debian_test_record'
     dsa_list = File.read('test/data/dsa.list')
@@ -457,12 +459,12 @@ if $PROGRAM_NAME == __FILE__
     exit 1
   end
 
-  hsh = {}
-  #errata.keys.sort.each do |k|
-  errata.keys.each do |k|
+  arr = []
+  #errata.sort{ |x, y| y.name <=> x.name }.each do |e|
+  errata.each do |e|
     # remove Errata without packages
-    hsh[k] = errata[k].to_h unless errata[k].packages.empty?
+    arr << e.to_h unless e.packages.empty?
   end
-  puts hsh.to_yaml
+  puts arr.to_yaml
   #puts errata.to_json
 end

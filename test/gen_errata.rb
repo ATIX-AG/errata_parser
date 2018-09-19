@@ -18,12 +18,13 @@ class TestDebianErrata < Test::Unit::TestCase
     )
     parser.add_binary_packages_from_file(errata, pkg_json_path, ['stretch'], ['amd64'])
 
+    assert_instance_of(Array, errata)
+
     hsh = {}
-    errata.keys.each do |k|
+    errata.each do |erratum|
       # remove Errata without packages
-      erratum = errata[k]
       next if erratum.packages.empty?
-      hsh[k] = erratum.to_h
+      hsh[erratum.name] = erratum.to_h
       erratum.packages.each do |p|
         assert_equal('stretch', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
         assert_include(['amd64', 'all'], p['architecture'], "Offending data was in #{erratum.name}: #{p.inspect}")
@@ -33,13 +34,13 @@ class TestDebianErrata < Test::Unit::TestCase
 
     original = YAML.load_file(original_path)
 
-    assert_instance_of(Hash, generated)
-    assert_equal(original.keys.length, generated.keys.length)
+    assert_equal(original.length, generated.keys.length)
 
-    original.each do |k, v|
+    original.each do |v|
+      name = v['name']
       #FIXME for some reasons ruby insists that assert only takes one argument
-      assert(generated.key?(k)) # , "Erratum #{k.inspect} not found")
-      assert_equal(v, generated[k], "Erratum #{k.inspect} does not match")
+      assert(generated.key?(name)) # , "Erratum #{name.inspect} not found")
+      assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
     end
   end
 
@@ -58,13 +59,13 @@ class TestDebianErrata < Test::Unit::TestCase
       ['amd64']
     )
     f.close
+    assert_instance_of(Array, errata)
 
     hsh = {}
-    errata.keys.each do |k|
+    errata.each do |erratum|
       # remove Errata without packages
-      erratum = errata[k]
       next if erratum.packages.empty?
-      hsh[k] = erratum.to_h
+      hsh[erratum.name] = erratum.to_h
       erratum.packages.each do |p|
         assert_equal('bionic', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
         assert_include(['amd64', 'all'], p['architecture'], "Offending data was in #{erratum.name}: #{p.inspect}")
@@ -74,13 +75,13 @@ class TestDebianErrata < Test::Unit::TestCase
 
     original = YAML.load_file(original_path)
 
-    assert_instance_of(Hash, generated)
-    assert_equal(original.keys.length, generated.keys.length)
+    assert_equal(original.length, generated.keys.length)
 
-    original.each do |k, v|
+    original.each do |v|
+      name = v['name']
       #FIXME for some reasons ruby insists that assert only takes one argument
-      assert(generated.key?(k)) # , "Erratum #{k.inspect} not found")
-      assert_equal(v, generated[k], "Erratum #{k.inspect} does not match")
+      assert(generated.key?(name)) # , "Erratum #{name.inspect} not found")
+      assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
     end
   end
 end

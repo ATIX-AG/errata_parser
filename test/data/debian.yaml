@@ -1,6 +1,5 @@
 ---
-DSA-4286-1:
-  name: DSA-4286-1
+- name: DSA-4286-1
   title: curl -- security update
   issued: 05 Sep 2018
   affected_source_package: curl
@@ -64,8 +63,7 @@ DSA-4286-1:
   - CVE-2018-14618
   severity: not yet assigned
   scope: local
-DSA-4285-1:
-  name: DSA-4285-1
+- name: DSA-4285-1
   title: sympa -- security update
   issued: 05 Sep 2018
   affected_source_package: sympa
@@ -84,8 +82,7 @@ DSA-4285-1:
   - CVE-2018-1000550
   severity: high
   scope: remote
-DSA-4284-1:
-  name: DSA-4284-1
+- name: DSA-4284-1
   title: lcms2 -- security update
   issued: 04 Sep 2018
   affected_source_package: lcms2
@@ -115,8 +112,7 @@ DSA-4284-1:
   scope: local
   dbts_bugs:
   - 907983
-DSA-4283-1:
-  name: DSA-4283-1
+- name: DSA-4283-1
   title: ruby-json-jwt -- security update
   issued: 31 Aug 2018
   affected_source_package: ruby-json-jwt
@@ -138,8 +134,7 @@ DSA-4283-1:
   scope: remote
   dbts_bugs:
   - 902721
-DSA-4282-1:
-  name: DSA-4282-1
+- name: DSA-4282-1
   title: trafficserver -- security update
   issued: 31 Aug 2018
   affected_source_package: trafficserver
@@ -188,8 +183,7 @@ DSA-4282-1:
   - CVE-2018-8040
   severity: not yet assigned
   scope: local
-DSA-4281-1:
-  name: DSA-4281-1
+- name: DSA-4281-1
   title: tomcat8 -- security update
   issued: 29 Aug 2018
   affected_source_package: tomcat8
@@ -289,8 +283,7 @@ DSA-4281-1:
   - 802312
   - 802312
   - 802312
-DSA-4280-1:
-  name: DSA-4280-1
+- name: DSA-4280-1
   title: openssh -- security update
   issued: 22 Aug 2018
   affected_source_package: openssh
@@ -340,8 +333,7 @@ DSA-4280-1:
   scope: local
   dbts_bugs:
   - 906236
-DSA-4279-1:
-  name: DSA-4279-1
+- name: DSA-4279-1
   title: linux -- security update
   issued: 20 Aug 2018
   affected_source_package: linux
@@ -470,8 +462,7 @@ DSA-4279-1:
   - CVE-2018-3646
   severity: medium
   scope: local
-DSA-4278-1:
-  name: DSA-4278-1
+- name: DSA-4278-1
   title: jetty9 -- security update
   issued: 19 Aug 2018
   affected_source_package: jetty9
@@ -528,8 +519,7 @@ DSA-4278-1:
   - 902953
   - 902953
   - 902953
-DSA-4277-1:
-  name: DSA-4277-1
+- name: DSA-4277-1
   title: mutt -- security update
   issued: 17 Aug 2018
   affected_source_package: mutt
@@ -624,8 +614,7 @@ DSA-4277-1:
   - 904021
   - 904021
   - 904021
-DSA-4276-1:
-  name: DSA-4276-1
+- name: DSA-4276-1
   title: php-horde-image -- security update
   issued: 17 Aug 2018
   affected_source_package: php-horde-image
@@ -659,8 +648,7 @@ DSA-4276-1:
   - 865504
   - 865505
   - 876400
-DSA-4275-1:
-  name: DSA-4275-1
+- name: DSA-4275-1
   title: keystone -- security update
   issued: 16 Aug 2018
   affected_source_package: keystone
@@ -692,8 +680,7 @@ DSA-4275-1:
   scope: local
   dbts_bugs:
   - 904616
-DSA-4274-1:
-  name: DSA-4274-1
+- name: DSA-4274-1
   title: xen -- security update
   issued: 16 Aug 2018
   affected_source_package: xen
@@ -778,8 +765,7 @@ DSA-4274-1:
   - CVE-2018-15470
   severity: medium
   scope: local
-DSA-4273-1:
-  name: DSA-4273-1
+- name: DSA-4273-1
   title: intel-microcode -- security update
   issued: 16 Aug 2018
   affected_source_package: intel-microcode
@@ -804,8 +790,7 @@ DSA-4273-1:
   - CVE-2018-3640
   severity: medium
   scope: local
-DSA-4272-1:
-  name: DSA-4272-1
+- name: DSA-4272-1
   title: linux -- security update
   issued: 14 Aug 2018
   affected_source_package: linux
@@ -979,8 +964,7 @@ DSA-4272-1:
   cves:
   - CVE-2018-5391
   severity: not yet assigned
-DSA-4271-1:
-  name: DSA-4271-1
+- name: DSA-4271-1
   title: samba -- security update
   issued: 14 Aug 2018
   affected_source_package: samba
@@ -1099,8 +1083,7 @@ DSA-4271-1:
   - CVE-2018-10919
   severity: not yet assigned
   scope: local
-DSA-4270-1:
-  name: DSA-4270-1
+- name: DSA-4270-1
   title: gdm3 -- security update
   issued: 13 Aug 2018
   affected_source_package: gdm3
@@ -1134,8 +1117,7 @@ DSA-4270-1:
   - CVE-2018-14424
   severity: not yet assigned
   scope: local
-DSA-4269-1:
-  name: DSA-4269-1
+- name: DSA-4269-1
   title: postgresql-9.6 -- security update
   issued: 10 Aug 2018
   affected_source_package: postgresql-9.6
@@ -1240,8 +1222,7 @@ DSA-4269-1:
   - CVE-2018-10925
   severity: not yet assigned
   scope: local
-DSA-4268-1:
-  name: DSA-4268-1
+- name: DSA-4268-1
   title: openjdk-8 -- security update
   issued: 10 Aug 2018
   affected_source_package: openjdk-8
@@ -1308,8 +1289,7 @@ DSA-4268-1:
   - CVE-2018-2952
   severity: medium
   scope: remote
-DSA-4267-1:
-  name: DSA-4267-1
+- name: DSA-4267-1
   title: kamailio -- security update
   issued: '08 Aug 2018'
   affected_source_package: kamailio
@@ -1508,8 +1488,7 @@ DSA-4267-1:
   - CVE-2018-14767
   severity: not yet assigned
   scope: local
-DSA-4266-1:
-  name: DSA-4266-1
+- name: DSA-4266-1
   title: linux -- security update
   issued: 06 Aug 2018
   affected_source_package: linux
@@ -1698,8 +1677,7 @@ DSA-4266-1:
   scope: local
   dbts_bugs:
   - 905751
-DSA-4264-1:
-  name: DSA-4264-1
+- name: DSA-4264-1
   title: python-django -- security update
   issued: 05 Aug 2018
   affected_source_package: python-django
@@ -1733,8 +1711,7 @@ DSA-4264-1:
   scope: local
   dbts_bugs:
   - 905216
-DSA-4263-1:
-  name: DSA-4263-1
+- name: DSA-4263-1
   title: cgit -- security update
   issued: 04 Aug 2018
   affected_source_package: cgit
@@ -1754,8 +1731,7 @@ DSA-4263-1:
   scope: local
   dbts_bugs:
   - 905382
-DSA-4262-1:
-  name: DSA-4262-1
+- name: DSA-4262-1
   title: symfony -- security update
   issued: 03 Aug 2018
   affected_source_package: symfony
@@ -2063,8 +2039,7 @@ DSA-4262-1:
   - CVE-2018-11406
   severity: high
   scope: remote
-DSA-4261-1:
-  name: DSA-4261-1
+- name: DSA-4261-1
   title: vim-syntastic -- security update
   issued: 03 Aug 2018
   affected_source_package: vim-syntastic
@@ -2087,8 +2062,7 @@ DSA-4261-1:
   scope: remote
   dbts_bugs:
   - 894736
-DSA-4260-1:
-  name: DSA-4260-1
+- name: DSA-4260-1
   title: libmspack -- security update
   issued: 02 Aug 2018
   affected_source_package: libmspack
@@ -2138,8 +2112,7 @@ DSA-4260-1:
   - 904801
   - 904799
   - 904800
-DSA-4259-1:
-  name: DSA-4259-1
+- name: DSA-4259-1
   title: ruby2.3 -- security update
   issued: 31 Jul 2018
   affected_source_package: ruby2.3
@@ -2281,8 +2254,7 @@ DSA-4259-1:
   - 895778
   - 895778
   - 895778
-DSA-4258-1:
-  name: DSA-4258-1
+- name: DSA-4258-1
   title: ffmpeg -- security update
   issued: 29 Jul 2018
   affected_source_package: ffmpeg
@@ -2420,8 +2392,7 @@ DSA-4258-1:
   - CVE-2018-14395
   severity: not yet assigned
   scope: local
-DSA-4257-1:
-  name: DSA-4257-1
+- name: DSA-4257-1
   title: fuse -- security update
   issued: 28 Jul 2018
   affected_source_package: fuse
@@ -2459,8 +2430,7 @@ DSA-4257-1:
   scope: local
   dbts_bugs:
   - 904216
-DSA-4256-1:
-  name: DSA-4256-1
+- name: DSA-4256-1
   title: chromium-browser -- security update
   issued: 26 Jul 2018
   affected_source_package: chromium-browser
@@ -2535,8 +2505,7 @@ DSA-4256-1:
   - CVE-2018-6179
   severity: medium
   scope: remote
-DSA-4255-1:
-  name: DSA-4255-1
+- name: DSA-4255-1
   title: ant -- security update
   issued: 24 Jul 2018
   affected_source_package: ant
@@ -2574,8 +2543,7 @@ DSA-4255-1:
   - CVE-2018-10886
   severity: not yet assigned
   scope: local
-DSA-4254-1:
-  name: DSA-4254-1
+- name: DSA-4254-1
   title: slurm-llnl -- security update
   issued: 24 Jul 2018
   affected_source_package: slurm-llnl
@@ -2764,8 +2732,7 @@ DSA-4254-1:
   dbts_bugs:
   - 893044
   - 900548
-DSA-4253-1:
-  name: DSA-4253-1
+- name: DSA-4253-1
   title: network-manager-vpnc -- security update
   issued: 23 Jul 2018
   affected_source_package: network-manager-vpnc
@@ -2791,8 +2758,7 @@ DSA-4253-1:
   scope: local
   dbts_bugs:
   - 904255
-DSA-4252-1:
-  name: DSA-4252-1
+- name: DSA-4252-1
   title: znc -- security update
   issued: 18 Jul 2018
   affected_source_package: znc
@@ -2841,8 +2807,7 @@ DSA-4252-1:
   dbts_bugs:
   - 903787
   - 903788
-DSA-4251-1:
-  name: DSA-4251-1
+- name: DSA-4251-1
   title: vlc -- security update
   issued: 18 Jul 2018
   affected_source_package: vlc
@@ -2970,8 +2935,7 @@ DSA-4251-1:
   - CVE-2018-11529
   severity: not yet assigned
   scope: local
-DSA-4250-1:
-  name: DSA-4250-1
+- name: DSA-4250-1
   title: wordpress -- security update
   issued: 18 Jul 2018
   affected_source_package: wordpress
@@ -3015,8 +2979,7 @@ DSA-4250-1:
   scope: remote
   dbts_bugs:
   - 902876
-DSA-4249-1:
-  name: DSA-4249-1
+- name: DSA-4249-1
   title: ffmpeg -- security update
   issued: 17 Jul 2018
   affected_source_package: ffmpeg
@@ -3211,8 +3174,7 @@ DSA-4249-1:
   - CVE-2018-14394
   severity: medium
   scope: remote
-DSA-4248-1:
-  name: DSA-4248-1
+- name: DSA-4248-1
   title: blender -- security update
   issued: 17 Jul 2018
   affected_source_package: blender
@@ -3383,8 +3345,7 @@ DSA-4248-1:
   - CVE-2017-12105
   severity: medium
   scope: remote
-DSA-4247-1:
-  name: DSA-4247-1
+- name: DSA-4247-1
   title: ruby-rack-protection -- security update
   issued: 16 Jul 2018
   affected_source_package: ruby-rack-protection
@@ -3405,8 +3366,7 @@ DSA-4247-1:
   scope: remote
   dbts_bugs:
   - 892250
-DSA-4246-1:
-  name: DSA-4246-1
+- name: DSA-4246-1
   title: mailman -- security update
   issued: 15 Jul 2018
   affected_source_package: mailman
@@ -3423,8 +3383,7 @@ DSA-4246-1:
   - CVE-2018-0618
   severity: not yet assigned
   scope: local
-DSA-4245-1:
-  name: DSA-4245-1
+- name: DSA-4245-1
   title: imagemagick -- security update
   issued: 14 Jul 2018
   affected_source_package: imagemagick
@@ -3614,8 +3573,7 @@ DSA-4245-1:
   - 886588
   - 902727
   - 902728
-DSA-4244-1:
-  name: DSA-4244-1
+- name: DSA-4244-1
   title: thunderbird -- security update
   issued: 13 Jul 2018
   affected_source_package: thunderbird
@@ -4839,8 +4797,7 @@ DSA-4244-1:
   - CVE-2018-12373
   - CVE-2018-12374
   severity: not yet assigned
-DSA-4243-1:
-  name: DSA-4243-1
+- name: DSA-4243-1
   title: cups -- security update
   issued: 11 Jul 2018
   affected_source_package: cups
@@ -4944,8 +4901,7 @@ DSA-4243-1:
   scope: remote
   dbts_bugs:
   - 903605
-DSA-4242-1:
-  name: DSA-4242-1
+- name: DSA-4242-1
   title: ruby-sprockets -- security update
   issued: '09 Jul 2018'
   affected_source_package: ruby-sprockets
@@ -4967,8 +4923,7 @@ DSA-4242-1:
   scope: remote
   dbts_bugs:
   - 901913
-DSA-4241-1:
-  name: DSA-4241-1
+- name: DSA-4241-1
   title: libsoup2.4 -- security update
   issued: 05 Jul 2018
   affected_source_package: libsoup2.4
@@ -5010,8 +4965,7 @@ DSA-4241-1:
   - CVE-2018-12910
   severity: high
   scope: remote
-DSA-4240-1:
-  name: DSA-4240-1
+- name: DSA-4240-1
   title: php7.0 -- security update
   issued: 05 Jul 2018
   affected_source_package: php7.0
@@ -5250,8 +5204,7 @@ DSA-4240-1:
   - CVE-2018-10549
   severity: high
   scope: remote
-DSA-4239-1:
-  name: DSA-4239-1
+- name: DSA-4239-1
   title: gosa -- security update
   issued: 03 Jul 2018
   affected_source_package: gosa
@@ -5523,8 +5476,7 @@ DSA-4239-1:
   scope: remote
   dbts_bugs:
   - 902723
-DSA-4238-1:
-  name: DSA-4238-1
+- name: DSA-4238-1
   title: exiv2 -- security update
   issued: 03 Jul 2018
   affected_source_package: exiv2
@@ -5584,8 +5536,7 @@ DSA-4238-1:
   dbts_bugs:
   - 901707
   - 901706
-DSA-4237-1:
-  name: DSA-4237-1
+- name: DSA-4237-1
   title: chromium-browser -- security update
   issued: 30 Jun 2018
   affected_source_package: chromium-browser
@@ -5654,8 +5605,7 @@ DSA-4237-1:
   severity: not yet assigned
   dbts_bugs:
   - 818180
-DSA-4236-1:
-  name: DSA-4236-1
+- name: DSA-4236-1
   title: xen -- security update
   issued: 27 Jun 2018
   affected_source_package: xen
@@ -5745,8 +5695,7 @@ DSA-4236-1:
   - CVE-2018-12893
   severity: medium
   scope: remote
-DSA-4235-1:
-  name: DSA-4235-1
+- name: DSA-4235-1
   title: firefox-esr -- security update
   issued: 27 Jun 2018
   affected_source_package: firefox-esr
@@ -6243,8 +6192,7 @@ DSA-4235-1:
   - CVE-2018-12365
   - CVE-2018-12366
   severity: not yet assigned
-DSA-4234-1:
-  name: DSA-4234-1
+- name: DSA-4234-1
   title: lava-server -- security update
   issued: 22 Jun 2018
   affected_source_package: lava-server
@@ -6281,8 +6229,7 @@ DSA-4234-1:
   - CVE-2018-12565
   severity: medium
   scope: remote
-DSA-4233-1:
-  name: DSA-4233-1
+- name: DSA-4233-1
   title: bouncycastle -- security update
   issued: 22 Jun 2018
   affected_source_package: bouncycastle
@@ -6338,8 +6285,7 @@ DSA-4233-1:
   scope: remote
   dbts_bugs:
   - 900843
-DSA-4232-1:
-  name: DSA-4232-1
+- name: DSA-4232-1
   title: xen -- security update
   issued: 20 Jun 2018
   affected_source_package: xen
@@ -6392,8 +6338,7 @@ DSA-4232-1:
   - CVE-2018-3665
   severity: medium
   scope: local
-DSA-4231-1:
-  name: DSA-4231-1
+- name: DSA-4231-1
   title: libgcrypt20 -- security update
   issued: 17 Jun 2018
   affected_source_package: libgcrypt20
@@ -6428,8 +6373,7 @@ DSA-4231-1:
   - CVE-2018-0495
   severity: low
   scope: local
-DSA-4230-1:
-  name: DSA-4230-1
+- name: DSA-4230-1
   title: redis -- security update
   issued: 17 Jun 2018
   affected_source_package: redis
@@ -6472,8 +6416,7 @@ DSA-4230-1:
   - 901495
   - 901495
   - 902410
-DSA-4229-1:
-  name: DSA-4229-1
+- name: DSA-4229-1
   title: strongswan -- security update
   issued: 14 Jun 2018
   affected_source_package: strongswan
@@ -6575,8 +6518,7 @@ DSA-4229-1:
   - CVE-2018-10811
   severity: medium
   scope: remote
-DSA-4228-1:
-  name: DSA-4228-1
+- name: DSA-4228-1
   title: spip -- security update
   issued: 14 Jun 2018
   affected_source_package: spip
@@ -6596,8 +6538,7 @@ DSA-4228-1:
   scope: remote
   dbts_bugs:
   - 879954
-DSA-4227-1:
-  name: DSA-4227-1
+- name: DSA-4227-1
   title: plexus-archiver -- security update
   issued: 12 Jun 2018
   affected_source_package: plexus-archiver
@@ -6617,8 +6558,7 @@ DSA-4227-1:
   scope: local
   dbts_bugs:
   - 900953
-DSA-4226-1:
-  name: DSA-4226-1
+- name: DSA-4226-1
   title: perl -- security update
   issued: 12 Jun 2018
   affected_source_package: perl
@@ -6668,8 +6608,7 @@ DSA-4226-1:
   scope: remote
   dbts_bugs:
   - 900834
-DSA-4223-1:
-  name: DSA-4223-1
+- name: DSA-4223-1
   title: gnupg1 -- security update
   issued: '08 Jun 2018'
   affected_source_package: gnupg1
@@ -6706,8 +6645,7 @@ DSA-4223-1:
   scope: remote
   dbts_bugs:
   - 901088
-DSA-4222-1:
-  name: DSA-4222-1
+- name: DSA-4222-1
   title: gnupg2 -- security update
   issued: '08 Jun 2018'
   affected_source_package: gnupg2
@@ -6779,8 +6717,7 @@ DSA-4222-1:
   scope: remote
   dbts_bugs:
   - 901088
-DSA-4221-1:
-  name: DSA-4221-1
+- name: DSA-4221-1
   title: libvncserver -- security update
   issued: '08 Jun 2018'
   affected_source_package: libvncserver
@@ -6826,8 +6763,7 @@ DSA-4221-1:
   scope: remote
   dbts_bugs:
   - 894045
-DSA-4220-1:
-  name: DSA-4220-1
+- name: DSA-4220-1
   title: firefox-esr -- security update
   issued: '08 Jun 2018'
   affected_source_package: firefox-esr
@@ -7318,8 +7254,7 @@ DSA-4220-1:
   severity: not yet assigned
   dbts_bugs:
   - 818180
-DSA-4219-1:
-  name: DSA-4219-1
+- name: DSA-4219-1
   title: jruby -- security update
   issued: '08 Jun 2018'
   affected_source_package: jruby
@@ -7392,8 +7327,7 @@ DSA-4219-1:
   - 895778
   - 895778
   - 895778
-DSA-4218-1:
-  name: DSA-4218-1
+- name: DSA-4218-1
   title: memcached -- security update
   issued: 06 Jun 2018
   affected_source_package: memcached
@@ -7431,8 +7365,7 @@ DSA-4218-1:
   dbts_bugs:
   - 868701
   - 894404
-DSA-4217-1:
-  name: DSA-4217-1
+- name: DSA-4217-1
   title: wireshark -- security update
   issued: 03 Jun 2018
   affected_source_package: wireshark
@@ -7545,8 +7478,7 @@ DSA-4217-1:
   dbts_bugs:
   - 900708
   - 900708
-DSA-4216-1:
-  name: DSA-4216-1
+- name: DSA-4216-1
   title: prosody -- security update
   issued: 02 Jun 2018
   affected_source_package: prosody
@@ -7567,8 +7499,7 @@ DSA-4216-1:
   scope: local
   dbts_bugs:
   - 900524
-DSA-4215-1:
-  name: DSA-4215-1
+- name: DSA-4215-1
   title: batik -- security update
   issued: 02 Jun 2018
   affected_source_package: batik
@@ -7599,8 +7530,7 @@ DSA-4215-1:
   dbts_bugs:
   - 860566
   - 899374
-DSA-4214-1:
-  name: DSA-4214-1
+- name: DSA-4214-1
   title: zookeeper -- security update
   issued: 01 Jun 2018
   affected_source_package: zookeeper
@@ -7671,8 +7601,7 @@ DSA-4214-1:
   scope: remote
   dbts_bugs:
   - 899332
-DSA-4213-1:
-  name: DSA-4213-1
+- name: DSA-4213-1
   title: qemu -- security update
   issued: 29 May 2018
   affected_source_package: qemu
@@ -7827,8 +7756,7 @@ DSA-4213-1:
   - 883625
   - 887392
   - 892041
-DSA-4212-1:
-  name: DSA-4212-1
+- name: DSA-4212-1
   title: git -- security update
   issued: 29 May 2018
   affected_source_package: git
@@ -7925,8 +7853,7 @@ DSA-4212-1:
   - CVE-2018-11235
   severity: medium
   scope: remote
-DSA-4211-1:
-  name: DSA-4211-1
+- name: DSA-4211-1
   title: xdg-utils -- security update
   issued: 25 May 2018
   affected_source_package: xdg-utils
@@ -7947,8 +7874,7 @@ DSA-4211-1:
   scope: remote
   dbts_bugs:
   - 898317
-DSA-4210-1:
-  name: DSA-4210-1
+- name: DSA-4210-1
   title: xen -- security update
   issued: 25 May 2018
   affected_source_package: xen
@@ -8002,8 +7928,7 @@ DSA-4210-1:
   - CVE-2018-3639
   severity: medium
   scope: local
-DSA-4209-1:
-  name: DSA-4209-1
+- name: DSA-4209-1
   title: thunderbird -- security update
   issued: 25 May 2018
   affected_source_package: thunderbird
@@ -9279,8 +9204,7 @@ DSA-4209-1:
   - CVE-2018-5185
   severity: high
   scope: remote
-DSA-4208-1:
-  name: DSA-4208-1
+- name: DSA-4208-1
   title: procps -- security update
   issued: 22 May 2018
   affected_source_package: procps
@@ -9336,8 +9260,7 @@ DSA-4208-1:
   - 899170
   - 899170
   - 899170
-DSA-4207-1:
-  name: DSA-4207-1
+- name: DSA-4207-1
   title: packagekit -- security update
   issued: 22 May 2018
   affected_source_package: packagekit
@@ -9397,8 +9320,7 @@ DSA-4207-1:
   scope: local
   dbts_bugs:
   - 896703
-DSA-4206-1:
-  name: DSA-4206-1
+- name: DSA-4206-1
   title: gitlab -- security update
   issued: 21 May 2018
   affected_source_package: gitlab
@@ -9424,8 +9346,7 @@ DSA-4206-1:
   scope: remote
   dbts_bugs:
   - 893905
-DSA-4203-1:
-  name: DSA-4203-1
+- name: DSA-4203-1
   title: vlc -- security update
   issued: 17 May 2018
   affected_source_package: vlc
@@ -9553,8 +9474,7 @@ DSA-4203-1:
   - CVE-2017-17670
   severity: medium
   scope: remote
-DSA-4202-1:
-  name: DSA-4202-1
+- name: DSA-4202-1
   title: curl -- security update
   issued: 16 May 2018
   affected_source_package: curl
@@ -9615,8 +9535,7 @@ DSA-4202-1:
   scope: remote
   dbts_bugs:
   - 898856
-DSA-4201-1:
-  name: DSA-4201-1
+- name: DSA-4201-1
   title: xen -- security update
   issued: 15 May 2018
   affected_source_package: xen
@@ -9702,8 +9621,7 @@ DSA-4201-1:
   - CVE-2018-10982
   severity: high
   scope: local
-DSA-4200-1:
-  name: DSA-4200-1
+- name: DSA-4200-1
   title: kwallet-pam -- security update
   issued: 14 May 2018
   affected_source_package: kwallet-pam
@@ -9730,8 +9648,7 @@ DSA-4200-1:
   - CVE-2018-10380
   severity: high
   scope: local
-DSA-4199-1:
-  name: DSA-4199-1
+- name: DSA-4199-1
   title: firefox-esr -- security update
   issued: 10 May 2018
   affected_source_package: firefox-esr
@@ -10273,8 +10190,7 @@ DSA-4199-1:
   - CVE-2018-5183
   severity: high
   scope: remote
-DSA-4198-1:
-  name: DSA-4198-1
+- name: DSA-4198-1
   title: prosody -- security update
   issued: '09 May 2018'
   affected_source_package: prosody
@@ -10295,8 +10211,7 @@ DSA-4198-1:
   scope: remote
   dbts_bugs:
   - 875829
-DSA-4197-1:
-  name: DSA-4197-1
+- name: DSA-4197-1
   title: wavpack -- security update
   issued: '09 May 2018'
   affected_source_package: wavpack
@@ -10356,8 +10271,7 @@ DSA-4197-1:
   - 897271
   - 897271
   - 897271
-DSA-4196-1:
-  name: DSA-4196-1
+- name: DSA-4196-1
   title: linux -- security update
   issued: '08 May 2018'
   affected_source_package: linux
@@ -10611,8 +10525,7 @@ DSA-4196-1:
   - CVE-2018-8897
   severity: high
   scope: local
-DSA-4195-1:
-  name: DSA-4195-1
+- name: DSA-4195-1
   title: wget -- security update
   issued: '08 May 2018'
   affected_source_package: wget
@@ -10631,8 +10544,7 @@ DSA-4195-1:
   scope: remote
   dbts_bugs:
   - 898076
-DSA-4194-1:
-  name: DSA-4194-1
+- name: DSA-4194-1
   title: lucene-solr -- security update
   issued: 06 May 2018
   affected_source_package: lucene-solr
@@ -10683,8 +10595,7 @@ DSA-4194-1:
   scope: remote
   dbts_bugs:
   - 896604
-DSA-4193-1:
-  name: DSA-4193-1
+- name: DSA-4193-1
   title: wordpress -- security update
   issued: 05 May 2018
   affected_source_package: wordpress
@@ -10728,8 +10639,7 @@ DSA-4193-1:
   dbts_bugs:
   - 895034
   - 895034
-DSA-4192-1:
-  name: DSA-4192-1
+- name: DSA-4192-1
   title: libmad -- security update
   issued: 04 May 2018
   affected_source_package: libmad
@@ -10765,8 +10675,7 @@ DSA-4192-1:
   dbts_bugs:
   - 287519
   - 287519
-DSA-4191-1:
-  name: DSA-4191-1
+- name: DSA-4191-1
   title: redmine -- security update
   issued: 03 May 2018
   affected_source_package: redmine
@@ -10856,8 +10765,7 @@ DSA-4191-1:
   - 882547
   - 882548
   - 887307
-DSA-4190-1:
-  name: DSA-4190-1
+- name: DSA-4190-1
   title: jackson-databind -- security update
   issued: 03 May 2018
   affected_source_package: jackson-databind
@@ -10884,8 +10792,7 @@ DSA-4190-1:
   scope: remote
   dbts_bugs:
   - 891614
-DSA-4189-1:
-  name: DSA-4189-1
+- name: DSA-4189-1
   title: quassel -- security update
   issued: 02 May 2018
   affected_source_package: quassel
@@ -10936,8 +10843,7 @@ DSA-4189-1:
   dbts_bugs:
   - 896914
   - 896915
-DSA-4188-1:
-  name: DSA-4188-1
+- name: DSA-4188-1
   title: linux -- security update
   issued: 01 May 2018
   affected_source_package: linux
@@ -11315,8 +11221,7 @@ DSA-4188-1:
   dbts_bugs:
   - 886532
   - 886852
-DSA-4185-1:
-  name: DSA-4185-1
+- name: DSA-4185-1
   title: openjdk-8 -- security update
   issued: 28 Apr 2018
   affected_source_package: openjdk-8
@@ -11513,8 +11418,7 @@ DSA-4185-1:
   - CVE-2018-2815
   severity: medium
   scope: remote
-DSA-4184-1:
-  name: DSA-4184-1
+- name: DSA-4184-1
   title: sdl-image1.2 -- security update
   issued: 28 Apr 2018
   affected_source_package: sdl-image1.2
@@ -11598,8 +11502,7 @@ DSA-4184-1:
   scope: remote
   dbts_bugs:
   - 878266
-DSA-4183-1:
-  name: DSA-4183-1
+- name: DSA-4183-1
   title: tor -- security update
   issued: 28 Apr 2018
   affected_source_package: tor
@@ -11629,8 +11532,7 @@ DSA-4183-1:
   - CVE-2018-0490
   severity: medium
   scope: remote
-DSA-4182-1:
-  name: DSA-4182-1
+- name: DSA-4182-1
   title: chromium-browser -- security update
   issued: 28 Apr 2018
   affected_source_package: chromium-browser
@@ -11731,8 +11633,7 @@ DSA-4182-1:
   - CVE-2018-6116
   - CVE-2018-6117
   severity: not yet assigned
-DSA-4181-1:
-  name: DSA-4181-1
+- name: DSA-4181-1
   title: roundcube -- security update
   issued: 28 Apr 2018
   affected_source_package: roundcube
@@ -11780,8 +11681,7 @@ DSA-4181-1:
   scope: remote
   dbts_bugs:
   - 895184
-DSA-4180-1:
-  name: DSA-4180-1
+- name: DSA-4180-1
   title: drupal7 -- security update
   issued: 25 Apr 2018
   affected_source_package: drupal7
@@ -11803,8 +11703,7 @@ DSA-4180-1:
   scope: local
   dbts_bugs:
   - 896701
-DSA-4178-1:
-  name: DSA-4178-1
+- name: DSA-4178-1
   title: libreoffice -- security update
   issued: 20 Apr 2018
   affected_source_package: libreoffice
@@ -12681,8 +12580,7 @@ DSA-4178-1:
   - CVE-2018-10120
   severity: medium
   scope: remote
-DSA-4177-1:
-  name: DSA-4177-1
+- name: DSA-4177-1
   title: libsdl2-image -- security update
   issued: 20 Apr 2018
   affected_source_package: libsdl2-image
@@ -12771,8 +12669,7 @@ DSA-4177-1:
   scope: remote
   dbts_bugs:
   - 878266
-DSA-4175-1:
-  name: DSA-4175-1
+- name: DSA-4175-1
   title: freeplane -- security update
   issued: 18 Apr 2018
   affected_source_package: freeplane
@@ -12798,8 +12695,7 @@ DSA-4175-1:
   scope: remote
   dbts_bugs:
   - 893663
-DSA-4174-1:
-  name: DSA-4174-1
+- name: DSA-4174-1
   title: corosync -- security update
   issued: 17 Apr 2018
   affected_source_package: corosync
@@ -12924,8 +12820,7 @@ DSA-4174-1:
   scope: remote
   dbts_bugs:
   - 895653
-DSA-4173-1:
-  name: DSA-4173-1
+- name: DSA-4173-1
   title: r-cran-readxl -- security update
   issued: 16 Apr 2018
   affected_source_package: r-cran-readxl
@@ -12984,8 +12879,7 @@ DSA-4173-1:
   - 895564
   - 895564
   - 895564
-DSA-4172-1:
-  name: DSA-4172-1
+- name: DSA-4172-1
   title: perl -- security update
   issued: 14 Apr 2018
   affected_source_package: perl
@@ -13032,8 +12926,7 @@ DSA-4172-1:
   - CVE-2018-6913
   severity: high
   scope: remote
-DSA-4171-1:
-  name: DSA-4171-1
+- name: DSA-4171-1
   title: ruby-loofah -- security update
   issued: 13 Apr 2018
   affected_source_package: ruby-loofah
@@ -13052,8 +12945,7 @@ DSA-4171-1:
   scope: remote
   dbts_bugs:
   - 893596
-DSA-4170-1:
-  name: DSA-4170-1
+- name: DSA-4170-1
   title: pjproject -- security update
   issued: '09 Apr 2018'
   affected_source_package: pjproject
@@ -13156,8 +13048,7 @@ DSA-4170-1:
   - CVE-2018-1000099
   severity: high
   scope: remote
-DSA-4169-1:
-  name: DSA-4169-1
+- name: DSA-4169-1
   title: pcs -- security update
   issued: '09 Apr 2018'
   affected_source_package: pcs
@@ -13178,8 +13069,7 @@ DSA-4169-1:
   scope: remote
   dbts_bugs:
   - 895313
-DSA-4167-1:
-  name: DSA-4167-1
+- name: DSA-4167-1
   title: sharutils -- security update
   issued: 05 Apr 2018
   affected_source_package: sharutils
@@ -13206,8 +13096,7 @@ DSA-4167-1:
   scope: remote
   dbts_bugs:
   - 893525
-DSA-4165-1:
-  name: DSA-4165-1
+- name: DSA-4165-1
   title: ldap-account-manager -- security update
   issued: 03 Apr 2018
   affected_source_package: ldap-account-manager
@@ -13230,8 +13119,7 @@ DSA-4165-1:
   - CVE-2018-8763
   severity: medium
   scope: remote
-DSA-4164-1:
-  name: DSA-4164-1
+- name: DSA-4164-1
   title: apache2 -- security update
   issued: 03 Apr 2018
   affected_source_package: apache2
@@ -13334,8 +13222,7 @@ DSA-4164-1:
   - CVE-2018-1312
   severity: medium
   scope: remote
-DSA-4163-1:
-  name: DSA-4163-1
+- name: DSA-4163-1
   title: beep -- security update
   issued: 02 Apr 2018
   affected_source_package: beep
@@ -13354,8 +13241,7 @@ DSA-4163-1:
   scope: local
   dbts_bugs:
   - 894667
-DSA-4162-1:
-  name: DSA-4162-1
+- name: DSA-4162-1
   title: irssi -- security update
   issued: 01 Apr 2018
   affected_source_package: irssi
@@ -13421,8 +13307,7 @@ DSA-4162-1:
   - 890676
   - 890674
   - 890674
-DSA-4161-1:
-  name: DSA-4161-1
+- name: DSA-4161-1
   title: python-django -- security update
   issued: 01 Apr 2018
   affected_source_package: python-django
@@ -13465,8 +13350,7 @@ DSA-4161-1:
   - CVE-2018-7537
   severity: medium
   scope: remote
-DSA-4160-1:
-  name: DSA-4160-1
+- name: DSA-4160-1
   title: libevt -- security update
   issued: 01 Apr 2018
   affected_source_package: libevt
@@ -13512,8 +13396,7 @@ DSA-4160-1:
   scope: local
   dbts_bugs:
   - 893431
-DSA-4159-1:
-  name: DSA-4159-1
+- name: DSA-4159-1
   title: remctl -- security update
   issued: 01 Apr 2018
   affected_source_package: remctl
@@ -13566,8 +13449,7 @@ DSA-4159-1:
   - CVE-2018-0493
   severity: medium
   scope: remote
-DSA-4158-1:
-  name: DSA-4158-1
+- name: DSA-4158-1
   title: openssl1.0 -- security update
   issued: 29 Mar 2018
   affected_source_package: openssl1.0
@@ -13592,8 +13474,7 @@ DSA-4158-1:
   - CVE-2018-0739
   severity: medium
   scope: remote
-DSA-4157-1:
-  name: DSA-4157-1
+- name: DSA-4157-1
   title: openssl -- security update
   issued: 29 Mar 2018
   affected_source_package: openssl
@@ -13628,8 +13509,7 @@ DSA-4157-1:
   - CVE-2018-0739
   severity: medium
   scope: remote
-DSA-4156-1:
-  name: DSA-4156-1
+- name: DSA-4156-1
   title: drupal7 -- security update
   issued: 29 Mar 2018
   affected_source_package: drupal7
@@ -13649,8 +13529,7 @@ DSA-4156-1:
   scope: remote
   dbts_bugs:
   - 894259
-DSA-4155-1:
-  name: DSA-4155-1
+- name: DSA-4155-1
   title: thunderbird -- security update
   issued: 28 Mar 2018
   affected_source_package: thunderbird
@@ -14897,8 +14776,7 @@ DSA-4155-1:
   scope: remote
   dbts_bugs:
   - 893130
-DSA-4153-1:
-  name: DSA-4153-1
+- name: DSA-4153-1
   title: firefox-esr -- security update
   issued: 27 Mar 2018
   affected_source_package: firefox-esr
@@ -15392,8 +15270,7 @@ DSA-4153-1:
   - CVE-2018-5148
   severity: high
   scope: remote
-DSA-4152-1:
-  name: DSA-4152-1
+- name: DSA-4152-1
   title: mupdf -- security update
   issued: 27 Mar 2018
   affected_source_package: mupdf
@@ -15429,8 +15306,7 @@ DSA-4152-1:
   dbts_bugs:
   - 891245
   - 891245
-DSA-4151-1:
-  name: DSA-4151-1
+- name: DSA-4151-1
   title: librelp -- security update
   issued: 26 Mar 2018
   affected_source_package: librelp
@@ -15454,8 +15330,7 @@ DSA-4151-1:
   - CVE-2018-1000140
   severity: high
   scope: remote
-DSA-4150-1:
-  name: DSA-4150-1
+- name: DSA-4150-1
   title: icu -- security update
   issued: 23 Mar 2018
   affected_source_package: icu
@@ -15501,8 +15376,7 @@ DSA-4150-1:
   scope: local
   dbts_bugs:
   - 892766
-DSA-4148-1:
-  name: DSA-4148-1
+- name: DSA-4148-1
   title: kamailio -- security update
   issued: 22 Mar 2018
   affected_source_package: kamailio
@@ -15701,8 +15575,7 @@ DSA-4148-1:
   - CVE-2018-8828
   severity: high
   scope: remote
-DSA-4146-1:
-  name: DSA-4146-1
+- name: DSA-4146-1
   title: plexus-utils -- security update
   issued: 20 Mar 2018
   affected_source_package: plexus-utils
@@ -15724,8 +15597,7 @@ DSA-4146-1:
   - CVE-2017-1000487
   severity: high
   scope: remote
-DSA-4145-1:
-  name: DSA-4145-1
+- name: DSA-4145-1
   title: gitlab -- security update
   issued: 18 Mar 2018
   affected_source_package: gitlab
@@ -15775,8 +15647,7 @@ DSA-4145-1:
   - 888508
   - 888508
   - 888508
-DSA-4144-1:
-  name: DSA-4144-1
+- name: DSA-4144-1
   title: openjdk-8 -- security update
   issued: 17 Mar 2018
   affected_source_package: openjdk-8
@@ -16060,8 +15931,7 @@ DSA-4144-1:
   - CVE-2018-2678
   severity: medium
   scope: remote
-DSA-4143-1:
-  name: DSA-4143-1
+- name: DSA-4143-1
   title: firefox-esr -- security update
   issued: 17 Mar 2018
   affected_source_package: firefox-esr
@@ -16562,8 +16432,7 @@ DSA-4143-1:
   dbts_bugs:
   - 893130
   - 893132
-DSA-4142-1:
-  name: DSA-4142-1
+- name: DSA-4142-1
   title: uwsgi -- security update
   issued: 17 Mar 2018
   affected_source_package: uwsgi
@@ -16837,8 +16706,7 @@ DSA-4142-1:
   scope: remote
   dbts_bugs:
   - 891639
-DSA-4141-1:
-  name: DSA-4141-1
+- name: DSA-4141-1
   title: libvorbisidec -- security update
   issued: 16 Mar 2018
   affected_source_package: libvorbisidec
@@ -16863,8 +16731,7 @@ DSA-4141-1:
   scope: remote
   dbts_bugs:
   - 893132
-DSA-4140-1:
-  name: DSA-4140-1
+- name: DSA-4140-1
   title: libvorbis -- security update
   issued: 16 Mar 2018
   affected_source_package: libvorbis
@@ -16904,8 +16771,7 @@ DSA-4140-1:
   scope: remote
   dbts_bugs:
   - 893130
-DSA-4139-1:
-  name: DSA-4139-1
+- name: DSA-4139-1
   title: firefox-esr -- security-update
   issued: 15 Mar 2018
   affected_source_package: firefox-esr
@@ -17432,8 +17298,7 @@ DSA-4139-1:
   - CVE-2018-5145
   severity: high
   scope: remote
-DSA-4138-1:
-  name: DSA-4138-1
+- name: DSA-4138-1
   title: mbedtls -- security update
   issued: 15 Mar 2018
   affected_source_package: mbedtls
@@ -17486,8 +17351,7 @@ DSA-4138-1:
   dbts_bugs:
   - 890288
   - 890287
-DSA-4137-1:
-  name: DSA-4137-1
+- name: DSA-4137-1
   title: libvirt -- security update
   issued: 14 Mar 2018
   affected_source_package: libvirt
@@ -17540,8 +17404,7 @@ DSA-4137-1:
   - CVE-2018-1064
   severity: medium
   scope: remote
-DSA-4136-1:
-  name: DSA-4136-1
+- name: DSA-4136-1
   title: curl -- security update
   issued: 14 Mar 2018
   affected_source_package: curl
@@ -17610,8 +17473,7 @@ DSA-4136-1:
   - 893546
   - 893546
   - 893546
-DSA-4135-1:
-  name: DSA-4135-1
+- name: DSA-4135-1
   title: samba -- security update
   issued: 13 Mar 2018
   affected_source_package: samba
@@ -17731,8 +17593,7 @@ DSA-4135-1:
   - CVE-2018-1057
   severity: medium
   scope: remote
-DSA-4134-1:
-  name: DSA-4134-1
+- name: DSA-4134-1
   title: util-linux -- security update
   issued: 10 Mar 2018
   affected_source_package: util-linux
@@ -17823,8 +17684,7 @@ DSA-4134-1:
   scope: local
   dbts_bugs:
   - 892179
-DSA-4133-1:
-  name: DSA-4133-1
+- name: DSA-4133-1
   title: isc-dhcp -- security update
   issued: 07 Mar 2018
   affected_source_package: isc-dhcp
@@ -17874,8 +17734,7 @@ DSA-4133-1:
   - 887413
   - 891786
   - 891785
-DSA-4132-1:
-  name: DSA-4132-1
+- name: DSA-4132-1
   title: libvpx -- security update
   issued: 04 Mar 2018
   affected_source_package: libvpx
@@ -17907,8 +17766,7 @@ DSA-4132-1:
   - CVE-2017-13194
   severity: high
   scope: remote
-DSA-4131-1:
-  name: DSA-4131-1
+- name: DSA-4131-1
   title: xen -- security update
   issued: 04 Mar 2018
   affected_source_package: xen
@@ -17970,8 +17828,7 @@ DSA-4131-1:
   - CVE-2018-7542
   severity: medium
   scope: local
-DSA-4130-1:
-  name: DSA-4130-1
+- name: DSA-4130-1
   title: dovecot -- security update
   issued: 02 Mar 2018
   affected_source_package: dovecot
@@ -18075,8 +17932,7 @@ DSA-4130-1:
   - 891819
   - 891820
   - 888432
-DSA-4129-1:
-  name: DSA-4129-1
+- name: DSA-4129-1
   title: freexl -- security update
   issued: 02 Mar 2018
   affected_source_package: freexl
@@ -18119,8 +17975,7 @@ DSA-4129-1:
   - CVE-2018-7439
   severity: medium
   scope: remote
-DSA-4128-1:
-  name: DSA-4128-1
+- name: DSA-4128-1
   title: trafficserver -- security update
   issued: 02 Mar 2018
   affected_source_package: trafficserver
@@ -18152,8 +18007,7 @@ DSA-4128-1:
   - CVE-2017-7671
   severity: medium
   scope: remote
-DSA-4127-1:
-  name: DSA-4127-1
+- name: DSA-4127-1
   title: simplesamlphp -- security update
   issued: 02 Mar 2018
   affected_source_package: simplesamlphp
@@ -18218,8 +18072,7 @@ DSA-4127-1:
   dbts_bugs:
   - 889286
   - 889286
-DSA-4126-1:
-  name: DSA-4126-1
+- name: DSA-4126-1
   title: xmltooling -- security update
   issued: 27 Feb 2018
   affected_source_package: xmltooling
@@ -18254,8 +18107,7 @@ DSA-4126-1:
   - CVE-2018-0489
   severity: medium
   scope: remote
-DSA-4125-1:
-  name: DSA-4125-1
+- name: DSA-4125-1
   title: wavpack -- security update
   issued: 27 Feb 2018
   affected_source_package: wavpack
@@ -18297,8 +18149,7 @@ DSA-4125-1:
   - 889276
   - 889559
   - 889274
-DSA-4124-1:
-  name: DSA-4124-1
+- name: DSA-4124-1
   title: lucene-solr -- security update
   issued: 27 Feb 2018
   affected_source_package: lucene-solr
@@ -18363,8 +18214,7 @@ DSA-4124-1:
   scope: remote
   dbts_bugs:
   - 867712
-DSA-4123-1:
-  name: DSA-4123-1
+- name: DSA-4123-1
   title: drupal7 -- security update
   issued: 24 Feb 2018
   affected_source_package: drupal7
@@ -18413,8 +18263,7 @@ DSA-4123-1:
   - 891152
   - 891153
   - 891154
-DSA-4122-1:
-  name: DSA-4122-1
+- name: DSA-4122-1
   title: squid3 -- security update
   issued: 23 Feb 2018
   affected_source_package: squid3
@@ -18475,8 +18324,7 @@ DSA-4122-1:
   dbts_bugs:
   - 888719
   - 888720
-DSA-4120-1:
-  name: DSA-4120-1
+- name: DSA-4120-1
   title: linux -- security update
   issued: 22 Feb 2018
   affected_source_package: linux
@@ -18720,8 +18568,7 @@ DSA-4120-1:
   scope: local
   dbts_bugs:
   - 886852
-DSA-4118-1:
-  name: DSA-4118-1
+- name: DSA-4118-1
   title: tomcat-native -- security update
   issued: 17 Feb 2018
   affected_source_package: tomcat-native
@@ -18742,8 +18589,7 @@ DSA-4118-1:
   - CVE-2017-15698
   severity: medium
   scope: remote
-DSA-4116-1:
-  name: DSA-4116-1
+- name: DSA-4116-1
   title: plasma-workspace -- security update
   issued: 16 Feb 2018
   affected_source_package: plasma-workspace
@@ -18803,8 +18649,7 @@ DSA-4116-1:
   - CVE-2018-6791
   severity: high
   scope: local
-DSA-4115-1:
-  name: DSA-4115-1
+- name: DSA-4115-1
   title: quagga -- security update
   issued: 15 Feb 2018
   affected_source_package: quagga
@@ -18883,8 +18728,7 @@ DSA-4115-1:
   - 890563
   - 890563
   - 890563
-DSA-4114-1:
-  name: DSA-4114-1
+- name: DSA-4114-1
   title: jackson-databind -- security update
   issued: 15 Feb 2018
   affected_source_package: jackson-databind
@@ -18918,8 +18762,7 @@ DSA-4114-1:
   dbts_bugs:
   - 888318
   - 888316
-DSA-4113-1:
-  name: DSA-4113-1
+- name: DSA-4113-1
   title: libvorbis -- security update
   issued: 14 Feb 2018
   affected_source_package: libvorbis
@@ -18970,8 +18813,7 @@ DSA-4113-1:
   - 870341
   - 876779
   - 876778
-DSA-4112-1:
-  name: DSA-4112-1
+- name: DSA-4112-1
   title: xen -- security update
   issued: 14 Feb 2018
   affected_source_package: xen
@@ -19039,8 +18881,7 @@ DSA-4112-1:
   - CVE-2017-17566
   severity: medium
   scope: local
-DSA-4111-1:
-  name: DSA-4111-1
+- name: DSA-4111-1
   title: libreoffice -- security update
   issued: 11 Feb 2018
   affected_source_package: libreoffice
@@ -19908,8 +19749,7 @@ DSA-4111-1:
   - CVE-2018-6871
   severity: medium
   scope: remote
-DSA-4110-1:
-  name: DSA-4110-1
+- name: DSA-4110-1
   title: exim4 -- security update
   issued: 10 Feb 2018
   affected_source_package: exim4
@@ -19974,8 +19814,7 @@ DSA-4110-1:
   scope: remote
   dbts_bugs:
   - 890000
-DSA-4109-1:
-  name: DSA-4109-1
+- name: DSA-4109-1
   title: ruby-omniauth -- security update
   issued: '09 Feb 2018'
   affected_source_package: ruby-omniauth
@@ -19995,8 +19834,7 @@ DSA-4109-1:
   scope: remote
   dbts_bugs:
   - 888523
-DSA-4108-1:
-  name: DSA-4108-1
+- name: DSA-4108-1
   title: mailman -- security update
   issued: '09 Feb 2018'
   affected_source_package: mailman
@@ -20015,8 +19853,7 @@ DSA-4108-1:
   scope: remote
   dbts_bugs:
   - 888201
-DSA-4107-1:
-  name: DSA-4107-1
+- name: DSA-4107-1
   title: django-anymail -- security update
   issued: 07 Feb 2018
   affected_source_package: django-anymail
@@ -20041,8 +19878,7 @@ DSA-4107-1:
   scope: remote
   dbts_bugs:
   - 889450
-DSA-4106-1:
-  name: DSA-4106-1
+- name: DSA-4106-1
   title: libtasn1-6 -- security update
   issued: 07 Feb 2018
   affected_source_package: libtasn1-6
@@ -20087,8 +19923,7 @@ DSA-4106-1:
   scope: remote
   dbts_bugs:
   - 867398
-DSA-4105-1:
-  name: DSA-4105-1
+- name: DSA-4105-1
   title: mpv -- security update
   issued: 06 Feb 2018
   affected_source_package: mpv
@@ -20121,8 +19956,7 @@ DSA-4105-1:
   scope: remote
   dbts_bugs:
   - 888654
-DSA-4104-1:
-  name: DSA-4104-1
+- name: DSA-4104-1
   title: p7zip -- security update
   issued: 04 Feb 2018
   affected_source_package: p7zip
@@ -20147,8 +19981,7 @@ DSA-4104-1:
   scope: remote
   dbts_bugs:
   - 888297
-DSA-4103-1:
-  name: DSA-4103-1
+- name: DSA-4103-1
   title: chromium-browser -- security update
   issued: 31 Jan 2018
   affected_source_package: chromium-browser
@@ -20224,8 +20057,7 @@ DSA-4103-1:
   - CVE-2018-6054
   severity: not yet assigned
   scope: local
-DSA-4102-1:
-  name: DSA-4102-1
+- name: DSA-4102-1
   title: thunderbird -- security update
   issued: 30 Jan 2018
   affected_source_package: thunderbird
@@ -21501,8 +21333,7 @@ DSA-4102-1:
   scope: remote
   dbts_bugs:
   - 818180
-DSA-4101-1:
-  name: DSA-4101-1
+- name: DSA-4101-1
   title: wireshark -- security update
   issued: 28 Jan 2018
   affected_source_package: wireshark
@@ -21598,8 +21429,7 @@ DSA-4101-1:
   - CVE-2018-5336
   severity: medium
   scope: remote
-DSA-4100-1:
-  name: DSA-4100-1
+- name: DSA-4100-1
   title: tiff -- security update
   issued: 27 Jan 2018
   affected_source_package: tiff
@@ -21677,8 +21507,7 @@ DSA-4100-1:
   - 873880
   - 873879
   - 885985
-DSA-4099-1:
-  name: DSA-4099-1
+- name: DSA-4099-1
   title: ffmpeg -- security update
   issued: 27 Jan 2018
   affected_source_package: ffmpeg
@@ -21816,8 +21645,7 @@ DSA-4099-1:
   - CVE-2017-17081
   severity: medium
   scope: remote
-DSA-4098-1:
-  name: DSA-4098-1
+- name: DSA-4098-1
   title: curl -- security update
   issued: 26 Jan 2018
   affected_source_package: curl
@@ -21880,8 +21708,7 @@ DSA-4098-1:
   - CVE-2018-1000007
   severity: medium
   scope: remote
-DSA-4097-1:
-  name: DSA-4097-1
+- name: DSA-4097-1
   title: poppler -- security update
   issued: 25 Jan 2018
   affected_source_package: poppler
@@ -21968,8 +21795,7 @@ DSA-4097-1:
   - CVE-2017-1000456
   severity: medium
   scope: remote
-DSA-4096-1:
-  name: DSA-4096-1
+- name: DSA-4096-1
   title: firefox-esr -- security update
   issued: 25 Jan 2018
   affected_source_package: firefox-esr
@@ -22520,8 +22346,7 @@ DSA-4096-1:
   scope: remote
   dbts_bugs:
   - 818180
-DSA-4095-1:
-  name: DSA-4095-1
+- name: DSA-4095-1
   title: gcab -- security update
   issued: 24 Jan 2018
   affected_source_package: gcab
@@ -22561,8 +22386,7 @@ DSA-4095-1:
   scope: remote
   dbts_bugs:
   - 887776
-DSA-4094-1:
-  name: DSA-4094-1
+- name: DSA-4094-1
   title: smarty3 -- security update
   issued: 22 Jan 2018
   affected_source_package: smarty3
@@ -22581,8 +22405,7 @@ DSA-4094-1:
   scope: remote
   dbts_bugs:
   - 886460
-DSA-4093-1:
-  name: DSA-4093-1
+- name: DSA-4093-1
   title: openocd -- security update
   issued: 21 Jan 2018
   affected_source_package: openocd
@@ -22603,8 +22426,7 @@ DSA-4093-1:
   scope: remote
   dbts_bugs:
   - 887488
-DSA-4092-1:
-  name: DSA-4092-1
+- name: DSA-4092-1
   title: awstats -- security update
   issued: 19 Jan 2018
   affected_source_package: awstats
@@ -22623,8 +22445,7 @@ DSA-4092-1:
   scope: remote
   dbts_bugs:
   - 885835
-DSA-4090-1:
-  name: DSA-4090-1
+- name: DSA-4090-1
   title: wordpress -- security update
   issued: 17 Jan 2018
   affected_source_package: wordpress
@@ -22688,8 +22509,7 @@ DSA-4090-1:
   - 883314
   - 883314
   - 883314
-DSA-4089-1:
-  name: DSA-4089-1
+- name: DSA-4089-1
   title: bind9 -- security update
   issued: 16 Jan 2018
   affected_source_package: bind9
@@ -22803,8 +22623,7 @@ DSA-4089-1:
   cves:
   - CVE-2017-3145
   severity: not yet assigned
-DSA-4088-1:
-  name: DSA-4088-1
+- name: DSA-4088-1
   title: gdk-pixbuf -- security update
   issued: 15 Jan 2018
   affected_source_package: gdk-pixbuf
@@ -22841,8 +22660,7 @@ DSA-4088-1:
   - CVE-2017-1000422
   severity: medium
   scope: remote
-DSA-4087-1:
-  name: DSA-4087-1
+- name: DSA-4087-1
   title: transmission -- security update
   issued: 14 Jan 2018
   affected_source_package: transmission
@@ -22888,8 +22706,7 @@ DSA-4087-1:
   scope: remote
   dbts_bugs:
   - 886990
-DSA-4086-1:
-  name: DSA-4086-1
+- name: DSA-4086-1
   title: libxml2 -- security update
   issued: 13 Jan 2018
   affected_source_package: libxml2
@@ -22954,8 +22771,7 @@ DSA-4086-1:
   scope: local
   dbts_bugs:
   - 883790
-DSA-4084-1:
-  name: DSA-4084-1
+- name: DSA-4084-1
   title: gifsicle -- security update
   issued: 12 Jan 2018
   affected_source_package: gifsicle
@@ -22972,8 +22788,7 @@ DSA-4084-1:
   - CVE-2017-1000421
   severity: high
   scope: remote
-DSA-4083-1:
-  name: DSA-4083-1
+- name: DSA-4083-1
   title: poco -- security update
   issued: 11 Jan 2018
   affected_source_package: poco
@@ -23053,8 +22868,7 @@ DSA-4083-1:
   - CVE-2017-1000472
   severity: medium
   scope: remote
-DSA-4080-1:
-  name: DSA-4080-1
+- name: DSA-4080-1
   title: php7.0 -- security update
   issued: '08 Jan 2018'
   affected_source_package: php7.0
@@ -23318,8 +23132,7 @@ DSA-4080-1:
   scope: remote
   dbts_bugs:
   - 887485
-DSA-4079-1:
-  name: DSA-4079-1
+- name: DSA-4079-1
   title: poppler -- security update
   issued: 07 Jan 2018
   affected_source_package: poppler
@@ -23475,8 +23288,7 @@ DSA-4079-1:
   - 877954
   - 877952
   - 879066
-DSA-4078-1:
-  name: DSA-4078-1
+- name: DSA-4078-1
   title: linux -- security update
   issued: 04 Jan 2018
   affected_source_package: linux
@@ -23766,8 +23578,7 @@ DSA-4078-1:
   scope: local
   dbts_bugs:
   - 886852
-DSA-4077-1:
-  name: DSA-4077-1
+- name: DSA-4077-1
   title: gimp -- security update
   issued: 30 Dec 2017
   affected_source_package: gimp
@@ -23837,8 +23648,7 @@ DSA-4077-1:
   - 884927
   - 885347
   - 884837
-DSA-4076-1:
-  name: DSA-4076-1
+- name: DSA-4076-1
   title: asterisk -- security update
   issued: 30 Dec 2017
   affected_source_package: asterisk
@@ -23925,8 +23735,7 @@ DSA-4076-1:
   scope: remote
   dbts_bugs:
   - 883342
-DSA-4075-1:
-  name: DSA-4075-1
+- name: DSA-4075-1
   title: thunderbird -- security update
   issued: 29 Dec 2017
   affected_source_package: thunderbird
@@ -25174,8 +24983,7 @@ DSA-4075-1:
   - CVE-2017-7848
   severity: high
   scope: remote
-DSA-4074-1:
-  name: DSA-4074-1
+- name: DSA-4074-1
   title: imagemagick -- security update
   issued: 28 Dec 2017
   affected_source_package: imagemagick
@@ -25372,8 +25180,7 @@ DSA-4074-1:
   - 885339
   - 885340
   - 885125
-DSA-4073-1:
-  name: DSA-4073-1
+- name: DSA-4073-1
   title: linux -- security update
   issued: 23 Dec 2017
   affected_source_package: linux
@@ -25838,8 +25645,7 @@ DSA-4073-1:
   - CVE-2017-1000410
   severity: high
   scope: remote
-DSA-4072-1:
-  name: DSA-4072-1
+- name: DSA-4072-1
   title: bouncycastle -- security update
   issued: 21 Dec 2017
   affected_source_package: bouncycastle
@@ -25895,8 +25701,7 @@ DSA-4072-1:
   scope: remote
   dbts_bugs:
   - 884241
-DSA-4071-1:
-  name: DSA-4071-1
+- name: DSA-4071-1
   title: sensible-utils -- security update
   issued: 21 Dec 2017
   affected_source_package: sensible-utils
@@ -25917,8 +25722,7 @@ DSA-4071-1:
   scope: remote
   dbts_bugs:
   - 881767
-DSA-4070-1:
-  name: DSA-4070-1
+- name: DSA-4070-1
   title: enigmail -- security update
   issued: 21 Dec 2017
   affected_source_package: enigmail
@@ -25965,8 +25769,7 @@ DSA-4070-1:
   - CVE-2017-17848
   severity: high
   scope: remote
-DSA-4069-1:
-  name: DSA-4069-1
+- name: DSA-4069-1
   title: otrs2 -- security update
   issued: 20 Dec 2017
   affected_source_package: otrs2
@@ -25991,8 +25794,7 @@ DSA-4069-1:
   scope: remote
   dbts_bugs:
   - 884801
-DSA-4068-1:
-  name: DSA-4068-1
+- name: DSA-4068-1
   title: rsync -- security update
   issued: 17 Dec 2017
   affected_source_package: rsync
@@ -26028,8 +25830,7 @@ DSA-4068-1:
   - 880954
   - 883667
   - 883665
-DSA-4067-1:
-  name: DSA-4067-1
+- name: DSA-4067-1
   title: openafs -- security update
   issued: 17 Dec 2017
   affected_source_package: openafs
@@ -26115,8 +25916,7 @@ DSA-4067-1:
   scope: remote
   dbts_bugs:
   - 883602
-DSA-4066-1:
-  name: DSA-4066-1
+- name: DSA-4066-1
   title: otrs2 -- security update
   issued: 17 Dec 2017
   affected_source_package: otrs2
@@ -26147,8 +25947,7 @@ DSA-4066-1:
   scope: remote
   dbts_bugs:
   - 883774
-DSA-4065-1:
-  name: DSA-4065-1
+- name: DSA-4065-1
   title: openssl1.0 -- security update
   issued: 17 Dec 2017
   affected_source_package: openssl1.0
@@ -26198,8 +25997,7 @@ DSA-4065-1:
   - CVE-2017-3738
   severity: medium
   scope: remote
-DSA-4064-1:
-  name: DSA-4064-1
+- name: DSA-4064-1
   title: chromium-browser -- security update
   issued: 12 Dec 2017
   affected_source_package: chromium-browser
@@ -26317,8 +26115,7 @@ DSA-4064-1:
   - CVE-2017-15427
   severity: not yet assigned
   scope: local
-DSA-4063-1:
-  name: DSA-4063-1
+- name: DSA-4063-1
   title: pdns-recursor -- security update
   issued: 11 Dec 2017
   affected_source_package: pdns-recursor
@@ -26337,8 +26134,7 @@ DSA-4063-1:
   - CVE-2017-15120
   severity: not yet assigned
   scope: local
-DSA-4062-1:
-  name: DSA-4062-1
+- name: DSA-4062-1
   title: firefox-esr -- security update
   issued: 10 Dec 2017
   affected_source_package: firefox-esr
@@ -26833,8 +26629,7 @@ DSA-4062-1:
   - CVE-2017-7843
   severity: medium
   scope: remote
-DSA-4061-1:
-  name: DSA-4061-1
+- name: DSA-4061-1
   title: thunderbird -- security update
   issued: 10 Dec 2017
   affected_source_package: thunderbird
@@ -28064,8 +27859,7 @@ DSA-4061-1:
   - CVE-2017-7830
   severity: high
   scope: remote
-DSA-4060-1:
-  name: DSA-4060-1
+- name: DSA-4060-1
   title: wireshark -- security update
   issued: '09 Dec 2017'
   affected_source_package: wireshark
@@ -28167,8 +27961,7 @@ DSA-4060-1:
   scope: remote
   dbts_bugs:
   - 870172
-DSA-4059-1:
-  name: DSA-4059-1
+- name: DSA-4059-1
   title: libxcursor -- security update
   issued: '08 Dec 2017'
   affected_source_package: libxcursor
@@ -28199,8 +27992,7 @@ DSA-4059-1:
   scope: remote
   dbts_bugs:
   - 883792
-DSA-4058-1:
-  name: DSA-4058-1
+- name: DSA-4058-1
   title: optipng -- security update
   issued: '08 Dec 2017'
   affected_source_package: optipng
@@ -28225,8 +28017,7 @@ DSA-4058-1:
   dbts_bugs:
   - 878839
   - 882032
-DSA-4057-1:
-  name: DSA-4057-1
+- name: DSA-4057-1
   title: erlang -- security update
   issued: '08 Dec 2017'
   affected_source_package: erlang
@@ -28474,8 +28265,7 @@ DSA-4057-1:
   - CVE-2017-1000385
   severity: medium
   scope: remote
-DSA-4056-1:
-  name: DSA-4056-1
+- name: DSA-4056-1
   title: nova -- security update
   issued: 07 Dec 2017
   affected_source_package: nova
@@ -28588,8 +28378,7 @@ DSA-4056-1:
   scope: remote
   dbts_bugs:
   - 882009
-DSA-4055-1:
-  name: DSA-4055-1
+- name: DSA-4055-1
   title: heimdal -- security update
   issued: 07 Dec 2017
   affected_source_package: heimdal
@@ -28726,8 +28515,7 @@ DSA-4055-1:
   scope: remote
   dbts_bugs:
   - 878144
-DSA-4054-1:
-  name: DSA-4054-1
+- name: DSA-4054-1
   title: tor -- security update
   issued: 03 Dec 2017
   affected_source_package: tor
@@ -28781,8 +28569,7 @@ DSA-4054-1:
   - CVE-2017-8823
   severity: medium
   scope: remote
-DSA-4053-1:
-  name: DSA-4053-1
+- name: DSA-4053-1
   title: exim4 -- security update
   issued: 30 Nov 2017
   affected_source_package: exim4
@@ -28854,8 +28641,7 @@ DSA-4053-1:
   dbts_bugs:
   - 882648
   - 882671
-DSA-4052-1:
-  name: DSA-4052-1
+- name: DSA-4052-1
   title: bzr -- security update
   issued: 29 Nov 2017
   affected_source_package: bzr
@@ -28896,8 +28682,7 @@ DSA-4052-1:
   scope: remote
   dbts_bugs:
   - 874429
-DSA-4051-1:
-  name: DSA-4051-1
+- name: DSA-4051-1
   title: curl -- security update
   issued: 29 Nov 2017
   affected_source_package: curl
@@ -28961,8 +28746,7 @@ DSA-4051-1:
   - CVE-2017-8817
   severity: high
   scope: remote
-DSA-4050-1:
-  name: DSA-4050-1
+- name: DSA-4050-1
   title: xen -- security update
   issued: 28 Nov 2017
   affected_source_package: xen
@@ -29105,8 +28889,7 @@ DSA-4050-1:
   - CVE-2017-17046
   severity: high
   scope: remote
-DSA-4049-1:
-  name: DSA-4049-1
+- name: DSA-4049-1
   title: ffmpeg -- security update
   issued: 27 Nov 2017
   affected_source_package: ffmpeg
@@ -29253,8 +29036,7 @@ DSA-4049-1:
   - CVE-2017-16840
   severity: high
   scope: remote
-DSA-4047-1:
-  name: DSA-4047-1
+- name: DSA-4047-1
   title: otrs2 -- security update
   issued: 23 Nov 2017
   affected_source_package: otrs2
@@ -29280,8 +29062,7 @@ DSA-4047-1:
   scope: remote
   dbts_bugs:
   - 882370
-DSA-4045-1:
-  name: DSA-4045-1
+- name: DSA-4045-1
   title: vlc -- security update
   issued: 21 Nov 2017
   affected_source_package: vlc
@@ -29424,8 +29205,7 @@ DSA-4045-1:
   - CVE-2017-10699
   severity: high
   scope: remote
-DSA-4044-1:
-  name: DSA-4044-1
+- name: DSA-4044-1
   title: swauth -- security update
   issued: 21 Nov 2017
   affected_source_package: swauth
@@ -29453,8 +29233,7 @@ DSA-4044-1:
   scope: remote
   dbts_bugs:
   - 882314
-DSA-4043-1:
-  name: DSA-4043-1
+- name: DSA-4043-1
   title: samba -- security update
   issued: 21 Nov 2017
   affected_source_package: samba
@@ -29570,8 +29349,7 @@ DSA-4043-1:
   - CVE-2017-15275
   severity: high
   scope: remote
-DSA-4042-1:
-  name: DSA-4042-1
+- name: DSA-4042-1
   title: libxml-libxml-perl -- security update
   issued: 19 Nov 2017
   affected_source_package: libxml-libxml-perl
@@ -29590,8 +29368,7 @@ DSA-4042-1:
   scope: remote
   dbts_bugs:
   - 866676
-DSA-4041-1:
-  name: DSA-4041-1
+- name: DSA-4041-1
   title: procmail -- security update
   issued: 19 Nov 2017
   affected_source_package: procmail
@@ -29612,8 +29389,7 @@ DSA-4041-1:
   scope: remote
   dbts_bugs:
   - 876511
-DSA-4039-1:
-  name: DSA-4039-1
+- name: DSA-4039-1
   title: opensaml2 -- security update
   issued: 16 Nov 2017
   affected_source_package: opensaml2
@@ -29655,8 +29431,7 @@ DSA-4039-1:
   scope: remote
   dbts_bugs:
   - 881856
-DSA-4038-1:
-  name: DSA-4038-1
+- name: DSA-4038-1
   title: shibboleth-sp2 -- security update
   issued: 16 Nov 2017
   affected_source_package: shibboleth-sp2
@@ -29708,8 +29483,7 @@ DSA-4038-1:
   scope: remote
   dbts_bugs:
   - 881857
-DSA-4037-1:
-  name: DSA-4037-1
+- name: DSA-4037-1
   title: jackson-databind -- security update
   issued: 16 Nov 2017
   affected_source_package: jackson-databind
@@ -29734,8 +29508,7 @@ DSA-4037-1:
   - CVE-2017-15095
   severity: high
   scope: remote
-DSA-4036-1:
-  name: DSA-4036-1
+- name: DSA-4036-1
   title: mediawiki -- security update
   issued: 15 Nov 2017
   affected_source_package: mediawiki
@@ -29784,8 +29557,7 @@ DSA-4036-1:
   - CVE-2017-8815
   severity: high
   scope: remote
-DSA-4035-1:
-  name: DSA-4035-1
+- name: DSA-4035-1
   title: firefox-esr -- security update
   issued: 15 Nov 2017
   affected_source_package: firefox-esr
@@ -30290,8 +30062,7 @@ DSA-4035-1:
   - CVE-2017-7830
   severity: high
   scope: remote
-DSA-4034-1:
-  name: DSA-4034-1
+- name: DSA-4034-1
   title: varnish -- security update
   issued: 15 Nov 2017
   affected_source_package: varnish
@@ -30327,8 +30098,7 @@ DSA-4034-1:
   scope: remote
   dbts_bugs:
   - 881808
-DSA-4033-1:
-  name: DSA-4033-1
+- name: DSA-4033-1
   title: konversation -- security update
   issued: 13 Nov 2017
   affected_source_package: konversation
@@ -30352,8 +30122,7 @@ DSA-4033-1:
   scope: remote
   dbts_bugs:
   - 881586
-DSA-4032-1:
-  name: DSA-4032-1
+- name: DSA-4032-1
   title: imagemagick -- security update
   issued: 12 Nov 2017
   affected_source_package: imagemagick
@@ -30577,8 +30346,7 @@ DSA-4032-1:
   - 876488
   - 878562
   - 878578
-DSA-4031-1:
-  name: DSA-4031-1
+- name: DSA-4031-1
   title: ruby2.3 -- security update
   issued: 11 Nov 2017
   affected_source_package: ruby2.3
@@ -30643,8 +30411,7 @@ DSA-4031-1:
   - 879231
   - 875931
   - 875928
-DSA-4006-2:
-  name: DSA-4006-2
+- name: DSA-4006-2
   title: mupdf -- security update
   issued: 10 Nov 2017
   affected_source_package: mupdf
@@ -30673,8 +30440,7 @@ DSA-4006-2:
   scope: remote
   dbts_bugs:
   - 879055
-DSA-4030-1:
-  name: DSA-4030-1
+- name: DSA-4030-1
   title: roundcube -- security update
   issued: '09 Nov 2017'
   affected_source_package: roundcube
@@ -30720,8 +30486,7 @@ DSA-4030-1:
   - CVE-2017-16651
   severity: medium
   scope: local
-DSA-4029-1:
-  name: DSA-4029-1
+- name: DSA-4029-1
   title: postgresql-common -- security update
   issued: '09 Nov 2017'
   affected_source_package: postgresql-common
@@ -30750,8 +30515,7 @@ DSA-4029-1:
   - CVE-2017-8806
   severity: low
   scope: local
-DSA-4028-1:
-  name: DSA-4028-1
+- name: DSA-4028-1
   title: postgresql-9.6 -- security update
   issued: '09 Nov 2017'
   affected_source_package: postgresql-9.6
@@ -30851,8 +30615,7 @@ DSA-4028-1:
   - CVE-2017-15099
   severity: medium
   scope: remote
-DSA-4026-1:
-  name: DSA-4026-1
+- name: DSA-4026-1
   title: bchunk -- security update
   issued: '09 Nov 2017'
   affected_source_package: bchunk
@@ -30882,8 +30645,7 @@ DSA-4026-1:
   - 880116
   - 880116
   - 880116
-DSA-4025-1:
-  name: DSA-4025-1
+- name: DSA-4025-1
   title: libpam4j -- security update
   issued: '08 Nov 2017'
   affected_source_package: libpam4j
@@ -30908,8 +30670,7 @@ DSA-4025-1:
   scope: remote
   dbts_bugs:
   - 879001
-DSA-4024-1:
-  name: DSA-4024-1
+- name: DSA-4024-1
   title: chromium-browser -- security update
   issued: '08 Nov 2017'
   affected_source_package: chromium-browser
@@ -30960,8 +30721,7 @@ DSA-4024-1:
   - CVE-2017-15399
   severity: not yet assigned
   scope: local
-DSA-4023-1:
-  name: DSA-4023-1
+- name: DSA-4023-1
   title: slurm-llnl -- security update
   issued: 07 Nov 2017
   affected_source_package: slurm-llnl
@@ -31146,8 +30906,7 @@ DSA-4023-1:
   scope: local
   dbts_bugs:
   - 880530
-DSA-4021-1:
-  name: DSA-4021-1
+- name: DSA-4021-1
   title: otrs2 -- security update
   issued: 07 Nov 2017
   affected_source_package: otrs2
@@ -31172,8 +30931,7 @@ DSA-4021-1:
   scope: remote
   dbts_bugs:
   - 876462
-DSA-4020-1:
-  name: DSA-4020-1
+- name: DSA-4020-1
   title: chromium-browser -- security update
   issued: 05 Nov 2017
   affected_source_package: chromium-browser
@@ -31313,8 +31071,7 @@ DSA-4020-1:
   - CVE-2017-15406
   severity: medium
   scope: remote
-DSA-4019-1:
-  name: DSA-4019-1
+- name: DSA-4019-1
   title: imagemagick -- security update
   issued: 05 Nov 2017
   affected_source_package: imagemagick
@@ -31603,8 +31360,7 @@ DSA-4019-1:
   - 870012
   - 869728
   - 869830
-DSA-4018-1:
-  name: DSA-4018-1
+- name: DSA-4018-1
   title: openssl -- security update
   issued: 04 Nov 2017
   affected_source_package: openssl
@@ -31638,8 +31394,7 @@ DSA-4018-1:
   - CVE-2017-3735
   severity: medium
   scope: remote
-DSA-4017-1:
-  name: DSA-4017-1
+- name: DSA-4017-1
   title: openssl1.0 -- security update
   issued: 03 Nov 2017
   affected_source_package: openssl1.0
@@ -31676,8 +31431,7 @@ DSA-4017-1:
   - CVE-2017-3736
   severity: medium
   scope: remote
-DSA-4016-1:
-  name: DSA-4016-1
+- name: DSA-4016-1
   title: irssi -- security update
   issued: 03 Nov 2017
   affected_source_package: irssi
@@ -31722,8 +31476,7 @@ DSA-4016-1:
   - 879521
   - 879521
   - 879521
-DSA-4015-1:
-  name: DSA-4015-1
+- name: DSA-4015-1
   title: openjdk-8 -- security update
   issued: 02 Nov 2017
   affected_source_package: openjdk-8
@@ -31977,8 +31730,7 @@ DSA-4015-1:
   - CVE-2017-10388
   severity: medium
   scope: remote
-DSA-4014-1:
-  name: DSA-4014-1
+- name: DSA-4014-1
   title: thunderbird -- security update
   issued: 01 Nov 2017
   affected_source_package: thunderbird
@@ -33244,8 +32996,7 @@ DSA-4014-1:
   - CVE-2017-7824
   severity: high
   scope: remote
-DSA-4013-1:
-  name: DSA-4013-1
+- name: DSA-4013-1
   title: openjpeg2 -- security update
   issued: 31 Oct 2017
   affected_source_package: openjpeg2
@@ -33354,8 +33105,7 @@ DSA-4013-1:
   - 874117
   - 874115
   - 874431
-DSA-4011-1:
-  name: DSA-4011-1
+- name: DSA-4011-1
   title: quagga -- security update
   issued: 30 Oct 2017
   affected_source_package: quagga
@@ -33421,8 +33171,7 @@ DSA-4011-1:
   scope: remote
   dbts_bugs:
   - 879474
-DSA-4010-1:
-  name: DSA-4010-1
+- name: DSA-4010-1
   title: git-annex -- security update
   issued: 30 Oct 2017
   affected_source_package: git-annex
@@ -33443,8 +33192,7 @@ DSA-4010-1:
   scope: remote
   dbts_bugs:
   - 873088
-DSA-4009-1:
-  name: DSA-4009-1
+- name: DSA-4009-1
   title: shadowsocks-libev -- security update
   issued: 29 Oct 2017
   affected_source_package: shadowsocks-libev
@@ -33473,8 +33221,7 @@ DSA-4009-1:
   - CVE-2017-15924
   severity: high
   scope: local
-DSA-4008-1:
-  name: DSA-4008-1
+- name: DSA-4008-1
   title: wget -- security update
   issued: 28 Oct 2017
   affected_source_package: wget
@@ -33510,8 +33257,7 @@ DSA-4008-1:
   dbts_bugs:
   - 879957
   - 879957
-DSA-4007-1:
-  name: DSA-4007-1
+- name: DSA-4007-1
   title: curl -- security update
   issued: 27 Oct 2017
   affected_source_package: curl
@@ -33573,8 +33319,7 @@ DSA-4007-1:
   - CVE-2017-1000257
   severity: medium
   scope: remote
-DSA-4006-1:
-  name: DSA-4006-1
+- name: DSA-4006-1
   title: mupdf -- security update
   issued: 24 Oct 2017
   affected_source_package: mupdf
@@ -33626,8 +33371,7 @@ DSA-4006-1:
   - 877379
   - 877379
   - 879055
-DSA-4005-1:
-  name: DSA-4005-1
+- name: DSA-4005-1
   title: openjfx -- security update
   issued: 20 Oct 2017
   affected_source_package: openjfx
@@ -33693,8 +33437,7 @@ DSA-4005-1:
   dbts_bugs:
   - 870860
   - 870860
-DSA-4004-1:
-  name: DSA-4004-1
+- name: DSA-4004-1
   title: jackson-databind -- security update
   issued: 20 Oct 2017
   affected_source_package: jackson-databind
@@ -33719,8 +33462,7 @@ DSA-4004-1:
   scope: remote
   dbts_bugs:
   - 870848
-DSA-4003-1:
-  name: DSA-4003-1
+- name: DSA-4003-1
   title: libvirt -- security update
   issued: 19 Oct 2017
   affected_source_package: libvirt
@@ -33775,8 +33517,7 @@ DSA-4003-1:
   scope: remote
   dbts_bugs:
   - 878799
-DSA-4001-1:
-  name: DSA-4001-1
+- name: DSA-4001-1
   title: yadifa -- security update
   issued: 19 Oct 2017
   affected_source_package: yadifa
@@ -33801,8 +33542,7 @@ DSA-4001-1:
   scope: remote
   dbts_bugs:
   - 876315
-DSA-4000-1:
-  name: DSA-4000-1
+- name: DSA-4000-1
   title: xorg-server -- security update
   issued: 17 Oct 2017
   affected_source_package: xorg-server
@@ -33928,8 +33668,7 @@ DSA-4000-1:
   - CVE-2017-13723
   severity: high
   scope: remote
-DSA-3999-1:
-  name: DSA-3999-1
+- name: DSA-3999-1
   title: wpa -- security update
   issued: 16 Oct 2017
   affected_source_package: wpa
@@ -33999,8 +33738,7 @@ DSA-3999-1:
   - CVE-2017-13088
   severity: medium
   scope: remote
-DSA-3998-1:
-  name: DSA-3998-1
+- name: DSA-3998-1
   title: nss -- security update
   issued: 11 Oct 2017
   affected_source_package: nss
@@ -34037,8 +33775,7 @@ DSA-3998-1:
   - CVE-2017-7805
   severity: medium
   scope: remote
-DSA-3997-1:
-  name: DSA-3997-1
+- name: DSA-3997-1
   title: wordpress -- security update
   issued: 10 Oct 2017
   affected_source_package: wordpress
@@ -34120,8 +33857,7 @@ DSA-3997-1:
   - 876274
   - 876274
   - 877629
-DSA-3996-1:
-  name: DSA-3996-1
+- name: DSA-3996-1
   title: ffmpeg -- security update
   issued: 10 Oct 2017
   affected_source_package: ffmpeg
@@ -34343,8 +34079,7 @@ DSA-3996-1:
   - CVE-2017-14767
   severity: high
   scope: remote
-DSA-3995-1:
-  name: DSA-3995-1
+- name: DSA-3995-1
   title: libxfont -- security update
   issued: 10 Oct 2017
   affected_source_package: libxfont
@@ -34375,8 +34110,7 @@ DSA-3995-1:
   - CVE-2017-13722
   severity: low
   scope: local
-DSA-3994-1:
-  name: DSA-3994-1
+- name: DSA-3994-1
   title: nautilus -- security update
   issued: 07 Oct 2017
   affected_source_package: nautilus
@@ -34421,8 +34155,7 @@ DSA-3994-1:
   scope: remote
   dbts_bugs:
   - 860268
-DSA-3993-1:
-  name: DSA-3993-1
+- name: DSA-3993-1
   title: tor -- security update
   issued: 06 Oct 2017
   affected_source_package: tor
@@ -34455,8 +34188,7 @@ DSA-3993-1:
   scope: remote
   dbts_bugs:
   - 876221
-DSA-3992-1:
-  name: DSA-3992-1
+- name: DSA-3992-1
   title: curl -- security update
   issued: 06 Oct 2017
   affected_source_package: curl
@@ -34553,8 +34285,7 @@ DSA-3992-1:
   - 871555
   - 871554
   - 877671
-DSA-3991-1:
-  name: DSA-3991-1
+- name: DSA-3991-1
   title: qemu -- security update
   issued: 03 Oct 2017
   affected_source_package: qemu
@@ -34673,8 +34404,7 @@ DSA-3991-1:
   - 873851
   - 873875
   - 874606
-DSA-3990-1:
-  name: DSA-3990-1
+- name: DSA-3990-1
   title: asterisk -- security update
   issued: 03 Oct 2017
   affected_source_package: asterisk
@@ -34760,8 +34490,7 @@ DSA-3990-1:
   scope: remote
   dbts_bugs:
   - 876328
-DSA-3989-1:
-  name: DSA-3989-1
+- name: DSA-3989-1
   title: dnsmasq -- security update
   issued: 02 Oct 2017
   affected_source_package: dnsmasq
@@ -34801,8 +34530,7 @@ DSA-3989-1:
   - CVE-2017-14494
   severity: high
   scope: remote
-DSA-3988-1:
-  name: DSA-3988-1
+- name: DSA-3988-1
   title: libidn2-0 -- security update
   issued: 30 Sep 2017
   affected_source_package: libidn2-0
@@ -34837,8 +34565,7 @@ DSA-3988-1:
   scope: remote
   dbts_bugs:
   - 873902
-DSA-3987-1:
-  name: DSA-3987-1
+- name: DSA-3987-1
   title: firefox-esr -- security update
   issued: 29 Sep 2017
   affected_source_package: firefox-esr
@@ -35379,8 +35106,7 @@ DSA-3987-1:
   - CVE-2017-7824
   severity: high
   scope: remote
-DSA-3986-1:
-  name: DSA-3986-1
+- name: DSA-3986-1
   title: ghostscript -- security update
   issued: 29 Sep 2017
   affected_source_package: ghostscript
@@ -35468,8 +35194,7 @@ DSA-3986-1:
   - 869910
   - 869907
   - 869977
-DSA-3985-1:
-  name: DSA-3985-1
+- name: DSA-3985-1
   title: chromium-browser -- security update
   issued: 28 Sep 2017
   affected_source_package: chromium-browser
@@ -35573,8 +35298,7 @@ DSA-3985-1:
   - CVE-2017-5122
   severity: medium
   scope: remote
-DSA-3984-1:
-  name: DSA-3984-1
+- name: DSA-3984-1
   title: git -- security update
   issued: 26 Sep 2017
   affected_source_package: git
@@ -35670,8 +35394,7 @@ DSA-3984-1:
   scope: remote
   dbts_bugs:
   - 876854
-DSA-3983-1:
-  name: DSA-3983-1
+- name: DSA-3983-1
   title: samba -- security update
   issued: 22 Sep 2017
   affected_source_package: samba
@@ -35796,8 +35519,7 @@ DSA-3983-1:
   - CVE-2017-12163
   severity: not yet assigned
   scope: local
-DSA-3982-1:
-  name: DSA-3982-1
+- name: DSA-3982-1
   title: perl -- security update
   issued: 21 Sep 2017
   affected_source_package: perl
@@ -35855,8 +35577,7 @@ DSA-3982-1:
   dbts_bugs:
   - 875596
   - 875597
-DSA-3981-1:
-  name: DSA-3981-1
+- name: DSA-3981-1
   title: linux -- security update
   issued: 20 Sep 2017
   affected_source_package: linux
@@ -36361,8 +36082,7 @@ DSA-3981-1:
   scope: remote
   dbts_bugs:
   - 875881
-DSA-3980-1:
-  name: DSA-3980-1
+- name: DSA-3980-1
   title: apache2 -- security update
   issued: 20 Sep 2017
   affected_source_package: apache2
@@ -36432,8 +36152,7 @@ DSA-3980-1:
   scope: remote
   dbts_bugs:
   - 876109
-DSA-3979-1:
-  name: DSA-3979-1
+- name: DSA-3979-1
   title: pyjwt -- security update
   issued: 19 Sep 2017
   affected_source_package: pyjwt
@@ -36461,8 +36180,7 @@ DSA-3979-1:
   scope: remote
   dbts_bugs:
   - 873244
-DSA-3978-1:
-  name: DSA-3978-1
+- name: DSA-3978-1
   title: gdk-pixbuf -- security update
   issued: 18 Sep 2017
   affected_source_package: gdk-pixbuf
@@ -36503,8 +36221,7 @@ DSA-3978-1:
   scope: remote
   dbts_bugs:
   - 874552
-DSA-3977-1:
-  name: DSA-3977-1
+- name: DSA-3977-1
   title: newsbeuter -- security update
   issued: 18 Sep 2017
   affected_source_package: newsbeuter
@@ -36526,8 +36243,7 @@ DSA-3977-1:
   scope: remote
   dbts_bugs:
   - 876004
-DSA-3976-1:
-  name: DSA-3976-1
+- name: DSA-3976-1
   title: freexl -- security update
   issued: 17 Sep 2017
   affected_source_package: freexl
@@ -36565,8 +36281,7 @@ DSA-3976-1:
   dbts_bugs:
   - 875690
   - 875691
-DSA-3975-1:
-  name: DSA-3975-1
+- name: DSA-3975-1
   title: emacs25 -- security update
   issued: 15 Sep 2017
   affected_source_package: emacs25
@@ -36629,8 +36344,7 @@ DSA-3975-1:
   scope: remote
   dbts_bugs:
   - 875447
-DSA-3974-1:
-  name: DSA-3974-1
+- name: DSA-3974-1
   title: tomcat8 -- security update
   issued: 15 Sep 2017
   affected_source_package: tomcat8
@@ -36696,8 +36410,7 @@ DSA-3974-1:
   scope: remote
   dbts_bugs:
   - 802312
-DSA-3973-1:
-  name: DSA-3973-1
+- name: DSA-3973-1
   title: wordpress-shibboleth -- security update
   issued: 14 Sep 2017
   affected_source_package: wordpress-shibboleth
@@ -36716,8 +36429,7 @@ DSA-3973-1:
   scope: remote
   dbts_bugs:
   - 874416
-DSA-3972-1:
-  name: DSA-3972-1
+- name: DSA-3972-1
   title: bluez -- security update
   issued: 13 Sep 2017
   affected_source_package: bluez
@@ -36788,8 +36500,7 @@ DSA-3972-1:
   scope: remote
   dbts_bugs:
   - 875633
-DSA-3971-1:
-  name: DSA-3971-1
+- name: DSA-3971-1
   title: tcpdump -- security update
   issued: 13 Sep 2017
   affected_source_package: tcpdump
@@ -37157,8 +36868,7 @@ DSA-3971-1:
   - 873804
   - 873805
   - 873806
-DSA-3970-1:
-  name: DSA-3970-1
+- name: DSA-3970-1
   title: emacs24 -- security update
   issued: 12 Sep 2017
   affected_source_package: emacs24
@@ -37221,8 +36931,7 @@ DSA-3970-1:
   scope: remote
   dbts_bugs:
   - 875447
-DSA-3969-1:
-  name: DSA-3969-1
+- name: DSA-3969-1
   title: xen -- security update
   issued: 12 Sep 2017
   affected_source_package: xen
@@ -37338,8 +37047,7 @@ DSA-3969-1:
   - CVE-2017-15596
   severity: high
   scope: remote
-DSA-3967-1:
-  name: DSA-3967-1
+- name: DSA-3967-1
   title: mbedtls -- security update
   issued: '08 Sep 2017'
   affected_source_package: mbedtls
@@ -37380,8 +37088,7 @@ DSA-3967-1:
   scope: remote
   dbts_bugs:
   - 873557
-DSA-3966-1:
-  name: DSA-3966-1
+- name: DSA-3966-1
   title: ruby2.3 -- security update
   issued: 05 Sep 2017
   affected_source_package: ruby2.3
@@ -37463,8 +37170,7 @@ DSA-3966-1:
   - 873802
   - 873802
   - 873906
-DSA-3965-1:
-  name: DSA-3965-1
+- name: DSA-3965-1
   title: file -- security update
   issued: 05 Sep 2017
   affected_source_package: file
@@ -37508,8 +37214,7 @@ DSA-3965-1:
   - CVE-2017-1000249
   severity: low
   scope: local
-DSA-3964-1:
-  name: DSA-3964-1
+- name: DSA-3964-1
   title: asterisk -- security update
   issued: 04 Sep 2017
   affected_source_package: asterisk
@@ -37620,8 +37325,7 @@ DSA-3964-1:
   dbts_bugs:
   - 873907
   - 873908
-DSA-3963-1:
-  name: DSA-3963-1
+- name: DSA-3963-1
   title: mercurial -- security update
   issued: 04 Sep 2017
   affected_source_package: mercurial
@@ -37650,8 +37354,7 @@ DSA-3963-1:
   dbts_bugs:
   - 871709
   - 871710
-DSA-3962-1:
-  name: DSA-3962-1
+- name: DSA-3962-1
   title: strongswan -- security update
   issued: 03 Sep 2017
   affected_source_package: strongswan
@@ -37750,8 +37453,7 @@ DSA-3962-1:
   scope: remote
   dbts_bugs:
   - 872155
-DSA-3961-1:
-  name: DSA-3961-1
+- name: DSA-3961-1
   title: libgd2 -- security update
   issued: 03 Sep 2017
   affected_source_package: libgd2
@@ -37779,8 +37481,7 @@ DSA-3961-1:
   - CVE-2017-6362
   severity: medium
   scope: remote
-DSA-3959-1:
-  name: DSA-3959-1
+- name: DSA-3959-1
   title: libgcrypt20 -- security update
   issued: 29 Aug 2017
   affected_source_package: libgcrypt20
@@ -37815,8 +37516,7 @@ DSA-3959-1:
   scope: remote
   dbts_bugs:
   - 873383
-DSA-3958-1:
-  name: DSA-3958-1
+- name: DSA-3958-1
   title: fontforge -- security update
   issued: 29 Aug 2017
   affected_source_package: fontforge
@@ -37906,8 +37606,7 @@ DSA-3958-1:
   - 869614
   - 869614
   - 869614
-DSA-3957-1:
-  name: DSA-3957-1
+- name: DSA-3957-1
   title: ffmpeg -- security update
   issued: 28 Aug 2017
   affected_source_package: ffmpeg
@@ -38064,8 +37763,7 @@ DSA-3957-1:
   - CVE-2017-11719
   severity: medium
   scope: remote
-DSA-3956-1:
-  name: DSA-3956-1
+- name: DSA-3956-1
   title: connman -- security update
   issued: 27 Aug 2017
   affected_source_package: connman
@@ -38100,8 +37798,7 @@ DSA-3956-1:
   scope: remote
   dbts_bugs:
   - 872844
-DSA-3955-1:
-  name: DSA-3955-1
+- name: DSA-3955-1
   title: mariadb-10.1 -- security update
   issued: 26 Aug 2017
   affected_source_package: mariadb-10.1
@@ -38252,8 +37949,7 @@ DSA-3955-1:
   - 868788
   - 868788
   - 868788
-DSA-3953-1:
-  name: DSA-3953-1
+- name: DSA-3953-1
   title: aodh -- security update
   issued: 23 Aug 2017
   affected_source_package: aodh
@@ -38311,8 +38007,7 @@ DSA-3953-1:
   scope: remote
   dbts_bugs:
   - 872605
-DSA-3952-1:
-  name: DSA-3952-1
+- name: DSA-3952-1
   title: libxml2 -- security update
   issued: 23 Aug 2017
   affected_source_package: libxml2
@@ -38427,8 +38122,7 @@ DSA-3952-1:
   - 863021
   - 863019
   - 863018
-DSA-3950-1:
-  name: DSA-3950-1
+- name: DSA-3950-1
   title: libraw -- security update
   issued: 21 Aug 2017
   affected_source_package: libraw
@@ -38469,8 +38163,7 @@ DSA-3950-1:
   dbts_bugs:
   - 864183
   - 864183
-DSA-3949-1:
-  name: DSA-3949-1
+- name: DSA-3949-1
   title: augeas -- security update
   issued: 21 Aug 2017
   affected_source_package: augeas
@@ -38516,8 +38209,7 @@ DSA-3949-1:
   scope: remote
   dbts_bugs:
   - 872400
-DSA-3948-1:
-  name: DSA-3948-1
+- name: DSA-3948-1
   title: ioquake3 -- security update
   issued: 19 Aug 2017
   affected_source_package: ioquake3
@@ -38542,8 +38234,7 @@ DSA-3948-1:
   scope: remote
   dbts_bugs:
   - 870725
-DSA-3947-1:
-  name: DSA-3947-1
+- name: DSA-3947-1
   title: newsbeuter -- security update
   issued: 18 Aug 2017
   affected_source_package: newsbeuter
@@ -38561,8 +38252,7 @@ DSA-3947-1:
   - CVE-2017-12904
   severity: high
   scope: remote
-DSA-3946-1:
-  name: DSA-3946-1
+- name: DSA-3946-1
   title: libmspack -- security update
   issued: 18 Aug 2017
   affected_source_package: libmspack
@@ -38603,8 +38293,7 @@ DSA-3946-1:
   dbts_bugs:
   - 871263
   - 868956
-DSA-3942-1:
-  name: DSA-3942-1
+- name: DSA-3942-1
   title: supervisor -- security update
   issued: 13 Aug 2017
   affected_source_package: supervisor
@@ -38629,8 +38318,7 @@ DSA-3942-1:
   scope: remote
   dbts_bugs:
   - 870187
-DSA-3941-1:
-  name: DSA-3941-1
+- name: DSA-3941-1
   title: iortcw -- security update
   issued: 13 Aug 2017
   affected_source_package: iortcw
@@ -38660,8 +38348,7 @@ DSA-3941-1:
   scope: remote
   dbts_bugs:
   - 870725
-DSA-3940-1:
-  name: DSA-3940-1
+- name: DSA-3940-1
   title: cvs -- security update
   issued: 13 Aug 2017
   affected_source_package: cvs
@@ -38681,8 +38368,7 @@ DSA-3940-1:
   scope: remote
   dbts_bugs:
   - 871810
-DSA-3938-1:
-  name: DSA-3938-1
+- name: DSA-3938-1
   title: libgd2 -- security update
   issued: 12 Aug 2017
   affected_source_package: libgd2
@@ -38714,8 +38400,7 @@ DSA-3938-1:
   scope: remote
   dbts_bugs:
   - 869263
-DSA-3936-1:
-  name: DSA-3936-1
+- name: DSA-3936-1
   title: postgresql-9.6 -- security update
   issued: 10 Aug 2017
   affected_source_package: postgresql-9.6
@@ -38819,8 +38504,7 @@ DSA-3936-1:
   - CVE-2017-7548
   severity: high
   scope: remote
-DSA-3934-1:
-  name: DSA-3934-1
+- name: DSA-3934-1
   title: git -- security update
   issued: 10 Aug 2017
   affected_source_package: git
@@ -38915,8 +38599,7 @@ DSA-3934-1:
   - CVE-2017-1000117
   severity: medium
   scope: remote
-DSA-3932-1:
-  name: DSA-3932-1
+- name: DSA-3932-1
   title: subversion -- security update
   issued: 10 Aug 2017
   affected_source_package: subversion
@@ -38982,8 +38665,7 @@ DSA-3932-1:
   - CVE-2017-9800
   severity: high
   scope: remote
-DSA-3931-1:
-  name: DSA-3931-1
+- name: DSA-3931-1
   title: ruby-rack-cors -- security update
   issued: 10 Aug 2017
   affected_source_package: ruby-rack-cors
@@ -39003,8 +38685,7 @@ DSA-3931-1:
   - CVE-2017-11173
   severity: medium
   scope: remote
-DSA-3930-1:
-  name: DSA-3930-1
+- name: DSA-3930-1
   title: freeradius -- security update
   issued: 10 Aug 2017
   affected_source_package: freeradius
@@ -39103,8 +38784,7 @@ DSA-3930-1:
   dbts_bugs:
   - 868765
   - 868765
-DSA-3929-1:
-  name: DSA-3929-1
+- name: DSA-3929-1
   title: libsoup2.4 -- security update
   issued: 10 Aug 2017
   affected_source_package: libsoup2.4
@@ -39150,8 +38830,7 @@ DSA-3929-1:
   scope: remote
   dbts_bugs:
   - 871650
-DSA-3928-1:
-  name: DSA-3928-1
+- name: DSA-3928-1
   title: firefox-esr -- security update
   issued: 10 Aug 2017
   affected_source_package: firefox-esr
@@ -39740,8 +39419,7 @@ DSA-3928-1:
   - 872834
   - 872834
   - 872834
-DSA-3927-1:
-  name: DSA-3927-1
+- name: DSA-3927-1
   title: linux -- security update
   issued: 07 Aug 2017
   affected_source_package: linux
@@ -40199,8 +39877,7 @@ DSA-3927-1:
   scope: remote
   dbts_bugs:
   - 869706
-DSA-3926-1:
-  name: DSA-3926-1
+- name: DSA-3926-1
   title: chromium-browser -- security update
   issued: 04 Aug 2017
   affected_source_package: chromium-browser
@@ -40357,8 +40034,7 @@ DSA-3926-1:
   - CVE-2017-7000
   severity: medium
   scope: remote
-DSA-3925-1:
-  name: DSA-3925-1
+- name: DSA-3925-1
   title: qemu -- security update
   issued: 04 Aug 2017
   affected_source_package: qemu
@@ -40473,8 +40149,7 @@ DSA-3925-1:
   - 867751
   - 869173
   - 869171
-DSA-3924-1:
-  name: DSA-3924-1
+- name: DSA-3924-1
   title: varnish -- security update
   issued: 02 Aug 2017
   affected_source_package: varnish
@@ -40514,8 +40189,7 @@ DSA-3924-1:
   scope: remote
   dbts_bugs:
   - 870467
-DSA-3923-1:
-  name: DSA-3923-1
+- name: DSA-3923-1
   title: freerdp -- security update
   issued: 01 Aug 2017
   affected_source_package: freerdp
@@ -40821,8 +40495,7 @@ DSA-3923-1:
   - 869880
   - 869880
   - 869880
-DSA-3920-1:
-  name: DSA-3920-1
+- name: DSA-3920-1
   title: qemu -- security update
   issued: 25 Jul 2017
   affected_source_package: qemu
@@ -40949,8 +40622,7 @@ DSA-3920-1:
   - 864568
   - 866674
   - 869706
-DSA-3919-1:
-  name: DSA-3919-1
+- name: DSA-3919-1
   title: openjdk-8 -- security update
   issued: 25 Jul 2017
   affected_source_package: openjdk-8
@@ -41359,8 +41031,7 @@ DSA-3919-1:
   - CVE-2017-10243
   severity: medium
   scope: remote
-DSA-3917-1:
-  name: DSA-3917-1
+- name: DSA-3917-1
   title: catdoc -- security update
   issued: 23 Jul 2017
   affected_source_package: catdoc
@@ -41381,8 +41052,7 @@ DSA-3917-1:
   scope: remote
   dbts_bugs:
   - 867717
-DSA-3916-1:
-  name: DSA-3916-1
+- name: DSA-3916-1
   title: atril -- security update
   issued: 21 Jul 2017
   affected_source_package: atril
@@ -41433,8 +41103,7 @@ DSA-3916-1:
   scope: remote
   dbts_bugs:
   - 868500
-DSA-3915-1:
-  name: DSA-3915-1
+- name: DSA-3915-1
   title: ruby-mixlib-archive -- security update
   issued: 20 Jul 2017
   affected_source_package: ruby-mixlib-archive
@@ -41454,8 +41123,7 @@ DSA-3915-1:
   scope: remote
   dbts_bugs:
   - 868572
-DSA-3914-1:
-  name: DSA-3914-1
+- name: DSA-3914-1
   title: imagemagick -- security update
   issued: 18 Jul 2017
   affected_source_package: imagemagick
@@ -41747,8 +41415,7 @@ DSA-3914-1:
   - 867811
   - 867823
   - 867821
-DSA-3913-1:
-  name: DSA-3913-1
+- name: DSA-3913-1
   title: apache2 -- security update
   issued: 18 Jul 2017
   affected_source_package: apache2
@@ -41816,8 +41483,7 @@ DSA-3913-1:
   scope: remote
   dbts_bugs:
   - 868467
-DSA-3912-1:
-  name: DSA-3912-1
+- name: DSA-3912-1
   title: heimdal -- security update
   issued: 16 Jul 2017
   affected_source_package: heimdal
@@ -41957,8 +41623,7 @@ DSA-3912-1:
   scope: remote
   dbts_bugs:
   - 868208
-DSA-3911-1:
-  name: DSA-3911-1
+- name: DSA-3911-1
   title: evince -- security update
   issued: 14 Jul 2017
   affected_source_package: evince
@@ -42014,8 +41679,7 @@ DSA-3911-1:
   scope: remote
   dbts_bugs:
   - 868500
-DSA-3910-1:
-  name: DSA-3910-1
+- name: DSA-3910-1
   title: knot -- security update
   issued: 14 Jul 2017
   affected_source_package: knot
@@ -42071,8 +41735,7 @@ DSA-3910-1:
   scope: remote
   dbts_bugs:
   - 865678
-DSA-3909-1:
-  name: DSA-3909-1
+- name: DSA-3909-1
   title: samba -- security update
   issued: 14 Jul 2017
   affected_source_package: samba
@@ -42192,8 +41855,7 @@ DSA-3909-1:
   scope: remote
   dbts_bugs:
   - 868208
-DSA-3908-1:
-  name: DSA-3908-1
+- name: DSA-3908-1
   title: nginx -- security update
   issued: 12 Jul 2017
   affected_source_package: nginx
@@ -42328,8 +41990,7 @@ DSA-3908-1:
   scope: remote
   dbts_bugs:
   - 868109
-DSA-3907-1:
-  name: DSA-3907-1
+- name: DSA-3907-1
   title: spice -- security update
   issued: 11 Jul 2017
   affected_source_package: spice
@@ -42354,8 +42015,7 @@ DSA-3907-1:
   scope: remote
   dbts_bugs:
   - 868083
-DSA-3905-1:
-  name: DSA-3905-1
+- name: DSA-3905-1
   title: xorg-server -- security update
   issued: '09 Jul 2017'
   affected_source_package: xorg-server
@@ -42431,8 +42091,7 @@ DSA-3905-1:
   dbts_bugs:
   - 867492
   - 867492
-DSA-3904-1:
-  name: DSA-3904-1
+- name: DSA-3904-1
   title: bind9 -- security update
   issued: '08 Jul 2017'
   affected_source_package: bind9
@@ -42550,8 +42209,7 @@ DSA-3904-1:
   dbts_bugs:
   - 866564
   - 866564
-DSA-3903-1:
-  name: DSA-3903-1
+- name: DSA-3903-1
   title: tiff -- security update
   issued: 05 Jul 2017
   affected_source_package: tiff
@@ -42601,8 +42259,7 @@ DSA-3903-1:
   dbts_bugs:
   - 866113
   - 866611
-DSA-3902-1:
-  name: DSA-3902-1
+- name: DSA-3902-1
   title: jabberd2 -- security update
   issued: 05 Jul 2017
   affected_source_package: jabberd2
@@ -42621,8 +42278,7 @@ DSA-3902-1:
   scope: remote
   dbts_bugs:
   - 867032
-DSA-3901-1:
-  name: DSA-3901-1
+- name: DSA-3901-1
   title: libgcrypt20 -- security update
   issued: 02 Jul 2017
   affected_source_package: libgcrypt20
@@ -42657,8 +42313,7 @@ DSA-3901-1:
   - CVE-2017-7526
   severity: not yet assigned
   scope: local
-DSA-3900-1:
-  name: DSA-3900-1
+- name: DSA-3900-1
   title: openvpn -- security update
   issued: 27 Jun 2017
   affected_source_package: openvpn
@@ -42688,8 +42343,7 @@ DSA-3900-1:
   - 865480
   - 865480
   - 865480
-DSA-3898-1:
-  name: DSA-3898-1
+- name: DSA-3898-1
   title: expat -- security update
   issued: 25 Jun 2017
   affected_source_package: expat
@@ -42717,8 +42371,7 @@ DSA-3898-1:
   - CVE-2017-9233
   severity: medium
   scope: remote
-DSA-3897-1:
-  name: DSA-3897-1
+- name: DSA-3897-1
   title: drupal7 -- security update
   issued: 24 Jun 2017
   affected_source_package: drupal7
@@ -42734,8 +42387,7 @@ DSA-3897-1:
   severity: not yet assigned
   dbts_bugs:
   - 756305
-DSA-3896-1:
-  name: DSA-3896-1
+- name: DSA-3896-1
   title: apache2 -- security update
   issued: 22 Jun 2017
   affected_source_package: apache2
@@ -42813,8 +42465,7 @@ DSA-3896-1:
   - CVE-2017-7679
   severity: high
   scope: remote
-DSA-3895-1:
-  name: DSA-3895-1
+- name: DSA-3895-1
   title: flatpak -- security update
   issued: 22 Jun 2017
   affected_source_package: flatpak
@@ -42867,8 +42518,7 @@ DSA-3895-1:
   scope: local
   dbts_bugs:
   - 865413
-DSA-3893-1:
-  name: DSA-3893-1
+- name: DSA-3893-1
   title: jython -- security update
   issued: 22 Jun 2017
   affected_source_package: jython
@@ -42892,8 +42542,7 @@ DSA-3893-1:
   scope: remote
   dbts_bugs:
   - 864859
-DSA-3891-1:
-  name: DSA-3891-1
+- name: DSA-3891-1
   title: tomcat8 -- security update
   issued: 22 Jun 2017
   affected_source_package: tomcat8
@@ -42970,8 +42619,7 @@ DSA-3891-1:
   scope: remote
   dbts_bugs:
   - 802312
-DSA-3890-1:
-  name: DSA-3890-1
+- name: DSA-3890-1
   title: spip -- security update
   issued: 21 Jun 2017
   affected_source_package: spip
@@ -42990,8 +42638,7 @@ DSA-3890-1:
   scope: remote
   dbts_bugs:
   - 864921
-DSA-3888-1:
-  name: DSA-3888-1
+- name: DSA-3888-1
   title: exim4 -- security update
   issued: 19 Jun 2017
   affected_source_package: exim4
@@ -43056,8 +42703,7 @@ DSA-3888-1:
   - CVE-2017-1000369
   severity: low
   scope: local
-DSA-3887-1:
-  name: DSA-3887-1
+- name: DSA-3887-1
   title: glibc -- security update
   issued: 19 Jun 2017
   affected_source_package: glibc
@@ -43157,8 +42803,7 @@ DSA-3887-1:
   - CVE-2017-1000366
   severity: high
   scope: local
-DSA-3885-1:
-  name: DSA-3885-1
+- name: DSA-3885-1
   title: irssi -- security update
   issued: 18 Jun 2017
   affected_source_package: irssi
@@ -43188,8 +42833,7 @@ DSA-3885-1:
   dbts_bugs:
   - 864400
   - 864400
-DSA-3884-1:
-  name: DSA-3884-1
+- name: DSA-3884-1
   title: gnutls28 -- security update
   issued: 16 Jun 2017
   affected_source_package: gnutls28
@@ -43239,8 +42883,7 @@ DSA-3884-1:
   scope: remote
   dbts_bugs:
   - 864560
-DSA-3882-1:
-  name: DSA-3882-1
+- name: DSA-3882-1
   title: request-tracker4 -- security update
   issued: 15 Jun 2017
   affected_source_package: request-tracker4
@@ -43314,8 +42957,7 @@ DSA-3882-1:
   - CVE-2017-5944
   severity: medium
   scope: remote
-DSA-3881-1:
-  name: DSA-3881-1
+- name: DSA-3881-1
   title: firefox-esr -- security update
   issued: 14 Jun 2017
   affected_source_package: firefox-esr
@@ -43881,8 +43523,7 @@ DSA-3881-1:
   - CVE-2017-7778
   severity: high
   scope: remote
-DSA-3877-1:
-  name: DSA-3877-1
+- name: DSA-3877-1
   title: tor -- security update
   issued: 10 Jun 2017
   affected_source_package: tor

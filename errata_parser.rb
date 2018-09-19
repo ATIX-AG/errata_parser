@@ -137,7 +137,7 @@ if $PROGRAM_NAME == __FILE__
     )
 
     # filter empty package-lists
-    errata.delete_if { |_k, x| x.packages.empty? }
+    errata.delete_if { |x| x.packages.empty? }
 
     File.open(options[:debian], 'w') do |f|
       warn "Writing debian-errata to #{options[:debian].inspect}" if options[:verbose]
