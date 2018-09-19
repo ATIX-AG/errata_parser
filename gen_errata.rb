@@ -187,7 +187,7 @@ end
 class DebianErrataParser
   attr_reader :info_state, :info_state_cmplt
 
-  def initialize
+  def initialize(verbose=false)
     @info_state = :init
     @info_state_cmplt = 1
 
@@ -198,6 +198,8 @@ class DebianErrataParser
     # Setting this to false makes it easier to remove Errata not applicable for the
     # release, packages were added for, by removing all Errata with packages == []
     @option_keep_unsupported_source_packages = false
+
+    @verbose = verbose
   end
 
   # find additional information for DSA's CVEs in cve_list
@@ -375,7 +377,7 @@ class DebianErrataParser
             release: deb['release'],
             component: deb['comp']
           }
-        else
+        elsif @verbose
           warn "Skipping #{deb['name']} because available version is smaller than fixed version: #{deb['version']} < #{pkg[:version]}"
         end
       end

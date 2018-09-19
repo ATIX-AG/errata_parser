@@ -1,10 +1,13 @@
 #!/usr/bin/env ruby
 
+require 'optparse'
 require_relative 'gen_errata'
 require_relative 'debRelease'
-require 'optparse'
 
 DEFAULT_CONF_FILE = 'config.json'.freeze
+DEFAULT_CONF = {
+  'tempdir' => '/tmp/errataparser_cache',
+}.freeze
 
 def fatal(message, code=42, show_help=false)
   warn message
@@ -50,12 +53,12 @@ if $PROGRAM_NAME == __FILE__
 
   ## Load config
   fatal("Config-file #{options[:config].inspect} not found, please create one from \"config.json.example\"", 3) unless File.exist? options[:config]
-  @config = JSON.parse(File.read(options[:config]))
+  @config = DEFAULT_CONF.merge(JSON.parse(File.read(options[:config])))
 
   ## Sanity checks
   fatal('No Errata-type specified!', 2, true) unless options.key?(:ubuntu) || options.key?(:debian)
 
-  parser = DebianErrataParser.new
+  parser = DebianErrataParser.new(options[:verbose])
   extend Downloader
 
   if options.key? :debian
@@ -68,12 +71,13 @@ if $PROGRAM_NAME == __FILE__
       whitelist_rel = whitel['releases'] if whitel.key?('releases') && whitel['releases'].is_a?(Array)
       whitelist_arch = whitel['architectures'] if whitel.key?('architectures') && whitel['architectures'].is_a?(Array)
     end
-    tempdir = Pathname.new(File.join(TEMPDIR, 'debian'))
+    tempdir = Pathname.new(File.join(@config['tempdir'], 'debian'))
     tempdir.mkpath
     threads = []
     dsa_list = nil
     cve_list = nil
-    pckgs = []
+    packages = {}
+    mutex = Mutex.new
 
     Thread.abort_on_exception = true
 
@@ -90,13 +94,25 @@ if $PROGRAM_NAME == __FILE__
     end
 
     ## Download package-lists
+    DebRelease.tempdir = tempdir
     fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
     fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
     fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
     cfg['repository']['releases'].each do |s|
       threads << Thread.new do
         warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
-        pckgs << DebRelease.get_all_packages(cfg['repository']['repo_url'], s, nil, whitelist_arch)
+        pkgs = DebRelease.get_all_packages(cfg['repository']['repo_url'], s, nil, whitelist_arch)
+
+        # merge package-list
+        mutex.synchronize do
+          pkgs.each do |pkg_name, pkg|
+            packages[pkg_name] = {} unless packages.key? pkg_name
+            pkg.each do |arch_name, arch|
+              packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
+              packages[pkg_name][arch_name].concat arch
+            end
+          end
+        end
         warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
       end
     end
@@ -112,17 +128,6 @@ if $PROGRAM_NAME == __FILE__
     ## add package lists
     # wait for package-list download
     threads.each(&:join)
-    # merge package-list
-    packages = {}
-    pckgs.each do |p|
-      p.each do |pkg_name, pkg|
-        packages[pkg_name] = {} unless packages.key? pkg_name
-        pkg.each do |arch_name, arch|
-          packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
-          packages[pkg_name][arch_name].concat arch
-        end
-      end
-    end
     # add package-information to errata
     parser.add_binary_packages(
       errata,
@@ -136,7 +141,8 @@ if $PROGRAM_NAME == __FILE__
 
     File.open(options[:debian], 'w') do |f|
       warn "Writing debian-errata to #{options[:debian].inspect}" if options[:verbose]
-      f << errata.to_json # (object_nl: "\n")
+      f << errata.to_json
+      #f << errata.to_json(object_nl: "\n")
     end
   end
 

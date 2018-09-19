@@ -1,4 +1,5 @@
 {
+  "tempdir": "/tmp/errataparser",
   "debian": {
     "dsa_list_url": "https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list",
     "cve_list_url": "https://security-tracker.debian.org/tracker/data/json",
