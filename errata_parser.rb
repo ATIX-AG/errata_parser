@@ -47,6 +47,25 @@ def parse_commandline
   options
 end
 
+def write_errata_file(filename, errata, name: '', verbose: false, remove_empty_packages: true)
+  # filter empty package-lists
+  errata = errata.clone.delete_if { |x| x.packages.empty? } if remove_empty_packages
+
+  File.open(filename, 'w') do |f|
+    warn "Writing #{name} to #{filename.inspect}" if verbose
+    f << errata.to_json
+    #f << errata.to_json(object_nl: "\n")
+  end
+end
+
+def get_whitelist(config, name)
+  if config.key? 'whitelists'
+    whitel = config['whitelists']
+    return whitel[name] if whitel.key?(name) && whitel[name].is_a?(Array)
+  end
+  nil
+end
+
 if $PROGRAM_NAME == __FILE__
   # parse command-line parameters
   options = parse_commandline
@@ -64,13 +83,7 @@ if $PROGRAM_NAME == __FILE__
   if options.key? :debian
     ## Debian
     cfg = @config['debian']
-    whitelist_rel = nil
-    whitelist_arch = nil
-    if cfg.key? 'whitelists'
-      whitel = cfg['whitelists']
-      whitelist_rel = whitel['releases'] if whitel.key?('releases') && whitel['releases'].is_a?(Array)
-      whitelist_arch = whitel['architectures'] if whitel.key?('architectures') && whitel['architectures'].is_a?(Array)
-    end
+    whitelist_arch = get_whitelist(cfg, 'architectures')
     tempdir = Pathname.new(File.join(@config['tempdir'], 'debian'))
     tempdir.mkpath
     threads = []
@@ -132,23 +145,47 @@ if $PROGRAM_NAME == __FILE__
     parser.add_binary_packages(
       errata,
       packages,
-      releases: whitelist_rel,
+      releases: get_whitelist(cfg, 'releases'),
       architecture_whitelist: whitelist_arch
     )
 
-    # filter empty package-lists
-    errata.delete_if { |x| x.packages.empty? }
-
-    File.open(options[:debian], 'w') do |f|
-      warn "Writing debian-errata to #{options[:debian].inspect}" if options[:verbose]
-      f << errata.to_json
-      #f << errata.to_json(object_nl: "\n")
-    end
+    write_errata_file(
+      options[:debian],
+      errata,
+      name: 'debian-errata',
+      verbose: options[:verbose]
+    )
   end
 
   if options.key? :ubuntu
+    ## Ubuntu
+    require 'bzip2/ffi'
+    require 'stringio'
 
-    raise 'TODO'
+    cfg = @config['ubuntu']
+    tempdir = Pathname.new(File.join(@config['tempdir'], 'ubuntu'))
+    tempdir.mkpath
+
+    #HTTPDEBUG = options[:verbose]
+
+    warn 'START  Download USN-information' if options[:verbose]
+    usn_db = download_file_cached(cfg['usn_list_url'], File.join(tempdir, 'database.json.bz2'))
+    warn 'FINISH Download USN-information' if options[:verbose]
+
+    warn 'START  Generate ubuntu-errata' if options[:verbose]
+    errata = parser.gen_ubuntu_errata(
+      JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))),
+      get_whitelist(cfg, 'releases'),
+      get_whitelist(cfg, 'architectures')
+    )
+    warn 'FINISH Generate ubuntu-errata' if options[:verbose]
+
+    write_errata_file(
+      options[:ubuntu],
+      errata,
+      name: 'ubuntu-errata',
+      verbose: options[:verbose]
+    )
   end
 
 end

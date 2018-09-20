@@ -268,7 +268,7 @@ class DebianErrataParser
       arch['urls'].each_key do |url|
         match = %r{/(?<pkg_name>[^/_]*)_(?<version>[^_/]+)_(?<arch>[^_/]+)\.[ud]?deb}.match(url)
         if match.nil?
-          warn "URL did not match: #{url}"
+          warn "#{erratum.name}: URL did not match: #{url}" if @verbose
         else
           erratum.add_package(
             match['pkg_name'],
@@ -308,7 +308,7 @@ class DebianErrataParser
         usn['releases'].each do |rel, dat|
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
           unless dat.key?('archs')
-            warn "#{name} has no architectures for release #{rel}"
+            warn "#{name} has no architectures for release #{rel}" if @verbose
             next
           end
           add_packages_ubuntu(erratum, rel, dat, architecture_whitelist)
