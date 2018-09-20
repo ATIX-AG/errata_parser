@@ -144,7 +144,7 @@
   - CVE-2018-13153
 - name: USN-3690-1
   title: AMD Microcode update
-  issued: 21 Jun 2018
+  issued: 20 Jun 2018
   affected_source_package: 
   packages:
   - name: amd64-microcode
@@ -10379,7 +10379,7 @@
   - CVE-2018-9234
 - name: USN-3671-1
   title: Git vulnerabilities
-  issued: 06 Jun 2018
+  issued: 05 Jun 2018
   affected_source_package: 
   packages:
   - name: git-daemon-run
@@ -11732,7 +11732,7 @@
   - CVE-2018-7726
 - name: USN-3651-1
   title: QEMU update
-  issued: 22 May 2018
+  issued: 21 May 2018
   affected_source_package: 
   packages:
   - name: qemu-system-sparc
@@ -13275,7 +13275,7 @@
   - CVE-2018-12265
 - name: USN-3673-1
   title: Unbound vulnerability
-  issued: '08 Jun 2018'
+  issued: 07 Jun 2018
   affected_source_package: 
   packages:
   - name: python-unbound

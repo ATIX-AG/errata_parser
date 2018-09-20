@@ -58,7 +58,7 @@ class Erratum
   end
 
   def issued
-    @issued.strftime('%d %b %Y')
+    @issued.utc.strftime('%d %b %Y')
   end
 
   def description
@@ -243,7 +243,8 @@ class DebianErrataParser
       erratum = Erratum.new
       erratum.name = dsa.id
       erratum.title = "#{dsa.package} -- #{dsa.type}"
-      erratum.issued = dsa.date
+      # add time and timezone, otherwise conversion to UTC might change the date
+      erratum.issued = "#{dsa.date} 00:00 UTC"
       dsa.cve.each { |c| erratum.add_cve c } if dsa.cve
       erratum.package = dsa.package
 
