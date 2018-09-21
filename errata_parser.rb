@@ -4,6 +4,9 @@ require 'optparse'
 require_relative 'gen_errata'
 require_relative 'debRelease'
 
+# always interpret files as UTF-8 instead of US-ASCII
+Encoding.default_external = 'UTF-8'
+
 DEFAULT_CONF_FILE = 'config.json'.freeze
 DEFAULT_CONF = {
   'tempdir' => '/tmp/errataparser_cache',

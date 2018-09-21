@@ -156,6 +156,9 @@ end
 if $PROGRAM_NAME == __FILE__
   require 'json'
 
+  # always interpret files as UTF-8 instead of US-ASCII
+  Encoding.default_external = 'UTF-8'
+
   HTTPDEBUG = true
   suites = [
     'jessie/updates',
