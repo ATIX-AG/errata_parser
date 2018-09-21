@@ -1,4 +1,4 @@
-# Errata-Parser v2.0 
+# Errata-Parser v2.0
 
 ## Source of information
 
@@ -21,7 +21,8 @@
    * <https://usn.ubuntu.com/usn-db/database.json.bz2> (<https://usn.ubuntu.com/usn-db/database.json.bz2.sha256>)
    * <https://usn.ubuntu.com/usn-db/database-all.json.bz2> (<https://usn.ubuntu.com/usn-db/database-all.json.bz2.sha256>)
 
-### ...
+---
+[^ubuntujsonformat]: see <https://blueprints.launchpad.net/ubuntu/+spec/security-p-usn-database-format>
 
 
 ## Errata Format
@@ -31,8 +32,7 @@ The structure is always the same.
 
 #### YAML:
 
-    DSA-4283-1:
-      name: DSA-4283-1
+    - name: DSA-4283-1
       title: ruby-json-jwt -- security update
       issued: "31 Aug 2018"
       affected_source_package: ruby-json-jwt
@@ -95,6 +95,18 @@ For Debian, the packages-data must be fetched from the repository first.
     bundle exec gen_errata.rb debian_test_record > test/data/debian.yaml
     bundle exec gen_errata.rb ubuntu_test_record > test/data/ubuntu.yaml
 
+### Docker container
 
----
-[^ubuntujsonformat]: see <https://blueprints.launchpad.net/ubuntu/+spec/security-p-usn-database-format>
+#### Create from local files:
+
+    docker build -r errata_parser:latest .
+
+#### Testing:
+
+    docker run --rm errata_parser:latest bundle exec ruby test/gen_errata.rb
+
+#### Running:
+
+    docker run --rm --mount type=bind,source="${pwd}/errata",target=/errata --mount source=errataparser_temp,target=/tmp/errataparser -ti errata_parser:latest
+
+Make sure to create a `config.json` in `${pwd}/errata`-directory before running
