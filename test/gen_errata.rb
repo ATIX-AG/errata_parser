@@ -24,6 +24,7 @@ class TestDebianErrata < Test::Unit::TestCase
     errata.each do |erratum|
       # remove Errata without packages
       next if erratum.packages.empty?
+
       hsh[erratum.name] = erratum.to_h
       erratum.packages.each do |p|
         assert_equal('stretch', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
@@ -65,6 +66,7 @@ class TestDebianErrata < Test::Unit::TestCase
     errata.each do |erratum|
       # remove Errata without packages
       next if erratum.packages.empty?
+
       hsh[erratum.name] = erratum.to_h
       erratum.packages.each do |p|
         assert_equal('bionic', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")

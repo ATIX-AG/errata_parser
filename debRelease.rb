@@ -21,6 +21,7 @@ class DebRelease
     init
     url = URI(uri)
     return unless url.scheme =~ /^http(s)?$/
+
     @base_url = uri
     @suite = suite
     cachedir = create_cache

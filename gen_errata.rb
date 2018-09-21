@@ -40,8 +40,9 @@ class ParserException < RuntimeError
 end
 
 class Erratum
-  attr_accessor :title, :name, :cves, :package, :fixed_version, :description
+  attr_accessor :title, :name, :cves, :package, :fixed_version
   attr_accessor :dbts_bugs
+  attr_writer :description
 
   def initialize
     @cves = []
@@ -71,6 +72,7 @@ class Erratum
 
   def add_cve(cve)
     raise "Invalid CVE number #{cve}" unless cve =~ /CVE-\d{4,}-\d+/
+
     @cves << cve
   end
 
@@ -176,9 +178,12 @@ class Erratum
   def priorized_value(old_idx, new, list, name='value')
     # skip if it was empty
     return old_idx if new.nil? || new.empty?
+
     new_idx = list.index new
     raise "UNKNOWN #{name} #{new.inspect} should be one of #{list.inspect}" if new_idx.nil?
+
     return new_idx if old_idx.nil? || new_idx > old_idx
+
     old_idx
   end
 end
@@ -222,6 +227,7 @@ class DebianErrataParser
 
       cve['releases'].each do |rel, data|
         next if !dsa.versions.key?(rel) || data['status'] != 'resolved'
+
         # WORKAROUND: currently DSA severities include '**' at the end
         erratum.severity = data['urgency'].delete('*')
       end
@@ -308,6 +314,7 @@ class DebianErrataParser
         erratum.issued = usn['timestamp']
         usn['releases'].each do |rel, dat|
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
+
           unless dat.key?('archs')
             warn "#{name} has no architectures for release #{rel}" if @verbose
             next
@@ -316,6 +323,7 @@ class DebianErrataParser
         end
         # ignore errata without package-information
         next if erratum.packages.empty?
+
         errata << erratum
       rescue StandardError
         warn "At #{name}:"
@@ -343,6 +351,7 @@ class DebianErrataParser
       @info_state_cmplt += info_step
 
       next if erratum.packages.empty?
+
       erratum.replace_packages do |p|
         new = []
         if releases.nil? || releases.include?(p[:release])
@@ -369,8 +378,10 @@ class DebianErrataParser
     res = []
     packages.each do |arch_name, arch|
       next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
+
       arch.each do |deb|
         next if pkg[:release] != deb['release']
+
         # version from packages must be 'greater or equal' to the version requested by DSA
         if Debian::Dpkg.compare_versions deb['version'], 'ge', pkg[:version]
           res << {
