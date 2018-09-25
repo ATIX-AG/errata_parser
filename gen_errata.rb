@@ -429,7 +429,6 @@ if $PROGRAM_NAME == __FILE__
     tempdir.mkpath
     dsa_list = download_file_cached('https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list', File.join(tempdir, 'dsa.list'))
     cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', File.join(tempdir, 'cve.json'))
-    #warn File.read("test_data/cve.json")[0,255]
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
     #parser.add_binary_packages_from_file(errata, 'packages_everything.json')
     parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['stretch'], ['amd64'])
@@ -453,8 +452,7 @@ if $PROGRAM_NAME == __FILE__
 
     HTTPDEBUG = true
     usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', File.join(tempdir, 'database.json.bz2'))
-    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', 'test_data/database-all.json.bz2')
-    #usn_db = File.read('test_data/database.json.bz2')
+    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', File.join(tempdir, 'database-all.json.bz2'))
 
     # TODO verify checksum
     #verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)

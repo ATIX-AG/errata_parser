@@ -168,7 +168,7 @@ end
 
 if $PROGRAM_NAME == __FILE__
   dsa_list = nil
-  File.open('test_data/dsa.list', 'r') do |f|
+  File.open('test/data/dsa.list', 'r') do |f|
     dsa_list = DSA.parse_dsa_list(f)
   end
   puts JSON.generate(dsa_list)
