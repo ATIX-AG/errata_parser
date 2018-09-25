@@ -15,6 +15,7 @@ class DebRelease
 
   attr_reader :data, :files
   attr_accessor :suite, :base_url
+  attr_accessor :whitelist_arch, :whitelist_comp
   RE_FILES = /^\s*(?<digest>[0-9a-f]+)\s+(?<size>\d+)\s*(?<path>\S.*)$/
 
   def initialize(uri=nil, suite='stable')
@@ -119,20 +120,28 @@ class DebRelease
     end
   end
 
-  def self.tempdir=(dirname)
-    @@tempdir = dirname
+  def architectures
+    arch = Set.new(data['architectures'])
+    arch &= Set.new(whitelist_arch) if whitelist_arch
+    # make sure architecture 'all' is always present
+    arch += Set.new(['all'])
+    arch.to_a
   end
 
-  def self.get_all_packages(uri, suite, components=nil, architectures=nil)
-    rel = new(uri, suite)
+  def components
+    # must work around debian-security having components like 'updates/main'
+    # but paths use 'main'
+    comp = Set.new(data['components'].map { |c| c.split('/').last })
+    comp &= Set.new(whitelist_comp) if whitelist_comp
+    comp.to_a
+  end
 
+  def all_packages
     packages = {}
-    architectures = rel.data['architectures'] + ['all'] if architectures.nil?
-    components = Debian::COMPONENT if components.nil?
     architectures.each do |arch|
       components.each do |comp|
-        rel.get_package(comp, arch).each do |p, d|
-          # necessary because sometimes 'all'-packages are also in the binary Packlage-files
+        get_package(comp, arch).each do |p, d|
+          # necessary because sometimes 'all'-packages are also in the binary Package-files
           architecture = d.info['Architecture'] if d.fields.include? 'Architecture'
           architecture = arch if architecture.nil?
 
@@ -143,7 +152,7 @@ class DebRelease
             'version' => d.version,
             'arch' => architecture,
             'comp' => comp,
-            'release' => rel.release_name
+            'release' => release_name
           }
           # make sure we do not have duplicates
           packages[d.source][architecture].uniq!
@@ -151,6 +160,17 @@ class DebRelease
       end
     end
     packages
+  end
+
+  def self.tempdir=(dirname)
+    @@tempdir = dirname
+  end
+
+  def self.get_all_packages(uri, suite, components=nil, architectures=nil)
+    rel = new(uri, suite)
+    rel.whitelist_arch = architectures unless architectures.nil?
+    rel.whitelist_comp = components unless components.nil?
+    rel.all_packages
   end
 end
 
@@ -170,7 +190,15 @@ if $PROGRAM_NAME == __FILE__
   pckgs = []
   suites.each do |s|
     threads << Thread.new do
-      pckgs << DebRelease.get_all_packages('http://security.debian.org/debian-security', s) # , nil, ['amd64', 'all']
+      warn "Loading Release for #{s.inspect}"
+      debrel = DebRelease.new('http://security.debian.org/debian-security', s)
+
+      debrel.whitelist_arch = ['amd64', 'all']
+      debrel.whitelist_comp = ['main']
+
+      warn "From #{s.inspect} get archs:#{debrel.architectures.inspect} and comps: #{debrel.components.inspect}"
+
+      pckgs << debrel.all_packages
     end
   end
 

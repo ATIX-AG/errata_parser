@@ -267,6 +267,30 @@ class DebianErrataParser
     errata
   end
 
+  def metadata_add_entry(release, architecture, component)
+    if @metadata[:releases].key? release
+      @metadata[:releases][release][:architectures] << architecture
+      @metadata[:releases][release][:components] << component
+    else
+      # init metadata
+      @metadata[:releases][release] = {
+        architectures: Set.new([architecture]),
+        components: Set.new([component]),
+      }
+    end
+  end
+
+  def metadata
+    res = { releases: {} }
+    @metadata[:releases].each do |rel, data|
+      res[:releases][rel] = {
+        architectures: data[:architectures].to_a,
+        components: data[:components].to_a,
+      }
+    end
+    res
+  end
+
   def add_packages_ubuntu(erratum, release, data, architecture_whitelist)
     data['archs'].each do |arch_name, arch|
       next if arch_name == 'source'
@@ -284,6 +308,7 @@ class DebianErrataParser
             component: match['comp'],
             release: release
           )
+          metadata_add_entry(release, match['arch'], match['comp'])
         end
       end
     end
@@ -294,6 +319,7 @@ class DebianErrataParser
     info_step = 1.0 / usn_db.length
     @info_state_cmplt = 0
 
+    @metadata = { releases: {} }
     errata = []
     usn_db.each do |id, usn|
       @info_state_cmplt += info_step
