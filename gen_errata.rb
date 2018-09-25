@@ -62,6 +62,14 @@ class Erratum
     @issued.strftime('%d %b %Y')
   end
 
+  def description
+    description = ''
+    @description.each_line do |line|
+      description += line.gsub(/(.{1,90})(\s+|\Z)/, "\\1\n")
+    end
+    description
+  end
+
   def add_cve(cve)
     raise "Invalid CVE number #{cve}" unless cve =~ /CVE-\d{4,}-\d+/
     @cves << cve
