@@ -1,0 +1,40 @@
+{
+  "tempdir": "/tmp/errataparser",
+  "debian": {
+    "dsa_list_url": "https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list",
+    "cve_list_url": "https://security-tracker.debian.org/tracker/data/json",
+    "repository": {
+      "repo_url": "http://security.debian.org/debian-security",
+      "releases": [
+        "buster/updates",
+        "stretch/updates",
+        "jessie/updates"
+      ]
+    },
+    "whitelists": {
+      "releases": [
+        "buster",
+        "stretch",
+        "jessie"
+      ],
+      "architectures": [
+        "amd64",
+        "i386"
+      ]
+    }
+  },
+  "ubuntu": {
+    "usn_list_url": "https://usn.ubuntu.com/usn-db/database.json.bz2",
+    "whitelists": {
+      "releases": [
+        "bionic",
+        "artful",
+        "xenial"
+      ],
+      "architectures": [
+        "amd64",
+        "i386"
+      ]
+    }
+  }
+}

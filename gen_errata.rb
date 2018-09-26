@@ -9,7 +9,6 @@ require 'pathname'
 require_relative 'parse_dsalist'
 require_relative 'downloader'
 
-TEMPDIR = '/tmp/errataparser_cache'.freeze
 URGENCY_PRIO = [
   'not yet assigned',
   'unimportant',
@@ -41,8 +40,9 @@ class ParserException < RuntimeError
 end
 
 class Erratum
-  attr_accessor :title, :name, :cves, :package, :fixed_version, :description
+  attr_accessor :title, :name, :cves, :package, :fixed_version
   attr_accessor :dbts_bugs
+  attr_writer :description
 
   def initialize
     @cves = []
@@ -59,7 +59,7 @@ class Erratum
   end
 
   def issued
-    @issued.strftime('%d %b %Y')
+    @issued.utc.strftime('%d %b %Y')
   end
 
   def description
@@ -72,6 +72,7 @@ class Erratum
 
   def add_cve(cve)
     raise "Invalid CVE number #{cve}" unless cve =~ /CVE-\d{4,}-\d+/
+
     @cves << cve
   end
 
@@ -177,9 +178,12 @@ class Erratum
   def priorized_value(old_idx, new, list, name='value')
     # skip if it was empty
     return old_idx if new.nil? || new.empty?
+
     new_idx = list.index new
     raise "UNKNOWN #{name} #{new.inspect} should be one of #{list.inspect}" if new_idx.nil?
+
     return new_idx if old_idx.nil? || new_idx > old_idx
+
     old_idx
   end
 end
@@ -188,7 +192,7 @@ end
 class DebianErrataParser
   attr_reader :info_state, :info_state_cmplt
 
-  def initialize
+  def initialize(verbose=false)
     @info_state = :init
     @info_state_cmplt = 1
 
@@ -199,6 +203,8 @@ class DebianErrataParser
     # Setting this to false makes it easier to remove Errata not applicable for the
     # release, packages were added for, by removing all Errata with packages == []
     @option_keep_unsupported_source_packages = false
+
+    @verbose = verbose
   end
 
   # find additional information for DSA's CVEs in cve_list
@@ -219,8 +225,9 @@ class DebianErrataParser
       erratum.scope = cve.fetch('scope', nil)
       description << cve['description']
 
-      cve['releases'].each do |rel,data|
+      cve['releases'].each do |rel, data|
         next if !dsa.versions.key?(rel) || data['status'] != 'resolved'
+
         # WORKAROUND: currently DSA severities include '**' at the end
         erratum.severity = data['urgency'].delete('*')
       end
@@ -230,7 +237,7 @@ class DebianErrataParser
   end
 
   def gen_debian_errata(dsa_list, cve_list)
-    errata = {}
+    errata = []
 
     @info_state = :gen_errata
     info_step = 1.0 / dsa_list.length
@@ -242,32 +249,33 @@ class DebianErrataParser
       erratum = Erratum.new
       erratum.name = dsa.id
       erratum.title = "#{dsa.package} -- #{dsa.type}"
-      erratum.issued = dsa.date
+      # add time and timezone, otherwise conversion to UTC might change the date
+      erratum.issued = "#{dsa.date} 00:00 UTC"
       dsa.cve.each { |c| erratum.add_cve c } if dsa.cve
       erratum.package = dsa.package
 
-      dsa.versions.each do |rel,pkg_dat|
-        pkg_dat.each do |pkg_name,pkg_version|
+      dsa.versions.each do |rel, pkg_dat|
+        pkg_dat.each do |pkg_name, pkg_version|
           erratum.add_package(pkg_name, pkg_version, release: rel)
         end
       end
 
       add_cve_information(erratum, dsa, cve_list) unless dsa.cve_empty?
 
-      errata[dsa.id] = erratum
+      errata << erratum
     end
     errata
   end
 
   def add_packages_ubuntu(erratum, release, data, architecture_whitelist)
-    data['archs'].each do |arch_name,arch|
+    data['archs'].each do |arch_name, arch|
       next if arch_name == 'source'
       next unless arch_name == 'all' || architecture_whitelist.nil? || architecture_whitelist.include?(arch_name)
 
       arch['urls'].each_key do |url|
         match = %r{/(?<pkg_name>[^/_]*)_(?<version>[^_/]+)_(?<arch>[^_/]+)\.[ud]?deb}.match(url)
         if match.nil?
-          warn "URL did not match: #{url}"
+          warn "#{erratum.name}: URL did not match: #{url}" if @verbose
         else
           erratum.add_package(
             match['pkg_name'],
@@ -285,11 +293,13 @@ class DebianErrataParser
     info_step = 1.0 / usn_db.length
     @info_state_cmplt = 0
 
-    errata = {}
-    usn_db.each do |id,usn|
+    errata = []
+    usn_db.each do |id, usn|
       @info_state_cmplt += info_step
+      name = "USN-#{id}"
       begin
         erratum = Erratum.new
+        erratum.name = name
         erratum.title = usn['title']
         erratum.description = usn['description']
         if usn.key? 'cves'
@@ -302,19 +312,21 @@ class DebianErrataParser
           end
         end
         erratum.issued = usn['timestamp']
-        usn['releases'].each do |rel,dat|
+        usn['releases'].each do |rel, dat|
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
+
           unless dat.key?('archs')
-            warn "USN-#{id} has no architectures for release #{rel}"
+            warn "#{name} has no architectures for release #{rel}" if @verbose
             next
           end
           add_packages_ubuntu(erratum, rel, dat, architecture_whitelist)
         end
         # ignore errata without package-information
         next if erratum.packages.empty?
-        errata["USN-#{id}"] = erratum
+
+        errata << erratum
       rescue StandardError
-        warn "At USN-#{id}:"
+        warn "At #{name}:"
         raise
       end
     end
@@ -335,10 +347,11 @@ class DebianErrataParser
     @info_state_cmplt = 0
     info_step = 1.0 / errata.length
 
-    errata.each do |_name,erratum|
+    errata.each do |erratum|
       @info_state_cmplt += info_step
 
       next if erratum.packages.empty?
+
       erratum.replace_packages do |p|
         new = []
         if releases.nil? || releases.include?(p[:release])
@@ -363,10 +376,12 @@ class DebianErrataParser
 
   def get_binary_packages_for_erratum_package(pkg, packages, architecture_whitelist)
     res = []
-    packages.each do |arch_name,arch|
+    packages.each do |arch_name, arch|
       next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
+
       arch.each do |deb|
         next if pkg[:release] != deb['release']
+
         # version from packages must be 'greater or equal' to the version requested by DSA
         if Debian::Dpkg.compare_versions deb['version'], 'ge', pkg[:version]
           res << {
@@ -376,7 +391,7 @@ class DebianErrataParser
             release: deb['release'],
             component: deb['comp']
           }
-        else
+        elsif @verbose
           warn "Skipping #{deb['name']} because available version is smaller than fixed version: #{deb['version']} < #{pkg[:version]}"
         end
       end
@@ -386,6 +401,10 @@ class DebianErrataParser
 end
 
 if $PROGRAM_NAME == __FILE__
+  # always interpret files as UTF-8 instead of US-ASCII
+  Encoding.default_external = 'UTF-8'
+
+  TEMPDIR = '/tmp/errataparser_cache'.freeze
   extend Downloader
 
   type = ARGV[0]
@@ -416,7 +435,7 @@ if $PROGRAM_NAME == __FILE__
     parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['stretch'], ['amd64'])
 
     # filter empty package-lists
-    #errata.delete_if { |_k, x| x['packages'].nil? || x['packages'].empty? }
+    #errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
 
   when 'debian_test_record'
     dsa_list = File.read('test/data/dsa.list')
@@ -455,12 +474,12 @@ if $PROGRAM_NAME == __FILE__
     exit 1
   end
 
-  hsh = {}
-  #errata.keys.sort.each do |k|
-  errata.keys.each do |k|
+  arr = []
+  #errata.sort{ |x, y| y.name <=> x.name }.each do |e|
+  errata.each do |e|
     # remove Errata without packages
-    hsh[k] = errata[k].to_h unless errata[k].packages.empty?
+    arr << e.to_h unless e.packages.empty?
   end
-  puts hsh.to_yaml
+  puts arr.to_yaml
   #puts errata.to_json
 end

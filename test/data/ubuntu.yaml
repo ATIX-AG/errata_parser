@@ -1,6 +1,5 @@
 ---
-USN-3711-1:
-  name: 
+- name: USN-3711-1
   title: ImageMagick vulnerabilities
   issued: 11 Jul 2018
   affected_source_package: 
@@ -143,10 +142,9 @@ USN-3711-1:
   - CVE-2018-12599
   - CVE-2018-12600
   - CVE-2018-13153
-USN-3690-1:
-  name: 
+- name: USN-3690-1
   title: AMD Microcode update
-  issued: 21 Jun 2018
+  issued: 20 Jun 2018
   affected_source_package: 
   packages:
   - name: amd64-microcode
@@ -163,8 +161,7 @@ USN-3690-1:
     processors required for the corresponding Linux kernel updates.
   cves:
   - CVE-2017-5715
-USN-3692-1:
-  name: 
+- name: USN-3692-1
   title: OpenSSL vulnerabilities
   issued: 26 Jun 2018
   affected_source_package: 
@@ -230,8 +227,7 @@ USN-3692-1:
   - CVE-2018-0495
   - CVE-2018-0732
   - CVE-2018-0737
-USN-3756-1:
-  name: 
+- name: USN-3756-1
   title: Intel Microcode vulnerabilities
   issued: 27 Aug 2018
   affected_source_package: 
@@ -263,8 +259,7 @@ USN-3756-1:
   - CVE-2018-3639
   - CVE-2018-3640
   - CVE-2018-3646
-USN-3695-1:
-  name: 
+- name: USN-3695-1
   title: Linux kernel vulnerabilities
   issued: 02 Jul 2018
   affected_source_package: 
@@ -1169,8 +1164,7 @@ USN-3695-1:
   - CVE-2018-1095
   - CVE-2018-11508
   - CVE-2018-7755
-USN-3752-1:
-  name: 
+- name: USN-3752-1
   title: Linux kernel vulnerabilities
   issued: 24 Aug 2018
   affected_source_package: 
@@ -1890,8 +1884,7 @@ USN-3752-1:
   - CVE-2018-13406
   - CVE-2018-5814
   - CVE-2018-9415
-USN-3718-1:
-  name: 
+- name: USN-3718-1
   title: Linux kernel regression
   issued: 21 Jul 2018
   affected_source_package: 
@@ -2806,8 +2799,7 @@ USN-3718-1:
      floppy driver in the Linux kernel. A local attacker could use this to
      expose sensitive information (kernel memory). (CVE-2018-7755)
   cves: []
-USN-3731-1:
-  name: 
+- name: USN-3731-1
   title: LFTP vulnerability
   issued: 06 Aug 2018
   affected_source_package: 
@@ -2821,8 +2813,7 @@ USN-3731-1:
     An attacker could possibly use this issue to cause a denial of service.
   cves:
   - CVE-2018-10916
-USN-3672-1:
-  name: 
+- name: USN-3672-1
   title: Liblouis vulnerabilities
   issued: 06 Jun 2018
   affected_source_package: 
@@ -2859,8 +2850,7 @@ USN-3672-1:
   - CVE-2018-11683
   - CVE-2018-11684
   - CVE-2018-11685
-USN-3637-1:
-  name: 
+- name: USN-3637-1
   title: WavPack vulnerabilities
   issued: 30 Apr 2018
   affected_source_package: 
@@ -2893,8 +2883,7 @@ USN-3637-1:
   - CVE-2018-10538
   - CVE-2018-10539
   - CVE-2018-10540
-USN-3627-2:
-  name: 
+- name: USN-3627-2
   title: Apache HTTP Server vulnerabilities
   issued: 30 Apr 2018
   affected_source_package: 
@@ -2966,8 +2955,7 @@ USN-3627-2:
   - CVE-2018-1301
   - CVE-2018-1303
   - CVE-2018-1312
-USN-3678-3:
-  name: 
+- name: USN-3678-3
   title: Linux kernel (Azure) vulnerabilities
   issued: 12 Jun 2018
   affected_source_package: 
@@ -3075,8 +3063,7 @@ USN-3678-3:
   - CVE-2018-10021
   - CVE-2018-1092
   - CVE-2018-8087
-USN-3678-1:
-  name: 
+- name: USN-3678-1
   title: Linux kernel vulnerabilities
   issued: 12 Jun 2018
   affected_source_package: 
@@ -3708,8 +3695,7 @@ USN-3678-1:
   - CVE-2018-10021
   - CVE-2018-1092
   - CVE-2018-8087
-USN-3720-1:
-  name: 
+- name: USN-3720-1
   title: python-cryptography vulnerability
   issued: 23 Jul 2018
   affected_source_package: 
@@ -3731,8 +3717,7 @@ USN-3720-1:
     An attacker could possibly use this to get access to sensitive information.
   cves:
   - CVE-2018-10903
-USN-3702-1:
-  name: 
+- name: USN-3702-1
   title: PHP vulnerability
   issued: 04 Jul 2018
   affected_source_package: 
@@ -3895,8 +3880,7 @@ USN-3702-1:
     a denial of service, or possibly execute arbitrary code.
   cves:
   - CVE-2018-12882
-USN-3705-2:
-  name: 
+- name: USN-3705-2
   title: Firefox regressions
   issued: 10 Jul 2018
   affected_source_package: 
@@ -4307,8 +4291,7 @@ USN-3705-2:
     If a user were\n tricked in to installing a specially crafted extension, an attacker\n
     could potentially exploit this to obtain full browser permissions.\n (CVE-2018-12369)\n"
   cves: []
-USN-3705-1:
-  name: 
+- name: USN-3705-1
   title: Firefox vulnerabilities
   issued: 05 Jul 2018
   affected_source_package: 
@@ -4739,8 +4722,7 @@ USN-3705-1:
   - CVE-2018-12369
   - CVE-2018-12370
   - CVE-2018-12371
-USN-3680-1:
-  name: 
+- name: USN-3680-1
   title: libvirt vulnerability and update
   issued: 12 Jun 2018
   affected_source_package: 
@@ -4815,8 +4797,7 @@ USN-3680-1:
   cves:
   - CVE-2018-1064
   - CVE-2018-3639
-USN-3701-1:
-  name: 
+- name: USN-3701-1
   title: libsoup vulnerability
   issued: 03 Jul 2018
   affected_source_package: 
@@ -4850,8 +4831,7 @@ USN-3701-1:
     An attacker could possibly use this to cause a denial of service.
   cves:
   - CVE-2018-12910
-USN-3643-1:
-  name: 
+- name: USN-3643-1
   title: Wget vulnerability
   issued: '09 May 2018'
   affected_source_package: 
@@ -4869,8 +4849,7 @@ USN-3643-1:
     An attacker could possibly use this to inject arbitrary cookie values.
   cves:
   - CVE-2018-0494
-USN-3689-1:
-  name: 
+- name: USN-3689-1
   title: Libgcrypt vulnerability
   issued: 19 Jun 2018
   affected_source_package: 
@@ -4905,8 +4884,7 @@ USN-3689-1:
     private keys.
   cves:
   - CVE-2018-0495
-USN-3684-1:
-  name: 
+- name: USN-3684-1
   title: Perl vulnerability
   issued: 13 Jun 2018
   affected_source_package: 
@@ -4944,8 +4922,7 @@ USN-3684-1:
     An attacker could possibly use this to overwrite arbitrary files.
   cves:
   - CVE-2018-12015
-USN-3725-1:
-  name: 
+- name: USN-3725-1
   title: MySQL vulnerabilities
   issued: 30 Jul 2018
   affected_source_package: 
@@ -5028,8 +5005,7 @@ USN-3725-1:
   - CVE-2018-3071
   - CVE-2018-3077
   - CVE-2018-3081
-USN-3707-1:
-  name: 
+- name: USN-3707-1
   title: NTP vulnerabilities
   issued: '09 Jul 2018'
   affected_source_package: 
@@ -5073,8 +5049,7 @@ USN-3707-1:
   - CVE-2018-7183
   - CVE-2018-7184
   - CVE-2018-7185
-USN-3744-1:
-  name: 
+- name: USN-3744-1
   title: PostgreSQL vulnerabilities
   issued: 16 Aug 2018
   affected_source_package: 
@@ -5148,8 +5123,7 @@ USN-3744-1:
   cves:
   - CVE-2018-10915
   - CVE-2018-10925
-USN-3664-1:
-  name: 
+- name: USN-3664-1
   title: Apport vulnerability
   issued: 30 May 2018
   affected_source_package: 
@@ -5205,8 +5179,7 @@ USN-3664-1:
     from containers.
   cves:
   - CVE-2018-6552
-USN-3748-1:
-  name: 
+- name: USN-3748-1
   title: base-files vulnerability
   issued: 21 Aug 2018
   affected_source_package: 
@@ -5226,8 +5199,7 @@ USN-3748-1:
     were disabled.
   cves:
   - CVE-2018-6557
-USN-3660-1:
-  name: 
+- name: USN-3660-1
   title: Thunderbird vulnerabilities
   issued: 25 May 2018
   affected_source_package: 
@@ -5622,8 +5594,7 @@ USN-3660-1:
   - CVE-2018-5183
   - CVE-2018-5184
   - CVE-2018-5185
-USN-3646-1:
-  name: 
+- name: USN-3646-1
   title: PHP vulnerabilities
   issued: 14 May 2018
   affected_source_package: 
@@ -5809,8 +5780,7 @@ USN-3646-1:
   - CVE-2018-10547
   - CVE-2018-10548
   - CVE-2018-10549
-USN-3669-1:
-  name: 
+- name: USN-3669-1
   title: Liblouis vulnerabilities
   issued: 04 Jun 2018
   affected_source_package: 
@@ -5855,8 +5825,7 @@ USN-3669-1:
   - CVE-2018-11410
   - CVE-2018-11440
   - CVE-2018-11577
-USN-3719-1:
-  name: 
+- name: USN-3719-1
   title: Mutt vulnerabilities
   issued: 23 Jul 2018
   affected_source_package: 
@@ -5888,8 +5857,7 @@ USN-3719-1:
   - CVE-2018-14358
   - CVE-2018-14359
   - CVE-2018-14362
-USN-3739-1:
-  name: 
+- name: USN-3739-1
   title: libxml2 vulnerabilities
   issued: 14 Aug 2018
   affected_source_package: 
@@ -5952,8 +5920,7 @@ USN-3739-1:
   - CVE-2017-18258
   - CVE-2018-14404
   - CVE-2018-14567
-USN-3679-1:
-  name: 
+- name: USN-3679-1
   title: QEMU update
   issued: 12 Jun 2018
   affected_source_package: 
@@ -6035,8 +6002,7 @@ USN-3679-1:
     updates to guests on amd64 and i386.
   cves:
   - CVE-2018-3639
-USN-3636-1:
-  name: 
+- name: USN-3636-1
   title: Ghostscript vulnerabilities
   issued: 30 Apr 2018
   affected_source_package: 
@@ -6080,8 +6046,7 @@ USN-3636-1:
   cves:
   - CVE-2016-10317
   - CVE-2018-10194
-USN-3713-1:
-  name: 
+- name: USN-3713-1
   title: CUPS vulnerabilities
   issued: 11 Jul 2018
   affected_source_package: 
@@ -6172,8 +6137,7 @@ USN-3713-1:
   - CVE-2018-4180
   - CVE-2018-4181
   - CVE-2018-6553
-USN-3758-1:
-  name: 
+- name: USN-3758-1
   title: libx11 vulnerabilities
   issued: 30 Aug 2018
   affected_source_package: 
@@ -6224,8 +6188,7 @@ USN-3758-1:
   - CVE-2018-14598
   - CVE-2018-14599
   - CVE-2018-14600
-USN-3728-1:
-  name: 
+- name: USN-3728-1
   title: libmspack vulnerabilities
   issued: 01 Aug 2018
   affected_source_package: 
@@ -6259,8 +6222,7 @@ USN-3728-1:
   - CVE-2018-14680
   - CVE-2018-14681
   - CVE-2018-14682
-USN-3688-1:
-  name: 
+- name: USN-3688-1
   title: Spidermonkey vulnerabilities
   issued: 19 Jun 2018
   affected_source_package: 
@@ -6283,8 +6245,7 @@ USN-3688-1:
   - CVE-2018-5089
   - CVE-2018-5125
   - CVE-2018-5150
-USN-3706-1:
-  name: 
+- name: USN-3706-1
   title: libjpeg-turbo vulnerabilities
   issued: '09 Jul 2018'
   affected_source_package: 
@@ -6331,8 +6292,7 @@ USN-3706-1:
   - CVE-2018-11213
   - CVE-2018-11214
   - CVE-2018-1152
-USN-3745-1:
-  name: 
+- name: USN-3745-1
   title: wpa_supplicant and hostapd vulnerability
   issued: 20 Aug 2018
   affected_source_package: 
@@ -6358,8 +6318,7 @@ USN-3745-1:
     messages. An attacker could possibly use this to access sensitive information.
   cves:
   - CVE-2018-14526
-USN-3749-1:
-  name: 
+- name: USN-3749-1
   title: Spidermonkey vulnerabilities
   issued: 22 Aug 2018
   affected_source_package: 
@@ -6378,8 +6337,7 @@ USN-3749-1:
     arbitrary code.
   cves:
   - CVE-2018-5188
-USN-3722-3:
-  name: 
+- name: USN-3722-3
   title: ClamAV regression
   issued: 26 Jul 2018
   affected_source_package: 
@@ -6434,8 +6392,7 @@ USN-3722-3:
     handled parsing certain PDF\n files. A remote attacker could use this issue to
     cause ClamAV to hang,\n resulting in a denial of service. (CVE-2018-0361)\n"
   cves: []
-USN-3722-1:
-  name: 
+- name: USN-3722-1
   title: ClamAV vulnerabilities
   issued: 24 Jul 2018
   affected_source_package: 
@@ -6491,8 +6448,7 @@ USN-3722-1:
   cves:
   - CVE-2018-0360
   - CVE-2018-0361
-USN-3752-3:
-  name: 
+- name: USN-3752-3
   title: Linux kernel (Azure, GCP, OEM) vulnerabilities
   issued: 28 Aug 2018
   affected_source_package: 
@@ -6880,8 +6836,7 @@ USN-3752-3:
   - CVE-2018-13406
   - CVE-2018-5814
   - CVE-2018-9415
-USN-3761-1:
-  name: 
+- name: USN-3761-1
   title: Firefox vulnerabilities
   issued: 06 Sep 2018
   affected_source_package: 
@@ -7295,8 +7250,7 @@ USN-3761-1:
   - CVE-2018-12377
   - CVE-2018-12378
   - CVE-2018-12383
-USN-3647-1:
-  name: 
+- name: USN-3647-1
   title: poppler vulnerabilities
   issued: 15 May 2018
   affected_source_package: 
@@ -7360,8 +7314,7 @@ USN-3647-1:
   cves:
   - CVE-2017-18267
   - CVE-2018-10768
-USN-3645-2:
-  name: 
+- name: USN-3645-2
   title: Firefox regression
   issued: 18 May 2018
   affected_source_package: 
@@ -7795,8 +7748,7 @@ USN-3645-2:
     tricked in to\n dragging specially crafted text on to the addressbar, an attacker
     could\n potentially exploit this to bypass intended security policies.\n (CVE-2018-5182)\n"
   cves: []
-USN-3682-1:
-  name: 
+- name: USN-3682-1
   title: Firefox vulnerability
   issued: 12 Jun 2018
   affected_source_package: 
@@ -8199,8 +8151,7 @@ USN-3682-1:
     exploit this to cause a denial of service, or execute arbitrary code.
   cves:
   - CVE-2018-6126
-USN-3703-1:
-  name: 
+- name: USN-3703-1
   title: Archive Zip
   issued: 04 Jul 2018
   affected_source_package: 
@@ -8214,8 +8165,7 @@ USN-3703-1:
     An attacker could possibly use this to access sensitive information.
   cves:
   - CVE-2018-10860
-USN-3740-1:
-  name: 
+- name: USN-3740-1
   title: Linux kernel vulnerabilities
   issued: 14 Aug 2018
   affected_source_package: 
@@ -9121,8 +9071,7 @@ USN-3740-1:
   - CVE-2018-3620
   - CVE-2018-3646
   - CVE-2018-5391
-USN-3732-1:
-  name: 
+- name: USN-3732-1
   title: Linux kernel vulnerability
   issued: 06 Aug 2018
   affected_source_package: 
@@ -10014,8 +9963,7 @@ USN-3732-1:
     denial of service.
   cves:
   - CVE-2018-5390
-USN-3738-1:
-  name: 
+- name: USN-3738-1
   title: Samba vulnerabilities
   issued: 14 Aug 2018
   affected_source_package: 
@@ -10126,8 +10074,7 @@ USN-3738-1:
   - CVE-2018-10918
   - CVE-2018-10919
   - CVE-2018-1139
-USN-3712-1:
-  name: 
+- name: USN-3712-1
   title: libpng vulnerabilities
   issued: 11 Jul 2018
   affected_source_package: 
@@ -10160,8 +10107,7 @@ USN-3712-1:
   cves:
   - CVE-2016-10087
   - CVE-2018-13785
-USN-3730-1:
-  name: 
+- name: USN-3730-1
   title: LXC vulnerability
   issued: 06 Aug 2018
   affected_source_package: 
@@ -10204,8 +10150,7 @@ USN-3730-1:
     files.
   cves:
   - CVE-2018-6556
-USN-3751-1:
-  name: 
+- name: USN-3751-1
   title: Spice vulnerability
   issued: 22 Aug 2018
   affected_source_package: 
@@ -10223,8 +10168,7 @@ USN-3751-1:
     An attacker could possibly use this issue to cause a denial of service.
   cves:
   - CVE-2018-10873
-USN-3759-1:
-  name: 
+- name: USN-3759-1
   title: libtirpc vulnerabilities
   issued: 05 Sep 2018
   affected_source_package: 
@@ -10255,8 +10199,7 @@ USN-3759-1:
   - CVE-2016-4429
   - CVE-2017-8779
   - CVE-2018-14622
-USN-3659-1:
-  name: 
+- name: USN-3659-1
   title: Spice vulnerability
   issued: 23 May 2018
   affected_source_package: 
@@ -10275,8 +10218,7 @@ USN-3659-1:
     resulting in a denial of service, or possibly execute arbitrary code.
   cves:
   - CVE-2017-12194
-USN-3717-1:
-  name: 
+- name: USN-3717-1
   title: PolicyKit vulnerabilities
   issued: 16 Jul 2018
   affected_source_package: 
@@ -10342,8 +10284,7 @@ USN-3717-1:
   - CVE-2015-3255
   - CVE-2015-4625
   - CVE-2018-1116
-USN-3675-1:
-  name: 
+- name: USN-3675-1
   title: GnuPG vulnerabilities
   issued: 11 Jun 2018
   affected_source_package: 
@@ -10436,10 +10377,9 @@ USN-3675-1:
   cves:
   - CVE-2018-12020
   - CVE-2018-9234
-USN-3671-1:
-  name: 
+- name: USN-3671-1
   title: Git vulnerabilities
-  issued: 06 Jun 2018
+  issued: 05 Jun 2018
   affected_source_package: 
   packages:
   - name: git-daemon-run
@@ -10511,8 +10451,7 @@ USN-3671-1:
   cves:
   - CVE-2018-11233
   - CVE-2018-11235
-USN-3737-1:
-  name: 
+- name: USN-3737-1
   title: GDM vulnerability
   issued: 13 Aug 2018
   affected_source_package: 
@@ -10539,8 +10478,7 @@ USN-3737-1:
     administrator.
   cves:
   - CVE-2018-14424
-USN-3709-1:
-  name: 
+- name: USN-3709-1
   title: Xapian-core vulnerability
   issued: 10 Jul 2018
   affected_source_package: 
@@ -10570,8 +10508,7 @@ USN-3709-1:
     An attacker could possibly use this to execute arbitrary code.
   cves:
   - CVE-2018-0499
-USN-3665-1:
-  name: 
+- name: USN-3665-1
   title: Tomcat vulnerabilities
   issued: 30 May 2018
   affected_source_package: 
@@ -10649,8 +10586,7 @@ USN-3665-1:
   - CVE-2018-1304
   - CVE-2018-1305
   - CVE-2018-8014
-USN-3683-1:
-  name: 
+- name: USN-3683-1
   title: Bind vulnerability
   issued: 13 Jun 2018
   affected_source_package: 
@@ -10757,8 +10693,7 @@ USN-3683-1:
     improperly permit recursion to all clients, contrary to expectations.
   cves:
   - CVE-2018-5738
-USN-3702-2:
-  name: 
+- name: USN-3702-2
   title: PHP vulnerability
   issued: 05 Jul 2018
   affected_source_package: 
@@ -10929,8 +10864,7 @@ USN-3702-2:
      a denial of service, or possibly execute arbitrary code.
   cves:
   - CVE-2018-12882
-USN-3686-1:
-  name: 
+- name: USN-3686-1
   title: file vulnerabilities
   issued: 14 Jun 2018
   affected_source_package: 
@@ -10979,8 +10913,7 @@ USN-3686-1:
   - CVE-2014-9653
   - CVE-2015-8865
   - CVE-2018-10360
-USN-3726-1:
-  name: 
+- name: USN-3726-1
   title: Django vulnerability
   issued: 01 Aug 2018
   affected_source_package: 
@@ -11007,8 +10940,7 @@ USN-3726-1:
     perform phishing attacks.
   cves:
   - CVE-2018-14574
-USN-3649-1:
-  name: 
+- name: USN-3649-1
   title: QEMU vulnerabilities
   issued: 16 May 2018
   affected_source_package: 
@@ -11101,8 +11033,7 @@ USN-3649-1:
   - CVE-2017-16845
   - CVE-2018-7550
   - CVE-2018-7858
-USN-3704-1:
-  name: 
+- name: USN-3704-1
   title: devscripts vulnerability
   issued: 05 Jul 2018
   affected_source_package: 
@@ -11116,8 +11047,7 @@ USN-3704-1:
     An attacker could possibly use this to execute arbitrary code.
   cves:
   - CVE-2018-13043
-USN-3747-1:
-  name: 
+- name: USN-3747-1
   title: OpenJDK 10 vulnerabilities
   issued: 21 Aug 2018
   affected_source_package: 
@@ -11176,8 +11106,7 @@ USN-3747-1:
   - CVE-2018-2826
   - CVE-2018-2952
   - CVE-2018-2972
-USN-3757-1:
-  name: 
+- name: USN-3757-1
   title: poppler vulnerability
   issued: 29 Aug 2018
   affected_source_package: 
@@ -11235,8 +11164,7 @@ USN-3757-1:
     An attacker could possible use this issue to cause a denial of service.
   cves:
   - CVE-2018-13988
-USN-3663-1:
-  name: 
+- name: USN-3663-1
   title: HAProxy vulnerability
   issued: 30 May 2018
   affected_source_package: 
@@ -11258,8 +11186,7 @@ USN-3663-1:
     An attacker could possibly use this to expose sensitive information.
   cves:
   - CVE-2018-11469
-USN-3645-1:
-  name: 
+- name: USN-3645-1
   title: Firefox vulnerabilities
   issued: 11 May 2018
   affected_source_package: 
@@ -11730,8 +11657,7 @@ USN-3645-1:
   - CVE-2018-5180
   - CVE-2018-5181
   - CVE-2018-5182
-USN-3658-1:
-  name: 
+- name: USN-3658-1
   title: procps-ng vulnerabilities
   issued: 23 May 2018
   affected_source_package: 
@@ -11774,8 +11700,7 @@ USN-3658-1:
   - CVE-2018-1124
   - CVE-2018-1125
   - CVE-2018-1126
-USN-3699-1:
-  name: 
+- name: USN-3699-1
   title: zziplib vulnerabilities
   issued: 03 Jul 2018
   affected_source_package: 
@@ -11805,10 +11730,9 @@ USN-3699-1:
   - CVE-2018-6869
   - CVE-2018-7725
   - CVE-2018-7726
-USN-3651-1:
-  name: 
+- name: USN-3651-1
   title: QEMU update
-  issued: 22 May 2018
+  issued: 21 May 2018
   affected_source_package: 
   packages:
   - name: qemu-system-sparc
@@ -11887,8 +11811,7 @@ USN-3651-1:
     CPU features added by microcode updates to guests on amd64 and i386.
   cves:
   - CVE-2018-3639
-USN-3714-1:
-  name: 
+- name: USN-3714-1
   title: Thunderbird vulnerabilities
   issued: 12 Jul 2018
   affected_source_package: 
@@ -12268,8 +12191,7 @@ USN-3714-1:
   - CVE-2018-12373
   - CVE-2018-12374
   - CVE-2018-5188
-USN-3755-1:
-  name: 
+- name: USN-3755-1
   title: GD vulnerabilities
   issued: 27 Aug 2018
   affected_source_package: 
@@ -12297,8 +12219,7 @@ USN-3755-1:
   cves:
   - CVE-2018-1000222
   - CVE-2018-5711
-USN-3710-1:
-  name: 
+- name: USN-3710-1
   title: curl vulnerability
   issued: 11 Jul 2018
   affected_source_package: 
@@ -12341,8 +12262,7 @@ USN-3710-1:
     denial of service, or possibly execute arbitrary code.
   cves:
   - CVE-2018-0500
-USN-3736-1:
-  name: 
+- name: USN-3736-1
   title: libarchive vulnerabilities
   issued: 13 Aug 2018
   affected_source_package: 
@@ -12388,8 +12308,7 @@ USN-3736-1:
   - CVE-2017-14166
   - CVE-2017-14501
   - CVE-2017-14503
-USN-3639-1:
-  name: 
+- name: USN-3639-1
   title: LibRaw vulnerabilities
   issued: '08 May 2018'
   affected_source_package: 
@@ -12421,8 +12340,7 @@ USN-3639-1:
   cves:
   - CVE-2018-10528
   - CVE-2018-10529
-USN-3652-1:
-  name: 
+- name: USN-3652-1
   title: Linux kernel vulnerability
   issued: 22 May 2018
   affected_source_package: 
@@ -13307,8 +13225,7 @@ USN-3652-1:
     information, including kernel memory.
   cves:
   - CVE-2018-3639
-USN-3700-1:
-  name: 
+- name: USN-3700-1
   title: Exiv2 vulnerabilities
   issued: 03 Jul 2018
   affected_source_package: 
@@ -13356,10 +13273,9 @@ USN-3700-1:
   - CVE-2018-11531
   - CVE-2018-12264
   - CVE-2018-12265
-USN-3673-1:
-  name: 
+- name: USN-3673-1
   title: Unbound vulnerability
-  issued: '08 Jun 2018'
+  issued: 07 Jun 2018
   affected_source_package: 
   packages:
   - name: python-unbound
@@ -13397,8 +13313,7 @@ USN-3673-1:
     Unbound into accepting a NODATA proof.
   cves:
   - CVE-2017-15105
-USN-3687-1:
-  name: 
+- name: USN-3687-1
   title: WebKitGTK+ vulnerabilities
   issued: 18 Jun 2018
   affected_source_package: 
@@ -13457,8 +13372,7 @@ USN-3687-1:
   - CVE-2018-4222
   - CVE-2018-4232
   - CVE-2018-4233
-USN-3648-1:
-  name: 
+- name: USN-3648-1
   title: curl vulnerabilities
   issued: 16 May 2018
   affected_source_package: 
@@ -13511,8 +13425,7 @@ USN-3648-1:
   cves:
   - CVE-2018-1000300
   - CVE-2018-1000301
-USN-3650-1:
-  name: 
+- name: USN-3650-1
   title: xdg-utils vulnerability
   issued: 21 May 2018
   affected_source_package: 
@@ -13526,8 +13439,7 @@ USN-3650-1:
     An attacker could possibly use this to execute arbitrary code.
   cves:
   - CVE-2017-18266
-USN-3746-1:
-  name: 
+- name: USN-3746-1
   title: APT vulnerability
   issued: 20 Aug 2018
   affected_source_package: 
@@ -13571,8 +13483,7 @@ USN-3746-1:
     environments configured to use mirror:// entries.
   cves:
   - CVE-2018-0501
-USN-3640-1:
-  name: 
+- name: USN-3640-1
   title: WebKitGTK+ vulnerability
   issued: '08 May 2018'
   affected_source_package: 
@@ -13623,8 +13534,7 @@ USN-3640-1:
     attacker could possibly exploit this to execute arbitrary code.
   cves:
   - CVE-2018-4200
-USN-3681-1:
-  name: 
+- name: USN-3681-1
   title: ImageMagick vulnerabilities
   issued: 12 Jun 2018
   affected_source_package: 
@@ -13888,8 +13798,7 @@ USN-3681-1:
   - CVE-2018-8804
   - CVE-2018-8960
   - CVE-2018-9133
-USN-3629-3:
-  name: 
+- name: USN-3629-3
   title: MySQL vulnerabilities
   issued: 30 Apr 2018
   affected_source_package: 
@@ -13981,8 +13890,7 @@ USN-3629-3:
   - CVE-2018-2819
   - CVE-2018-2839
   - CVE-2018-2846
-USN-3642-1:
-  name: 
+- name: USN-3642-1
   title: DPDK vulnerability
   issued: '09 May 2018'
   affected_source_package: 
@@ -14321,8 +14229,7 @@ USN-3642-1:
     information.
   cves:
   - CVE-2018-1059
-USN-3743-1:
-  name: 
+- name: USN-3743-1
   title: WebKitGTK+ vulnerabilities
   issued: 16 Aug 2018
   affected_source_package: 

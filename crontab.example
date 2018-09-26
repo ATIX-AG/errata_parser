@@ -1,0 +1,2 @@
+# m h  dom mon dow   command
+0 4,16 * * * mkdir "/var/spool/errataparser" 2>&1 >/dev/null; docker run --rm --mount type=bind,source=/var/spool/errataparser,target=/errata --mount source=temp,target=/tmp/errataparser errata-generator:master

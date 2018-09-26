@@ -35,13 +35,21 @@ module Downloader
     end
 
     if res.is_a? Net::HTTPSuccess
+      mode = 'wb'
+      body = res.body
+      # check for content type; use 'wb' for images
+      if res.content_type =~ /application\json/ ||
+         res.content_type =~ /text/
+        mode = 'w'
+        body = body.to_s.force_encoding(Encoding::UTF_8)
+      end
       unless path.nil?
-        File.open(path, 'w') do |io|
+        File.open(path, mode) do |io|
           warn "Save data to #{path}" if HTTPDEBUG
-          io.write res.body
+          io.write body
         end
       end
-      return res.body
+      return body
     elsif res.is_a? Net::HTTPNotModified
       # Use already downloaded version
       return File.read path

@@ -35,6 +35,7 @@ end
 # keys must be symbols for usage as named method-parameters
 def symbolize_hash_keys(hsh)
   return nil if hsh.nil?
+
   res = {}
   hsh.each do |k, v|
     res[k.to_sym] = v
@@ -51,6 +52,7 @@ class DSAList < Array
   def secure_push(item)
     return unless item.is_a? DSA
     return if @opt_ignore_empty_cve && item.cve_empty?
+
     push item
   end
 end
@@ -155,6 +157,7 @@ class DSA
         end
       rescue ParserException => e
         raise if e.critical
+
         warn(e)
       end
     end
