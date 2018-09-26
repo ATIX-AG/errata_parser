@@ -18,6 +18,10 @@ def fatal(message, code=42, show_help=false)
   exit code
 end
 
+def get_filename(os_name, type=:errata)
+  "#{os_name}_#{type}.json"
+end
+
 def parse_commandline
   options = {
     config: DEFAULT_CONF_FILE,
@@ -29,17 +33,23 @@ def parse_commandline
     options[:config] = c
   end
 
-  @opts.on('-d', '--debian FILE', String, 'Parse Debian DSAs as Errata to FILE') do |d|
+  @opts.on('-d', '--debian PATH', String,
+           "Parse Debian DSAs as Errata to #{get_filename(:debian)} in PATH") do |d|
     options[:debian] = d
   end
 
-  @opts.on('-u', '--ubuntu FILE', String, 'Parse Ubuntu USNs as Errata to FILE') do |u|
+  @opts.on('-u', '--ubuntu PATH', String,
+           "Parse Ubuntu USNs as Errata to #{get_filename(:ubuntu)} in PATH") do |u|
     options[:ubuntu] = u
   end
 
   @opts.on('-v', '--[no-]verbose', 'Run verbosely') do |v|
     options[:verbose] = v
     #HTTPDEBUG = v
+  end
+
+  @opts.on('-m', '--[no-]metadata', 'Create metadata files per Errata-file') do |m|
+    options[:metadata] = m
   end
 
   @opts.on('-h', '--help', 'Prints this help') do
@@ -50,15 +60,25 @@ def parse_commandline
   options
 end
 
-def write_errata_file(filename, errata, name: '', verbose: false, remove_empty_packages: true)
-  # filter empty package-lists
-  errata = errata.clone.delete_if { |x| x.packages.empty? } if remove_empty_packages
-
+def write_json_file(filename, json_data, name: '', verbose: false)
   File.open(filename, 'w') do |f|
     warn "Writing #{name} to #{filename.inspect}" if verbose
-    f << errata.to_json
-    #f << errata.to_json(object_nl: "\n")
+    f << json_data.to_json
+    #f << json_data.to_json(object_nl: "\n")
   end
+end
+
+def write_errata_file(filename, errata, name: '', verbose: false, remove_empty_packages: true)
+  data = errata
+  # filter empty package-lists
+  data = errata.clone.delete_if { |x| x.packages.empty? } if remove_empty_packages
+
+  write_json_file(
+    filename,
+    data,
+    name: name,
+    verbose: verbose
+  )
 end
 
 def get_whitelist(config, name)
@@ -93,6 +113,7 @@ if $PROGRAM_NAME == __FILE__
     dsa_list = nil
     cve_list = nil
     packages = {}
+    metadata = { releases: {} }
     mutex = Mutex.new
 
     Thread.abort_on_exception = true
@@ -117,10 +138,20 @@ if $PROGRAM_NAME == __FILE__
     cfg['repository']['releases'].each do |s|
       threads << Thread.new do
         warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
-        pkgs = DebRelease.get_all_packages(cfg['repository']['repo_url'], s, nil, whitelist_arch)
+        deb_rel = DebRelease.new(cfg['repository']['repo_url'], s)
+        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+        deb_rel.whitelist_arch = whitelist_arch
+        pkgs = deb_rel.all_packages
 
         # merge package-list
         mutex.synchronize do
+          # save Meta-data
+          metadata[:releases][deb_rel.release_name] = {
+            'architectures': deb_rel.architectures,
+            'components': deb_rel.components,
+          }
+
+          # merge packages
           pkgs.each do |pkg_name, pkg|
             packages[pkg_name] = {} unless packages.key? pkg_name
             pkg.each do |arch_name, arch|
@@ -153,11 +184,21 @@ if $PROGRAM_NAME == __FILE__
     )
 
     write_errata_file(
-      options[:debian],
+      get_filename(:debian, :errata),
       errata,
       name: 'debian-errata',
       verbose: options[:verbose]
     )
+
+    if options[:metadata]
+      # write Metadata
+      write_json_file(
+        get_filename(:debian, :config),
+        metadata,
+        name: 'debian-errata-meta',
+        verbose: options[:verbose]
+      )
+    end
   end
 
   if options.key? :ubuntu
@@ -184,11 +225,21 @@ if $PROGRAM_NAME == __FILE__
     warn 'FINISH Generate ubuntu-errata' if options[:verbose]
 
     write_errata_file(
-      options[:ubuntu],
+      get_filename(:ubuntu, :errata),
       errata,
       name: 'ubuntu-errata',
       verbose: options[:verbose]
     )
+
+    if options[:metadata]
+      # write Metadata
+      write_json_file(
+        get_filename(:ubuntu, :config),
+        parser.metadata,
+        name: 'ubuntu-errata-meta',
+        verbose: options[:verbose]
+      )
+    end
   end
 
 end

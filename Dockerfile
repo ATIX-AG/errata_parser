@@ -15,4 +15,4 @@ RUN bundle
 
 VOLUME /errata
 
-CMD bundle exec errata_parser.rb --config /errata/config.json --debian /errata/debian_errata.json --ubuntu /errata/ubuntu_errata.json
+CMD bundle exec errata_parser.rb --config /errata/config.json --debian /errata/ --ubuntu /errata/ --metadata
