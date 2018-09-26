@@ -184,7 +184,7 @@ if $PROGRAM_NAME == __FILE__
     )
 
     write_errata_file(
-      get_filename(:debian, :errata),
+      File.join(options[:debian], get_filename(:debian, :errata)),
       errata,
       name: 'debian-errata',
       verbose: options[:verbose]
@@ -193,7 +193,7 @@ if $PROGRAM_NAME == __FILE__
     if options[:metadata]
       # write Metadata
       write_json_file(
-        get_filename(:debian, :config),
+        File.join(options[:debian], get_filename(:debian, :config)),
         metadata,
         name: 'debian-errata-meta',
         verbose: options[:verbose]
@@ -225,7 +225,7 @@ if $PROGRAM_NAME == __FILE__
     warn 'FINISH Generate ubuntu-errata' if options[:verbose]
 
     write_errata_file(
-      get_filename(:ubuntu, :errata),
+      File.join(options[:ubuntu], get_filename(:ubuntu, :errata)),
       errata,
       name: 'ubuntu-errata',
       verbose: options[:verbose]
@@ -234,7 +234,7 @@ if $PROGRAM_NAME == __FILE__
     if options[:metadata]
       # write Metadata
       write_json_file(
-        get_filename(:ubuntu, :config),
+        File.join(options[:ubuntu], get_filename(:ubuntu, :config)),
         parser.metadata,
         name: 'ubuntu-errata-meta',
         verbose: options[:verbose]
