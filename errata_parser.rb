@@ -3,6 +3,7 @@
 require 'optparse'
 require_relative 'gen_errata'
 require_relative 'debRelease'
+require_relative 'check_config'
 
 # always interpret files as UTF-8 instead of US-ASCII
 Encoding.default_external = 'UTF-8'
@@ -89,13 +90,24 @@ def get_whitelist(config, name)
   nil
 end
 
+def load_config(filename)
+  raise "Config-file #{filename.inspect} not found, please create one from \"config.json.example\"" unless File.exist? filename
+
+  config = DEFAULT_CONF.merge(JSON.parse(File.read(filename)))
+
+  check_config_hash(config, ERRATAPARSER_CONFIG_SCHEMA)
+  config
+rescue StandardError => e
+  fatal("Error loading config: #{e}", 3)
+end
+
 if $PROGRAM_NAME == __FILE__
   # parse command-line parameters
   options = parse_commandline
 
   ## Load config
   fatal("Config-file #{options[:config].inspect} not found, please create one from \"config.json.example\"", 3) unless File.exist? options[:config]
-  @config = DEFAULT_CONF.merge(JSON.parse(File.read(options[:config])))
+  @config = load_config(options[:config])
 
   ## Sanity checks
   fatal('No Errata-type specified!', 2, true) unless options.key?(:ubuntu) || options.key?(:debian)
