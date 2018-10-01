@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY . .
 
-RUN bundle
+RUN bundle install --deployment
 
 VOLUME /errata
 
