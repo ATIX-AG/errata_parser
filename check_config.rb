@@ -1,6 +1,11 @@
 ##
 # ErrataParser config schema
 #
+ERRATAPARSER_ALIASES_SCHEMA = { type: Hash, mandatory: false, child: {
+  'releases' => { type: Hash, mandatory: false, child: {
+    type: Array, mandatory: true, child: { type: String, mandatory: true }
+  } }
+} }.freeze
 ERRATAPARSER_WHITELIST_SCHEMA = { type: Hash, mandatory: false, child: {
   'releases' => { type: Array, mandatory: false, child: {
     type: String, mandatory: true
@@ -20,10 +25,12 @@ ERRATAPARSER_CONFIG_SCHEMA = {
         type: String, mandatory: true
       } }
     } },
+    'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
     'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA
   } },
   'ubuntu' => { type: Hash, mandatory: false, child: {
     'usn_list_url' => { type: String, mandatory: true },
+    'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
     'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA
   } }
 }.freeze
@@ -31,16 +38,27 @@ ERRATAPARSER_CONFIG_SCHEMA = {
 # takes config (cfg) as a ruby-hash and a schema-hash like above.
 # problems will be reported by throwing exceptions
 def check_config_hash(cfg, schema, path='')
-  # iterate all possible entries
-  schema.each do |k, v|
-    local_path = "#{path}.#{k}"
-    raise "#{path}: Mandatory key #{k.inspect} not found in config" if v[:mandatory] && !cfg.key?(k)
+  if schema.key?(:type)
+    # Hash with not custom keys of fixed schema
+    cfg.each do |k, v|
+      local_path = "#{path}.#{k}"
+      raise "#{local_path}: has type #{v.class.name} but should be #{schema[:type]}" if v.class != schema[:type]
 
-    next unless cfg.key? k
+      check_config_child(v, schema, local_path) if schema.key?(:child)
+    end
 
-    raise "#{local_path}: has type #{cfg[k].class.name} but should be #{v[:type]}" if cfg[k].class != v[:type]
+  else
+    # iterate all possible entries
+    schema.each do |k, v|
+      local_path = "#{path}.#{k}"
+      raise "#{path}: Mandatory key #{k.inspect} not found in config" if v[:mandatory] && !cfg.key?(k)
 
-    check_config_child(cfg[k], v, local_path) if v.key?(:child)
+      next unless cfg.key? k
+
+      raise "#{local_path}: has type #{cfg[k].class.name} but should be #{v[:type]}" if cfg[k].class != v[:type]
+
+      check_config_child(cfg[k], v, local_path) if v.key?(:child)
+    end
   end
 end
 

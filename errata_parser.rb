@@ -162,6 +162,8 @@ if $PROGRAM_NAME == __FILE__
             'architectures': deb_rel.architectures,
             'components': deb_rel.components,
           }
+          metadata[:releases][deb_rel.release_name][:aliases] = cfg['aliases']['releases'][deb_rel.release_name] if
+            cfg.key?('aliases') && cfg['aliases'].key?('releases') && cfg['aliases']['releases'].key?(deb_rel.release_name)
 
           # merge packages
           pkgs.each do |pkg_name, pkg|
@@ -244,10 +246,18 @@ if $PROGRAM_NAME == __FILE__
     )
 
     if options[:metadata]
+      metadata = parser.metadata
+      if cfg.key?('aliases') && cfg['aliases'].key?('releases')
+        metadata[:releases].each_key do |rel|
+          # rubocop:disable Metrics/BlockNesting
+          metadata[:releases][rel][:aliases] = cfg['aliases']['releases'][rel] if cfg['aliases']['releases'].key?(rel)
+          # rubocop:enable Metrics/BlockNesting
+        end
+      end
       # write Metadata
       write_json_file(
         File.join(options[:ubuntu], get_filename(:ubuntu, :config)),
-        parser.metadata,
+        metadata,
         name: 'ubuntu-errata-meta',
         verbose: options[:verbose]
       )
