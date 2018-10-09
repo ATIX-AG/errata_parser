@@ -21,6 +21,13 @@
         "amd64",
         "i386"
       ]
+    },
+    "aliases": {
+      "releases": {
+        "buster": [ "buster/updates", "buster-updates" , "buster-backports" ],
+        "stretch": [ "stretch/updates", "stretch-updates" , "stretch-backports" ],
+        "jessie": [ "jessie/updates", "jessie-updates" , "jessie-backports" ]
+      }
     }
   },
   "ubuntu": {
@@ -35,6 +42,13 @@
         "amd64",
         "i386"
       ]
+    },
+    "aliases": {
+      "releases": {
+        "bionic": [ "bionic-security", "bionic-updates" ],
+        "artful": [ "artful-security", "artful-updates" ],
+        "xenial": [ "xenial-security", "xenial-updates" ]
+      }
     }
   }
 }
