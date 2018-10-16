@@ -5,162 +5,162 @@
   affected_source_package: 
   packages:
   - name: libmagick++-6-headers
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
     release: bionic
   - name: libmagickcore-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
     release: bionic
   - name: libmagickwand-6-headers
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
     release: bionic
   - name: imagemagick-doc
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: universe
     release: bionic
   - name: perlmagick
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: universe
     release: bionic
   - name: libmagickcore-6-headers
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
     release: bionic
   - name: imagemagick-6-common
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
     release: bionic
   - name: libimage-magick-perl
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: universe
     release: bionic
   - name: imagemagick-6-doc
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: universe
     release: bionic
   - name: libmagickwand-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
     release: bionic
   - name: imagemagick-common
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: universe
     release: bionic
   - name: libmagick++-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
     release: bionic
   - name: libmagickcore-6.q16hdri-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16hdri-3
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libimage-magick-q16hdri-perl
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: universe
     release: bionic
   - name: libmagickcore-6-arch-config
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16-3
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16hdri-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16-3-extra
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: imagemagick
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16-7
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16hdri-7
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16-3
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16hdri-3
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16hdri-3-extra
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: imagemagick-6.q16hdri
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: universe
     release: bionic
   - name: imagemagick-6.q16
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16hdri-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
     release: bionic
   - name: libimage-magick-q16-perl
-    version: 6.9.7.4+dfsg-16ubuntu6.3
+    version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: universe
     release: bionic
@@ -6120,22 +6120,22 @@
   affected_source_package: 
   packages:
   - name: ntp-doc
-    version: 4.2.8p10+dfsg-5ubuntu7.1
+    version: 1:4.2.8p10+dfsg-5ubuntu7.1
     architecture: all
     component: universe
     release: bionic
   - name: ntp
-    version: 4.2.8p10+dfsg-5ubuntu7.1
+    version: 1:4.2.8p10+dfsg-5ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: ntpdate
-    version: 4.2.8p10+dfsg-5ubuntu7.1
+    version: 1:4.2.8p10+dfsg-5ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: sntp
-    version: 4.2.8p10+dfsg-5ubuntu7.1
+    version: 1:4.2.8p10+dfsg-5ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
@@ -6345,432 +6345,432 @@
   affected_source_package: 
   packages:
   - name: thunderbird-locale-fy-nl
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-bn-bd
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-es-es
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-zh-cn
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-pa-in
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-pt-pt
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-nn-no
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-ga-ie
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-en-us
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-pt-br
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-es-ar
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-sv-se
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-en-gb
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-zh-tw
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-ta-lk
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-nb-no
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-tr
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-fi
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-es
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-it
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-fr
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-mozsymbols
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-ru
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-da
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-pt
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ast
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-bn
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-id
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-gl
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-cy
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-uk
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-bg
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-et
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: xul-ext-calendar-timezones
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-pl
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ar
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-de
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ka
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-be
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-eu
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: xul-ext-lightning
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-testsuite
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-nb
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-vi
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ro
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-kab
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-dsb
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-gnome-support
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-dev
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ta
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-zh-hant
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sl
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-hy
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-rm
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ko
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-af
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-dbg
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sv
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-nn
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-hu
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-gd
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ca
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: xul-ext-gdata-provider
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-mk
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ja
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-nl
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-cs
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-lt
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ga
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-en
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-zh-hans
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sq
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-globalmenu
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-pa
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sk
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-hsb
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-el
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-gnome-support-dbg
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-is
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-fy
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-si
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sr
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-hr
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-he
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-br
-    version: 52.8.0+build1-0ubuntu0.18.04.1
+    version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
@@ -7207,87 +7207,87 @@
   affected_source_package: 
   packages:
   - name: qemu-system-mips
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-user-binfmt
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-arm
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-utils
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-kvm
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-user
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-ppc
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-x86
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-misc
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-user-static
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-s390x
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-block-extra
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-common
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-sparc
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-guest-agent
-    version: 2.11+dfsg-1ubuntu7.3
+    version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: universe
     release: bionic
@@ -7464,37 +7464,37 @@
   affected_source_package: 
   packages:
   - name: libx11-doc
-    version: 1.6.4-3ubuntu0.1
+    version: 2:1.6.4-3ubuntu0.1
     architecture: all
     component: main
     release: bionic
   - name: libx11-data
-    version: 1.6.4-3ubuntu0.1
+    version: 2:1.6.4-3ubuntu0.1
     architecture: all
     component: main
     release: bionic
   - name: libx11-xcb1
-    version: 1.6.4-3ubuntu0.1
+    version: 2:1.6.4-3ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
   - name: libx11-6-udeb
-    version: 1.6.4-3ubuntu0.1
+    version: 2:1.6.4-3ubuntu0.1
     architecture: amd64
     component: universe
     release: bionic
   - name: libx11-dev
-    version: 1.6.4-3ubuntu0.1
+    version: 2:1.6.4-3ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
   - name: libx11-6
-    version: 1.6.4-3ubuntu0.1
+    version: 2:1.6.4-3ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
   - name: libx11-xcb-dev
-    version: 1.6.4-3ubuntu0.1
+    version: 2:1.6.4-3ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
@@ -7638,22 +7638,22 @@
   affected_source_package: 
   packages:
   - name: hostapd
-    version: 2.6-15ubuntu2.1
+    version: 2:2.6-15ubuntu2.1
     architecture: amd64
     component: universe
     release: bionic
   - name: wpagui
-    version: 2.6-15ubuntu2.1
+    version: 2:2.6-15ubuntu2.1
     architecture: amd64
     component: universe
     release: bionic
   - name: wpasupplicant-udeb
-    version: 2.6-15ubuntu2.1
+    version: 2:2.6-15ubuntu2.1
     architecture: amd64
     component: main
     release: bionic
   - name: wpasupplicant
-    version: 2.6-15ubuntu2.1
+    version: 2:2.6-15ubuntu2.1
     architecture: amd64
     component: main
     release: bionic
@@ -12150,102 +12150,102 @@
   affected_source_package: 
   packages:
   - name: samba-common
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: all
     component: main
     release: bionic
   - name: samba-libs
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: ctdb
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: universe
     release: bionic
   - name: python-samba
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: samba-vfs-modules
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: smbclient
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: samba-dev
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: libsmbclient-dev
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: registry-tools
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: universe
     release: bionic
   - name: winbind
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: libsmbclient
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: libparse-pidl-perl
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: samba-dsdb-modules
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: samba
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: samba-common-bin
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: libpam-winbind
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: samba-testsuite
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: universe
     release: bionic
   - name: libnss-winbind
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: libwbclient-dev
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
   - name: libwbclient0
-    version: 4.7.6+dfsg~ubuntu-0ubuntu2.2
+    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
     release: bionic
@@ -12629,72 +12629,72 @@
   affected_source_package: 
   packages:
   - name: git-daemon-run
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-el
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-man
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: main
     release: bionic
   - name: git-gui
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: gitweb
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-svn
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-all
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: gitk
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-daemon-sysvinit
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-email
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-doc
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: main
     release: bionic
   - name: git-mediawiki
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git-cvs
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: universe
     release: bionic
   - name: git
-    version: 2.17.1-1ubuntu0.1
+    version: 1:2.17.1-1ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
@@ -12871,122 +12871,122 @@
   affected_source_package: 
   packages:
   - name: bind9-doc
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: all
     component: main
     release: bionic
   - name: libbind-export-dev
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisccfg-export160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libdns-export1100
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisc-export169-udeb
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libirs160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libirs-export160-udeb
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libdns-export1100-udeb
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisccc-export160-udeb
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: universe
     release: bionic
   - name: libisc169
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisc-export169
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libbind-dev
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisccfg-export160-udeb
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: bind9-host
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisccc160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: dnsutils
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libbind9-160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: bind9
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: liblwres160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libdns1100
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisccc-export160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libisccfg160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: bind9utils
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libirs-export160
-    version: 9.11.3+dfsg-1ubuntu1.1
+    version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
@@ -13211,22 +13211,22 @@
   affected_source_package: 
   packages:
   - name: libmagic-dev
-    version: 5.32-2ubuntu0.1
+    version: 1:5.32-2ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
   - name: file
-    version: 5.32-2ubuntu0.1
+    version: 1:5.32-2ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
   - name: libmagic1
-    version: 5.32-2ubuntu0.1
+    version: 1:5.32-2ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
   - name: libmagic-mgc
-    version: 5.32-2ubuntu0.1
+    version: 1:5.32-2ubuntu0.1
     architecture: amd64
     component: main
     release: bionic
@@ -13264,22 +13264,22 @@
   affected_source_package: 
   packages:
   - name: python-django
-    version: 1.11.11-1ubuntu1.1
+    version: 1:1.11.11-1ubuntu1.1
     architecture: all
     component: main
     release: bionic
   - name: python-django-common
-    version: 1.11.11-1ubuntu1.1
+    version: 1:1.11.11-1ubuntu1.1
     architecture: all
     component: main
     release: bionic
   - name: python3-django
-    version: 1.11.11-1ubuntu1.1
+    version: 1:1.11.11-1ubuntu1.1
     architecture: all
     component: main
     release: bionic
   - name: python-django-doc
-    version: 1.11.11-1ubuntu1.1
+    version: 1:1.11.11-1ubuntu1.1
     architecture: all
     component: main
     release: bionic
@@ -13295,87 +13295,87 @@
   affected_source_package: 
   packages:
   - name: qemu-system-ppc
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-utils
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-block-extra
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-user-binfmt
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-user-static
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-arm
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-misc
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-guest-agent
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-user
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-common
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-x86
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-sparc
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-mips
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-kvm
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-s390x
-    version: 2.11+dfsg-1ubuntu7.1
+    version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
     release: bionic
@@ -14152,17 +14152,17 @@
   affected_source_package: 
   packages:
   - name: libprocps6
-    version: 3.3.12-3ubuntu1.1
+    version: 2:3.3.12-3ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: libprocps-dev
-    version: 3.3.12-3ubuntu1.1
+    version: 2:3.3.12-3ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
   - name: procps
-    version: 3.3.12-3ubuntu1.1
+    version: 2:3.3.12-3ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
@@ -14231,87 +14231,87 @@
   affected_source_package: 
   packages:
   - name: qemu-system-sparc
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-utils
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-user
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-guest-agent
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-common
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-user-static
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-s390x
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-mips
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-block-extra
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-kvm
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-ppc
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-x86
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
   - name: qemu-system-misc
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-user-binfmt
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: universe
     release: bionic
   - name: qemu-system-arm
-    version: 2.11+dfsg-1ubuntu7.2
+    version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
@@ -14329,432 +14329,432 @@
   affected_source_package: 
   packages:
   - name: thunderbird-locale-es-ar
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-zh-tw
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-pa-in
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-fy-nl
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-bn-bd
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-ga-ie
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-ta-lk
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-es-es
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-nb-no
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-en-us
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-pt-pt
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-sv-se
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-pt-br
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-zh-cn
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-en-gb
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-nn-no
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: all
     component: main
     release: bionic
   - name: thunderbird-locale-hsb
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-el
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-dbg
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: xul-ext-gdata-provider
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-en
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-dev
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sv
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-mozsymbols
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-zh-hant
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-testsuite
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-cy
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-he
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-pt
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ast
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ar
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-id
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-nl
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ta
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ru
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: xul-ext-lightning
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-fr
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-da
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ga
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-fy
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-gnome-support
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-is
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-es
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-zh-hans
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-fi
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-rm
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-pa
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-dsb
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-af
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-mk
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-be
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ja
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sq
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-hu
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-br
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-bg
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-bn
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-it
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-et
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-pl
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-gnome-support-dbg
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-globalmenu
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-kab
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-nn
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sk
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ca
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-eu
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-cs
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ro
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ka
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sr
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-tr
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-gl
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-uk
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-vi
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-hy
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-nb
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-lt
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-sl
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: xul-ext-calendar-timezones
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: universe
     release: bionic
   - name: thunderbird-locale-hr
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-de
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-si
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-gd
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
   - name: thunderbird-locale-ko
-    version: 52.9.1+build3-0ubuntu0.18.04.1
+    version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
@@ -16425,162 +16425,162 @@
   affected_source_package: 
   packages:
   - name: libmagickcore-6-headers
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
   - name: libmagickcore-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
   - name: libmagickwand-6-headers
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
   - name: libmagick++-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
   - name: imagemagick-doc
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: universe
     release: bionic
   - name: libmagick++-6-headers
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
   - name: libimage-magick-perl
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: universe
     release: bionic
   - name: imagemagick-6-common
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
   - name: imagemagick-6-doc
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: universe
     release: bionic
   - name: imagemagick-common
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: universe
     release: bionic
   - name: perlmagick
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: universe
     release: bionic
   - name: libmagickwand-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
   - name: libmagickcore-6.q16hdri-3-extra
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16hdri-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16-3-extra
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16hdri-3
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6-arch-config
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16hdri-7
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libimage-magick-q16hdri-perl
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: universe
     release: bionic
   - name: libmagickcore-6.q16-3
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16-3
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: imagemagick-6.q16hdri
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: universe
     release: bionic
   - name: libimage-magick-q16-perl
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: universe
     release: bionic
   - name: imagemagick-6.q16
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: imagemagick
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickwand-6.q16hdri-3
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagickcore-6.q16hdri-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16-7
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
   - name: libmagick++-6.q16hdri-dev
-    version: 6.9.7.4+dfsg-16ubuntu6.2
+    version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
     release: bionic
