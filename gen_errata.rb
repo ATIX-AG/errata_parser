@@ -291,7 +291,17 @@ class DebianErrataParser
     res
   end
 
+  def get_versions(hsh)
+    ret = {}
+    hsh.values.each do |b|
+      ret[b['version'].sub(/^\d+:/, '')] = b['version']
+    end
+    ret
+  end
+
   def add_packages_ubuntu(erratum, release, data, architecture_whitelist)
+    versions = get_versions(data['sources'])
+    versions.merge(get_versions(data['binaries']))
     data['archs'].each do |arch_name, arch|
       next if arch_name == 'source'
       next unless arch_name == 'all' || architecture_whitelist.nil? || architecture_whitelist.include?(arch_name)
@@ -303,7 +313,7 @@ class DebianErrataParser
         else
           erratum.add_package(
             match['pkg_name'],
-            match['version'],
+            versions[match['version']] || match['version'],
             architecture: match['arch'],
             component: match['comp'],
             release: release
