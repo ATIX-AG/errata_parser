@@ -307,7 +307,7 @@ class DebianErrataParser
       next unless arch_name == 'all' || architecture_whitelist.nil? || architecture_whitelist.include?(arch_name)
 
       arch['urls'].each_key do |url|
-        match = %r{/pool/(?<comp>[^/]+)/.*/(?<pkg_name>[^/_]*)_(?<version>[^_/]+)_(?<arch>[^_/]+)\.[ud]?deb}.match(url)
+        match = %r{/pool/(?<comp>[^/]+)/.*/(?<pkg_name>[^/_]*)_(?<version>[^_/]+)_(?<arch>[^_/]+)\.deb}.match(url)
         if match.nil?
           warn "#{erratum.name}: URL did not match: #{url}" if @verbose
         else

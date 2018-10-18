@@ -209,11 +209,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libssl1.1-udeb
-    version: 1.1.0g-2ubuntu4.1
-    architecture: amd64
-    component: main
-    release: bionic
   - name: openssl1.0
     version: 1.0.2n-1ubuntu5.1
     architecture: amd64
@@ -223,11 +218,6 @@
     version: 1.0.2n-1ubuntu5.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libssl1.0.0-udeb
-    version: 1.0.2n-1ubuntu5.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libssl1.1
     version: 1.1.0g-2ubuntu4.1
@@ -241,16 +231,6 @@
     release: bionic
   - name: openssl
     version: 1.1.0g-2ubuntu4.1
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: libcrypto1.1-udeb
-    version: 1.1.0g-2ubuntu4.1
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: libcrypto1.0.0-udeb
-    version: 1.0.2n-1ubuntu5.1
     architecture: amd64
     component: main
     release: bionic
@@ -364,11 +344,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: plip-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-kvm
     version: 4.15.0.1012.12
     architecture: amd64
@@ -376,11 +351,6 @@
     release: bionic
   - name: linux-signed-lowlatency
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -394,33 +364,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: parport-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-kvm
     version: 4.15.0.1012.12
     architecture: amd64
     component: main
     release: bionic
-  - name: input-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1011-aws
     version: 4.15.0-1011.11
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -431,11 +381,6 @@
     release: bionic
   - name: linux-tools-generic-hwe-16.04
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -454,28 +399,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pcmcia-storage-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-gcp
     version: 4.15.0.1010.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -494,11 +419,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: vlan-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-4.15.0-24-generic
     version: 4.15.0-24.26
     architecture: amd64
@@ -514,23 +434,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: vlan-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-aws
     version: 4.15.0.1011.11
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -549,11 +454,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: message-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-virtual
     version: 4.15.0.24.26
     architecture: amd64
@@ -561,11 +461,6 @@
     release: bionic
   - name: linux-cloud-tools-lowlatency-hwe-16.04
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ipmi-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -629,11 +524,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: kernel-image-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-1014-azure
     version: 4.15.0-1014.14
     architecture: amd64
@@ -644,23 +534,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: irda-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-lowlatency-hwe-16.04
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -674,38 +549,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: plip-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-oem
     version: 4.15.0.1009.11
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-oem
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -714,18 +559,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pata-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-extra-4.15.0-1014-azure
     version: 4.15.0-1014.14
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -759,11 +594,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pcmcia-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-virtual-hwe-16.04-edge
     version: 4.15.0.24.26
     architecture: amd64
@@ -774,18 +604,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fat-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-unsigned-4.15.0-1009-oem
     version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -799,11 +619,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: message-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-virtual-hwe-16.04-edge
     version: 4.15.0.24.26
     architecture: amd64
@@ -814,28 +629,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: virtio-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-generic
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -849,53 +644,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: linux-udebs-generic
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-kvm
     version: 4.15.0.1012.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -914,11 +664,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-pcmcia-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-gke
     version: 4.15.0.1010.12
     architecture: amd64
@@ -929,11 +674,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ppp-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-azure
     version: 4.15.0.1014.14
     architecture: amd64
@@ -941,11 +681,6 @@
     release: bionic
   - name: linux-headers-4.15.0-1011-aws
     version: 4.15.0-1011.11
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -964,18 +699,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: scsi-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-lowlatency
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -994,11 +719,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pata-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-24
     version: 4.15.0-24.26
     architecture: amd64
@@ -1011,11 +731,6 @@
     release: bionic
   - name: linux-image-generic
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -1044,11 +759,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-virtual-hwe-16.04
     version: 4.15.0.24.26
     architecture: amd64
@@ -1069,16 +779,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: block-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-unsigned-4.15.0-1014-azure
     version: 4.15.0-1014.14
     architecture: amd64
@@ -1086,16 +786,6 @@
     release: bionic
   - name: linux-signed-image-generic-hwe-16.04
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: multipath-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -1109,23 +799,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: multipath-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-azure
     version: 4.15.0.1014.14
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -1136,11 +811,6 @@
     release: bionic
   - name: linux-headers-generic-hwe-16.04
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: virtio-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -1179,11 +849,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fs-core-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-generic
     version: 4.15.0.24.26
     architecture: amd64
@@ -1191,11 +856,6 @@
     release: bionic
   - name: linux-modules-4.15.0-1009-oem
     version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ipmi-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -1215,21 +875,6 @@
     component: main
     release: bionic
   - name: linux-modules-extra-4.15.0-24-generic
-    version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-24-generic-di
     version: 4.15.0-24.26
     architecture: amd64
     component: main
@@ -1309,18 +954,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-shared-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-virtual
     version: 4.15.0.24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-24-generic-di
-    version: 4.15.0-24.26
     architecture: amd64
     component: main
     release: bionic
@@ -1336,11 +971,6 @@
     release: bionic
   - name: linux-modules-4.15.0-24-lowlatency
     version: 4.15.0-24.26
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-1009-oem-di
-    version: 4.15.0-1009.12
     architecture: amd64
     component: main
     release: bionic
@@ -1477,11 +1107,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: virtio-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-aws
     version: 4.15.0.1020.20
     architecture: amd64
@@ -1497,18 +1122,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nfs-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-lowlatency-hwe-16.04
     version: 4.15.0.33.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -1522,11 +1137,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: md-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-virtual
     version: 4.15.0.33.35
     architecture: amd64
@@ -1534,11 +1144,6 @@
     release: bionic
   - name: linux-cloud-tools-generic-hwe-16.04-edge
     version: 4.15.0.33.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: vlan-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -1564,11 +1169,6 @@
     release: bionic
   - name: linux-headers-virtual
     version: 4.15.0.33.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-generic
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -1607,28 +1207,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fat-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-lowlatency-hwe-16.04-edge
     version: 4.15.0.33.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -1667,31 +1247,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: plip-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-aws
     version: 4.15.0.1020.20
     architecture: amd64
@@ -1717,11 +1272,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firewire-core-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-generic
     version: 4.15.0.33.35
     architecture: amd64
@@ -1729,11 +1279,6 @@
     release: bionic
   - name: linux-modules-4.15.0-1020-aws
     version: 4.15.0-1020.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -1827,11 +1372,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: kernel-image-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-gcp
     version: 4.15.0.1018.20
     architecture: amd64
@@ -1867,17 +1407,7 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pcmcia-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-33-generic
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: multipath-modules-4.15.0-33-generic-di
     version: 4.15.0-33.36
     architecture: amd64
     component: main
@@ -1902,18 +1432,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-lowlatency
     version: 4.15.0.33.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -1923,11 +1443,6 @@
     component: main
     release: bionic
   - name: linux-cloud-tools-4.15.0-33
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-33-generic-di
     version: 4.15.0-33.36
     architecture: amd64
     component: main
@@ -1947,11 +1462,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: irda-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-generic
     version: 4.15.0.33.35
     architecture: amd64
@@ -1968,26 +1478,6 @@
     component: main
     release: bionic
   - name: linux-cloud-tools-4.15.0-33-generic
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-33-generic-di
     version: 4.15.0-33.36
     architecture: amd64
     component: main
@@ -2027,16 +1517,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pcmcia-storage-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: message-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-virtual-hwe-16.04-edge
     version: 4.15.0.33.35
     architecture: amd64
@@ -2054,16 +1534,6 @@
     release: bionic
   - name: linux-generic-hwe-16.04-edge
     version: 4.15.0.33.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -2127,11 +1597,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: input-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-gcp
     version: 4.15.0.1018.20
     architecture: amd64
@@ -2157,18 +1622,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: sata-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-aws
     version: 4.15.0.1020.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pata-modules-4.15.0-33-generic-di
-    version: 4.15.0-33.36
     architecture: amd64
     component: main
     release: bionic
@@ -2358,23 +1813,8 @@
     architecture: all
     component: main
     release: bionic
-  - name: kernel-image-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-kvm
     version: 4.15.0.1016.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -2423,11 +1863,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: parport-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-unsigned-4.15.0-1018-azure
     version: 4.15.0-1018.18
     architecture: amd64
@@ -2453,11 +1888,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: virtio-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-4.15.0-1016-kvm
     version: 4.15.0-1016.16
     architecture: amd64
@@ -2475,31 +1905,6 @@
     release: bionic
   - name: linux-image-extra-virtual-hwe-16.04-edge
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: message-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -2533,23 +1938,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: input-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-virtual-hwe-16.04-edge
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pata-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -2558,18 +1948,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fat-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-generic-hwe-16.04
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -2583,11 +1963,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: storage-core-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-virtual-hwe-16.04
     version: 4.15.0.29.31
     architecture: amd64
@@ -2598,11 +1973,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: message-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-aws
     version: 4.15.0.1016.16
     architecture: amd64
@@ -2610,11 +1980,6 @@
     release: bionic
   - name: linux-azure-edge
     version: 4.15.0.1018.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -2633,22 +1998,7 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: virtio-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-29
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-generic
     version: 4.15.0-29.31
     architecture: amd64
     component: main
@@ -2668,23 +2018,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: serial-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-extra-virtual-hwe-16.04
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -2703,33 +2038,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firewire-core-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pata-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-29-lowlatency
     version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -2768,18 +2078,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: mouse-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-lowlatency
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -2793,11 +2093,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-virtual-hwe-16.04-edge
     version: 4.15.0.29.31
     architecture: amd64
@@ -2808,28 +2103,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: kernel-image-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-lowlatency-hwe-16.04-edge
     version: 4.15.0.29.31
     architecture: amd64
     component: main
     release: bionic
-  - name: fb-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-kvm-tools-4.15.0-1016
     version: 4.15.0-1016.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: multipath-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -2873,18 +2153,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nfs-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-image-azure
     version: 4.15.0.1018.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -2903,48 +2173,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: md-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1018-azure
     version: 4.15.0-1018.18
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-generic-hwe-16.04-edge
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -2955,11 +2190,6 @@
     release: bionic
   - name: linux-aws-tools-4.15.0-1016
     version: 4.15.0-1016.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -2975,11 +2205,6 @@
     release: bionic
   - name: linux-oem
     version: 4.15.0.1012.14
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -3013,28 +2238,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fs-secondary-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-lowlatency
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-oem
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -3058,38 +2263,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: multipath-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-azure-edge
     version: 4.15.0.1018.18
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-generic-hwe-16.04-edge
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -3123,11 +2303,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fb-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-aws
     version: 4.15.0.1016.16
     architecture: amd64
@@ -3135,11 +2310,6 @@
     release: bionic
   - name: linux-signed-image-generic-hwe-16.04-edge
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -3155,11 +2325,6 @@
     release: bionic
   - name: linux-tools-kvm
     version: 4.15.0.1016.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -3198,11 +2363,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: floppy-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-lowlatency-hwe-16.04-edge
     version: 4.15.0.29.31
     architecture: amd64
@@ -3213,27 +2373,12 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: vlan-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-1016-aws
     version: 4.15.0-1016.16
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-shared-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-1012-oem
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-1012-oem-di
     version: 4.15.0-1012.15
     architecture: amd64
     component: main
@@ -3278,27 +2423,12 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firewire-core-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-virtual-hwe-16.04-edge
     version: 4.15.0.29.31
     architecture: amd64
     component: main
     release: bionic
-  - name: vlan-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-29-lowlatency
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-29-generic-di
     version: 4.15.0-29.31
     architecture: amd64
     component: main
@@ -3318,18 +2448,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-generic-hwe-16.04-edge
     version: 4.15.0.29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-1012-oem-di
-    version: 4.15.0-1012.15
     architecture: amd64
     component: main
     release: bionic
@@ -3340,16 +2460,6 @@
     release: bionic
   - name: linux-modules-extra-4.15.0-1018-azure
     version: 4.15.0-1018.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-29-generic-di
-    version: 4.15.0-29.31
     architecture: amd64
     component: main
     release: bionic
@@ -3384,11 +2494,6 @@
     component: main
     release: bionic
   - name: linux-image-unsigned-4.15.0-29-lowlatency
-    version: 4.15.0-29.31
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-29-generic-di
     version: 4.15.0-29.31
     architecture: amd64
     component: main
@@ -3796,11 +2901,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: multipath-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-4.15.0-1011-kvm
     version: 4.15.0-1011.11
     architecture: amd64
@@ -3826,28 +2926,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: block-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1009-gcp
     version: 4.15.0-1009.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -3881,22 +2961,12 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: virtio-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-extra-virtual-hwe-16.04
     version: 4.15.0.23.25
     architecture: amd64
     component: main
     release: bionic
   - name: linux-modules-4.15.0-23-lowlatency
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-generic
     version: 4.15.0-23.25
     architecture: amd64
     component: main
@@ -3913,11 +2983,6 @@
     release: bionic
   - name: linux-image-lowlatency-hwe-16.04-edge
     version: 4.15.0.23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -3956,11 +3021,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nfs-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-4.15.0-1009-gcp
     version: 4.15.0-1009.9
     architecture: amd64
@@ -3971,18 +3031,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-usb-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-virtual
     version: 4.15.0.23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -4023,16 +3073,6 @@
     release: bionic
   - name: linux-kvm
     version: 4.15.0.1011.11
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pata-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -4081,21 +3121,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: storage-core-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-lowlatency-hwe-16.04-edge
     version: 4.15.0.23.25
     architecture: amd64
@@ -4141,11 +3166,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: md-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-4.15.0-23
     version: 4.15.0-23.25
     architecture: amd64
@@ -4163,11 +3183,6 @@
     release: bionic
   - name: linux-image-generic-hwe-16.04-edge
     version: 4.15.0.23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -4191,18 +3206,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fb-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-generic-hwe-16.04-edge
     version: 4.15.0.23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -4266,11 +3271,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-shared-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-lowlatency
     version: 4.15.0.23.25
     architecture: amd64
@@ -4286,11 +3286,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: crypto-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-23-generic
     version: 4.15.0-23.25
     architecture: amd64
@@ -4298,16 +3293,6 @@
     release: bionic
   - name: linux-signed-image-lowlatency
     version: 4.15.0.23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -4366,11 +3351,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pcmcia-storage-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-extra-virtual-hwe-16.04-edge
     version: 4.15.0.23.25
     architecture: amd64
@@ -4381,33 +3361,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: message-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-image-generic-hwe-16.04-edge
     version: 4.15.0.23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: vlan-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -4426,21 +3381,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-gke
     version: 4.15.0.1009.11
     architecture: amd64
@@ -4448,11 +3388,6 @@
     release: bionic
   - name: linux-tools-kvm
     version: 4.15.0.1011.11
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -4483,11 +3418,6 @@
     release: bionic
   - name: linux-tools-generic-hwe-16.04
     version: 4.15.0.23.25
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-23-generic-di
-    version: 4.15.0-23.25
     architecture: amd64
     component: main
     release: bionic
@@ -5923,11 +4853,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: wget-udeb
-    version: 1.19.4-1ubuntu2.1
-    architecture: amd64
-    component: main
-    release: bionic
   description: |
     It was discovered that Wget incorrectly handled certain inputs.
     An attacker could possibly use this to inject arbitrary cookie values.
@@ -5950,11 +4875,6 @@
     release: bionic
   - name: libgcrypt11-dev
     version: 1.5.4-3+really1.8.1-4ubuntu1.1
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: libgcrypt20-udeb
-    version: 1.8.1-4ubuntu1.1
     architecture: amd64
     component: main
     release: bionic
@@ -6322,11 +5242,6 @@
   issued: 21 Aug 2018
   affected_source_package: 
   packages:
-  - name: lsb-release-udeb
-    version: 10.1ubuntu2.2
-    architecture: all
-    component: main
-    release: bionic
   - name: base-files
     version: 10.1ubuntu2.2
     architecture: amd64
@@ -7158,11 +6073,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libxml2-udeb
-    version: 2.9.4+dfsg1-6.1ubuntu1.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: python3-libxml2
     version: 2.9.4+dfsg1-6.1ubuntu1.2
     architecture: amd64
@@ -7478,11 +6388,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libx11-6-udeb
-    version: 2:1.6.4-3ubuntu0.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libx11-dev
     version: 2:1.6.4-3ubuntu0.1
     architecture: amd64
@@ -7646,11 +6551,6 @@
     version: 2:2.6-15ubuntu2.1
     architecture: amd64
     component: universe
-    release: bionic
-  - name: wpasupplicant-udeb
-    version: 2:2.6-15ubuntu2.1
-    architecture: amd64
-    component: main
     release: bionic
   - name: wpasupplicant
     version: 2:2.6-15ubuntu2.1
@@ -7829,33 +6729,8 @@
     architecture: all
     component: main
     release: bionic
-  - name: message-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-azure
     version: 4.15.0.1022.22
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -7874,26 +6749,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nfs-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: multipath-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pata-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1022-azure
     version: 4.15.0-1022.23
     architecture: amd64
@@ -7901,11 +6756,6 @@
     release: bionic
   - name: linux-image-azure-edge
     version: 4.15.0.1022.22
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -7934,43 +6784,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: usb-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-extra-azure
     version: 4.15.0.1022.22
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -7979,18 +6794,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fs-core-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-azure
     version: 4.15.0.1022.22
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -8019,33 +6824,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: linux-udebs-oem
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-azure
     version: 4.15.0.1022.22
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: virtio-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: vlan-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -8054,43 +6834,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-1017-oem
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-1017-oem-di
     version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
   - name: linux-azure-cloud-tools-4.15.0-1022
     version: 4.15.0-1022.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -8101,11 +6851,6 @@
     release: bionic
   - name: linux-headers-4.15.0-1022-azure
     version: 4.15.0-1022.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -8124,11 +6869,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fs-secondary-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-azure-tools-4.15.0-1022
     version: 4.15.0-1022.23
     architecture: amd64
@@ -8139,23 +6879,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ppp-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-azure-edge
     version: 4.15.0.1022.22
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-1017-oem-di
-    version: 4.15.0-1017.20
     architecture: amd64
     component: main
     release: bionic
@@ -9971,11 +8696,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fb-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-lowlatency
     version: 4.15.0.32.34
     architecture: amd64
@@ -9986,18 +8706,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pcmcia-storage-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-gke
     version: 4.15.0.1017.19
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10051,23 +8761,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-kvm
     version: 4.15.0.1019.19
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10083,26 +8778,6 @@
     release: bionic
   - name: linux-tools-4.15.0-32
     version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ipmi-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10126,18 +8801,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: scsi-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-image-azure
     version: 4.15.0.1021.21
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10166,21 +8831,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: input-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-4.15.0-1019-kvm
     version: 4.15.0-1019.19
     architecture: amd64
@@ -10196,38 +8846,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pata-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-32-generic
     version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
-  - name: multipath-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-image-lowlatency
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: vlan-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10316,23 +8941,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: kernel-image-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-gcp-tools-4.15.0-1017
     version: 4.15.0-1017.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10351,16 +8961,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: vlan-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-gke
     version: 4.15.0.1017.19
     architecture: amd64
@@ -10368,11 +8968,6 @@
     release: bionic
   - name: linux-image-unsigned-4.15.0-1015-oem
     version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10386,28 +8981,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: floppy-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-generic
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-oem
     version: 4.15.0.1015.17
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10416,38 +8991,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fs-secondary-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-generic-hwe-16.04
     version: 4.15.0.32.34
     architecture: amd64
     component: main
     release: bionic
-  - name: md-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-4.15.0-32-lowlatency
     version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10491,11 +9041,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-32-lowlatency
     version: 4.15.0-32.35
     architecture: amd64
@@ -10508,11 +9053,6 @@
     release: bionic
   - name: linux-signed-image-lowlatency-hwe-16.04
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10551,31 +9091,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-pcmcia-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-oem
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-azure
     version: 4.15.0.1021.21
     architecture: amd64
@@ -10583,16 +9098,6 @@
     release: bionic
   - name: linux-image-virtual-hwe-16.04-edge
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10608,21 +9113,6 @@
     release: bionic
   - name: linux-headers-lowlatency-hwe-16.04
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10666,21 +9156,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: sata-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: message-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-32-lowlatency
     version: 4.15.0-32.35
     architecture: amd64
@@ -10701,16 +9176,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: parport-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pata-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-lowlatency
     version: 4.15.0.32.34
     architecture: amd64
@@ -10718,11 +9183,6 @@
     release: bionic
   - name: linux-headers-gke
     version: 4.15.0.1017.19
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: message-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10736,28 +9196,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: serial-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-lowlatency-hwe-16.04-edge
     version: 4.15.0.32.34
     architecture: amd64
     component: main
     release: bionic
-  - name: multipath-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-generic-hwe-16.04
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: virtio-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10786,11 +9231,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: virtio-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-lowlatency-hwe-16.04
     version: 4.15.0.32.34
     architecture: amd64
@@ -10816,11 +9256,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firewire-core-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-lowlatency
     version: 4.15.0.32.34
     architecture: amd64
@@ -10833,11 +9268,6 @@
     release: bionic
   - name: linux-headers-generic-hwe-16.04-edge
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
     architecture: amd64
     component: main
     release: bionic
@@ -10871,48 +9301,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-azure
     version: 4.15.0.1021.21
     architecture: amd64
     component: main
     release: bionic
-  - name: usb-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-gcp
     version: 4.15.0.1017.19
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10926,11 +9321,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: crypto-modules-4.15.0-32-generic-di
-    version: 4.15.0-32.35
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-4.15.0-32-generic
     version: 4.15.0-32.35
     architecture: amd64
@@ -10938,11 +9328,6 @@
     release: bionic
   - name: linux-signed-generic-hwe-16.04
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -10981,18 +9366,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-usb-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-lowlatency-hwe-16.04-edge
     version: 4.15.0.32.34
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-1015-oem-di
-    version: 4.15.0-1015.18
     architecture: amd64
     component: main
     release: bionic
@@ -11097,21 +9472,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1015-gcp
     version: 4.15.0-1015.15
     architecture: amd64
@@ -11144,11 +9504,6 @@
     release: bionic
   - name: linux-image-virtual-hwe-16.04
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
     architecture: amd64
     component: main
     release: bionic
@@ -11187,11 +9542,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: vlan-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-4.15.0-1019-azure
     version: 4.15.0-1019.19
     architecture: amd64
@@ -11199,31 +9549,6 @@
     release: bionic
   - name: linux-tools-lowlatency-hwe-16.04-edge
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
     architecture: amd64
     component: main
     release: bionic
@@ -11292,16 +9617,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: sata-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-generic-hwe-16.04
     version: 4.15.0.30.32
     architecture: amd64
@@ -11327,18 +9642,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fb-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-lowlatency
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
     architecture: amd64
     component: main
     release: bionic
@@ -11349,21 +9654,6 @@
     release: bionic
   - name: linux-virtual-hwe-16.04
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: virtio-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11382,23 +9672,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-usb-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-aws
     version: 4.15.0.1017.17
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
     architecture: amd64
     component: main
     release: bionic
@@ -11417,11 +9692,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: crypto-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-extra-4.15.0-30-generic
     version: 4.15.0-30.32
     architecture: amd64
@@ -11434,11 +9704,6 @@
     release: bionic
   - name: linux-headers-oem
     version: 4.15.0.1013.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11462,11 +9727,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: storage-core-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-4.15.0-1017-kvm
     version: 4.15.0-1017.17
     architecture: amd64
@@ -11474,11 +9734,6 @@
     release: bionic
   - name: linux-image-virtual-hwe-16.04-edge
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11492,33 +9747,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-shared-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pata-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-generic-hwe-16.04
     version: 4.15.0.30.32
     architecture: amd64
     component: main
     release: bionic
-  - name: irda-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-unsigned-4.15.0-30-lowlatency
     version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11542,11 +9777,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pata-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-generic
     version: 4.15.0.30.32
     architecture: amd64
@@ -11562,53 +9792,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-usb-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: message-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-extra-4.15.0-1019-azure
     version: 4.15.0-1019.19
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-core-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11622,11 +9807,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: plip-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-unsigned-4.15.0-1019-azure
     version: 4.15.0-1019.19
     architecture: amd64
@@ -11634,11 +9814,6 @@
     release: bionic
   - name: linux-headers-generic-hwe-16.04-edge
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11657,28 +9832,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: serial-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-lowlatency-hwe-16.04
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: vlan-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11697,11 +9852,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-generic-hwe-16.04-edge
     version: 4.15.0.30.32
     architecture: amd64
@@ -11712,28 +9862,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-pcmcia-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: linux-udebs-oem
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-gcp-tools-4.15.0-1015
     version: 4.15.0-1015.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11747,18 +9877,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: usb-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-4.15.0-1015-gcp
     version: 4.15.0-1015.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11787,18 +9907,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: floppy-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-generic-hwe-16.04-edge
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
     architecture: amd64
     component: main
     release: bionic
@@ -11812,11 +9922,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: serial-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-gcp
     version: 4.15.0.1015.17
     architecture: amd64
@@ -11827,18 +9932,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: irda-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-lowlatency-hwe-16.04-edge
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -11872,11 +9967,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: mouse-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-lowlatency
     version: 4.15.0.30.32
     architecture: amd64
@@ -11892,11 +9982,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-pcmcia-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-generic
     version: 4.15.0.30.32
     architecture: amd64
@@ -11907,38 +9992,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: multipath-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-extra-azure
     version: 4.15.0.1019.19
     architecture: amd64
     component: main
     release: bionic
-  - name: linux-udebs-generic
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: virtio-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-crashdump
     version: 4.15.0.30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: block-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
     architecture: amd64
     component: main
     release: bionic
@@ -11964,11 +10024,6 @@
     release: bionic
   - name: linux-modules-4.15.0-1017-aws
     version: 4.15.0-1017.17
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -12002,11 +10057,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-4.15.0-30-generic
     version: 4.15.0-30.32
     architecture: amd64
@@ -12029,11 +10079,6 @@
     release: bionic
   - name: linux-tools-oem
     version: 4.15.0.1013.15
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -12064,11 +10109,6 @@
     release: bionic
   - name: linux-modules-extra-azure-edge
     version: 4.15.0.1019.19
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
     architecture: amd64
     component: main
     release: bionic
@@ -12107,28 +10147,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: multipath-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-gke
     version: 4.15.0.1015.17
     architecture: amd64
     component: main
     release: bionic
-  - name: floppy-modules-4.15.0-30-generic-di
-    version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-30-lowlatency
     version: 4.15.0-30.32
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: message-modules-4.15.0-1013-oem-di
-    version: 4.15.0-1013.16
     architecture: amd64
     component: main
     release: bionic
@@ -12280,11 +10305,6 @@
   issued: 11 Jul 2018
   affected_source_package: 
   packages:
-  - name: libpng16-16-udeb
-    version: 1.6.34-1ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libpng-dev
     version: 1.6.34-1ubuntu0.18.04.1
     architecture: amd64
@@ -12602,11 +10622,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: gpgv-udeb
-    version: 2.2.4-1ubuntu1.1
-    architecture: amd64
-    component: main
-    release: bionic
   description: |
     Marcus Brinkmann discovered that during decryption or verification,
     GnuPG did not properly filter out terminal sequences when reporting the
@@ -12890,30 +10905,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libisc-export169-udeb
-    version: 1:9.11.3+dfsg-1ubuntu1.1
-    architecture: amd64
-    component: main
-    release: bionic
   - name: libirs160
     version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libirs-export160-udeb
-    version: 1:9.11.3+dfsg-1ubuntu1.1
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: libdns-export1100-udeb
-    version: 1:9.11.3+dfsg-1ubuntu1.1
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: libisccc-export160-udeb
-    version: 1:9.11.3+dfsg-1ubuntu1.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libisc169
     version: 1:9.11.3+dfsg-1ubuntu1.1
@@ -12926,11 +10921,6 @@
     component: main
     release: bionic
   - name: libbind-dev
-    version: 1:9.11.3+dfsg-1ubuntu1.1
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: libisccfg-export160-udeb
     version: 1:9.11.3+dfsg-1ubuntu1.1
     architecture: amd64
     component: main
@@ -15033,11 +13023,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: usb-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1008-gcp
     version: 4.15.0-1008.8
     architecture: amd64
@@ -15078,16 +13063,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pcmcia-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-azure
     version: 4.15.0.1012.12
     architecture: amd64
@@ -15098,18 +13073,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pata-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-lowlatency-hwe-16.04-edge
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: input-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15123,26 +13088,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: crypto-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nfs-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-lowlatency-hwe-16.04-edge
     version: 4.15.0.22.23
     architecture: amd64
@@ -15153,18 +13098,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nfs-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-lowlatency-hwe-16.04
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
     architecture: amd64
     component: main
     release: bionic
@@ -15203,16 +13138,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: sata-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-kvm
     version: 4.15.0.1010.10
     architecture: amd64
@@ -15220,26 +13145,6 @@
     release: bionic
   - name: linux-crashdump
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: virtio-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: multipath-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: scsi-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15268,23 +13173,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: message-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-image-gke
     version: 4.15.0.1008.10
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15313,26 +13203,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fs-core-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ppp-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: mouse-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-image-lowlatency-hwe-16.04-edge
     version: 4.15.0.22.23
     architecture: amd64
@@ -15340,26 +13210,6 @@
     release: bionic
   - name: linux-lowlatency-hwe-16.04
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: storage-core-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: irda-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15383,11 +13233,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-pcmcia-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1006-oem
     version: 4.15.0-1006.9
     architecture: amd64
@@ -15395,11 +13240,6 @@
     release: bionic
   - name: linux-tools-4.15.0-1009-aws
     version: 4.15.0-1009.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: message-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15453,16 +13293,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: linux-udebs-oem
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: md-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-4.15.0-22-generic
     version: 4.15.0-22.24
     architecture: amd64
@@ -15470,11 +13300,6 @@
     release: bionic
   - name: linux-image-gcp
     version: 4.15.0.1008.10
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: floppy-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15488,23 +13313,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: virtio-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-shared-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-1009-aws
     version: 4.15.0-1009.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: plip-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15533,11 +13343,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: linux-udebs-generic
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-generic-hwe-16.04
     version: 4.15.0.22.23
     architecture: amd64
@@ -15548,18 +13353,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: input-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-aws
     version: 4.15.0.1009.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-usb-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15568,18 +13363,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: irda-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-virtual
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: ipmi-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15628,18 +13413,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: nic-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-oem
     version: 4.15.0.1006.8
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
     architecture: amd64
     component: main
     release: bionic
@@ -15653,11 +13428,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: floppy-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-4.15.0-22-generic
     version: 4.15.0-22.24
     architecture: amd64
@@ -15665,21 +13435,6 @@
     release: bionic
   - name: linux-tools-kvm
     version: 4.15.0.1010.10
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fat-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: serial-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15695,11 +13450,6 @@
     release: bionic
   - name: linux-gke
     version: 4.15.0.1008.10
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: usb-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
     architecture: amd64
     component: main
     release: bionic
@@ -15728,16 +13478,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: scsi-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: multipath-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-azure-edge
     version: 4.15.0.1012.12
     architecture: amd64
@@ -15748,28 +13488,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: block-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-modules-4.15.0-22-generic
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-pcmcia-modules-4.15.0-22-generic-di
     version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
   - name: linux-gcp-headers-4.15.0-1008
     version: 4.15.0-1008.8
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: vlan-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15783,11 +13508,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ppp-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-generic-hwe-16.04
     version: 4.15.0.22.23
     architecture: amd64
@@ -15795,16 +13515,6 @@
     release: bionic
   - name: linux-image-virtual-hwe-16.04
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: firewire-core-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: pcmcia-storage-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
@@ -15853,11 +13563,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: fs-core-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-headers-4.15.0-22-lowlatency
     version: 4.15.0-22.24
     architecture: amd64
@@ -15883,28 +13588,8 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: vlan-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: crypto-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-image-lowlatency
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: nic-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
     architecture: amd64
     component: main
     release: bionic
@@ -15915,11 +13600,6 @@
     release: bionic
   - name: linux-cloud-tools-4.15.0-22
     version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: sata-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
     architecture: amd64
     component: main
     release: bionic
@@ -15948,11 +13628,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: pata-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-signed-lowlatency
     version: 4.15.0.22.23
     architecture: amd64
@@ -15968,33 +13643,13 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: block-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-tools-gke
     version: 4.15.0.1008.10
     architecture: amd64
     component: main
     release: bionic
-  - name: ipmi-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
   - name: linux-cloud-tools-generic
     version: 4.15.0.22.23
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fb-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: kernel-image-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
     architecture: amd64
     component: main
     release: bionic
@@ -16005,16 +13660,6 @@
     release: bionic
   - name: linux-aws-tools-4.15.0-1009
     version: 4.15.0-1009.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: parport-modules-4.15.0-1006-oem-di
-    version: 4.15.0-1006.9
     architecture: amd64
     component: main
     release: bionic
@@ -16040,11 +13685,6 @@
     release: bionic
   - name: linux-cloud-tools-4.15.0-1012-azure
     version: 4.15.0-1012.12
-    architecture: amd64
-    component: main
-    release: bionic
-  - name: fs-secondary-modules-4.15.0-22-generic-di
-    version: 4.15.0-22.24
     architecture: amd64
     component: main
     release: bionic
