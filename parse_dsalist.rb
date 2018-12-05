@@ -1,9 +1,9 @@
 require 'json'
 
-REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9\-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/
-REGEX_CVE_LINE = /\s+{(?<cves>[^}]*)}/
-REGEX_REL_LINE = /\s+\[(?<release>[^\]]*)\]\s*-\s*(?<package>\S+)\s*(?<version>\S*)/
-REGEX_NOT_LINE = /\s+NOTE:/
+REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9\-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/.freeze
+REGEX_CVE_LINE = /\s+{(?<cves>[^}]*)}/.freeze
+REGEX_REL_LINE = /\s+\[(?<release>[^\]]*)\]\s*-\s*(?<package>\S+)\s*(?<version>\S*)/.freeze
+REGEX_NOT_LINE = /\s+NOTE:/.freeze
 
 # Base-Parser Exception
 class ParserException < RuntimeError

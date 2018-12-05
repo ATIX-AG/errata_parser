@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY . .
 
-RUN bundle install --deployment
+RUN bundle install --deployment --without rubocop
 
 VOLUME /errata
 
