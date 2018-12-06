@@ -5,7 +5,9 @@ HTTPDEBUG = false
 
 # module for cached downloading of files
 module Downloader
-  def download_file_cached(url, path = nil, force = false)
+  MAXREDIRECTHOPS = 5
+
+  def download_file_cached(url, path = nil, force = false, maxhop = MAXREDIRECTHOPS)
     uri = URI(url)
     fs = File.stat path if path && File.exist?(path)
 
@@ -53,6 +55,12 @@ module Downloader
     elsif res.is_a? Net::HTTPNotModified
       # Use already downloaded version
       return File.read path
+    elsif res.is_a? Net::HTTPFound
+      # Redirect!
+      warn "REDIRECTed to #{res['location'].inspect}"
+      raise "Max redirect-depth reached (#{MAXREDIRECTHOPS} hops)" if maxhop.zero?
+
+      download_file_cached(res['location'], path, force, maxhop - 1)
     else
       # raise Exception if response != SUCCESS
       res.value
