@@ -19,4 +19,6 @@ gem "bzip2-ffi", "~> 1.0", group: [:build, :test]
 gem "test-unit", "~> 3.2", group: [:test]
 
 # Added at 2018-12-05 19:28:10 +0100 by markus:
-gem "rubocop", "~> 0.61.0", group: [:rubocop]
+group :rubocop, optional: true do
+  gem "rubocop", "~> 0.61.0"
+end
