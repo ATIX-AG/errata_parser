@@ -16,7 +16,7 @@ class DebRelease
   attr_reader :data, :files
   attr_accessor :suite, :base_url
   attr_accessor :whitelist_arch, :whitelist_comp
-  RE_FILES = /^\s*(?<digest>[0-9a-f]+)\s+(?<size>\d+)\s*(?<path>\S.*)$/
+  RE_FILES = /^\s*(?<digest>[0-9a-f]+)\s+(?<size>\d+)\s*(?<path>\S.*)$/.freeze
 
   def initialize(uri=nil, suite='stable')
     init
