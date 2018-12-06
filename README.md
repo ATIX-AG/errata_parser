@@ -1,5 +1,11 @@
 # Errata-Parser v2.0
 
+## Development
+
+Run the following script to add a git hook, which will automatically validate your code
+
+    scripts/bootstrap.sh
+
 ## Source of information
 
 ### Debian
