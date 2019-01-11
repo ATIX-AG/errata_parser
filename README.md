@@ -1,12 +1,142 @@
-# Errata-Parser v2.0
+This Debian/Ubuntu `errata_parser` can use the "Debian Security Announcements (DSA)" and "Ubuntu Security Notices (USN)" to generate YAML files containing up to date Debian or Ubuntu erratum information.
 
-## Development
+It is designed to be used in conjunction with the accompanying `errata_server` project (https://github.com/ATIX-AG/errata_server), to provide a Debian/Ubuntu errata service.
+This errata service is ultimately intended for use with Katello (https://github.com/Katello/katello).
+However, at the time of writing the needed changes to Katello have not yet been merged.
 
-Run the following script to add a git hook, which will automatically validate your code
+
+# Quick Start Guide
+
+This quick start guide covers the basic installation and usage of this repository for a typical developer use case.
+
+## Installation/First Time Setup
+
+The first time installation steps only need to be performed once after checking out this repository.
+
+### Install Package Dependencies
+
+To use this repository you will need to install several packages.
+On Debian they include:
+
+    ruby (tested with version 2.5)
+    bundler
+    libapt-pkg-dev
+
+If you want to build the Docker image provided by this repository, you will also need a working Docker installation (https://docs.docker.com/install/).
+
+Note: If you notice additional dependencies when using this repository, please let us know so we can improve this `README.md` file.
+Do feel free to open a pull request!
+
+
+### Install Ruby Dependencies
+
+Use `bundle install` in the repository root to install the needed ruby dependencies:
+
+    bundle install
+
+This repository includes a `.bundle/config` file to ensure all ruby dependencies are installed under `vendor/bundle/`.
+
+
+### Enabling Syntax Checking
+
+You can add a git hook that enables syntax checking using rubocop before committing, by running the following script:
 
     scripts/bootstrap.sh
 
-## Source of information
+
+## Local Usage
+
+The `gen_errata.rb` script is mainly intended for local usage during development.
+Only the Docker container (explained below) is intended for production use.
+
+
+### Ubuntu Errata
+
+You can generate Ubuntu errata information by running the `gen_errata.rb` script as follows:
+
+    bundle exec gen_errata.rb ubuntu > errata_ubuntu.yaml
+
+Note that the `ubuntu` argument of the `gen_errata.rb` script is hard coded to use https://usn.ubuntu.com/usn-db/database.json.bz2 as its source of information, and to generate errata for `bionic` for `amd64` only.
+
+
+### Debian Errata
+
+You can generate Debian errata information by running the `gen_errata.rb` script as follows:
+
+    bundle exec debRelease.rb > packages_everything.json
+    bundle exec gen_errata.rb debian > errata_debian.yaml
+
+The `packages_everything.json` file from the first of these two commands stores package information from the Debian security repository (http://security.debian.org/debian-security)
+This is needed to map the source packages referenced in the Debian Security Announcements to the binary packages listed in the final `errata_debian.yaml` file.
+
+Note that the `debian` argument of the `gen_errata.rb` script is hard coded to use https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list and https://security-tracker.debian.org/tracker/data/json as its source of information, and to generate errata for `stretch` for `amd64` only.
+
+
+## Testing
+
+To run the tests for this repository use:
+
+    bundle exec ruby test/all.rb
+
+If you make changes to this repository, it may become necessary to re-record the test data:
+
+    bundle exec gen_errata.rb debian_test_record > test/data/debian.yaml
+    bundle exec gen_errata.rb ubuntu_test_record > test/data/ubuntu.yaml
+
+Note that pull requests will only be accepted once all tests run both within and outside of the container.
+
+
+## Docker Container
+
+The errata parser provided by this repository is intended for use within a Docker container.
+
+To build the relevant container image use:
+
+    docker build -t errata_parser:latest .
+
+Once built, you can run the tests within the container as follows:
+
+    docker run --rm errata_parser:latest bundle exec ruby test/all.rb
+
+If you want to run the container interactively to see what the world looks like from within it, you can use:
+
+    docker run --rm -it --entrypoint=/bin/bash errata_parser:latest
+
+A production run of the errata parser container might use the following command:
+
+    docker run --rm \
+      --mount type=bind,source="${PWD}/errata",target=/errata \
+      --mount source=errataparser_temp,target=/tmp/errataparser \
+      errata_parser:latest
+
+This command requires the presence of the configuration file `config.json` in the `${PWD}/errata` directory.
+See `config.json.example` in the repository root for an example.
+Also see the "Configuration" section under "Advanced Topics" below.
+
+The container will run as configured via the `errata/config.json` file, and place any output in the `errata` directory.
+This directory also serves as the interface to the `errata_server` project.
+The container's output files use JSON format, since the `errata_server` wants JSON.
+In addition to the errata lists themselves, the container will also generate a configuration file for each errata list.
+These configuration files will tell the `errata_server` what releases, components, and architectures each errata list contains.
+
+A successfull run of the errata parser container, using the configuration found in the `config.json.example` file from this repository, will result in the following new files:
+
+    debian_config.json
+    debian_errata.json
+    ubuntu_config.json
+    ubuntu_errata.json
+
+
+# Advanced Topics
+
+This section of the readme provides some additional background information, for those who want to delve deeper.
+
+
+## Possible Sources of Information
+
+This section collects various links were Debian and Ubuntu security information is published.
+Not all of these are in use (and have been tested) with the default configuration of this errata parser.
+
 
 ### Debian
 
@@ -16,6 +146,7 @@ Run the following script to add a git hook, which will automatically validate yo
   * <https://salsa.debian.org/security-tracker-team/security-tracker/blob/master/data/DSA/list>
 * JSON-file including all information from Debian Security Tracker (sorted by package-name, CVE-number, release-name)
   * <https://security-tracker.debian.org/tracker/data/json>
+
 
 ### Ubuntu
 
@@ -33,10 +164,11 @@ Run the following script to add a git hook, which will automatically validate yo
 
 ## Errata Format
 
-Right now the errata are presented as YAML, but changing that to JSON is trivial.
-The structure is always the same.
+When used locally the errata parser produces output in YAML format.
+However, the errata parser container produces structurally the same output in JSON instead.
+The reason is that the `errata_server` companion project requires JSON for input.
 
-#### YAML:
+See the following example for the structure of an individual erratum entry (in YAML):
 
     - name: DSA-4283-1
       title: ruby-json-jwt -- security update
@@ -60,59 +192,63 @@ The structure is always the same.
       dbts_bugs:
       - 902721
 
-## Implementation
 
-1. Pull Security-Information
-1. Gather information per CVE/DSA/USN or similar:
-   1. General information (e.g. description)
-   1. Affected Packages
-   1. Affected Package-binary-versions (may have to be looked-up in packages-directory; e.g. packages.debian.org)
-   1. TODO Affected release!?
-1. Save data in local database (optional) or sort data into database while parsing the information-source.
-1. Create our own Errata-JSON/YAML/... to be downloaded by orcharhino-installations OR (better) provide REST-API to download specific Errata (for certain release/packages or new errata since specified date)
+## Configuration
 
+As previously mentioned, container runs can (and must) be configured via a configuration file named `config.json` present in the `/errata/` folder within the container.
+As the `.json` extension suggests, the configuration file must contain a specific JSON data structure.
 
-## Usage
+The default configuration is given by the `config.json.example` file within this repository which is also used for testing.
 
-### Initialize
+The top level data structure within the configuration file may contain the following fields:
 
-    bundle install
+    {
+      "tempdir": "tmp/errataparser",
+      "debian": <debian_dict>,
+      "ubuntu": <ubuntu_dict>
+    }
 
-### Generate Errata
+The `tempdir` field gives the location to which the errata parser will download the upstream sources of information.
+In the usage examples within this README, we mount an external folder to this location within the container.
+This can improve performance, since the errata parser will NOT re-download these files if there is no newer version available on the upstream server than has already been downloaded.
 
-#### Debian:
+The `debian` and `ubuntu` fields must be given if errata are to be generate for the respective operating systems.
 
-For Debian, the packages-data must be fetched from the repository first.
+The `<debian_dict>` must contain the following fields:
 
-    bundle exec debRelease.rb > packages_everything.json
-    bundle exec gen_errata.rb debian > errata_debian.yaml
+    "debian": {
+      "dsa_list_url": <url>,
+      "cve_list_url": <url>,
+      "repository": <repository_dict>,
+      "whitelists": <whitelists_dict>,
+      "aliases": <aliases_dict>
+    }
 
-#### Ubuntu:
+Note that for debian, we require three upstream sources of information to generate errata:
+The `dsa.list` file obtained via the `dsa_list_url` associates CVEs with debian binary packages.
+The `cve.json` obtained via `cve_list_url` contains the actual information associated with these CVEs.
+The `repository` must be a debian-security repository, containing the relevant binary packages.
 
-    bundle exec gen_errata.rb ubuntu > errata_ubuntu.yaml
+The `whitelists` field allows users to filter the Debian repositories for which errata should be generated by "releases", "components", and "architectures".
+An example:
 
+    whitelists: {
+      "releases": ["stretch"],
+      "components": ["main", "contrib"],
+      "architectures": ["amd64", "armhf"]
+    }
 
-### Testing
+If no components (or architectures) are given, this is interpreted as "all components (or architectures)".
 
-    bundle exec ruby test/gen_errata.rb
+The `aliases` field is needed since the accompanying `errata_server` must be able to associate Debian security repositories like `stretch/updates` with errata for Debian `stretch`.
 
-#### Re-Record Errata for test
+The `<ubuntu_dict>` is somewhat simpler than that for Debian:
 
-    bundle exec gen_errata.rb debian_test_record > test/data/debian.yaml
-    bundle exec gen_errata.rb ubuntu_test_record > test/data/ubuntu.yaml
+    "ubuntu": {
+      "usn_list_url": <url>,
+      "whitelists": <whitelists_dict>,
+      "aliases": <aliases_dict>
+    }
 
-### Docker container
-
-#### Create from local files:
-
-    docker build -r errata_parser:latest .
-
-#### Testing:
-
-    docker run --rm errata_parser:latest bundle exec ruby test/gen_errata.rb
-
-#### Running:
-
-    docker run --rm --mount type=bind,source="${pwd}/errata",target=/errata --mount source=errataparser_temp,target=/tmp/errataparser -ti errata_parser:latest
-
-Make sure to create a `config.json` in `${pwd}/errata`-directory before running
+A single USN URL will suffice as an upstream source of information.
+`whitelists` and `aliases` are structurally identical to those for Debian.
