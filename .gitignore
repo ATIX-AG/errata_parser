@@ -2,3 +2,10 @@ vendor
 .bundle
 config.json
 archive.tar.gz
+errata_debian.yaml
+errata_ubuntu.yaml
+packages_everything.json
+debian_config.json
+debian_errata.json
+ubuntu_config.json
+ubuntu_errata.json
