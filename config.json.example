@@ -17,6 +17,11 @@
         "stretch",
         "jessie"
       ],
+      "components": [
+        "main",
+        "contrib",
+        "non-free"
+      ],
       "architectures": [
         "amd64",
         "i386"
@@ -37,6 +42,12 @@
         "bionic",
         "artful",
         "xenial"
+      ],
+      "components": [
+        "main",
+        "restricted",
+        "universe",
+        "multiverse"
       ],
       "architectures": [
         "amd64",
