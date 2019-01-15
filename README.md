@@ -32,9 +32,10 @@ Do feel free to open a pull request!
 
 Use `bundle install` in the repository root to install the needed ruby dependencies:
 
-    bundle install
+    bundle install --path vendor/bundle
 
-This repository includes a `.bundle/config` file to ensure all ruby dependencies are installed under `vendor/bundle/`.
+Using `--path vendor/bundle` will ensure that all ruby dependencies are installed within the `vendor` folder, which is included in this repositories `.gitignore` file.
+This is generally preferrable than installing to the system RubyGems!
 
 
 ### Enabling Syntax Checking
