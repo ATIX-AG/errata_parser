@@ -95,6 +95,9 @@ To build the relevant container image use:
 
     docker build -t errata_parser:latest .
 
+Note that the image build uses a `.dockerignore` whitelist to ensure only those files we really need are sent to the build context.
+If you want to add aditional files to the container image, you will need to add them to the whitelist.
+
 Once built, you can run the tests within the container as follows:
 
     docker run --rm errata_parser:latest bundle exec ruby test/all.rb

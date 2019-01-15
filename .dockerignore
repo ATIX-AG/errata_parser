@@ -1,0 +1,16 @@
+# Blacklist everything:
+*
+
+# Now whitelist the specific files we want:
+!check_config.rb
+!config.json.example
+!debRelease.rb
+!downloader.rb
+!errata_parser.rb
+!Gemfile
+!Gemfile.lock
+!gen_errata.rb
+!parse_dsalist.rb
+!.rubocop_todo.yml
+!.rubocop.yml
+!test
