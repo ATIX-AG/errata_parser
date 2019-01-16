@@ -1,6 +1,5 @@
 #!/bin/sh
 
-bundle install --with rubocop
+bundle install --path vendor/bundle --with rubocop
 
 bundle exec rubocop
-
