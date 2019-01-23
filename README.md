@@ -115,7 +115,7 @@ We recommend using the following set of commands for a feature run of the errata
       --mount type=volume,source=errata_parser_temp,target=/tmp/errata_parser \
       errata_parser:latest
 
-A so defined feature run will use the errata parsers default configuration, as defined by the `config.json.example` file.
+A so defined feature run will use the errata parsers default configuration, as defined by the `default_config.json` file.
 (Within the container this file is located at `/etc/errata_parser.json`.)
 
 To supply an individual container run with an alternate configuration add the following option to the `docker run` command:
@@ -130,7 +130,7 @@ The container's output files use JSON format, since the `errata_server` wants JS
 In addition to the errata lists themselves, the container will also generate a configuration file for each errata list.
 These configuration files will tell the `errata_server` what releases, components, and architectures each errata list contains.
 
-A successfull run of the errata parser container, using the default configuration found in the `config.json.example` file from this repository, will result in the following new files:
+A successfull run of the errata parser container, using the default configuration found in the `default_config.json` file from this repository, will result in the following new files:
 
     debian_config.json
     debian_errata.json
@@ -209,7 +209,7 @@ See the following example for the structure of an individual erratum entry (in Y
 As previously mentioned, container runs can (and must) be configured via a configuration file named `config.json` present in the `/errata/` folder within the container.
 As the `.json` extension suggests, the configuration file must contain a specific JSON data structure.
 
-The default configuration is given by the `config.json.example` file within this repository which is also used for testing.
+The default configuration is given by the `default_config.json` file within this repository which is also used for testing.
 
 The top level data structure within the configuration file may contain the following fields:
 

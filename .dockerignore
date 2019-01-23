@@ -3,7 +3,7 @@
 
 # Now whitelist the specific files we want:
 !check_config.rb
-!config.json.example
+!default_config.json
 !debRelease.rb
 !downloader.rb
 !errata_parser.rb

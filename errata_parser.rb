@@ -91,7 +91,7 @@ def get_whitelist(config, name)
 end
 
 def load_config(filename)
-  raise "Config-file #{filename.inspect} not found, please create one from \"config.json.example\"" unless File.exist? filename
+  raise "Config-file #{filename.inspect} not found, please create one from \"default_config.json\"" unless File.exist? filename
 
   config = DEFAULT_CONF.merge(JSON.parse(File.read(filename)))
 
@@ -106,7 +106,7 @@ if $PROGRAM_NAME == __FILE__
   options = parse_commandline
 
   ## Load config
-  fatal("Config-file #{options[:config].inspect} not found, please create one from \"config.json.example\"", 3) unless File.exist? options[:config]
+  fatal("Config-file #{options[:config].inspect} not found, please create one from \"default_config.json\"", 3) unless File.exist? options[:config]
   @config = load_config(options[:config])
 
   ## Sanity checks
