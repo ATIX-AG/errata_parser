@@ -10,7 +10,7 @@ Encoding.default_external = 'UTF-8'
 
 DEFAULT_CONF_FILE = 'config.json'.freeze
 DEFAULT_CONF = {
-  'tempdir' => '/tmp/errataparser_cache',
+  'tempdir' => '/tmp/errata_parser_cache',
 }.freeze
 
 def fatal(message, code=42, show_help=false)

@@ -441,7 +441,7 @@ if $PROGRAM_NAME == __FILE__
   # always interpret files as UTF-8 instead of US-ASCII
   Encoding.default_external = 'UTF-8'
 
-  TEMPDIR = '/tmp/errataparser_cache'.freeze
+  TEMPDIR = '/tmp/errata_parser_cache'.freeze
   extend Downloader
 
   type = ARGV[0]
