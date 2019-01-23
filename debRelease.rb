@@ -10,7 +10,7 @@ class DebRelease
   include Downloader
 
   # rubocop:disable Style/ClassVars
-  @@tempdir = '/tmp/errataparser_cache/debian'
+  @@tempdir = '/tmp/errata_parser_cache/debian'
   # rubocop:enable Style/ClassVars
 
   attr_reader :data, :files

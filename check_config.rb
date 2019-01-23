@@ -84,5 +84,5 @@ end
 if $PROGRAM_NAME == __FILE__
   require 'json'
 
-  check_config_hash(JSON.parse(File.read('config.json.example')), ERRATAPARSER_CONFIG_SCHEMA)
+  check_config_hash(JSON.parse(File.read('default_config.json')), ERRATAPARSER_CONFIG_SCHEMA)
 end

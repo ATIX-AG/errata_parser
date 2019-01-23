@@ -106,24 +106,31 @@ If you want to run the container interactively to see what the world looks like 
 
     docker run --rm -it --entrypoint=/bin/bash errata_parser:latest
 
-A production run of the errata parser container might use the following command:
+We recommend using the following set of commands for a feature run of the errata parser:
 
+    docker volume create errata
+    docker volume create errata_parser_temp
     docker run --rm \
-      --mount type=bind,source="${PWD}/errata",target=/errata \
-      --mount source=errataparser_temp,target=/tmp/errataparser \
+      --mount type=volume,source=errata,target=/errata \
+      --mount type=volume,source=errata_parser_temp,target=/tmp/errata_parser \
       errata_parser:latest
 
-This command requires the presence of the configuration file `config.json` in the `${PWD}/errata` directory.
-See `config.json.example` in the repository root for an example.
+A so defined feature run will use the errata parsers default configuration, as defined by the `default_config.json` file.
+(Within the container this file is located at `/etc/errata_parser.json`.)
+
+To supply an individual container run with an alternate configuration add the following option to the `docker run` command:
+
+    --mount type=bind,source=<absolute_path_to_user_config>,target=/etc/errata_parser.json
+
 Also see the "Configuration" section under "Advanced Topics" below.
 
-The container will run as configured via the `errata/config.json` file, and place any output in the `errata` directory.
-This directory also serves as the interface to the `errata_server` project.
+The container will run as configured, and place any output in the `errata` volume.
+This volume also serves as the interface to the `errata_server` project.
 The container's output files use JSON format, since the `errata_server` wants JSON.
 In addition to the errata lists themselves, the container will also generate a configuration file for each errata list.
 These configuration files will tell the `errata_server` what releases, components, and architectures each errata list contains.
 
-A successfull run of the errata parser container, using the configuration found in the `config.json.example` file from this repository, will result in the following new files:
+A successfull run of the errata parser container, using the default configuration found in the `default_config.json` file from this repository, will result in the following new files:
 
     debian_config.json
     debian_errata.json
@@ -202,12 +209,12 @@ See the following example for the structure of an individual erratum entry (in Y
 As previously mentioned, container runs can (and must) be configured via a configuration file named `config.json` present in the `/errata/` folder within the container.
 As the `.json` extension suggests, the configuration file must contain a specific JSON data structure.
 
-The default configuration is given by the `config.json.example` file within this repository which is also used for testing.
+The default configuration is given by the `default_config.json` file within this repository which is also used for testing.
 
 The top level data structure within the configuration file may contain the following fields:
 
     {
-      "tempdir": "tmp/errataparser",
+      "tempdir": "tmp/errata_parser",
       "debian": <debian_dict>,
       "ubuntu": <ubuntu_dict>
     }
