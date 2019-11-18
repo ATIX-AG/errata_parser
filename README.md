@@ -9,6 +9,9 @@ However, at the time of writing the needed changes to Katello have not yet been 
 
 This quick start guide covers the basic installation and usage of this repository for a typical developer use case.
 
+There also is a puppet-module for installing the errata-parser and -server: https://github.com/chrisongthb/puppet-errata_parser
+
+
 ## Installation/First Time Setup
 
 The first time installation steps only need to be performed once after checking out this repository.
