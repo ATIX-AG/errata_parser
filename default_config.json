@@ -39,6 +39,7 @@
     "usn_list_url": "https://usn.ubuntu.com/usn-db/database.json.bz2",
     "whitelists": {
       "releases": [
+        "focal",
         "bionic",
         "artful",
         "xenial"
@@ -56,6 +57,7 @@
     },
     "aliases": {
       "releases": {
+        "focal": [ "focal-security", "focal-updates" ],
         "bionic": [ "bionic-security", "bionic-updates" ],
         "artful": [ "artful-security", "artful-updates" ],
         "xenial": [ "xenial-security", "xenial-updates" ]
