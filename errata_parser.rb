@@ -123,6 +123,7 @@ if $PROGRAM_NAME == __FILE__
     tempdir.mkpath
     threads = []
     dsa_list = nil
+    dla_list = nil
     cve_list = nil
     packages = {}
     metadata = { releases: {} }
@@ -133,6 +134,7 @@ if $PROGRAM_NAME == __FILE__
     thread_dsa = Thread.new do
       warn 'START  Download DSA-information' if options[:verbose]
       dsa_list = download_file_cached(cfg['dsa_list_url'], File.join(tempdir, 'dsa.list'))
+      dla_list = download_file_cached(cfg['dla_list_url'], File.join(tempdir, 'dla.list'))
       warn 'FINISH Download DSA-information' if options[:verbose]
     end
     thread_cve = Thread.new do
@@ -185,6 +187,9 @@ if $PROGRAM_NAME == __FILE__
     warn 'START  Generate debian-errata' if options[:verbose]
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), cve_list)
     warn 'FINISH Generate debian-errata' if options[:verbose]
+    warn 'START  Generate debian-errata(LTS)' if options[:verbose]
+    errata += parser.gen_debian_errata(DSA.parse_dsa_list_str(dla_list), cve_list)
+    warn 'FINISH Generate debian-errata(LTS)' if options[:verbose]
 
     ## add package lists
     # wait for package-list download

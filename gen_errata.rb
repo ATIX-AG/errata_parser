@@ -465,10 +465,12 @@ if $PROGRAM_NAME == __FILE__
     tempdir = Pathname.new(File.join(TEMPDIR, 'debian'))
     tempdir.mkpath
     dsa_list = download_file_cached('https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list', File.join(tempdir, 'dsa.list'))
+    dla_list = download_file_cached('https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DLA/list', File.join(tempdir, 'dla.list'))
     cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', File.join(tempdir, 'cve.json'))
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
+    errata += parser.gen_debian_errata(DSA.parse_dsa_list_str(dla_list), JSON.parse(cve_file))
     #parser.add_binary_packages_from_file(errata, 'packages_everything.json')
-    parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['stretch'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['buster', 'stretch'], ['amd64'])
 
     # filter empty package-lists
     #errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
