@@ -15,6 +15,7 @@ class DebRelease
 
   attr_reader :data, :files
   attr_accessor :suite, :base_url
+  attr_writer :release_name
   attr_accessor :whitelist_arch, :whitelist_comp
   RE_FILES = /^\s*(?<digest>[0-9a-f]+)\s+(?<size>\d+)\s*(?<path>\S.*)$/.freeze
 
@@ -43,7 +44,7 @@ class DebRelease
   end
 
   def release_name
-    @data['codename'] || @data['suite']
+    @release_name || @data['codename'] || @data['suite']
   end
 
   def parse(release_text)
@@ -184,7 +185,8 @@ if $PROGRAM_NAME == __FILE__
   suites = [
     'jessie/updates',
     'stretch/updates',
-    'buster/updates'
+    'buster/updates',
+    'bullseye-security'
   ]
   threads = []
   pckgs = []
@@ -195,6 +197,7 @@ if $PROGRAM_NAME == __FILE__
 
       debrel.whitelist_arch = ['amd64', 'all']
       debrel.whitelist_comp = ['main']
+      debrel.release_name = 'bullseye' if s == 'bullseye-security'
 
       warn "From #{s.inspect} get archs:#{debrel.architectures.inspect} and comps: #{debrel.components.inspect}"
 

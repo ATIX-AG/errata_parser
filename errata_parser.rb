@@ -23,6 +23,26 @@ def get_filename(os_name, type=:errata)
   "#{os_name}_#{type}.json"
 end
 
+# inverts a hash of arrays to a hash of all the arrays elemnts pointing to the key they had in the original hash
+def hash_invert(hsh)
+  ret = {}
+  hsh.each do |k, v|
+    v.each do |x|
+      ret[x] = k
+    end
+  end
+  ret
+end
+
+def fix_release(release, aliases)
+  return release unless aliases && aliases['releases']
+
+  ali = hash_invert(aliases['releases'])
+  return release unless ali.key? release
+
+  ali[release]
+end
+
 def parse_commandline
   options = {
     config: DEFAULT_CONF_FILE,
@@ -154,6 +174,8 @@ if $PROGRAM_NAME == __FILE__
         warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
         deb_rel = DebRelease.new(cfg['repository']['repo_url'], s)
         deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+        # necessary for 'bullseye', for release_name would be 'bullseye-security' instead of 'bullseye'
+        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
         deb_rel.whitelist_arch = whitelist_arch
         pkgs = deb_rel.all_packages
 
