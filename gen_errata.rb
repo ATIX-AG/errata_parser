@@ -470,7 +470,7 @@ if $PROGRAM_NAME == __FILE__
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
     errata += parser.gen_debian_errata(DSA.parse_dsa_list_str(dla_list), JSON.parse(cve_file))
     #parser.add_binary_packages_from_file(errata, 'packages_everything.json')
-    parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['buster', 'stretch'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['bullseye'], ['amd64'])
 
     # filter empty package-lists
     #errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
