@@ -9,7 +9,7 @@ class TestDebianErrata < Test::Unit::TestCase
     original_path = "#{File.dirname(__FILE__)}/data/debian.yaml"
     dsa_list_path = "#{File.dirname(__FILE__)}/data/dsa.list"
     cve_json_path = "#{File.dirname(__FILE__)}/data/cve.json"
-    pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything.json"
+    pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything_debian.json"
     parser = DebianErrataParser.new
 
     errata = parser.gen_debian_errata(
@@ -49,7 +49,10 @@ class TestDebianErrata < Test::Unit::TestCase
     require 'bzip2/ffi'
     original_path = "#{File.dirname(__FILE__)}/data/ubuntu.yaml"
     usn_list_path = "#{File.dirname(__FILE__)}/data/database.json.bz2"
+    pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything_ubuntu.json"
     parser = DebianErrataParser.new
+
+    packages = JSON.parse(File.read(pkg_json_path))
 
     f = File.open usn_list_path, 'rb'
     errata = parser.gen_ubuntu_errata(
@@ -57,7 +60,8 @@ class TestDebianErrata < Test::Unit::TestCase
         Bzip2::FFI::Reader.read(f)
       ),
       ['bionic'],
-      ['amd64']
+      ['amd64'],
+      packages
     )
     f.close
     assert_instance_of(Array, errata)

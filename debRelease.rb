@@ -181,19 +181,37 @@ if $PROGRAM_NAME == __FILE__
   # always interpret files as UTF-8 instead of US-ASCII
   Encoding.default_external = 'UTF-8'
 
+  type = ARGV[0]
+
   HTTPDEBUG = true
-  suites = [
-    'jessie/updates',
-    'stretch/updates',
-    'buster/updates',
-    'bullseye-security'
-  ]
+
+  case type
+  when 'debian'
+    suites = [
+      'jessie/updates',
+      'stretch/updates',
+      'buster/updates',
+      'bullseye-security'
+    ]
+    repository_url = "http://security.debian.org/debian-security"
+  when 'ubuntu'
+    suites = [
+      'bionic-security',
+      'focal-security',
+      'hirsute-security',
+    ]
+    repository_url = "http://security.ubuntu.com/ubuntu"
+  else
+    warn "Unsupported option #{type}"
+    exit 1
+  end
+
   threads = []
   pckgs = []
   suites.each do |s|
     threads << Thread.new do
       warn "Loading Release for #{s.inspect}"
-      debrel = DebRelease.new('http://security.debian.org/debian-security', s)
+      debrel = DebRelease.new(repository_url, s)
 
       debrel.whitelist_arch = ['amd64', 'all']
       debrel.whitelist_comp = ['main']
@@ -208,14 +226,34 @@ if $PROGRAM_NAME == __FILE__
   threads.each(&:join)
 
   packages = {}
-  pckgs.each do |p|
-    p.each do |pkg_name, pkg|
-      packages[pkg_name] = {} unless packages.key? pkg_name
-      pkg.each do |arch_name, arch|
-        packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
-        packages[pkg_name][arch_name].concat arch
+
+  case type
+  when 'debian'
+    pckgs.each do |p|
+      p.each do |pkg_name, pkg|
+        packages[pkg_name] = {} unless packages.key? pkg_name
+        pkg.each do |arch_name, arch|
+          packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
+          packages[pkg_name][arch_name].concat arch
+        end
       end
     end
+  when 'ubuntu'
+    pckgs.each do |p|
+      p.each do |pkg_name, pkg|
+        pkg.each do |arch_name, arch_pkgs|
+          arch_pkgs.each do |arch_pkg|
+            packages[arch_name] = {} unless packages.key? arch_name
+            packages[arch_name][arch_pkg['release']] = {} unless packages[arch_name].key? arch_pkg['release']
+            packages[arch_name][arch_pkg['release']][arch_pkg['name']] = [] unless packages[arch_name][arch_pkg['release']].key? arch_pkg['name']
+            packages[arch_name][arch_pkg['release']][arch_pkg['name']] << arch_pkg['version']
+          end
+        end
+      end
+    end
+  else
+    warn "Unsupported option #{type}"
+    exit 1
   end
 
   puts JSON.dump packages

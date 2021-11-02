@@ -299,7 +299,7 @@ class DebianErrataParser
     ret
   end
 
-  def add_packages_ubuntu(erratum, release, data, architecture_whitelist)
+  def add_packages_ubuntu(erratum, release, data, architecture_whitelist, packages)
     versions = get_versions(data['sources'])
     versions.merge(get_versions(data['binaries']))
     data['archs'].each do |arch_name, arch|
@@ -311,20 +311,34 @@ class DebianErrataParser
         if match.nil?
           warn "#{erratum.name}: URL did not match: #{url}" if @verbose
         else
-          erratum.add_package(
-            match['pkg_name'],
-            versions[match['version']] || match['version'],
-            architecture: match['arch'],
-            component: match['comp'],
-            release: release
-          )
-          metadata_add_entry(release, match['arch'], match['comp'])
+          found = false
+          if packages.dig(match['arch'], release, match['pkg_name'])
+            packages[match['arch']][release][match['pkg_name']].each do |v|
+              if Debian::Dpkg.compare_versions v, 'ge', match['version']
+                found = true
+                break
+              end
+            end
+          end
+
+          if found
+            erratum.add_package(
+              match['pkg_name'],
+              versions[match['version']] || match['version'],
+              architecture: match['arch'],
+              component: match['comp'],
+              release: release
+            )
+            metadata_add_entry(release, match['arch'], match['comp'])
+          else
+            warn "#{erratum.name}: The package \"#{match['pkg_name']}-#{match['version']}\" for \"#{release} - #{match['arch']}\" doesn't exist in package list!" if @verbose
+          end
         end
       end
     end
   end
 
-  def gen_ubuntu_errata(usn_db, release_whitelist=nil, architecture_whitelist=nil)
+  def gen_ubuntu_errata(usn_db, release_whitelist=nil, architecture_whitelist=nil, packages)
     @info_state = :gen_errata
     info_step = 1.0 / usn_db.length
     @info_state_cmplt = 0
@@ -356,7 +370,7 @@ class DebianErrataParser
             warn "#{name} has no architectures for release #{rel}" if @verbose
             next
           end
-          add_packages_ubuntu(erratum, rel, dat, architecture_whitelist)
+          add_packages_ubuntu(erratum, rel, dat, architecture_whitelist, packages)
         end
         # ignore errata without package-information
         next if erratum.packages.empty?
@@ -496,14 +510,17 @@ if $PROGRAM_NAME == __FILE__
     # TODO verify checksum
     #verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
 
-    errata = parser.gen_ubuntu_errata JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), ['bionic'], ['amd64']
+    packages = JSON.parse(File.read('packages_everything.json'))
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), ['bionic'], ['amd64'], packages)
 
   when 'ubuntu_test_record'
     require 'bzip2/ffi'
     require 'stringio'
 
     usn_db_f = File.open('test/data/database.json.bz2', 'rb')
-    errata = parser.gen_ubuntu_errata JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), ['bionic'], ['amd64']
+
+    packages = JSON.parse(File.read('packages_everything.json'))
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), ['bionic'], ['amd64'], packages)
     usn_db_f.close
 
   else

@@ -19,16 +19,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: imagemagick-doc
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: all
-    component: universe
-    release: bionic
-  - name: perlmagick
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: all
-    component: universe
-    release: bionic
   - name: libmagickcore-6-headers
     version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
@@ -39,25 +29,10 @@
     architecture: all
     component: main
     release: bionic
-  - name: libimage-magick-perl
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: all
-    component: universe
-    release: bionic
-  - name: imagemagick-6-doc
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: all
-    component: universe
-    release: bionic
   - name: libmagickwand-dev
     version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: all
     component: main
-    release: bionic
-  - name: imagemagick-common
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: all
-    component: universe
     release: bionic
   - name: libmagick++-dev
     version: 8:6.9.7.4+dfsg-16ubuntu6.3
@@ -73,11 +48,6 @@
     version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
-    release: bionic
-  - name: libimage-magick-q16hdri-perl
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libmagickcore-6-arch-config
     version: 8:6.9.7.4+dfsg-16ubuntu6.3
@@ -144,11 +114,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: imagemagick-6.q16hdri
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: imagemagick-6.q16
     version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
@@ -158,11 +123,6 @@
     version: 8:6.9.7.4+dfsg-16ubuntu6.3
     architecture: amd64
     component: main
-    release: bionic
-  - name: libimage-magick-q16-perl
-    version: 8:6.9.7.4+dfsg-16ubuntu6.3
-    architecture: amd64
-    component: universe
     release: bionic
   description: |
     It was discovered that ImageMagick incorrectly handled certain malformed
@@ -208,11 +168,6 @@
     version: 1.0.2n-1ubuntu5.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: openssl1.0
-    version: 1.0.2n-1ubuntu5.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libssl1.0-dev
     version: 1.0.2n-1ubuntu5.1
@@ -2561,20 +2516,10 @@
     architecture: all
     component: main
     release: bionic
-  - name: python-louis
-    version: 3.5.0-1ubuntu0.2
-    architecture: all
-    component: universe
-    release: bionic
   - name: liblouis-data
     version: 3.5.0-1ubuntu0.2
     architecture: all
     component: main
-    release: bionic
-  - name: liblouis-bin
-    version: 3.5.0-1ubuntu0.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: liblouis14
     version: 3.5.0-1ubuntu0.2
@@ -2599,11 +2544,6 @@
   issued: 30 Apr 2018
   affected_source_package: 
   packages:
-  - name: wavpack
-    version: 5.1.0-2ubuntu1.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libwavpack1
     version: 5.1.0-2ubuntu1.1
     architecture: amd64
@@ -2645,11 +2585,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: apache2-suexec-custom
-    version: 2.4.29-1ubuntu4.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: apache2-dev
     version: 2.4.29-1ubuntu4.1
     architecture: amd64
@@ -2664,11 +2599,6 @@
     version: 2.4.29-1ubuntu4.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: apache2-suexec-pristine
-    version: 2.4.29-1ubuntu4.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: apache2-dbg
     version: 2.4.29-1ubuntu4.1
@@ -3480,11 +3410,6 @@
   issued: 04 Jul 2018
   affected_source_package: 
   packages:
-  - name: php7.2-xsl
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: php7.2
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: all
@@ -3494,16 +3419,6 @@
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-intl
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-bcmath
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-mysql
     version: 7.2.7-0ubuntu0.18.04.1
@@ -3519,11 +3434,6 @@
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-fpm
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-dev
     version: 7.2.7-0ubuntu0.18.04.1
@@ -3550,21 +3460,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-mbstring
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-interbase
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-bz2
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-xmlrpc
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: amd64
@@ -3585,21 +3480,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libphp7.2-embed
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-zip
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-soap
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-gmp
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: amd64
@@ -3609,11 +3489,6 @@
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-imap
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-odbc
     version: 7.2.7-0ubuntu0.18.04.1
@@ -3625,16 +3500,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-phpdbg
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-enchant
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-tidy
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: amd64
@@ -3645,20 +3510,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-dba
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-sqlite3
     version: 7.2.7-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-sybase
-    version: 7.2.7-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libapache2-mod-php7.2
     version: 7.2.7-0ubuntu0.18.04.1
@@ -3906,11 +3761,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-mozsymbols
-    version: 61.0.1+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-be
     version: 61.0.1+build1-0ubuntu0.18.04.1
     architecture: amd64
@@ -3950,11 +3800,6 @@
     version: 61.0.1+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-testsuite
-    version: 61.0.1+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-locale-hu
     version: 61.0.1+build1-0ubuntu0.18.04.1
@@ -4070,11 +3915,6 @@
     version: 61.0.1+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-globalmenu
-    version: 61.0.1+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-locale-gu
     version: 61.0.1+build1-0ubuntu0.18.04.1
@@ -4264,11 +4104,6 @@
     version: 61.0+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-mozsymbols
-    version: 61.0+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-locale-nn
     version: 61.0+build3-0ubuntu0.18.04.1
@@ -4645,11 +4480,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-globalmenu
-    version: 61.0+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-nl
     version: 61.0+build3-0ubuntu0.18.04.1
     architecture: amd64
@@ -4669,11 +4499,6 @@
     version: 61.0+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-testsuite
-    version: 61.0+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-locale-hy
     version: 61.0+build3-0ubuntu0.18.04.1
@@ -4724,21 +4549,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: libvirt-daemon-driver-storage-zfs
-    version: 4.0.0-1ubuntu8.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: libvirt-sanlock
-    version: 4.0.0-1ubuntu8.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: libvirt-daemon-driver-storage-gluster
-    version: 4.0.0-1ubuntu8.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libvirt0
     version: 4.0.0-1ubuntu8.2
     architecture: amd64
@@ -4748,11 +4558,6 @@
     version: 4.0.0-1ubuntu8.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: libvirt-wireshark
-    version: 4.0.0-1ubuntu8.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libvirt-daemon
     version: 4.0.0-1ubuntu8.2
@@ -4769,11 +4574,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libnss-libvirt
-    version: 4.0.0-1ubuntu8.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libvirt-daemon-driver-storage-rbd
     version: 4.0.0-1ubuntu8.2
     architecture: amd64
@@ -4783,11 +4583,6 @@
     version: 4.0.0-1ubuntu8.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: libvirt-daemon-driver-storage-sheepdog
-    version: 4.0.0-1ubuntu8.2
-    architecture: amd64
-    component: universe
     release: bionic
   description: |
     Ken Johnson and Jann Horn independently discovered that microprocessors
@@ -4949,11 +4744,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: mysql-testsuite
-    version: 5.7.23-0ubuntu0.18.04.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: mysql-client
     version: 5.7.23-0ubuntu0.18.04.1
     architecture: all
@@ -4983,16 +4773,6 @@
     version: 5.7.23-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: mysql-source-5.7
-    version: 5.7.23-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: mysql-testsuite-5.7
-    version: 5.7.23-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libmysqlclient-dev
     version: 5.7.23-0ubuntu0.18.04.1
@@ -5034,54 +4814,6 @@
   - CVE-2018-3071
   - CVE-2018-3077
   - CVE-2018-3081
-- name: USN-3707-1
-  title: NTP vulnerabilities
-  issued: '09 Jul 2018'
-  affected_source_package: 
-  packages:
-  - name: ntp-doc
-    version: 1:4.2.8p10+dfsg-5ubuntu7.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: ntp
-    version: 1:4.2.8p10+dfsg-5ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: ntpdate
-    version: 1:4.2.8p10+dfsg-5ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: sntp
-    version: 1:4.2.8p10+dfsg-5ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  description: |
-    Yihan Lian discovered that NTP incorrectly handled certain malformed mode 6
-    packets. A remote attacker could possibly use this issue to cause ntpd to
-    crash, resulting in a denial of service. This issue only affected Ubuntu
-    17.10 and Ubuntu 18.04 LTS. (CVE-2018-7182)
-
-    Michael Macnair discovered that NTP incorrectly handled certain responses.
-    A remote attacker could possibly use this issue to execute arbitrary code.
-    (CVE-2018-7183)
-
-    Miroslav Lichvar discovered that NTP incorrectly handled certain
-    zero-origin timestamps. A remote attacker could possibly use this issue to
-    cause a denial of service. This issue only affected Ubuntu 17.10 and Ubuntu
-    18.04 LTS. (CVE-2018-7184)
-
-    Miroslav Lichvar discovered that NTP incorrectly handled certain
-    zero-origin timestamps. A remote attacker could possibly use this issue to
-    cause a denial of service. (CVE-2018-7185)
-  cves:
-  - CVE-2018-7182
-  - CVE-2018-7183
-  - CVE-2018-7184
-  - CVE-2018-7185
 - name: USN-3744-1
   title: PostgreSQL vulnerabilities
   issued: 16 Aug 2018
@@ -5116,11 +4848,6 @@
     version: 10.5-0ubuntu0.18.04
     architecture: amd64
     component: main
-    release: bionic
-  - name: postgresql-server-dev-10
-    version: 10.5-0ubuntu0.18.04
-    architecture: amd64
-    component: universe
     release: bionic
   - name: postgresql-plperl-10
     version: 10.5-0ubuntu0.18.04
@@ -5180,25 +4907,10 @@
     architecture: all
     component: main
     release: bionic
-  - name: python-problem-report
-    version: 2.20.9-0ubuntu7.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: python3-problem-report
     version: 2.20.9-0ubuntu7.1
     architecture: all
     component: main
-    release: bionic
-  - name: apport-valgrind
-    version: 2.20.9-0ubuntu7.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: python-apport
-    version: 2.20.9-0ubuntu7.1
-    architecture: all
-    component: universe
     release: bionic
   - name: python3-apport
     version: 2.20.9-0ubuntu7.1
@@ -5210,25 +4922,10 @@
     architecture: all
     component: main
     release: bionic
-  - name: apport-kde
-    version: 2.20.9-0ubuntu7.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: apport-noui
-    version: 2.20.9-0ubuntu7.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: apport-gtk
     version: 2.20.9-0ubuntu7.1
     architecture: all
     component: main
-    release: bionic
-  - name: dh-apport
-    version: 2.20.9-0ubuntu7.1
-    architecture: all
-    component: universe
     release: bionic
   description: |
     Sander Bos discovered that Apport incorrectly handled core dumps when
@@ -5369,11 +5066,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: thunderbird-mozsymbols
-    version: 1:52.8.0+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-ru
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
@@ -5429,11 +5121,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: xul-ext-calendar-timezones
-    version: 1:52.8.0+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-pl
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
@@ -5463,16 +5150,6 @@
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: xul-ext-lightning
-    version: 1:52.8.0+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: thunderbird-testsuite
-    version: 1:52.8.0+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: thunderbird-locale-nb
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
@@ -5574,11 +5251,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: xul-ext-gdata-provider
-    version: 1:52.8.0+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-mk
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
@@ -5624,11 +5296,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: thunderbird-globalmenu
-    version: 1:52.8.0+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-pa
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
@@ -5648,11 +5315,6 @@
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: thunderbird-gnome-support-dbg
-    version: 1:52.8.0+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: thunderbird-locale-is
     version: 1:52.8.0+build1-0ubuntu0.18.04.1
@@ -5745,11 +5407,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: php7.2-xsl
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: php7.2-common
     version: 7.2.5-0ubuntu0.18.04.1
     architecture: amd64
@@ -5760,16 +5417,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-sybase
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: libphp7.2-embed
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-pgsql
     version: 7.2.5-0ubuntu0.18.04.1
     architecture: amd64
@@ -5779,36 +5426,6 @@
     version: 7.2.5-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-dba
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-imap
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-fpm
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-interbase
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-mbstring
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-zip
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-opcache
     version: 7.2.5-0ubuntu0.18.04.1
@@ -5840,30 +5457,15 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-soap
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-pspell
     version: 7.2.5-0ubuntu0.18.04.1
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-bz2
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-json
     version: 7.2.5-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-intl
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-ldap
     version: 7.2.5-0ubuntu0.18.04.1
@@ -5875,20 +5477,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-phpdbg
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-tidy
     version: 7.2.5-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-enchant
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-sqlite3
     version: 7.2.5-0ubuntu0.18.04.1
@@ -5904,11 +5496,6 @@
     version: 7.2.5-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-bcmath
-    version: 7.2.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-gmp
     version: 7.2.5-0ubuntu0.18.04.1
@@ -5969,11 +5556,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: python-louis
-    version: 3.5.0-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: python3-louis
     version: 3.5.0-1ubuntu0.1
     architecture: all
@@ -5988,11 +5570,6 @@
     version: 3.5.0-1ubuntu0.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: liblouis-bin
-    version: 3.5.0-1ubuntu0.1
-    architecture: amd64
-    component: universe
     release: bionic
   description: |
     It was discovered that Liblouis incorrectly handled certain files.
@@ -6116,16 +5693,6 @@
   issued: 12 Jun 2018
   affected_source_package: 
   packages:
-  - name: qemu-system-mips
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-user-binfmt
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: qemu-system-arm
     version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
@@ -6141,11 +5708,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: qemu-user
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: qemu-system-ppc
     version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
@@ -6156,30 +5718,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: qemu-system-misc
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-user-static
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: qemu-system-s390x
     version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
-    release: bionic
-  - name: qemu-system
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
     release: bionic
   - name: qemu-block-extra
     version: 1:2.11+dfsg-1ubuntu7.3
@@ -6190,16 +5732,6 @@
     version: 1:2.11+dfsg-1ubuntu7.3
     architecture: amd64
     component: main
-    release: bionic
-  - name: qemu-system-sparc
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-guest-agent
-    version: 1:2.11+dfsg-1ubuntu7.3
-    architecture: amd64
-    component: universe
     release: bionic
   description: |
     Ken Johnson and Jann Horn independently discovered that microprocessors
@@ -6488,25 +6020,10 @@
   issued: '09 Jul 2018'
   affected_source_package: 
   packages:
-  - name: libturbojpeg
-    version: 1.5.2-0ubuntu5.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: libjpeg-turbo-test
-    version: 1.5.2-0ubuntu5.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libjpeg-turbo8-dbg
     version: 1.5.2-0ubuntu5.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libturbojpeg0-dev
-    version: 1.5.2-0ubuntu5.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libjpeg-turbo8
     version: 1.5.2-0ubuntu5.18.04.1
@@ -6517,11 +6034,6 @@
     version: 1.5.2-0ubuntu5.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libjpeg-turbo-progs
-    version: 1.5.2-0ubuntu5.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   description: |
     It was discovered that libjpeg-turbo incorrectly handled certain malformed
@@ -6542,16 +6054,6 @@
   issued: 20 Aug 2018
   affected_source_package: 
   packages:
-  - name: hostapd
-    version: 2:2.6-15ubuntu2.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: wpagui
-    version: 2:2.6-15ubuntu2.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: wpasupplicant
     version: 2:2.6-15ubuntu2.1
     architecture: amd64
@@ -6588,11 +6090,6 @@
   issued: 26 Jul 2018
   affected_source_package: 
   packages:
-  - name: clamav-testfiles
-    version: 0.100.1+dfsg-1ubuntu0.18.04.2
-    architecture: all
-    component: universe
-    release: bionic
   - name: clamav-docs
     version: 0.100.1+dfsg-1ubuntu0.18.04.2
     architecture: all
@@ -6617,11 +6114,6 @@
     version: 0.100.1+dfsg-1ubuntu0.18.04.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: clamav-milter
-    version: 0.100.1+dfsg-1ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libclamav-dev
     version: 0.100.1+dfsg-1ubuntu0.18.04.2
@@ -6658,20 +6150,10 @@
     architecture: all
     component: main
     release: bionic
-  - name: clamav-testfiles
-    version: 0.100.1+dfsg-1ubuntu0.18.04.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: clamav-base
     version: 0.100.1+dfsg-1ubuntu0.18.04.1
     architecture: all
     component: main
-    release: bionic
-  - name: clamav-milter
-    version: 0.100.1+dfsg-1ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: clamav-freshclam
     version: 0.100.1+dfsg-1ubuntu0.18.04.1
@@ -7025,11 +6507,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-globalmenu
-    version: 62.0+build2-0ubuntu0.18.04.3
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-kk
     version: 62.0+build2-0ubuntu0.18.04.3
     architecture: amd64
@@ -7260,11 +6737,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-testsuite
-    version: 62.0+build2-0ubuntu0.18.04.3
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-vi
     version: 62.0+build2-0ubuntu0.18.04.3
     architecture: amd64
@@ -7460,11 +6932,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-mozsymbols
-    version: 62.0+build2-0ubuntu0.18.04.3
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-ku
     version: 62.0+build2-0ubuntu0.18.04.3
     architecture: amd64
@@ -7537,11 +7004,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libpoppler-qt5-1
-    version: 0.62.0-2ubuntu2.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: poppler-utils
     version: 0.62.0-2ubuntu2.1
     architecture: amd64
@@ -7556,11 +7018,6 @@
     version: 0.62.0-2ubuntu2.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libpoppler-qt5-dev
-    version: 0.62.0-2ubuntu2.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libpoppler-cpp-dev
     version: 0.62.0-2ubuntu2.1
@@ -7803,11 +7260,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-globalmenu
-    version: 60.0.1+build2-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-et
     version: 60.0.1+build2-0ubuntu0.18.04.1
     architecture: amd64
@@ -7913,11 +7365,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-mozsymbols
-    version: 60.0.1+build2-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-sr
     version: 60.0.1+build2-0ubuntu0.18.04.1
     architecture: amd64
@@ -7937,11 +7384,6 @@
     version: 60.0.1+build2-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-testsuite
-    version: 60.0.1+build2-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-locale-hi
     version: 60.0.1+build2-0ubuntu0.18.04.1
@@ -8125,11 +7567,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-mozsymbols
-    version: 60.0.2+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-ca
     version: 60.0.2+build1-0ubuntu0.18.04.1
     architecture: amd64
@@ -8300,11 +7737,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-testsuite
-    version: 60.0.2+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-hi
     version: 60.0.2+build1-0ubuntu0.18.04.1
     architecture: amd64
@@ -8394,11 +7826,6 @@
     version: 60.0.2+build1-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-globalmenu
-    version: 60.0.2+build1-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-locale-eu
     version: 60.0.2+build1-0ubuntu0.18.04.1
@@ -10184,11 +9611,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: ctdb
-    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: python-samba
     version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
@@ -10213,11 +9635,6 @@
     version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: registry-tools
-    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: winbind
     version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
@@ -10253,11 +9670,6 @@
     version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: samba-testsuite
-    version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libnss-winbind
     version: 2:4.7.6+dfsg~ubuntu-0ubuntu2.2
@@ -10337,35 +9749,15 @@
   issued: 06 Aug 2018
   affected_source_package: 
   packages:
-  - name: lxc1
-    version: 3.0.1-0ubuntu1~18.04.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: lxc
-    version: 3.0.1-0ubuntu1~18.04.2
-    architecture: all
-    component: universe
-    release: bionic
   - name: lxc-dev
     version: 3.0.1-0ubuntu1~18.04.2
     architecture: all
     component: main
     release: bionic
-  - name: libpam-cgfs
-    version: 3.0.1-0ubuntu1~18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: liblxc-common
     version: 3.0.1-0ubuntu1~18.04.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: lxc-utils
-    version: 3.0.1-0ubuntu1~18.04.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: liblxc-dev
     version: 3.0.1-0ubuntu1~18.04.2
@@ -10542,35 +9934,10 @@
     architecture: all
     component: main
     release: bionic
-  - name: gpgv2
-    version: 2.2.4-1ubuntu1.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: gnupg2
-    version: 2.2.4-1ubuntu1.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: gpgv-win32
-    version: 2.2.4-1ubuntu1.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: gnupg-agent
-    version: 2.2.4-1ubuntu1.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: dirmngr
     version: 2.2.4-1ubuntu1.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: scdaemon
-    version: 2.2.4-1ubuntu1.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: gnupg-utils
     version: 2.2.4-1ubuntu1.1
@@ -10596,11 +9963,6 @@
     version: 2.2.4-1ubuntu1.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: gpgv-static
-    version: 2.2.4-1ubuntu1.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: gpg-agent
     version: 2.2.4-1ubuntu1.1
@@ -10643,70 +10005,15 @@
   issued: 05 Jun 2018
   affected_source_package: 
   packages:
-  - name: git-daemon-run
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: git-el
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: git-man
     version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: main
     release: bionic
-  - name: git-gui
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: gitweb
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: git-svn
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: git-all
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: gitk
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: git-daemon-sysvinit
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: git-email
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: git-doc
     version: 1:2.17.1-1ubuntu0.1
     architecture: all
     component: main
-    release: bionic
-  - name: git-mediawiki
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: git-cvs
-    version: 1:2.17.1-1ubuntu0.1
-    architecture: all
-    component: universe
     release: bionic
   - name: git
     version: 1:2.17.1-1ubuntu0.1
@@ -10772,11 +10079,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: xapian-tools
-    version: 1.4.5-1ubuntu0.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libxapian30
     version: 1.4.5-1ubuntu0.1
     architecture: amd64
@@ -10792,94 +10094,6 @@
     An attacker could possibly use this to execute arbitrary code.
   cves:
   - CVE-2018-0499
-- name: USN-3665-1
-  title: Tomcat vulnerabilities
-  issued: 30 May 2018
-  affected_source_package: 
-  packages:
-  - name: libtomcat8-embed-java
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: libservlet3.1-java
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: tomcat8-common
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: libservlet3.1-java-doc
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: tomcat8
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: tomcat8-docs
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: tomcat8-examples
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: libtomcat8-java
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: tomcat8-admin
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: tomcat8-user
-    version: 8.5.30-1ubuntu1.2
-    architecture: all
-    component: universe
-    release: bionic
-  description: |
-    It was discovered that Tomcat incorrectly handled being configured with
-    HTTP PUTs enabled. A remote attacker could use this issue to upload a JSP
-    file to the server and execute arbitrary code. This issue only affected
-    Ubuntu 14.04 LTS, Ubuntu 16.04 LTS and Ubuntu 17.10. (CVE-2017-12616,
-    CVE-2017-12617)
-
-    It was discovered that Tomcat contained incorrect documentation regarding
-    description of the search algorithm used by the CGI Servlet to identify
-    which script to execute. This issue only affected Ubuntu 17.10.
-    (CVE-2017-15706)
-
-    It was discovered that Tomcat incorrectly handled en empty string URL
-    pattern in security constraint definitions. A remote attacker could
-    possibly use this issue to gain access to web application resources,
-    contrary to expectations. This issue only affected Ubuntu 14.04 LTS,
-    Ubuntu 16.04 LTS and Ubuntu 17.10. (CVE-2018-1304)
-
-    It was discovered that Tomcat incorrectly handled applying certain security
-    constraints. A remote attacker could possibly access certain resources,
-    contrary to expectations. This issue only affected Ubuntu 14.04 LTS,
-    Ubuntu 16.04 LTS and Ubuntu 17.10. (CVE-2018-1305)
-
-    It was discovered that the Tomcat CORS filter default settings were
-    insecure and would enable 'supportsCredentials' for all origins, contrary
-    to expectations. (CVE-2018-8014)
-  cves:
-  - CVE-2017-12616
-  - CVE-2017-12617
-  - CVE-2017-15706
-  - CVE-2018-1304
-  - CVE-2018-1305
-  - CVE-2018-8014
 - name: USN-3683-1
   title: Bind vulnerability
   issued: 13 Jun 2018
@@ -10991,11 +10205,6 @@
   issued: 05 Jul 2018
   affected_source_package: 
   packages:
-  - name: php7.2-xsl
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: all
-    component: universe
-    release: bionic
   - name: php7.2
     version: 7.2.7-0ubuntu0.18.04.2
     architecture: all
@@ -11016,11 +10225,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-bz2
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-readline
     version: 7.2.7-0ubuntu0.18.04.2
     architecture: amd64
@@ -11035,11 +10239,6 @@
     version: 7.2.7-0ubuntu0.18.04.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-interbase
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-odbc
     version: 7.2.7-0ubuntu0.18.04.2
@@ -11061,11 +10260,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-mbstring
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-gd
     version: 7.2.7-0ubuntu0.18.04.2
     architecture: amd64
@@ -11075,21 +10269,6 @@
     version: 7.2.7-0ubuntu0.18.04.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-fpm
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-soap
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-zip
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-sqlite3
     version: 7.2.7-0ubuntu0.18.04.2
@@ -11101,20 +10280,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-imap
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-xml
     version: 7.2.7-0ubuntu0.18.04.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: libphp7.2-embed
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-curl
     version: 7.2.7-0ubuntu0.18.04.2
@@ -11131,40 +10300,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: php7.2-dba
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: php7.2-dev
     version: 7.2.7-0ubuntu0.18.04.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: php7.2-sybase
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-bcmath
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-enchant
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-phpdbg
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: php7.2-intl
-    version: 7.2.7-0ubuntu0.18.04.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: php7.2-pspell
     version: 7.2.7-0ubuntu0.18.04.2
@@ -11299,45 +10438,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: qemu-user-binfmt
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-user-static
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-system
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: qemu-system-arm
     version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: qemu-system-misc
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-guest-agent
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-user
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: qemu-system-common
     version: 1:2.11+dfsg-1ubuntu7.1
@@ -11348,16 +10452,6 @@
     version: 1:2.11+dfsg-1ubuntu7.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: qemu-system-sparc
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-system-mips
-    version: 1:2.11+dfsg-1ubuntu7.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: qemu-kvm
     version: 1:2.11+dfsg-1ubuntu7.1
@@ -11428,16 +10522,6 @@
     version: 10.0.2+13-1ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: openjdk-11-demo
-    version: 10.0.2+13-1ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: openjdk-11-jre-zero
-    version: 10.0.2+13-1ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: openjdk-11-jre-headless
     version: 10.0.2+13-1ubuntu0.18.04.1
@@ -11512,11 +10596,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libpoppler-qt5-dev
-    version: 0.62.0-2ubuntu2.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libpoppler-glib-dev
     version: 0.62.0-2ubuntu2.2
     architecture: amd64
@@ -11526,11 +10605,6 @@
     version: 0.62.0-2ubuntu2.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: libpoppler-qt5-1
-    version: 0.62.0-2ubuntu2.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: poppler-utils
     version: 0.62.0-2ubuntu2.2
@@ -11547,16 +10621,6 @@
   issued: 30 May 2018
   affected_source_package: 
   packages:
-  - name: vim-haproxy
-    version: 1.8.8-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: haproxy-doc
-    version: 1.8.8-1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: haproxy
     version: 1.8.8-1ubuntu0.1
     architecture: amd64
@@ -11611,11 +10675,6 @@
     version: 60.0+build2-0ubuntu1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-mozsymbols
-    version: 60.0+build2-0ubuntu1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-dev
     version: 60.0+build2-0ubuntu1
@@ -11672,11 +10731,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: firefox-globalmenu
-    version: 60.0+build2-0ubuntu1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: firefox-locale-nl
     version: 60.0+build2-0ubuntu1
     architecture: amd64
@@ -11691,11 +10745,6 @@
     version: 60.0+build2-0ubuntu1
     architecture: amd64
     component: main
-    release: bionic
-  - name: firefox-testsuite
-    version: 60.0+build2-0ubuntu1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: firefox-locale-sw
     version: 60.0+build2-0ubuntu1
@@ -12197,11 +11246,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: zziplib-bin
-    version: 0.13.62-3.1ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   description: |
     It was discovered that zziplib incorrectly handled certain malformed ZIP
     files. If a user or automated system were tricked into opening a specially
@@ -12220,50 +11264,20 @@
   issued: 21 May 2018
   affected_source_package: 
   packages:
-  - name: qemu-system-sparc
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: qemu-utils
     version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: qemu-user
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-guest-agent
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: qemu-system-common
     version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
     release: bionic
-  - name: qemu-user-static
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: qemu-system-s390x
     version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: qemu-system-mips
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: qemu-block-extra
     version: 1:2.11+dfsg-1ubuntu7.2
@@ -12284,21 +11298,6 @@
     version: 1:2.11+dfsg-1ubuntu7.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: qemu-system-misc
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-system
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: qemu-user-binfmt
-    version: 1:2.11+dfsg-1ubuntu7.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: qemu-system-arm
     version: 1:2.11+dfsg-1ubuntu7.2
@@ -12413,11 +11412,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: xul-ext-gdata-provider
-    version: 1:52.9.1+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-en
     version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
@@ -12438,20 +11432,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: thunderbird-mozsymbols
-    version: 1:52.9.1+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-zh-hant
     version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: thunderbird-testsuite
-    version: 1:52.9.1+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: thunderbird-locale-cy
     version: 1:52.9.1+build3-0ubuntu0.18.04.1
@@ -12497,11 +11481,6 @@
     version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: xul-ext-lightning
-    version: 1:52.9.1+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: thunderbird-locale-fr
     version: 1:52.9.1+build3-0ubuntu0.18.04.1
@@ -12623,16 +11602,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: thunderbird-gnome-support-dbg
-    version: 1:52.9.1+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: thunderbird-globalmenu
-    version: 1:52.9.1+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-kab
     version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
@@ -12718,11 +11687,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: xul-ext-calendar-timezones
-    version: 1:52.9.1+build3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: thunderbird-locale-hr
     version: 1:52.9.1+build3-0ubuntu0.18.04.1
     architecture: amd64
@@ -12794,11 +11758,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libgd-tools
-    version: 2.2.5-4ubuntu0.2
-    architecture: amd64
-    component: universe
-    release: bionic
   description: |
     It was discovered that GD incorrectly handled certain images.
     An attacker could possibly use this issue to execute arbitrary code.
@@ -12866,25 +11825,10 @@
   issued: 13 Aug 2018
   affected_source_package: 
   packages:
-  - name: bsdcpio
-    version: 3.2.2-3.1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
-  - name: bsdtar
-    version: 3.2.2-3.1ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: libarchive13
     version: 3.2.2-3.1ubuntu0.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libarchive-tools
-    version: 3.2.2-3.1ubuntu0.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libarchive-dev
     version: 3.2.2-3.1ubuntu0.1
@@ -12931,11 +11875,6 @@
     version: 0.18.8-1ubuntu0.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libraw-bin
-    version: 0.18.8-1ubuntu0.1
-    architecture: amd64
-    component: universe
     release: bionic
   description: |
     It was discovered that LibRaw incorrectly handled certain files.
@@ -13716,11 +12655,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: exiv2
-    version: 0.25-3.1ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libexiv2-dbg
     version: 0.25-3.1ubuntu0.18.04.1
     architecture: amd64
@@ -13759,40 +12693,15 @@
   issued: 07 Jun 2018
   affected_source_package: 
   packages:
-  - name: python-unbound
-    version: 1.6.7-1ubuntu2.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libunbound2
     version: 1.6.7-1ubuntu2.1
     architecture: amd64
     component: main
     release: bionic
-  - name: unbound
-    version: 1.6.7-1ubuntu2.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: unbound-anchor
-    version: 1.6.7-1ubuntu2.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: unbound-host
-    version: 1.6.7-1ubuntu2.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libunbound-dev
     version: 1.6.7-1ubuntu2.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: python3-unbound
-    version: 1.6.7-1ubuntu2.1
-    architecture: amd64
-    component: universe
     release: bionic
   description: |
     Ralph Dolmans and Karst Koymans discovered that Unbound did not properly
@@ -13821,11 +12730,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: webkit2gtk-driver
-    version: 2.20.3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: gir1.2-webkit2-4.0
     version: 2.20.3-0ubuntu0.18.04.1
     architecture: amd64
@@ -13835,16 +12739,6 @@
     version: 2.20.3-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libjavascriptcoregtk-4.0-bin
-    version: 2.20.3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: libwebkit2gtk-4.0-37-gtk2
-    version: 2.20.3-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libwebkit2gtk-4.0-37
     version: 2.20.3-0ubuntu0.18.04.1
@@ -13961,11 +12855,6 @@
     architecture: all
     component: main
     release: bionic
-  - name: apt-transport-https
-    version: 1.6.3ubuntu0.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: apt
     version: 1.6.3ubuntu0.1
     architecture: amd64
@@ -14013,11 +12902,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: webkit2gtk-driver
-    version: 2.20.2-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: gir1.2-webkit2-4.0
     version: 2.20.2-0ubuntu0.18.04.1
     architecture: amd64
@@ -14028,20 +12912,10 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libwebkit2gtk-4.0-37-gtk2
-    version: 2.20.2-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libjavascriptcoregtk-4.0-18
     version: 2.20.2-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libjavascriptcoregtk-4.0-bin
-    version: 2.20.2-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: libwebkit2gtk-4.0-37
     version: 2.20.2-0ubuntu0.18.04.1
@@ -14084,40 +12958,15 @@
     architecture: all
     component: main
     release: bionic
-  - name: imagemagick-doc
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: all
-    component: universe
-    release: bionic
   - name: libmagick++-6-headers
     version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
     release: bionic
-  - name: libimage-magick-perl
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: all
-    component: universe
-    release: bionic
   - name: imagemagick-6-common
     version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: all
     component: main
-    release: bionic
-  - name: imagemagick-6-doc
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: imagemagick-common
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: all
-    component: universe
-    release: bionic
-  - name: perlmagick
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: all
-    component: universe
     release: bionic
   - name: libmagickwand-dev
     version: 8:6.9.7.4+dfsg-16ubuntu6.2
@@ -14164,11 +13013,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libimage-magick-q16hdri-perl
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libmagickcore-6.q16-3
     version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
@@ -14178,16 +13022,6 @@
     version: 8:6.9.7.4+dfsg-16ubuntu6.2
     architecture: amd64
     component: main
-    release: bionic
-  - name: imagemagick-6.q16hdri
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: libimage-magick-q16-perl
-    version: 8:6.9.7.4+dfsg-16ubuntu6.2
-    architecture: amd64
-    component: universe
     release: bionic
   - name: imagemagick-6.q16
     version: 8:6.9.7.4+dfsg-16ubuntu6.2
@@ -14360,11 +13194,6 @@
   issued: 30 Apr 2018
   affected_source_package: 
   packages:
-  - name: mysql-testsuite
-    version: 5.7.22-0ubuntu18.04.1
-    architecture: all
-    component: universe
-    release: bionic
   - name: mysql-client
     version: 5.7.22-0ubuntu18.04.1
     architecture: all
@@ -14379,16 +13208,6 @@
     version: 5.7.22-0ubuntu18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: mysql-source-5.7
-    version: 5.7.22-0ubuntu18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: mysql-testsuite-5.7
-    version: 5.7.22-0ubuntu18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: mysql-server-core-5.7
     version: 5.7.22-0ubuntu18.04.1
@@ -14834,11 +13653,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: dpdk-igb-uio-dkms
-    version: 17.11.2-1ubuntu0.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: librte-acl17.11
     version: 17.11.2-1ubuntu0.1
     architecture: amd64
@@ -14863,11 +13677,6 @@
     version: 17.11.2-1ubuntu0.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: dpdk-rte-kni-dkms
-    version: 17.11.2-1ubuntu0.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: dpdk
     version: 17.11.2-1ubuntu0.1
@@ -14900,11 +13709,6 @@
     architecture: amd64
     component: main
     release: bionic
-  - name: libwebkit2gtk-4.0-37-gtk2
-    version: 2.20.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
   - name: libjavascriptcoregtk-4.0-dev
     version: 2.20.5-0ubuntu0.18.04.1
     architecture: amd64
@@ -14919,16 +13723,6 @@
     version: 2.20.5-0ubuntu0.18.04.1
     architecture: amd64
     component: main
-    release: bionic
-  - name: libjavascriptcoregtk-4.0-bin
-    version: 2.20.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
-    release: bionic
-  - name: webkit2gtk-driver
-    version: 2.20.5-0ubuntu0.18.04.1
-    architecture: amd64
-    component: universe
     release: bionic
   - name: gir1.2-javascriptcoregtk-4.0
     version: 2.20.5-0ubuntu0.18.04.1

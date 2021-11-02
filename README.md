@@ -58,7 +58,11 @@ Only the Docker container (explained below) is intended for production use.
 
 You can generate Ubuntu errata information by running the `gen_errata.rb` script as follows:
 
+    bundle exec debRelease.rb ubuntu > packages_everything.json
     bundle exec gen_errata.rb ubuntu > errata_ubuntu.yaml
+
+The `packages_everything.json` file from the first of these two commands stores package information from the Ubuntu security repository (http://security.ubuntu.com/ubuntu)
+This is needed to make sure to only handle referenced packages which are provided by repository.
 
 Note that the `ubuntu` argument of the `gen_errata.rb` script is hard coded to use https://usn.ubuntu.com/usn-db/database.json.bz2 as its source of information, and to generate errata for `bionic` for `amd64` only.
 
@@ -67,7 +71,7 @@ Note that the `ubuntu` argument of the `gen_errata.rb` script is hard coded to u
 
 You can generate Debian errata information by running the `gen_errata.rb` script as follows:
 
-    bundle exec debRelease.rb > packages_everything.json
+    bundle exec debRelease.rb debian > packages_everything.json
     bundle exec gen_errata.rb debian > errata_debian.yaml
 
 The `packages_everything.json` file from the first of these two commands stores package information from the Debian security repository (http://security.debian.org/debian-security)

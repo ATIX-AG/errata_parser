@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'optparse'
 require_relative 'gen_errata'
@@ -8,9 +9,9 @@ require_relative 'check_config'
 # always interpret files as UTF-8 instead of US-ASCII
 Encoding.default_external = 'UTF-8'
 
-DEFAULT_CONF_FILE = 'config.json'.freeze
+DEFAULT_CONF_FILE = 'config.json'
 DEFAULT_CONF = {
-  'tempdir' => '/tmp/errata_parser_cache',
+  'tempdir' => '/tmp/errata_parser_cache'
 }.freeze
 
 def fatal(message, code=42, show_help=false)
@@ -45,7 +46,7 @@ end
 
 def parse_commandline
   options = {
-    config: DEFAULT_CONF_FILE,
+    config: DEFAULT_CONF_FILE
   }
   @opts = OptionParser.new
   @opts.banner = 'Usage: errata_parser.rb [options]'
@@ -66,7 +67,7 @@ def parse_commandline
 
   @opts.on('-v', '--[no-]verbose', 'Run verbosely') do |v|
     options[:verbose] = v
-    #HTTPDEBUG = v
+    # HTTPDEBUG = v
   end
 
   @opts.on('-m', '--[no-]metadata', 'Create metadata files per Errata-file') do |m|
@@ -85,7 +86,7 @@ def write_json_file(filename, json_data, name: '', verbose: false)
   File.open(filename, 'w') do |f|
     warn "Writing #{name} to #{filename.inspect}" if verbose
     f << json_data.to_json
-    #f << json_data.to_json(object_nl: "\n")
+    # f << json_data.to_json(object_nl: "\n")
   end
 end
 
@@ -184,7 +185,7 @@ if $PROGRAM_NAME == __FILE__
           # save Meta-data
           metadata[:releases][deb_rel.release_name] = {
             'architectures': deb_rel.architectures,
-            'components': deb_rel.components,
+            'components': deb_rel.components
           }
           metadata[:releases][deb_rel.release_name][:aliases] = cfg['aliases']['releases'][deb_rel.release_name] if
             cfg.key?('aliases') && cfg['aliases'].key?('releases') && cfg['aliases']['releases'].key?(deb_rel.release_name)
@@ -248,18 +249,56 @@ if $PROGRAM_NAME == __FILE__
     require 'stringio'
 
     cfg = @config['ubuntu']
+    whitelist_arch = get_whitelist(cfg, 'architectures')
     tempdir = Pathname.new(File.join(@config['tempdir'], 'ubuntu'))
     tempdir.mkpath
+    threads = []
+    packages = {}
+    mutex = Mutex.new
 
-    #HTTPDEBUG = options[:verbose]
+    # HTTPDEBUG = options[:verbose]
 
     warn 'START  Download USN-information' if options[:verbose]
     usn_db = download_file_cached(cfg['usn_list_url'], File.join(tempdir, 'database.json.bz2'))
     warn 'FINISH Download USN-information' if options[:verbose]
 
+    ## Download package-lists
+    DebRelease.tempdir = tempdir
+    fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
+    fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
+    fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
+    cfg['repository']['releases'].each do |s|
+      threads << Thread.new do
+        warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
+        deb_rel = DebRelease.new(cfg['repository']['repo_url'], s)
+        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+        deb_rel.whitelist_arch = whitelist_arch
+        pkgs = deb_rel.all_packages
+
+        # merge package-list
+        mutex.synchronize do
+          pkgs.each_value do |pkg|
+            pkg.each do |arch_name, arch_pkgs|
+              arch_pkgs.each do |arch_pkg|
+                packages[arch_name] = {} unless packages.key? arch_name
+                packages[arch_name][arch_pkg['release']] = {} unless packages[arch_name].key? arch_pkg['release']
+                packages[arch_name][arch_pkg['release']][arch_pkg['name']] = [] unless packages[arch_name][arch_pkg['release']].key? arch_pkg['name']
+                packages[arch_name][arch_pkg['release']][arch_pkg['name']] << arch_pkg['version']
+              end
+            end
+          end
+        end
+        warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
+      end
+    end
+
+    threads.each(&:join)
+
     warn 'START  Generate ubuntu-errata' if options[:verbose]
     errata = parser.gen_ubuntu_errata(
       JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))),
+      packages,
       get_whitelist(cfg, 'releases'),
       get_whitelist(cfg, 'architectures')
     )
@@ -276,9 +315,7 @@ if $PROGRAM_NAME == __FILE__
       metadata = parser.metadata
       if cfg.key?('aliases') && cfg['aliases'].key?('releases')
         metadata[:releases].each_key do |rel|
-          # rubocop:disable Metrics/BlockNesting
           metadata[:releases][rel][:aliases] = cfg['aliases']['releases'][rel] if cfg['aliases']['releases'].key?(rel)
-          # rubocop:enable Metrics/BlockNesting
         end
       end
       # write Metadata
