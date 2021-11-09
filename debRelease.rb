@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'debian'
 require 'time'
@@ -6,12 +7,10 @@ require 'pathname'
 
 require_relative 'downloader'
 
+# Debian / Ubuntu release file download / parsing
 class DebRelease
   include Downloader
-
-  # rubocop:disable Style/ClassVars
   @@tempdir = '/tmp/errata_parser_cache/debian'
-  # rubocop:enable Style/ClassVars
 
   attr_reader :data, :files
   attr_accessor :suite, :base_url
@@ -193,14 +192,14 @@ if $PROGRAM_NAME == __FILE__
       'buster/updates',
       'bullseye-security'
     ]
-    repository_url = "http://security.debian.org/debian-security"
+    repository_url = 'http://security.debian.org/debian-security'
   when 'ubuntu'
     suites = [
       'bionic-security',
       'focal-security',
-      'hirsute-security',
+      'hirsute-security'
     ]
-    repository_url = "http://security.ubuntu.com/ubuntu"
+    repository_url = 'http://security.ubuntu.com/ubuntu'
   else
     warn "Unsupported option #{type}"
     exit 1
@@ -240,7 +239,7 @@ if $PROGRAM_NAME == __FILE__
     end
   when 'ubuntu'
     pckgs.each do |p|
-      p.each do |pkg_name, pkg|
+      p.each_value do |pkg|
         pkg.each do |arch_name, arch_pkgs|
           arch_pkgs.each do |arch_pkg|
             packages[arch_name] = {} unless packages.key? arch_name
@@ -258,8 +257,8 @@ if $PROGRAM_NAME == __FILE__
 
   puts JSON.dump packages
 
-  #rel.get_package('main', 'amd64').each do |p, d|
+  # rel.get_package('main', 'amd64').each do |p, d|
   #  puts p.inspect
   #  puts "#{d.source} @ #{d.version}"
-  #end
+  # end
 end

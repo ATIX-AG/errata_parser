@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 
 REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9\-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/.freeze

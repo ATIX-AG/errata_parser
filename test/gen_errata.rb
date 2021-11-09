@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../gen_errata'
 require_relative '../parse_dsalist'
 require 'json'
@@ -39,7 +41,7 @@ class TestDebianErrata < Test::Unit::TestCase
 
     original.each do |v|
       name = v['name']
-      #FIXME for some reasons ruby insists that assert only takes one argument
+      # FIXME: for some reasons ruby insists that assert only takes one argument
       assert(generated.key?(name)) # , "Erratum #{name.inspect} not found")
       assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
     end
@@ -59,9 +61,9 @@ class TestDebianErrata < Test::Unit::TestCase
       JSON.parse(
         Bzip2::FFI::Reader.read(f)
       ),
+      packages,
       ['bionic'],
-      ['amd64'],
-      packages
+      ['amd64']
     )
     f.close
     assert_instance_of(Array, errata)
@@ -85,7 +87,7 @@ class TestDebianErrata < Test::Unit::TestCase
 
     original.each do |v|
       name = v['name']
-      #FIXME for some reasons ruby insists that assert only takes one argument
+      # FIXME: for some reasons ruby insists that assert only takes one argument
       assert(generated.key?(name)) # , "Erratum #{name.inspect} not found")
       assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
     end

@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'json'
 require 'yaml'
@@ -21,6 +22,7 @@ SCOPE_PRIO = [
   'remote'
 ].freeze
 
+# Parser exceptions
 class ParserException < RuntimeError
   def at
     str = ''
@@ -39,6 +41,7 @@ class ParserException < RuntimeError
   end
 end
 
+# The erratum main class
 class Erratum
   attr_accessor :title, :name, :cves, :package, :fixed_version
   attr_accessor :dbts_bugs
@@ -167,7 +170,7 @@ class Erratum
   private
 
   ### Helper
-  #TODO too static, what if a new value is introduced?
+  # TODO too static, what if a new value is introduced?
   # returns index of new in list, if the new is greater than old_idx
   # otherwise it returns the old_idx
   # Parameters:
@@ -251,7 +254,7 @@ class DebianErrataParser
       erratum.title = "#{dsa.package} -- #{dsa.type}"
       # add time and timezone, otherwise conversion to UTC might change the date
       erratum.issued = "#{dsa.date} 00:00 UTC"
-      dsa.cve.each { |c| erratum.add_cve c } if dsa.cve
+      dsa.cve&.each { |c| erratum.add_cve c }
       erratum.package = dsa.package
 
       dsa.versions.each do |rel, pkg_dat|
@@ -275,7 +278,7 @@ class DebianErrataParser
       # init metadata
       @metadata[:releases][release] = {
         architectures: Set.new([architecture]),
-        components: Set.new([component]),
+        components: Set.new([component])
       }
     end
   end
@@ -285,7 +288,7 @@ class DebianErrataParser
     @metadata[:releases].each do |rel, data|
       res[:releases][rel] = {
         architectures: data[:architectures].to_a,
-        components: data[:components].to_a,
+        components: data[:components].to_a
       }
     end
     res
@@ -293,7 +296,7 @@ class DebianErrataParser
 
   def get_versions(hsh)
     ret = {}
-    hsh.values.each do |b|
+    hsh.each_value do |b|
       ret[b['version'].sub(/^\d+:/, '')] = b['version']
     end
     ret
@@ -330,15 +333,15 @@ class DebianErrataParser
               release: release
             )
             metadata_add_entry(release, match['arch'], match['comp'])
-          else
-            warn "#{erratum.name}: The package \"#{match['pkg_name']}-#{match['version']}\" for \"#{release} - #{match['arch']}\" doesn't exist in package list!" if @verbose
+          elsif @verbose
+            warn "#{erratum.name}: Package \"#{match['pkg_name']}_#{match['version']}\" for \"#{release} - #{match['arch']}\" doesn't exist in package list!"
           end
         end
       end
     end
   end
 
-  def gen_ubuntu_errata(usn_db, release_whitelist=nil, architecture_whitelist=nil, packages)
+  def gen_ubuntu_errata(usn_db, packages, release_whitelist=nil, architecture_whitelist=nil)
     @info_state = :gen_errata
     info_step = 1.0 / usn_db.length
     @info_state_cmplt = 0
@@ -471,7 +474,7 @@ if $PROGRAM_NAME == __FILE__
   # always interpret files as UTF-8 instead of US-ASCII
   Encoding.default_external = 'UTF-8'
 
-  TEMPDIR = '/tmp/errata_parser_cache'.freeze
+  TEMPDIR = '/tmp/errata_parser_cache'
   extend Downloader
 
   type = ARGV[0]
@@ -499,17 +502,17 @@ if $PROGRAM_NAME == __FILE__
     cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', File.join(tempdir, 'cve.json'))
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
     errata += parser.gen_debian_errata(DSA.parse_dsa_list_str(dla_list), JSON.parse(cve_file))
-    #parser.add_binary_packages_from_file(errata, 'packages_everything.json')
+    # parser.add_binary_packages_from_file(errata, 'packages_everything.json')
     parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['bullseye'], ['amd64'])
 
     # filter empty package-lists
-    #errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
+    # errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
 
   when 'debian_test_record'
     dsa_list = File.read('test/data/dsa.list')
     cve_file = File.read('test/data/cve.json')
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
-    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything.json', ['stretch'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything_debian.json', ['stretch'], ['amd64'])
 
   when 'ubuntu'
     ## Ubuntu
@@ -521,13 +524,13 @@ if $PROGRAM_NAME == __FILE__
 
     HTTPDEBUG = true
     usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', File.join(tempdir, 'database.json.bz2'))
-    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', File.join(tempdir, 'database-all.json.bz2'))
+    # usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', File.join(tempdir, 'database-all.json.bz2'))
 
-    # TODO verify checksum
-    #verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
+    # TODO: verify checksum
+    # verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
 
     packages = JSON.parse(File.read('packages_everything.json'))
-    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), ['bionic'], ['amd64'], packages)
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), packages, ['bionic'], ['amd64'])
 
   when 'ubuntu_test_record'
     require 'bzip2/ffi'
@@ -536,7 +539,7 @@ if $PROGRAM_NAME == __FILE__
     usn_db_f = File.open('test/data/database.json.bz2', 'rb')
 
     packages = JSON.parse(File.read('packages_everything.json'))
-    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), ['bionic'], ['amd64'], packages)
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, ['bionic'], ['amd64'])
     usn_db_f.close
 
   else
@@ -545,11 +548,11 @@ if $PROGRAM_NAME == __FILE__
   end
 
   arr = []
-  #errata.sort{ |x, y| y.name <=> x.name }.each do |e|
+  # errata.sort{ |x, y| y.name <=> x.name }.each do |e|
   errata.each do |e|
     # remove Errata without packages
     arr << e.to_h unless e.packages.empty?
   end
   puts arr.to_yaml
-  #puts errata.to_json
+  # puts errata.to_json
 end
