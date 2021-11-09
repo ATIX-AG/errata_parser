@@ -437,7 +437,7 @@ class DebianErrataParser
         if Debian::Dpkg.compare_versions deb['version'], 'ge', pkg[:version]
           res << {
             name: deb['name'],
-            version: pkg[:version],
+            version: deb['version'],
             architecture: deb['arch'],
             release: deb['release'],
             component: deb['comp']
