@@ -408,6 +408,7 @@ class DebianErrataParser
         if releases.nil? || releases.include?(p[:release])
           if packages.key? p[:name]
             new = get_binary_packages_for_erratum_package(
+              erratum.package,
               p,
               packages[p[:name]],
               architecture_whitelist
@@ -425,13 +426,28 @@ class DebianErrataParser
     end
   end
 
-  def get_binary_packages_for_erratum_package(pkg, packages, architecture_whitelist)
+  def get_binary_packages_for_erratum_package(source_pkg, pkg, packages, architecture_whitelist)
     res = []
     packages.each do |arch_name, arch|
       next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
 
       arch.each do |deb|
         next if pkg[:release] != deb['release']
+
+        # Unfortunately, a special handling for packages created from the linux source need to be done.
+        # - In one debian release, multiple linux versions (= stream) can be shipped.
+        # - Therefore, the linux kernel package NAMES are like linux-image-4.19.0-14.
+        # - A full package including version would therefore look like linux-image-4.19.0-14_4.19.171-2_amd64.deb.
+        # - A Debian DSA is released based on a specific version like 4.19.171-2 which should fix the issue.
+        # - The erratum should only contain packages of this linux kernel stream '4.19.171' and not e.g. for '4.19.194'
+        # - The Debian DSA can be fixed with versions greater or equal '4.19.171-2' (4.19.171-3 or 4.19.171-4)
+        if source_pkg == 'linux'
+          deb_main_version = deb['version'].rpartition('-')[0]
+          deb_main_version = deb['version'] if deb_main_version.empty?
+          pkg_main_version = pkg[:version].rpartition('-')[0]
+          pkg_main_version = pkg[:version] if pkg_main_version.empty?
+          next if deb_main_version != pkg_main_version
+        end
 
         # version from packages must be 'greater or equal' to the version requested by DSA
         if Debian::Dpkg.compare_versions deb['version'], 'ge', pkg[:version]
