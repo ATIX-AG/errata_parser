@@ -6,7 +6,7 @@ GEM
       ffi (~> 1.0)
     ffi (1.15.4)
     jaro_winkler (1.5.4)
-    parallel (1.21.0)
+    parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
     power_assert (2.0.1)
@@ -32,6 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   bzip2-ffi (~> 1.0)
+  parallel (~> 1.20, < 1.21)
   rubocop (~> 0.61.0)
   ruby-debian (~> 0.3.8)
   ruby-xz (~> 1.0)
