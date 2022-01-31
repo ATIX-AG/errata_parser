@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'json'
 require 'yaml'
@@ -21,6 +22,7 @@ SCOPE_PRIO = [
   'remote'
 ].freeze
 
+# Parser exceptions
 class ParserException < RuntimeError
   def at
     str = ''
@@ -39,6 +41,7 @@ class ParserException < RuntimeError
   end
 end
 
+# The erratum main class
 class Erratum
   attr_accessor :title, :name, :cves, :package, :fixed_version
   attr_accessor :dbts_bugs
@@ -167,7 +170,7 @@ class Erratum
   private
 
   ### Helper
-  #TODO too static, what if a new value is introduced?
+  # TODO too static, what if a new value is introduced?
   # returns index of new in list, if the new is greater than old_idx
   # otherwise it returns the old_idx
   # Parameters:
@@ -251,7 +254,7 @@ class DebianErrataParser
       erratum.title = "#{dsa.package} -- #{dsa.type}"
       # add time and timezone, otherwise conversion to UTC might change the date
       erratum.issued = "#{dsa.date} 00:00 UTC"
-      dsa.cve.each { |c| erratum.add_cve c } if dsa.cve
+      dsa.cve&.each { |c| erratum.add_cve c }
       erratum.package = dsa.package
 
       dsa.versions.each do |rel, pkg_dat|
@@ -275,7 +278,7 @@ class DebianErrataParser
       # init metadata
       @metadata[:releases][release] = {
         architectures: Set.new([architecture]),
-        components: Set.new([component]),
+        components: Set.new([component])
       }
     end
   end
@@ -285,7 +288,7 @@ class DebianErrataParser
     @metadata[:releases].each do |rel, data|
       res[:releases][rel] = {
         architectures: data[:architectures].to_a,
-        components: data[:components].to_a,
+        components: data[:components].to_a
       }
     end
     res
@@ -293,13 +296,13 @@ class DebianErrataParser
 
   def get_versions(hsh)
     ret = {}
-    hsh.values.each do |b|
+    hsh.each_value do |b|
       ret[b['version'].sub(/^\d+:/, '')] = b['version']
     end
     ret
   end
 
-  def add_packages_ubuntu(erratum, release, data, architecture_whitelist)
+  def add_packages_ubuntu(erratum, release, data, architecture_whitelist, packages)
     versions = get_versions(data['sources'])
     versions.merge(get_versions(data['binaries']))
     data['archs'].each do |arch_name, arch|
@@ -311,20 +314,34 @@ class DebianErrataParser
         if match.nil?
           warn "#{erratum.name}: URL did not match: #{url}" if @verbose
         else
-          erratum.add_package(
-            match['pkg_name'],
-            versions[match['version']] || match['version'],
-            architecture: match['arch'],
-            component: match['comp'],
-            release: release
-          )
-          metadata_add_entry(release, match['arch'], match['comp'])
+          found = false
+          if packages.dig(match['arch'], release, match['pkg_name'])
+            packages[match['arch']][release][match['pkg_name']].each do |v|
+              if Debian::Dpkg.compare_versions v, 'ge', match['version']
+                found = true
+                break
+              end
+            end
+          end
+
+          if found
+            erratum.add_package(
+              match['pkg_name'],
+              versions[match['version']] || match['version'],
+              architecture: match['arch'],
+              component: match['comp'],
+              release: release
+            )
+            metadata_add_entry(release, match['arch'], match['comp'])
+          elsif @verbose
+            warn "#{erratum.name}: Package \"#{match['pkg_name']}_#{match['version']}\" for \"#{release} - #{match['arch']}\" doesn't exist in package list!"
+          end
         end
       end
     end
   end
 
-  def gen_ubuntu_errata(usn_db, release_whitelist=nil, architecture_whitelist=nil)
+  def gen_ubuntu_errata(usn_db, packages, release_whitelist=nil, architecture_whitelist=nil)
     @info_state = :gen_errata
     info_step = 1.0 / usn_db.length
     @info_state_cmplt = 0
@@ -356,7 +373,7 @@ class DebianErrataParser
             warn "#{name} has no architectures for release #{rel}" if @verbose
             next
           end
-          add_packages_ubuntu(erratum, rel, dat, architecture_whitelist)
+          add_packages_ubuntu(erratum, rel, dat, architecture_whitelist, packages)
         end
         # ignore errata without package-information
         next if erratum.packages.empty?
@@ -394,6 +411,7 @@ class DebianErrataParser
         if releases.nil? || releases.include?(p[:release])
           if packages.key? p[:name]
             new = get_binary_packages_for_erratum_package(
+              erratum.package,
               p,
               packages[p[:name]],
               architecture_whitelist
@@ -411,7 +429,7 @@ class DebianErrataParser
     end
   end
 
-  def get_binary_packages_for_erratum_package(pkg, packages, architecture_whitelist)
+  def get_binary_packages_for_erratum_package(source_pkg, pkg, packages, architecture_whitelist)
     res = []
     packages.each do |arch_name, arch|
       next unless architecture_whitelist.nil? || arch_name == 'all' || architecture_whitelist.include?(arch_name)
@@ -419,11 +437,26 @@ class DebianErrataParser
       arch.each do |deb|
         next if pkg[:release] != deb['release']
 
+        # Unfortunately, a special handling for packages created from the linux source need to be done.
+        # - In one debian release, multiple linux versions (= stream) can be shipped.
+        # - Therefore, the linux kernel package NAMES are like linux-image-4.19.0-14.
+        # - A full package including version would therefore look like linux-image-4.19.0-14_4.19.171-2_amd64.deb.
+        # - A Debian DSA is released based on a specific version like 4.19.171-2 which should fix the issue.
+        # - The erratum should only contain packages of this linux kernel stream '4.19.171' and not e.g. for '4.19.194'
+        # - The Debian DSA can be fixed with versions greater or equal '4.19.171-2' (4.19.171-3 or 4.19.171-4)
+        if source_pkg == 'linux'
+          deb_main_version = deb['version'].rpartition('-')[0]
+          deb_main_version = deb['version'] if deb_main_version.empty?
+          pkg_main_version = pkg[:version].rpartition('-')[0]
+          pkg_main_version = pkg[:version] if pkg_main_version.empty?
+          next if deb_main_version != pkg_main_version
+        end
+
         # version from packages must be 'greater or equal' to the version requested by DSA
         if Debian::Dpkg.compare_versions deb['version'], 'ge', pkg[:version]
           res << {
             name: deb['name'],
-            version: pkg[:version],
+            version: deb['version'],
             architecture: deb['arch'],
             release: deb['release'],
             component: deb['comp']
@@ -441,7 +474,7 @@ if $PROGRAM_NAME == __FILE__
   # always interpret files as UTF-8 instead of US-ASCII
   Encoding.default_external = 'UTF-8'
 
-  TEMPDIR = '/tmp/errata_parser_cache'.freeze
+  TEMPDIR = '/tmp/errata_parser_cache'
   extend Downloader
 
   type = ARGV[0]
@@ -469,17 +502,17 @@ if $PROGRAM_NAME == __FILE__
     cve_file = download_file_cached('https://security-tracker.debian.org/tracker/data/json', File.join(tempdir, 'cve.json'))
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
     errata += parser.gen_debian_errata(DSA.parse_dsa_list_str(dla_list), JSON.parse(cve_file))
-    #parser.add_binary_packages_from_file(errata, 'packages_everything.json')
+    # parser.add_binary_packages_from_file(errata, 'packages_everything.json')
     parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['bullseye'], ['amd64'])
 
     # filter empty package-lists
-    #errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
+    # errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
 
   when 'debian_test_record'
     dsa_list = File.read('test/data/dsa.list')
     cve_file = File.read('test/data/cve.json')
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
-    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything.json', ['stretch'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything_debian.json', ['stretch'], ['amd64'])
 
   when 'ubuntu'
     ## Ubuntu
@@ -491,19 +524,22 @@ if $PROGRAM_NAME == __FILE__
 
     HTTPDEBUG = true
     usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database.json.bz2', File.join(tempdir, 'database.json.bz2'))
-    #usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', File.join(tempdir, 'database-all.json.bz2'))
+    # usn_db = download_file_cached('https://usn.ubuntu.com/usn-db/database-all.json.bz2', File.join(tempdir, 'database-all.json.bz2'))
 
-    # TODO verify checksum
-    #verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
+    # TODO: verify checksum
+    # verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
 
-    errata = parser.gen_ubuntu_errata JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), ['bionic'], ['amd64']
+    packages = JSON.parse(File.read('packages_everything.json'))
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), packages, ['bionic'], ['amd64'])
 
   when 'ubuntu_test_record'
     require 'bzip2/ffi'
     require 'stringio'
 
     usn_db_f = File.open('test/data/database.json.bz2', 'rb')
-    errata = parser.gen_ubuntu_errata JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), ['bionic'], ['amd64']
+
+    packages = JSON.parse(File.read('packages_everything.json'))
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, ['bionic'], ['amd64'])
     usn_db_f.close
 
   else
@@ -512,11 +548,11 @@ if $PROGRAM_NAME == __FILE__
   end
 
   arr = []
-  #errata.sort{ |x, y| y.name <=> x.name }.each do |e|
+  # errata.sort{ |x, y| y.name <=> x.name }.each do |e|
   errata.each do |e|
     # remove Errata without packages
     arr << e.to_h unless e.packages.empty?
   end
   puts arr.to_yaml
-  #puts errata.to_json
+  # puts errata.to_json
 end

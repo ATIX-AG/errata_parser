@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../gen_errata'
 require_relative '../parse_dsalist'
 require 'json'
@@ -9,7 +11,7 @@ class TestDebianErrata < Test::Unit::TestCase
     original_path = "#{File.dirname(__FILE__)}/data/debian.yaml"
     dsa_list_path = "#{File.dirname(__FILE__)}/data/dsa.list"
     cve_json_path = "#{File.dirname(__FILE__)}/data/cve.json"
-    pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything.json"
+    pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything_debian.json"
     parser = DebianErrataParser.new
 
     errata = parser.gen_debian_errata(
@@ -39,7 +41,7 @@ class TestDebianErrata < Test::Unit::TestCase
 
     original.each do |v|
       name = v['name']
-      #FIXME for some reasons ruby insists that assert only takes one argument
+      # FIXME: for some reasons ruby insists that assert only takes one argument
       assert(generated.key?(name)) # , "Erratum #{name.inspect} not found")
       assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
     end
@@ -49,13 +51,17 @@ class TestDebianErrata < Test::Unit::TestCase
     require 'bzip2/ffi'
     original_path = "#{File.dirname(__FILE__)}/data/ubuntu.yaml"
     usn_list_path = "#{File.dirname(__FILE__)}/data/database.json.bz2"
+    pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything_ubuntu.json"
     parser = DebianErrataParser.new
+
+    packages = JSON.parse(File.read(pkg_json_path))
 
     f = File.open usn_list_path, 'rb'
     errata = parser.gen_ubuntu_errata(
       JSON.parse(
         Bzip2::FFI::Reader.read(f)
       ),
+      packages,
       ['bionic'],
       ['amd64']
     )
@@ -81,7 +87,7 @@ class TestDebianErrata < Test::Unit::TestCase
 
     original.each do |v|
       name = v['name']
-      #FIXME for some reasons ruby insists that assert only takes one argument
+      # FIXME: for some reasons ruby insists that assert only takes one argument
       assert(generated.key?(name)) # , "Erratum #{name.inspect} not found")
       assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
     end

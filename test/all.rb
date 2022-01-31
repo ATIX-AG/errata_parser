@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Dir.foreach(File.dirname(__FILE__)) do |filename|
   next if filename == File.basename(__FILE__)
 

@@ -1,5 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
 Style/WordArray:
   EnforcedStyle: brackets
+
+Style/MutableConstant:
+  EnforcedStyle: strict
+
+Style/MixinUsage:
+  Enabled: False
 
 # not my style ;-)
 Layout/SpaceAroundEqualsInParameterDefault:
@@ -17,6 +26,7 @@ Style/StringLiterals:
 Style/TrailingCommaInHashLiteral:
   Enabled: False
 
+
 Metrics/CyclomaticComplexity:
   Max: 20
 
@@ -24,7 +34,7 @@ Metrics/LineLength:
   Max: 159
 
 Metrics/ClassLength:
-  Max: 200
+  Max: 215
 
 Metrics/MethodLength:
   Max: 50
@@ -36,7 +46,7 @@ Metrics/AbcSize:
   Max: 50
 
 Metrics/BlockNesting:
-  Max: 4
+  Max: 5
 
 Metrics/PerceivedComplexity:
   Max: 20
@@ -44,5 +54,3 @@ Metrics/PerceivedComplexity:
 Style/ClassVars:
   Exclude:
     - 'debRelease.rb'
-
-inherit_from: .rubocop_todo.yml

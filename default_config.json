@@ -41,12 +41,19 @@
   },
   "ubuntu": {
     "usn_list_url": "https://usn.ubuntu.com/usn-db/database.json.bz2",
-    "whitelists": {
+    "repository": {
+      "repo_url": "http://security.ubuntu.com/ubuntu",
       "releases": [
         "focal",
         "bionic",
-        "artful",
         "xenial"
+      ]
+    },
+    "whitelists": {
+      "releases": [
+        "focal-security",
+        "bionic-security",
+        "xenial-security"
       ],
       "components": [
         "main",
@@ -63,7 +70,6 @@
       "releases": {
         "focal": [ "focal-security", "focal-updates" ],
         "bionic": [ "bionic-security", "bionic-updates" ],
-        "artful": [ "artful-security", "artful-updates" ],
         "xenial": [ "xenial-security", "xenial-updates" ]
       }
     }
