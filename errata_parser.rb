@@ -122,7 +122,7 @@ rescue StandardError => e
   fatal("Error loading config: #{e}", 3)
 end
 
-if $PROGRAM_NAME == __FILE__
+if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
   # parse command-line parameters
   options = parse_commandline
 
