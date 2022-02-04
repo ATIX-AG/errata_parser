@@ -44,9 +44,9 @@
     "repository": {
       "repo_url": "http://security.ubuntu.com/ubuntu",
       "releases": [
-        "focal",
-        "bionic",
-        "xenial"
+        "focal-security",
+        "bionic-security",
+        "xenial-security"
       ]
     },
     "whitelists": {
