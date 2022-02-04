@@ -18,7 +18,7 @@ RUN bundle install --deployment --without rubocop
 VOLUME /errata
 COPY default_config.json /etc/errata_parser.json
 CMD bundle exec errata_parser.rb \
-      --config /etc/errata_parser.json \
+      --config /errata/config.json \
       --debian /errata/ \
       --ubuntu /errata/ \
       --metadata
