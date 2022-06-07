@@ -52,9 +52,11 @@ class TestDebianErrata < Test::Unit::TestCase
     original_path = "#{File.dirname(__FILE__)}/data/ubuntu.yaml"
     usn_list_path = "#{File.dirname(__FILE__)}/data/database.json.bz2"
     pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything_ubuntu.json"
+    pkg_deb_json_path = "#{File.dirname(__FILE__)}/data/packages_everything_ubuntu_debstyle.json"
     parser = DebianErrataParser.new
 
     packages = JSON.parse(File.read(pkg_json_path))
+    packages_by_name = JSON.parse(File.read(pkg_deb_json_path))
 
     f = File.open usn_list_path, 'rb'
     errata = parser.gen_ubuntu_errata(
@@ -62,6 +64,7 @@ class TestDebianErrata < Test::Unit::TestCase
         Bzip2::FFI::Reader.read(f)
       ),
       packages,
+      packages_by_name,
       ['bionic'],
       ['amd64']
     )

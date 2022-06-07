@@ -5900,6 +5900,51 @@
   - CVE-2018-4180
   - CVE-2018-4181
   - CVE-2018-6553
+- name: USN-3750-1
+  title: Pango vulnerability
+  issued: 22 Aug 2018
+  affected_source_package: pango1.0
+  packages:
+  - name: gir1.2-pango-1.0
+    version: 1.40.14-1ubuntu0.1
+    architecture: amd64
+    component: main
+    release: bionic
+  - name: libpango-1.0-0
+    version: 1.40.14-1ubuntu0.1
+    architecture: amd64
+    component: main
+    release: bionic
+  - name: libpango1.0-dev
+    version: 1.40.14-1ubuntu0.1
+    architecture: amd64
+    component: main
+    release: bionic
+  - name: libpangocairo-1.0-0
+    version: 1.40.14-1ubuntu0.1
+    architecture: amd64
+    component: main
+    release: bionic
+  - name: libpangoft2-1.0-0
+    version: 1.40.14-1ubuntu0.1
+    architecture: amd64
+    component: main
+    release: bionic
+  - name: libpangoxft-1.0-0
+    version: 1.40.14-1ubuntu0.1
+    architecture: amd64
+    component: main
+    release: bionic
+  - name: libpango1.0-doc
+    version: 1.40.14-1ubuntu0.1
+    architecture: all
+    component: main
+    release: bionic
+  description: |
+    Jeffrey M. discovered that Pango incorrectly handled certain files.
+    An attacker could possibly use this issue to cause a denial of service.
+  cves:
+  - CVE-2018-15120
 - name: USN-3758-1
   title: libx11 vulnerabilities
   issued: 30 Aug 2018

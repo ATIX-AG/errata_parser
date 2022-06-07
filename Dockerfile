@@ -21,4 +21,5 @@ CMD bundle exec errata_parser.rb \
       --config /errata/config.json \
       --debian /errata/ \
       --ubuntu /errata/ \
+      --ubuntu-esm /errata/ \
       --metadata

@@ -341,7 +341,7 @@ class DebianErrataParser
     end
   end
 
-  def gen_ubuntu_errata(usn_db, packages, release_whitelist=nil, architecture_whitelist=nil)
+  def gen_ubuntu_errata(usn_db, packages, packages_by_name, release_whitelist=nil, architecture_whitelist=nil)
     @info_state = :gen_errata
     info_step = 1.0 / usn_db.length
     @info_state_cmplt = 0
@@ -369,11 +369,50 @@ class DebianErrataParser
         usn['releases'].each do |rel, dat|
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
 
-          unless dat.key?('archs')
-            warn "#{name} has no architectures for release #{rel}" if @verbose
-            next
+          # ESM-Updates do not have 'archs' -> Fallback to alternative handling
+          if dat.key?('archs')
+            add_packages_ubuntu(erratum, rel, dat, architecture_whitelist, packages)
+          elsif dat.key?('sources')
+            # try to do it the debian-way: get_binary_packages_for_erratum_package()
+            warn "#{name} has no architectures for release #{rel} -> using source-packages as fallback" if @verbose
+            dat['sources'].each do |source_pkg, pkg|
+              package = {}
+              pkg.each do |k, v|
+                package[k.to_sym || key] = v
+              end
+              package[:release] = rel
+
+              # skip if source_pkg not in packages_by_name
+              unless packages_by_name.key? source_pkg
+                warn "#{source_pkg} not in package-list; for #{name} and release #{rel} -> skipping" if @verbose
+                next
+              end
+
+              # set source-package
+              # if multiple sources are specified by USN, we currently only take the last one!
+              # which should not be the case :fingerscrossed:
+              erratum.package = source_pkg
+
+              pkgs = get_binary_packages_for_erratum_package(
+                source_pkg,
+                package,
+                packages_by_name[source_pkg],
+                architecture_whitelist
+              )
+              pkgs.each do |binpkg|
+                erratum.add_package(
+                  binpkg[:name],
+                  binpkg[:version],
+                  architecture: binpkg[:architecture],
+                  release: binpkg[:release],
+                  component: binpkg[:component]
+                )
+                metadata_add_entry(binpkg[:release], binpkg[:architecture], binpkg[:component])
+              end
+            end
+          elsif @verbose
+            warn "#{name} has no architectures for release #{rel} -> skipping"
           end
-          add_packages_ubuntu(erratum, rel, dat, architecture_whitelist, packages)
         end
         # ignore errata without package-information
         next if erratum.packages.empty?
@@ -530,7 +569,8 @@ if $PROGRAM_NAME == __FILE__
     # verify_checksum(usn_db, 'https://usn.ubuntu.com/usn-db/database.json.sha256', Digest::SHA256)
 
     packages = JSON.parse(File.read('packages_everything.json'))
-    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), packages, ['bionic'], ['amd64'])
+    packages_by_name = JSON.parse(File.read('test/data/packages_everything_ubuntu_debstyle.json'))
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))), packages, packages_by_name, ['bionic'], ['amd64'])
 
   when 'ubuntu_test_record'
     require 'bzip2/ffi'
@@ -538,8 +578,9 @@ if $PROGRAM_NAME == __FILE__
 
     usn_db_f = File.open('test/data/database.json.bz2', 'rb')
 
-    packages = JSON.parse(File.read('packages_everything.json'))
-    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, ['bionic'], ['amd64'])
+    packages = JSON.parse(File.read('test/data/packages_everything_ubuntu.json'))
+    packages_by_name = JSON.parse(File.read('test/data/packages_everything_ubuntu_debstyle.json'))
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, packages_by_name, ['bionic'], ['amd64'])
     usn_db_f.close
 
   else
