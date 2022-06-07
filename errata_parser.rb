@@ -170,10 +170,17 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
     fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
     fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
     fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
+    repo_url = cfg['repository']['repo_url']
+    unless cfg['repository'].fetch('repo_user', '').empty?
+      url = URI.parse(repo_url)
+      url.user = cfg['repository']['repo_user']
+      url.password = cfg['repository']['repo_pass']
+      repo_url = url.to_s
+    end
     cfg['repository']['releases'].each do |s|
       threads << Thread.new do
-        warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
-        deb_rel = DebRelease.new(cfg['repository']['repo_url'], s)
+        warn "START  Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        deb_rel = DebRelease.new(repo_url, s)
         deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
         # necessary for 'bullseye', for release_name would be 'bullseye-security' instead of 'bullseye'
         deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
@@ -193,7 +200,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
           # merge packages
           DebRelease.assemble_debian_packages(packages, pkgs)
         end
-        warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
+        warn "FINISH Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
       end
     end
 
@@ -261,20 +268,34 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
     fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
     fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
     fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
-    cfg['repository']['releases'].each do |s|
-      threads << Thread.new do
-        warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
-        deb_rel = DebRelease.new(cfg['repository']['repo_url'], s)
-        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
-        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
-        deb_rel.whitelist_arch = whitelist_arch
-        pkgs = deb_rel.all_packages
+    repository = cfg['repository']
 
-        # merge package-list
-        mutex.synchronize do
-          DebRelease.assemble_ubuntu_packages(packages, pkgs)
+    repository['releases'].each do |s|
+      threads << Thread.new do
+        begin
+          Thread.current[:repo_url] = repository['repo_url']
+          unless repository.fetch('repo_user', '').empty?
+            url = URI.parse(Thread.current[:repo_url])
+            url.user = repository['repo_user']
+            url.password = repository['repo_pass']
+            Thread.current[:repo_url] = url.to_s
+          end
+          warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+          deb_rel = DebRelease.new(Thread.current[:repo_url], s)
+          deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+          deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+          deb_rel.whitelist_arch = whitelist_arch
+          pkgs = deb_rel.all_packages
+
+          # merge package-list
+          mutex.synchronize do
+            DebRelease.assemble_ubuntu_packages(packages, pkgs)
+          end
+          warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        rescue Net::HTTPServerException => e
+          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+          raise e
         end
-        warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
       end
     end
 
