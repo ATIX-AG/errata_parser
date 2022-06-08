@@ -191,13 +191,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
             cfg.key?('aliases') && cfg['aliases'].key?('releases') && cfg['aliases']['releases'].key?(deb_rel.release_name)
 
           # merge packages
-          pkgs.each do |pkg_name, pkg|
-            packages[pkg_name] = {} unless packages.key? pkg_name
-            pkg.each do |arch_name, arch|
-              packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
-              packages[pkg_name][arch_name].concat arch
-            end
-          end
+          DebRelease.assemble_debian_packages(packages, pkgs)
         end
         warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
       end
@@ -278,16 +272,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
         # merge package-list
         mutex.synchronize do
-          pkgs.each_value do |pkg|
-            pkg.each do |arch_name, arch_pkgs|
-              arch_pkgs.each do |arch_pkg|
-                packages[arch_name] = {} unless packages.key? arch_name
-                packages[arch_name][arch_pkg['release']] = {} unless packages[arch_name].key? arch_pkg['release']
-                packages[arch_name][arch_pkg['release']][arch_pkg['name']] = [] unless packages[arch_name][arch_pkg['release']].key? arch_pkg['name']
-                packages[arch_name][arch_pkg['release']][arch_pkg['name']] << arch_pkg['version']
-              end
-            end
-          end
+          DebRelease.assemble_ubuntu_packages(packages, pkgs)
         end
         warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
       end
