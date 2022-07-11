@@ -21,8 +21,10 @@ ERRATAPARSER_WHITELIST_SCHEMA = { type: Hash, mandatory: false, child: {
 } }.freeze
 ERRATAPARSER_REPOSITORY_SCHEMA = { type: Hash, mandatory: true, child: {
   'repo_url' => { type: String, mandatory: true },
-  'repo_user' => { type: String, mandatory: false },
-  'repo_pass' => { type: String, mandatory: false },
+  'credentials' => { type: Hash, mandatory: false, child: {
+    'user' => { type: String, mandatory: true },
+    'pass' => { type: String, mandatory: true }
+  } },
   'releases' => { type: Array, mandatory: true, child: {
     type: String, mandatory: true
   } }

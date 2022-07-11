@@ -171,10 +171,10 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
     fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
     fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
     repo_url = cfg['repository']['repo_url']
-    unless cfg['repository'].fetch('repo_user', '').empty?
+    if cfg['repository'].key?('credentials')
       url = URI.parse(repo_url)
-      url.user = cfg['repository']['repo_user']
-      url.password = cfg['repository']['repo_pass']
+      url.user = cfg['repository']['credentials']['user']
+      url.password = cfg['repository']['credentials']['pass']
       repo_url = url.to_s
     end
     cfg['repository']['releases'].each do |s|
@@ -274,10 +274,10 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
       threads << Thread.new do
         begin
           Thread.current[:repo_url] = repository['repo_url']
-          unless repository.fetch('repo_user', '').empty?
+          if repository.key?('credentials')
             url = URI.parse(Thread.current[:repo_url])
-            url.user = repository['repo_user']
-            url.password = repository['repo_pass']
+            url.user = repository['credentials']['user']
+            url.password = repository['credentials']['pass']
             Thread.current[:repo_url] = url.to_s
           end
           warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
