@@ -105,5 +105,7 @@ end
 if $PROGRAM_NAME == __FILE__
   require 'json'
 
-  check_config_hash(JSON.parse(File.read('default_config.json')), ERRATAPARSER_CONFIG_SCHEMA)
+  config_path = ARGV[0] || 'default_config.json'
+
+  check_config_hash(JSON.parse(File.read(config_path)), ERRATAPARSER_CONFIG_SCHEMA)
 end
