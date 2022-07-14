@@ -12,7 +12,20 @@ ERRATAPARSER_WHITELIST_SCHEMA = { type: Hash, mandatory: false, child: {
   'releases' => { type: Array, mandatory: false, child: {
     type: String, mandatory: true
   } },
+  'components' => { type: Array, mandatory: false, child: {
+    type: String, mandatory: true
+  } },
   'architectures' => { type: Array, mandatory: false, child: {
+    type: String, mandatory: true
+  } }
+} }.freeze
+ERRATAPARSER_REPOSITORY_SCHEMA = { type: Hash, mandatory: true, child: {
+  'repo_url' => { type: String, mandatory: true },
+  'credentials' => { type: Hash, mandatory: false, child: {
+    'user' => { type: String, mandatory: true },
+    'pass' => { type: String, mandatory: true }
+  } },
+  'releases' => { type: Array, mandatory: true, child: {
     type: String, mandatory: true
   } }
 } }.freeze
@@ -20,18 +33,21 @@ ERRATAPARSER_CONFIG_SCHEMA = {
   'tempdir' => { type: String, mandatory: false },
   'debian' => { type: Hash, mandatory: false, child: {
     'dsa_list_url' => { type: String, mandatory: true },
+    'dla_list_url' => { type: String, mandatory: false },
     'cve_list_url' => { type: String, mandatory: true },
-    'repository' => { type: Hash, mandatory: true, child: {
-      'repo_url' => { type: String, mandatory: true },
-      'releases' => { type: Array, mandatory: true, child: {
-        type: String, mandatory: true
-      } }
-    } },
+    'repository' => ERRATAPARSER_REPOSITORY_SCHEMA,
     'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
     'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA
   } },
   'ubuntu' => { type: Hash, mandatory: false, child: {
     'usn_list_url' => { type: String, mandatory: true },
+    'repository' => ERRATAPARSER_REPOSITORY_SCHEMA,
+    'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
+    'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA
+  } },
+  'ubuntu-esm' => { type: Hash, mandatory: false, child: {
+    'usn_list_url' => { type: String, mandatory: true },
+    'repository' => ERRATAPARSER_REPOSITORY_SCHEMA,
     'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
     'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA
   } }
@@ -50,6 +66,7 @@ def check_config_hash(cfg, schema, path='')
     end
 
   else
+    keylist = cfg.keys
     # iterate all possible entries
     schema.each do |k, v|
       local_path = "#{path}.#{k}"
@@ -60,7 +77,9 @@ def check_config_hash(cfg, schema, path='')
       raise "#{local_path}: has type #{cfg[k].class.name} but should be #{v[:type]}" if cfg[k].class != v[:type]
 
       check_config_child(cfg[k], v, local_path) if v.key?(:child)
+      keylist.delete(k)
     end
+    raise "Found unknown keys (not defined in schema) at #{path.inspect}: #{keylist.join(', ')}" unless keylist.empty?
   end
 end
 
@@ -86,5 +105,7 @@ end
 if $PROGRAM_NAME == __FILE__
   require 'json'
 
-  check_config_hash(JSON.parse(File.read('default_config.json')), ERRATAPARSER_CONFIG_SCHEMA)
+  config_path = ARGV[0] || 'default_config.json'
+
+  check_config_hash(JSON.parse(File.read(config_path)), ERRATAPARSER_CONFIG_SCHEMA)
 end

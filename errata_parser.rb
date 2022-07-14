@@ -65,6 +65,11 @@ def parse_commandline
     options[:ubuntu] = u
   end
 
+  @opts.on('-e', '--ubuntu-esm PATH', String,
+           "Parse Ubuntu USNs for ESM as Errata to #{get_filename(:ubuntu)} in PATH") do |u|
+    options[:ubuntu_esm] = u
+  end
+
   @opts.on('-v', '--[no-]verbose', 'Run verbosely') do |v|
     options[:verbose] = v
     # HTTPDEBUG = v
@@ -131,7 +136,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
   @config = load_config(options[:config])
 
   ## Sanity checks
-  fatal('No Errata-type specified!', 2, true) unless options.key?(:ubuntu) || options.key?(:debian)
+  fatal('No Errata-type specified!', 2, true) unless options.key?(:ubuntu) || options.key?(:ubuntu_esm) || options.key?(:debian)
 
   parser = DebianErrataParser.new(options[:verbose])
   extend Downloader
@@ -170,10 +175,17 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
     fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
     fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
     fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
+    repo_url = cfg['repository']['repo_url']
+    if cfg['repository'].key?('credentials')
+      url = URI.parse(repo_url)
+      url.user = cfg['repository']['credentials']['user']
+      url.password = cfg['repository']['credentials']['pass']
+      repo_url = url.to_s
+    end
     cfg['repository']['releases'].each do |s|
       threads << Thread.new do
-        warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
-        deb_rel = DebRelease.new(cfg['repository']['repo_url'], s)
+        warn "START  Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        deb_rel = DebRelease.new(repo_url, s)
         deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
         # necessary for 'bullseye', for release_name would be 'bullseye-security' instead of 'bullseye'
         deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
@@ -191,15 +203,9 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
             cfg.key?('aliases') && cfg['aliases'].key?('releases') && cfg['aliases']['releases'].key?(deb_rel.release_name)
 
           # merge packages
-          pkgs.each do |pkg_name, pkg|
-            packages[pkg_name] = {} unless packages.key? pkg_name
-            pkg.each do |arch_name, arch|
-              packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
-              packages[pkg_name][arch_name].concat arch
-            end
-          end
+          DebRelease.assemble_debian_packages(packages, pkgs)
         end
-        warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
+        warn "FINISH Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
       end
     end
 
@@ -254,6 +260,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
     tempdir.mkpath
     threads = []
     packages = {}
+    packages_by_name = {}
     mutex = Mutex.new
 
     # HTTPDEBUG = options[:verbose]
@@ -267,29 +274,35 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
     fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
     fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
     fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
-    cfg['repository']['releases'].each do |s|
-      threads << Thread.new do
-        warn "START  Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
-        deb_rel = DebRelease.new(cfg['repository']['repo_url'], s)
-        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
-        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
-        deb_rel.whitelist_arch = whitelist_arch
-        pkgs = deb_rel.all_packages
 
-        # merge package-list
-        mutex.synchronize do
-          pkgs.each_value do |pkg|
-            pkg.each do |arch_name, arch_pkgs|
-              arch_pkgs.each do |arch_pkg|
-                packages[arch_name] = {} unless packages.key? arch_name
-                packages[arch_name][arch_pkg['release']] = {} unless packages[arch_name].key? arch_pkg['release']
-                packages[arch_name][arch_pkg['release']][arch_pkg['name']] = [] unless packages[arch_name][arch_pkg['release']].key? arch_pkg['name']
-                packages[arch_name][arch_pkg['release']][arch_pkg['name']] << arch_pkg['version']
-              end
-            end
+    repository = cfg['repository']
+
+    repository['releases'].each do |s|
+      threads << Thread.new do
+        begin
+          Thread.current[:repo_url] = repository['repo_url']
+          if repository.key?('credentials')
+            url = URI.parse(Thread.current[:repo_url])
+            url.user = repository['credentials']['user']
+            url.password = repository['credentials']['pass']
+            Thread.current[:repo_url] = url.to_s
           end
+          warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+          deb_rel = DebRelease.new(Thread.current[:repo_url], s)
+          deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+          deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+          deb_rel.whitelist_arch = whitelist_arch
+          pkgs = deb_rel.all_packages
+
+          # merge package-list
+          mutex.synchronize do
+            DebRelease.assemble_ubuntu_packages(packages, pkgs)
+          end
+          warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        rescue Net::HTTPServerException => e
+          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+          raise e
         end
-        warn "FINISH Download #{s.inspect} from #{cfg['repository']['repo_url']}" if options[:verbose]
       end
     end
 
@@ -299,6 +312,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
     errata = parser.gen_ubuntu_errata(
       JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))),
       packages,
+      packages_by_name,
       get_whitelist(cfg, 'releases'),
       get_whitelist(cfg, 'architectures')
     )
@@ -323,6 +337,100 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
         File.join(options[:ubuntu], get_filename(:ubuntu, :config)),
         metadata,
         name: 'ubuntu-errata-meta',
+        verbose: options[:verbose]
+      )
+    end
+  end
+
+  if options.key? :ubuntu_esm
+    ## ubuntu_esm
+    require 'bzip2/ffi'
+    require 'stringio'
+
+    cfg = @config['ubuntu-esm']
+    whitelist_arch = get_whitelist(cfg, 'architectures')
+    tempdir = Pathname.new(File.join(@config['tempdir'], 'ubuntu-esm'))
+    tempdir.mkpath
+    threads = []
+    packages = {}
+    packages_by_name = {}
+    mutex = Mutex.new
+
+    # HTTPDEBUG = options[:verbose]
+
+    warn 'START  Download USN-information' if options[:verbose]
+    usn_db = download_file_cached(cfg['usn_list_url'], File.join(tempdir, 'database.json.bz2'))
+    warn 'FINISH Download USN-information' if options[:verbose]
+
+    ## Download package-lists
+    DebRelease.tempdir = tempdir
+    fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
+    fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
+    fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
+
+    repository = cfg['repository']
+
+    repository['releases'].each do |s|
+      threads << Thread.new do
+        begin
+          Thread.current[:repo_url] = repository['repo_url']
+          if repository.key?('credentials')
+            url = URI.parse(Thread.current[:repo_url])
+            url.user = repository['credentials']['user']
+            url.password = repository['credentials']['pass']
+            Thread.current[:repo_url] = url.to_s
+          end
+          warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+          deb_rel = DebRelease.new(Thread.current[:repo_url], s)
+          deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+          deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+          deb_rel.whitelist_arch = whitelist_arch
+          pkgs = deb_rel.all_packages
+
+          # merge package-list
+          mutex.synchronize do
+            # ESM-Errata need debian style package-struct
+            DebRelease.assemble_debian_packages(packages_by_name, pkgs)
+          end
+          warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        rescue Net::HTTPServerException => e
+          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+          raise e
+        end
+      end
+    end
+
+    threads.each(&:join)
+
+    warn 'START  Generate ubuntu-esm-errata' if options[:verbose]
+    errata = parser.gen_ubuntu_errata(
+      JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))),
+      packages,
+      packages_by_name,
+      get_whitelist(cfg, 'releases'),
+      get_whitelist(cfg, 'architectures')
+    )
+    warn 'FINISH Generate ubuntu-esm-errata' if options[:verbose]
+
+    write_errata_file(
+      File.join(options[:ubuntu_esm], get_filename('ubuntu-esm', :errata)),
+      errata,
+      name: 'ubuntu-esm-errata',
+      verbose: options[:verbose]
+    )
+
+    if options[:metadata]
+      metadata = parser.metadata
+      if cfg.key?('aliases') && cfg['aliases'].key?('releases')
+        metadata[:releases].each_key do |rel|
+          metadata[:releases][rel][:aliases] = cfg['aliases']['releases'][rel] if cfg['aliases']['releases'].key?(rel)
+        end
+      end
+      # write Metadata
+      write_json_file(
+        File.join(options[:ubuntu_esm], get_filename('ubuntu-esm', :config)),
+        metadata,
+        name: 'ubuntu-esm-errata-meta',
         verbose: options[:verbose]
       )
     end

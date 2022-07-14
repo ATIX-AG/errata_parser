@@ -172,6 +172,29 @@ class DebRelease
     rel.whitelist_comp = components unless components.nil?
     rel.all_packages
   end
+
+  def self.assemble_debian_packages(target, source)
+    source.each do |pkg_name, pkg|
+      target[pkg_name] = {} unless target.key? pkg_name
+      pkg.each do |arch_name, arch|
+        target[pkg_name][arch_name] = [] unless target[pkg_name].key? arch_name
+        target[pkg_name][arch_name].concat arch
+      end
+    end
+  end
+
+  def self.assemble_ubuntu_packages(target, source)
+    source.each_value do |pkg|
+      pkg.each do |arch_name, arch_pkgs|
+        arch_pkgs.each do |arch_pkg|
+          target[arch_name] = {} unless target.key? arch_name
+          target[arch_name][arch_pkg['release']] = {} unless target[arch_name].key? arch_pkg['release']
+          target[arch_name][arch_pkg['release']][arch_pkg['name']] = [] unless target[arch_name][arch_pkg['release']].key? arch_pkg['name']
+          target[arch_name][arch_pkg['release']][arch_pkg['name']] << arch_pkg['version']
+        end
+      end
+    end
+  end
 end
 
 if $PROGRAM_NAME == __FILE__
@@ -193,7 +216,7 @@ if $PROGRAM_NAME == __FILE__
       'bullseye-security'
     ]
     repository_url = 'http://security.debian.org/debian-security'
-  when 'ubuntu'
+  when 'ubuntu', 'ubuntu_debstyle'
     suites = [
       'bionic-security',
       'focal-security',
@@ -227,28 +250,13 @@ if $PROGRAM_NAME == __FILE__
   packages = {}
 
   case type
-  when 'debian'
+  when 'debian', 'ubuntu_debstyle'
     pckgs.each do |p|
-      p.each do |pkg_name, pkg|
-        packages[pkg_name] = {} unless packages.key? pkg_name
-        pkg.each do |arch_name, arch|
-          packages[pkg_name][arch_name] = [] unless packages[pkg_name].key? arch_name
-          packages[pkg_name][arch_name].concat arch
-        end
-      end
+      DebRelease.assemble_debian_packages(packages, p)
     end
   when 'ubuntu'
     pckgs.each do |p|
-      p.each_value do |pkg|
-        pkg.each do |arch_name, arch_pkgs|
-          arch_pkgs.each do |arch_pkg|
-            packages[arch_name] = {} unless packages.key? arch_name
-            packages[arch_name][arch_pkg['release']] = {} unless packages[arch_name].key? arch_pkg['release']
-            packages[arch_name][arch_pkg['release']][arch_pkg['name']] = [] unless packages[arch_name][arch_pkg['release']].key? arch_pkg['name']
-            packages[arch_name][arch_pkg['release']][arch_pkg['name']] << arch_pkg['version']
-          end
-        end
-      end
+      DebRelease.assemble_ubuntu_packages(packages, p)
     end
   else
     warn "Unsupported option #{type}"
