@@ -43,7 +43,7 @@ end
 
 # The erratum main class
 class Erratum
-  attr_accessor :title, :name, :cves, :package, :fixed_version
+  attr_accessor :title, :name, :cves, :source_package, :fixed_version
   attr_accessor :dbts_bugs
   attr_writer :description
 
@@ -148,7 +148,7 @@ class Erratum
       'name' => name,
       'title' => title,
       'issued' => issued,
-      'affected_source_package' => package,
+      'affected_source_package' => source_package,
       'packages' => packages,
       'description' => description
     }
@@ -255,7 +255,7 @@ class DebianErrataParser
       # add time and timezone, otherwise conversion to UTC might change the date
       erratum.issued = "#{dsa.date} 00:00 UTC"
       dsa.cve&.each { |c| erratum.add_cve c }
-      erratum.package = dsa.package
+      erratum.source_package = dsa.package
 
       dsa.versions.each do |rel, pkg_dat|
         pkg_dat.each do |pkg_name, pkg_version|
@@ -391,7 +391,7 @@ class DebianErrataParser
               # set source-package
               # if multiple sources are specified by USN, we currently only take the last one!
               # which should not be the case :fingerscrossed:
-              erratum.package = source_pkg
+              erratum.source_package = source_pkg
 
               pkgs = get_binary_packages_for_erratum_package(
                 source_pkg,
@@ -450,7 +450,7 @@ class DebianErrataParser
         if releases.nil? || releases.include?(p[:release])
           if packages.key? p[:name]
             new = get_binary_packages_for_erratum_package(
-              erratum.package,
+              erratum.source_package,
               p,
               packages[p[:name]],
               architecture_whitelist
