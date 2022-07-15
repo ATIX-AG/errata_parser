@@ -34,7 +34,7 @@ Metrics/LineLength:
   Max: 159
 
 Metrics/ClassLength:
-  Max: 250
+  Max: 300
 
 Metrics/MethodLength:
   Max: 70
