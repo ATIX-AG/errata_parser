@@ -1,4 +1,4 @@
-.swp
+*.swp
 vendor
 .bundle
 config.json
