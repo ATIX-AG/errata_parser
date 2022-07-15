@@ -18,7 +18,7 @@ class TestDebianErrata < Test::Unit::TestCase
       DSA.parse_dsa_list_str(File.read(dsa_list_path)),
       JSON.parse(File.read(cve_json_path))
     )
-    parser.add_binary_packages_from_file(errata, pkg_json_path, ['stretch'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, pkg_json_path, ['bullseye', 'stretch'], ['amd64'])
 
     assert_instance_of(Array, errata)
 
@@ -29,7 +29,7 @@ class TestDebianErrata < Test::Unit::TestCase
 
       hsh[erratum.name] = erratum.to_h
       erratum.packages.each do |p|
-        assert_equal('stretch', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
+        assert_include(['stretch', 'bullseye'], p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
         assert_include(['amd64', 'all'], p['architecture'], "Offending data was in #{erratum.name}: #{p.inspect}")
       end
     end
