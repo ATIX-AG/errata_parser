@@ -579,8 +579,17 @@ if $PROGRAM_NAME == __FILE__
     usn_db_f = File.open('test/data/database.json.bz2', 'rb')
 
     packages = JSON.parse(File.read('test/data/packages_everything_ubuntu.json'))
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, {}, ['bionic'], ['amd64'])
+    usn_db_f.close
+
+  when 'ubuntu-esm_test_record'
+    require 'bzip2/ffi'
+    require 'stringio'
+
+    usn_db_f = File.open('test/data/database.json.bz2', 'rb')
+
     packages_by_name = JSON.parse(File.read('test/data/packages_everything_ubuntu_debstyle.json'))
-    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, packages_by_name, ['bionic'], ['amd64'])
+    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), {}, packages_by_name, ['xenial'], ['amd64'])
     usn_db_f.close
 
   else

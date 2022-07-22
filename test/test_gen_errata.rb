@@ -95,4 +95,51 @@ class TestDebianErrata < Test::Unit::TestCase
       assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
     end
   end
+
+  def test_gen_ubuntu_esm_errata
+    require 'bzip2/ffi'
+    original_path = "#{File.dirname(__FILE__)}/data/ubuntu-esm.yaml"
+    usn_list_path = "#{File.dirname(__FILE__)}/data/database.json.bz2"
+    pkg_json_path = "#{File.dirname(__FILE__)}/data/packages_everything_ubuntu_debstyle.json"
+    parser = DebianErrataParser.new
+
+    packages_by_name = JSON.parse(File.read(pkg_json_path))
+
+    f = File.open usn_list_path, 'rb'
+    errata = parser.gen_ubuntu_errata(
+      JSON.parse(
+        Bzip2::FFI::Reader.read(f)
+      ),
+      {},
+      packages_by_name,
+      ['xenial'],
+      ['amd64']
+    )
+    f.close
+    assert_instance_of(Array, errata)
+
+    hsh = {}
+    errata.each do |erratum|
+      # remove Errata without packages
+      next if erratum.packages.empty?
+
+      hsh[erratum.name] = erratum.to_h
+      erratum.packages.each do |p|
+        assert_equal('xenial', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
+        assert_include(['amd64', 'all'], p['architecture'], "Offending data was in #{erratum.name}: #{p.inspect}")
+      end
+    end
+    generated = hsh
+
+    original = YAML.load_file(original_path)
+
+    assert_equal(original.length, generated.keys.length)
+
+    original.each do |v|
+      name = v['name']
+      # FIXME: for some reasons ruby insists that assert only takes one argument
+      assert(generated.key?(name)) # , "Erratum #{name.inspect} not found")
+      assert_equal(v, generated[name], "Erratum #{name.inspect} does not match")
+    end
+  end
 end
