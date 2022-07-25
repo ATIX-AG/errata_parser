@@ -25,3 +25,7 @@ gem 'parallel', '~> 1.20', '< 1.21', group: %i[build test]
 group :rubocop, optional: true do
   gem "rubocop", "~> 0.61.0"
 end
+
+group :development, optional: true do
+  gem "byebug", "~> 11.1"
+end

@@ -1,0 +1,2286 @@
+[01 Jul 2022] DLA-3066-1 isync - security update
+	{CVE-2021-3578 CVE-2021-3657 CVE-2021-20247}
+	[stretch] - isync 1.2.1-2+deb9u1
+[30 Jun 2022] DLA-3065-1 linux - security update
+	{CVE-2018-1108 CVE-2021-4149 CVE-2021-39713 CVE-2022-0494 CVE-2022-0812 CVE-2022-0854 CVE-2022-1011 CVE-2022-1012 CVE-2022-1016 CVE-2022-1198 CVE-2022-1199 CVE-2022-1353 CVE-2022-1516 CVE-2022-1729 CVE-2022-1734 CVE-2022-1974 CVE-2022-1975 CVE-2022-2153 CVE-2022-21123 CVE-2022-21125 CVE-2022-21166 CVE-2022-23036 CVE-2022-23037 CVE-2022-23038 CVE-2022-23039 CVE-2022-23040 CVE-2022-23041 CVE-2022-23042 CVE-2022-23960 CVE-2022-24958 CVE-2022-26490 CVE-2022-26966 CVE-2022-27223 CVE-2022-28356 CVE-2022-28390 CVE-2022-30594 CVE-2022-32250 CVE-2022-32296 CVE-2022-33981}
+	[stretch] - linux 4.9.320-2
+[30 Jun 2022] DLA-3064-1 firefox-esr - security update
+	{CVE-2022-2200 CVE-2022-31744 CVE-2022-34468 CVE-2022-34470 CVE-2022-34472 CVE-2022-34479 CVE-2022-34481 CVE-2022-34484}
+	[stretch] - firefox-esr 91.11.0esr-1~deb9u1
+[30 Jun 2022] DLA-3063-1 systemd - security update
+	{CVE-2020-1712}
+	[stretch] - systemd 232-25+deb9u14
+[29 Jun 2022] DLA-3062-1 ublock-origin - security update
+	{CVE-2021-36773 CVE-2022-32308}
+	[stretch] - ublock-origin 1.42.0+dfsg-1~deb9u1
+[29 Jun 2022] DLA-3061-1 firejail - security update
+	{CVE-2022-31214}
+	[stretch] - firejail 0.9.58.2-2+deb9u1
+[27 Jun 2022] DLA-3060-1 blender - security update
+	{CVE-2022-0544 CVE-2022-0545 CVE-2022-0546}
+	[stretch] - blender 2.79.b+dfsg0-1~deb9u2
+[26 Jun 2022] DLA-3059-1 maven-shared-utils - security update
+	{CVE-2022-29599}
+	[stretch] - maven-shared-utils 3.0.0-1+deb9u1
+[26 Jun 2022] DLA-3058-1 libsndfile - security update
+	{CVE-2017-12562 CVE-2021-4156}
+	[stretch] - libsndfile 1.0.27-3+deb9u3
+[23 Jun 2022] DLA-3057-1 request-tracker4 - security update
+	{CVE-2021-38562}
+	[stretch] - request-tracker4 4.4.1-3+deb9u4
+[22 Jun 2022] DLA-3056-1 exo - security update
+	{CVE-2022-32278}
+	[stretch] - exo 0.10.7-1+deb9u1
+[21 Jun 2022] DLA-3055-1 ntfs-3g - security update
+	{CVE-2021-46790 CVE-2022-30783 CVE-2022-30784 CVE-2022-30785 CVE-2022-30786 CVE-2022-30787 CVE-2022-30788 CVE-2022-30789}
+	[stretch] - ntfs-3g 1:2016.2.22AR.1+dfsg-1+deb9u3
+[20 Jun 2022] DLA-3054-1 sleuthkit - security update
+	{CVE-2017-13755 CVE-2017-13756 CVE-2017-13760 CVE-2018-19497 CVE-2020-10232 CVE-2019-1010065}
+	[stretch] - sleuthkit 4.4.0-5+deb9u1
+[20 Jun 2022] DLA-3053-1 vim - security update
+	{CVE-2021-3903 CVE-2022-0417 CVE-2022-0943 CVE-2022-1720 CVE-2022-1851 CVE-2022-1898 CVE-2022-1968 CVE-2022-2124 CVE-2022-2126}
+	[stretch] - vim 2:8.0.0197-4+deb9u7
+[20 Jun 2022] DLA-3052-1 cyrus-imapd - security update
+	{CVE-2019-18928 CVE-2021-33582}
+	[stretch] - cyrus-imapd 2.5.10-3+deb9u3
+[10 Jun 2022] DLA-3050-1 vlc - security update
+	{CVE-2020-26664}
+	[stretch] - vlc 3.0.12-0+deb9u1
+[09 Jun 2022] DLA-3049-1 mailman - security update
+	{CVE-2021-43331 CVE-2021-43332 CVE-2021-44227}
+	[stretch] - mailman 1:2.1.23-1+deb9u8
+[09 Jun 2022] DLA-3048-1 python-bottle - security update
+	{CVE-2022-31799}
+	[stretch] - python-bottle 0.12.13-1+deb9u2
+[07 Jun 2022] DLA-3047-1 avahi - security update
+	{CVE-2021-3468 CVE-2021-26720}
+	[stretch] - avahi 0.6.32-2+deb9u1
+[07 Jun 2022] DLA-3046-1 librecad - security update
+	{CVE-2021-21897}
+	[stretch] - librecad 2.1.2-1+deb9u4
+[06 Jun 2022] DLA-3045-1 php-horde-mime-viewer - security update
+	{CVE-2022-26874}
+	[stretch] - php-horde-mime-viewer 2.2.1-1+deb9u1
+[06 Jun 2022] DLA-3044-1 glib2.0 - security update
+	{CVE-2021-27218 CVE-2021-27219 CVE-2021-28153}
+	[stretch] - glib2.0 2.50.3-2+deb9u3
+[06 Jun 2022] DLA-3043-1 pidgin - security update
+	{CVE-2022-26491}
+	[stretch] - pidgin 2.12.0-1+deb9u1
+[03 Jun 2022] DLA-3042-1 clamav - security update
+	{CVE-2022-20770 CVE-2022-20771 CVE-2022-20785 CVE-2022-20792 CVE-2022-20796}
+	[stretch] - clamav 0.103.6+dfsg-0+deb9u1
+[03 Jun 2022] DLA-3041-1 thunderbird - security update
+	{CVE-2022-1529 CVE-2022-1802 CVE-2022-1834 CVE-2022-31736 CVE-2022-31737 CVE-2022-31738 CVE-2022-31740 CVE-2022-31741 CVE-2022-31742 CVE-2022-31747}
+	[stretch] - thunderbird 1:91.10.0-1~deb9u1
+[03 Jun 2022] DLA-3040-1 firefox-esr - security update
+	{CVE-2022-31736 CVE-2022-31737 CVE-2022-31738 CVE-2022-31740 CVE-2022-31741 CVE-2022-31742 CVE-2022-31747}
+	[stretch] - firefox-esr 91.10.0esr-1~deb9u1
+[03 Jun 2022] DLA-3039-1 pypdf2 - security update
+	{CVE-2022-24859}
+	[stretch] - pypdf2 1.26.0-2+deb9u1
+[31 May 2022] DLA-3037-1 libjpeg-turbo - security update
+	{CVE-2019-2201}
+	[stretch] - libjpeg-turbo 1:1.5.1-2+deb9u2
+[31 May 2022] DLA-3036-1 pjproject - security update
+	{CVE-2022-24763 CVE-2022-24792 CVE-2022-24793}
+	[stretch] - pjproject 2.5.5~dfsg-6+deb9u5
+[30 May 2022] DLA-3035-1 libdbi-perl - security update
+	{CVE-2014-10402}
+	[stretch] - libdbi-perl 1.636-1+deb9u2
+[30 May 2022] DLA-3034-1 haproxy - security update
+	{CVE-2018-20102 CVE-2018-20103 CVE-2019-18277}
+	[stretch] - haproxy 1.7.5-2+deb9u1
+[29 May 2022] DLA-3033-1 smarty3 - security update
+	{CVE-2022-29221}
+	[stretch] - smarty3 3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6
+[29 May 2022] DLA-3032-1 pngcheck - security update
+	{CVE-2020-27818}
+	[stretch] - pngcheck 2.3.0-7+deb9u1
+[28 May 2022] DLA-3031-1 modsecurity-apache - security update
+	{CVE-2021-42717}
+	[stretch] - modsecurity-apache 2.9.1-2+deb9u1
+[27 May 2022] DLA-3030-1 zipios++ - security update
+	{CVE-2019-13453}
+	[stretch] - zipios++ 0.1.5.9+cvs.2007.04.28-6+deb9u1
+[27 May 2022] DLA-3029-1 cups - security update
+	{CVE-2022-26691}
+	[stretch] - cups 2.2.1-8+deb9u8
+[27 May 2022] DLA-3028-1 atftp - security update
+	{CVE-2021-46671}
+	[stretch] - atftp 0.7.git20120829-3.1~deb9u3
+[26 May 2022] DLA-3027-1 neutron - security update
+	{CVE-2021-40085}
+	[stretch] - neutron 2:9.1.1-3+deb9u3
+[26 May 2022] DLA-3026-1 filezilla - security update
+	{CVE-2019-5429}
+	[stretch] - filezilla 3.24.0-1+deb9u1
+[26 May 2022] DLA-3025-1 irssi - security update
+	{CVE-2019-13045}
+	[stretch] - irssi 1.0.7-1~deb9u2
+[26 May 2022] DLA-3024-1 python-django - security update
+	{CVE-2020-9402}
+	[stretch] - python-django 1:1.10.7-2+deb9u17
+[26 May 2022] DLA-3023-1 puma - security update
+	{CVE-2019-16770 CVE-2020-5247 CVE-2022-23634}
+	[stretch] - puma 3.6.0-1+deb9u2
+[25 May 2022] DLA-3022-1 dpkg - security update
+	{CVE-2022-1664}
+	[stretch] - dpkg 1.18.26
+[24 May 2022] DLA-3021-1 firefox-esr - security update
+	{CVE-2022-1529 CVE-2022-1802}
+	[stretch] - firefox-esr 91.9.1esr-1~deb9u1
+[23 May 2022] DLA-3020-1 thunderbird - security update
+	{CVE-2022-1520 CVE-2022-29909 CVE-2022-29911 CVE-2022-29912 CVE-2022-29913 CVE-2022-29914 CVE-2022-29916 CVE-2022-29917}
+	[stretch] - thunderbird 1:91.9.0-1~deb9u1
+[22 May 2022] DLA-3019-1 admesh - security update
+	{CVE-2018-25033}
+	[stretch] - admesh 0.98.2-3+deb9u1
+[20 May 2022] DLA-3018-1 libpgjava - security update
+	{CVE-2022-21724}
+	[stretch] - libpgjava 9.4.1212-1+deb9u1
+[20 May 2022] DLA-3017-1 openldap - security update
+	{CVE-2022-29155}
+	[stretch] - openldap 2.4.44+dfsg-5+deb9u9
+[20 May 2022] DLA-3016-1 rsyslog - security update
+	{CVE-2018-16881 CVE-2022-24903}
+	[stretch] - rsyslog 8.24.0-1+deb9u2
+[20 May 2022] DLA-3015-1 ark - security update
+	{CVE-2020-16116 CVE-2020-24654}
+	[stretch] - ark 4:16.08.3-2+deb9u1
+[18 May 2022] DLA-3014-1 elog - security update
+	{CVE-2020-8859}
+	[stretch] - elog 3.1.2-1-1+deb9u1
+[18 May 2022] DLA-3013-1 needrestart - security update
+	{CVE-2022-30688}
+	[stretch] - needrestart 2.11-3+deb9u2
+[17 May 2022] DLA-3012-1 libxml2 - security update
+	{CVE-2022-29824}
+	[stretch] - libxml2 2.9.4+dfsg1-2.2+deb9u7
+[16 May 2022] DLA-3011-1 vim - security update
+	{CVE-2022-0261 CVE-2022-0351 CVE-2022-0413 CVE-2022-0443 CVE-2022-0572 CVE-2022-1154 CVE-2022-1616 CVE-2022-1619 CVE-2022-1621}
+	[stretch] - vim 2:8.0.0197-4+deb9u6
+[16 May 2022] DLA-3010-1 ffmpeg - security update
+	{CVE-2020-20902}
+	[stretch] - ffmpeg 7:3.2.18-0+deb9u1
+[16 May 2022] DLA-3009-1 cifs-utils - security update
+	{CVE-2022-27239 CVE-2022-29869}
+	[stretch] - cifs-utils 2:6.7-1+deb9u1
+[14 May 2022] DLA-3008-1 openssl - security update
+	{CVE-2022-1292}
+	[stretch] - openssl 1.1.0l-1~deb9u6
+[14 May 2022] DLA-3007-1 imagemagick - security update
+	{CVE-2021-3596 CVE-2022-28463}
+	[stretch] - imagemagick 8:6.9.7.4+dfsg-11+deb9u14
+[14 May 2022] DLA-3006-1 openjdk-8 - security update
+	{CVE-2022-21426 CVE-2022-21434 CVE-2022-21443 CVE-2022-21476 CVE-2022-21496}
+	[stretch] - openjdk-8 8u332-ga-1~deb9u1
+[13 May 2022] DLA-3005-1 lrzip - security update
+	{CVE-2022-28044}
+	[stretch] - lrzip 0.631-1+deb9u3
+[13 May 2022] DLA-3004-1 htmldoc - security update
+	{CVE-2022-27114}
+	[stretch] - htmldoc 1.8.27-8+deb9u3
+[13 May 2022] DLA-3003-1 ruby-nokogiri - security update
+	{CVE-2022-24836}
+	[stretch] - ruby-nokogiri 1.6.8.1-1+deb9u2
+[13 May 2022] DLA-3002-1 adminer - security update
+	{CVE-2021-43008}
+	[stretch] - adminer 4.2.5-3+deb9u3
+[13 May 2022] DLA-3001-1 libgoogle-gson-java - security update
+	{CVE-2022-25647}
+	[stretch] - libgoogle-gson-java 2.4-1+deb9u1
+[12 May 2022] DLA-3000-1 waitress - security update
+	{CVE-2019-16785 CVE-2019-16786 CVE-2019-16789 CVE-2019-16792 CVE-2022-24761}
+	[stretch] - waitress 1.0.1-1+deb9u1
+[11 May 2022] DLA-2999-1 mutt - security update
+	{CVE-2022-1328}
+	[stretch] - mutt 1.7.2-1+deb9u6
+[09 May 2022] DLA-2998-1 kicad - security update
+	{CVE-2022-23803 CVE-2022-23804 CVE-2022-23946 CVE-2022-23947}
+	[stretch] - kicad 4.0.5+dfsg1-4+deb9u1
+[07 May 2022] DLA-2997-1 ecdsautils - security update
+	{CVE-2022-24884}
+	[stretch] - ecdsautils 0.3.2+git20151018-2+deb9u1
+[06 May 2022] DLA-2996-1 mruby - security update
+	{CVE-2017-9527 CVE-2018-10191 CVE-2018-11743 CVE-2018-12249 CVE-2018-14337 CVE-2020-15866}
+	[stretch] - mruby 1.2.0+20161228+git30d5424a-1+deb9u1
+[05 May 2022] DLA-2995-1 smarty3 - security update
+	{CVE-2021-21408 CVE-2021-29454}
+	[stretch] - smarty3 3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5
+[05 May 2022] DLA-2994-1 firefox-esr - security update
+	{CVE-2022-29909 CVE-2022-29911 CVE-2022-29912 CVE-2022-29914 CVE-2022-29916 CVE-2022-29917}
+	[stretch] - firefox-esr 91.9.0esr-1~deb9u1
+[04 May 2022] DLA-2993-1 libz-mingw-w64 - security update
+	{CVE-2018-25032}
+	[stretch] - libz-mingw-w64 1.2.11+dfsg-1+deb9u1
+[03 May 2022] DLA-2992-1 openvpn - security update
+	{CVE-2017-12166 CVE-2020-11810 CVE-2020-15078 CVE-2022-0547}
+	[stretch] - openvpn 2.4.0-6+deb9u4
+[03 May 2022] DLA-2991-1 twisted - security update
+	{CVE-2022-24801}
+	[stretch] - twisted 16.6.0-2+deb9u3
+[02 May 2022] DLA-2990-1 jackson-databind - security update
+	{CVE-2020-36518}
+	[stretch] - jackson-databind 2.8.6-1+deb9u10
+[01 May 2022] DLA-2989-1 ghostscript - security update
+	{CVE-2019-25059}
+	[stretch] - ghostscript 9.26a~dfsg-0+deb9u9
+[01 May 2022] DLA-2988-1 tinyxml - security update
+	{CVE-2021-42260}
+	[stretch] - tinyxml 2.6.2-4+deb9u1
+[30 Apr 2022] DLA-2987-1 libarchive - security update
+	{CVE-2019-19221 CVE-2021-23177 CVE-2021-31566}
+	[stretch] - libarchive 3.2.2-2+deb9u3
+[28 Apr 2022] DLA-2986-1 golang-1.8 - security update
+	{CVE-2022-23772 CVE-2022-23806 CVE-2022-24921}
+	[stretch] - golang-1.8 1.8.1-1+deb9u5
+[28 Apr 2022] DLA-2985-1 golang-1.7 - security update
+	{CVE-2022-23772 CVE-2022-23806 CVE-2022-24921}
+	[stretch] - golang-1.7 1.7.4-2+deb9u5
+[19 Apr 2022] DLA-2984-1 condor - security update
+	{CVE-2022-26110}
+	[stretch] - condor 8.4.11~dfsg.1-1+deb9u2
+[16 Apr 2022] DLA-2983-1 abcm2ps - security update
+	{CVE-2018-10753 CVE-2018-10771 CVE-2019-1010069 CVE-2021-32434 CVE-2021-32435 CVE-2021-32436}
+	[stretch] - abcm2ps 7.8.9-1+deb9u1
+[14 Apr 2022] DLA-2982-1 python-django - security update
+	{CVE-2022-28346}
+	[stretch] - python-django 1:1.10.7-2+deb9u16
+[13 Apr 2022] DLA-2981-1 lrzip - security update
+	{CVE-2018-5786 CVE-2020-25467 CVE-2021-27345 CVE-2021-27347 CVE-2022-26291}
+	[stretch] - lrzip 0.631-1+deb9u2
+[12 Apr 2022] DLA-2980-1 zabbix - security update
+	{CVE-2022-24349 CVE-2022-24917 CVE-2022-24919}
+	[stretch] - zabbix 1:3.0.32+dfsg-0+deb9u3
+[11 Apr 2022] DLA-2979-1 usbguard - security update
+	{CVE-2019-25058}
+	[stretch] - usbguard 0.6.2+ds1-2+deb9u1
+[11 Apr 2022] DLA-2978-1 thunderbird - security update
+	{CVE-2022-1097 CVE-2022-1196 CVE-2022-1197 CVE-2022-24713 CVE-2022-28281 CVE-2022-28282 CVE-2022-28285 CVE-2022-28286 CVE-2022-28289}
+	[stretch] - thunderbird 1:91.8.0-1~deb9u1
+[10 Apr 2022] DLA-2977-1 xz-utils - security update
+	{CVE-2022-1271}
+	[stretch] - xz-utils 5.2.2-1.2+deb9u1
+[10 Apr 2022] DLA-2976-1 gzip - security update
+	{CVE-2022-1271}
+	[stretch] - gzip 1.6-5+deb9u1
+[10 Apr 2022] DLA-2975-1 openjpeg2 - security update
+	{CVE-2020-27842 CVE-2020-27843 CVE-2021-29338 CVE-2022-1122}
+	[stretch] - openjpeg2 2.1.2-1.1+deb9u7
+[10 Apr 2022] DLA-2974-1 fribidi - security update
+	{CVE-2022-25308 CVE-2022-25309 CVE-2022-25310}
+	[stretch] - fribidi 0.19.7-1+deb9u2
+[10 Apr 2022] DLA-2973-1 minidlna - security update
+	{CVE-2022-26505}
+	[stretch] - minidlna 1.1.6+dfsg-1+deb9u2
+[08 Apr 2022] DLA-2972-1 libxml2 - security update
+	{CVE-2016-9318 CVE-2017-5130 CVE-2017-5969 CVE-2017-16932 CVE-2022-23308}
+	[stretch] - libxml2 2.9.4+dfsg1-2.2+deb9u6
+[07 Apr 2022] DLA-2971-1 firefox-esr - security update
+	{CVE-2022-1097 CVE-2022-1196 CVE-2022-24713 CVE-2022-28281 CVE-2022-28282 CVE-2022-28285 CVE-2022-28286 CVE-2022-28289}
+	[stretch] - firefox-esr 91.8.0esr-1~deb9u1
+[04 Apr 2022] DLA-2970-1 qemu - security update
+	{CVE-2021-3593 CVE-2021-3748 CVE-2021-3930 CVE-2021-20196 CVE-2022-26354}
+	[stretch] - qemu 1:2.8+dfsg-6+deb9u17
+[03 Apr 2022] DLA-2969-1 asterisk - security update
+	{CVE-2019-13161 CVE-2019-18610 CVE-2019-18790 CVE-2019-18976 CVE-2020-28242}
+	[stretch] - asterisk 1:13.14.1~dfsg-2+deb9u6
+[02 Apr 2022] DLA-2968-1 zlib - security update
+	{CVE-2018-25032}
+	[stretch] - zlib 1:1.2.8.dfsg-5+deb9u1
+[31 Mar 2022] DLA-2967-1 wireshark - security update
+	{CVE-2021-4181 CVE-2021-4184 CVE-2021-4185 CVE-2021-22191 CVE-2022-0581 CVE-2022-0582 CVE-2022-0583 CVE-2022-0585 CVE-2022-0586}
+	[stretch] - wireshark 2.6.20-0+deb9u3
+[30 Mar 2022] DLA-2966-1 libgc - security update
+	{CVE-2016-9427}
+	[stretch] - libgc 1:7.4.2-8+deb9u1
+[29 Mar 2022] DLA-2965-1 cacti - security update
+	{CVE-2018-10060 CVE-2018-10061 CVE-2019-11025 CVE-2020-7106 CVE-2020-13230 CVE-2020-23226 CVE-2021-23225 CVE-2022-0730}
+	[stretch] - cacti 0.8.8h+ds1-10+deb9u2
+[28 Mar 2022] DLA-2962-1 pjproject - security update
+	{CVE-2021-32686 CVE-2021-37706 CVE-2021-41141 CVE-2021-43299 CVE-2021-43300 CVE-2021-43301 CVE-2021-43302 CVE-2021-43303 CVE-2021-43804 CVE-2021-43845 CVE-2022-21722 CVE-2022-21723 CVE-2022-23608 CVE-2022-24754 CVE-2022-24764}
+	[stretch] - pjproject 2.5.5~dfsg-6+deb9u3
+[22 Mar 2022] DLA-2961-1 thunderbird - security update
+	{CVE-2022-26381 CVE-2022-26383 CVE-2022-26384 CVE-2022-26386 CVE-2022-26387}
+	[stretch] - thunderbird 1:91.7.0-2~deb9u1
+[22 Mar 2022] DLA-2960-1 apache2 - security update
+	{CVE-2022-22719 CVE-2022-22720 CVE-2022-22721 CVE-2022-23943}
+	[stretch] - apache2 2.4.25-3+deb9u13
+[21 Mar 2022] DLA-2959-1 paramiko - security update
+	{CVE-2022-24302}
+	[stretch] - paramiko 2.0.0-1+deb9u2
+[21 Mar 2022] DLA-2958-1 usbredir - security update
+	{CVE-2021-3700}
+	[stretch] - usbredir 0.7.1-1+deb9u1
+[20 Mar 2022] DLA-2957-1 libpano13 - security update
+	{CVE-2021-33293}
+	[stretch] - libpano13 2.9.19+dfsg-2+deb9u2
+[18 Mar 2022] DLA-2955-1 bind9 - security update
+	{CVE-2021-25220}
+	[stretch] - bind9 1:9.10.3.dfsg.P4-12.3+deb9u11
+[18 Mar 2022] DLA-2954-1 python-treq - security update
+	{CVE-2022-23607}
+	[stretch] - python-treq 15.1.0-1+deb9u1
+[17 Mar 2022] DLA-2953-1 openssl1.0 - security update
+	{CVE-2022-0778}
+	[stretch] - openssl1.0 1.0.2u-1~deb9u7
+[17 Mar 2022] DLA-2952-1 openssl - security update
+	{CVE-2019-1551 CVE-2022-0778}
+	[stretch] - openssl 1.1.0l-1~deb9u5
+[17 Mar 2022] DLA-2951-1 flac - security update
+	{CVE-2021-0561}
+	[stretch] - flac 1.3.2-2+deb9u2
+[16 Mar 2022] DLA-2950-1 python-scrapy - security update
+	{CVE-2021-41125 CVE-2022-0577}
+	[stretch] - python-scrapy 1.0.3-2+deb9u1
+[15 Mar 2022] DLA-2949-1 spip - security update
+	{CVE-2022-26846 CVE-2022-26847}
+	[stretch] - spip 3.1.4-4~deb9u5
+[11 Mar 2022] DLA-2947-1 vim - security update
+	{CVE-2021-3984 CVE-2021-4019 CVE-2021-4069 CVE-2021-4193 CVE-2022-0213 CVE-2022-0319 CVE-2022-0368 CVE-2022-0554 CVE-2022-0361 CVE-2022-0408 CVE-2022-0685 CVE-2022-0714 CVE-2022-0359 CVE-2021-4192 CVE-2021-3872 CVE-2021-3927 CVE-2021-3928 CVE-2021-3973 CVE-2021-3974 CVE-2022-0729}
+	[stretch] - vim 2:8.0.0197-4+deb9u5
+[11 Mar 2022] DLA-2946-1 tryton-proteus - security update
+	{CVE-2022-26661 CVE-2022-26662}
+	[stretch] - tryton-proteus 4.2.0-1+deb9u1
+[11 Mar 2022] DLA-2945-1 tryton-server - security update
+	{CVE-2022-26661 CVE-2022-26662}
+	[stretch] - tryton-server 4.2.1-2+deb9u2
+[10 Mar 2022] DLA-2944-1 nbd - security update
+	{CVE-2022-26495}
+	[stretch] - nbd 1:3.15.2-3+deb9u1
+[10 Mar 2022] DLA-2943-1 ruby-sidekiq - security update
+	{CVE-2021-30151 CVE-2022-23837}
+	[stretch] - ruby-sidekiq 4.2.3+dfsg-1+deb9u1
+[10 Mar 2022] DLA-2942-1 firefox-esr - security update
+	{CVE-2022-26381 CVE-2022-26383 CVE-2022-26384 CVE-2022-26386 CVE-2022-26387}
+	[stretch] - firefox-esr 91.7.0esr-1~deb9u1
+[09 Mar 2022] DLA-2941-1 linux-4.19 - security update
+	{CVE-2020-29374 CVE-2020-36322 CVE-2021-3640 CVE-2021-3744 CVE-2021-3752 CVE-2021-3760 CVE-2021-3764 CVE-2021-3772 CVE-2021-4002 CVE-2021-4083 CVE-2021-4135 CVE-2021-4155 CVE-2021-4203 CVE-2021-20317 CVE-2021-20321 CVE-2021-20322 CVE-2021-22600 CVE-2021-28711 CVE-2021-28712 CVE-2021-28713 CVE-2021-28714 CVE-2021-28715 CVE-2021-28950 CVE-2021-38300 CVE-2021-39685 CVE-2021-39686 CVE-2021-39698 CVE-2021-39713 CVE-2021-41864 CVE-2021-42739 CVE-2021-43389 CVE-2021-43975 CVE-2021-43976 CVE-2021-44733 CVE-2021-45095 CVE-2021-45469 CVE-2021-45480 CVE-2022-0001 CVE-2022-0002 CVE-2022-0322 CVE-2022-0330 CVE-2022-0435 CVE-2022-0487 CVE-2022-0492 CVE-2022-0617 CVE-2022-0644 CVE-2022-22942 CVE-2022-24448 CVE-2022-24959 CVE-2022-25258 CVE-2022-25375}
+	[stretch] - linux-4.19 4.19.232-1~deb9u1
+[09 Mar 2022] DLA-2940-1 linux - security update
+	{CVE-2021-3640 CVE-2021-3752 CVE-2021-4002 CVE-2021-4083 CVE-2021-4155 CVE-2021-4202 CVE-2021-28711 CVE-2021-28712 CVE-2021-28713 CVE-2021-28714 CVE-2021-28715 CVE-2021-29264 CVE-2021-33033 CVE-2021-39685 CVE-2021-39686 CVE-2021-39698 CVE-2021-39714 CVE-2021-43976 CVE-2021-45095 CVE-2022-0001 CVE-2022-0002 CVE-2022-0330 CVE-2022-0435 CVE-2022-0487 CVE-2022-0492 CVE-2022-0617 CVE-2022-24448 CVE-2022-25258 CVE-2022-25375}
+	[stretch] - linux 4.9.303-1
+[09 Mar 2022] DLA-2939-1 thunderbird - security update
+	{CVE-2022-26485 CVE-2022-26486}
+	[stretch] - thunderbird 1:91.6.2-1~deb9u1
+[08 Mar 2022] DLA-2938-1 twisted - security update
+	{CVE-2022-21716}
+	[stretch] - twisted 16.6.0-2+deb9u2
+[07 Mar 2022] DLA-2937-1 gif2apng - security update
+	{CVE-2021-45909 CVE-2021-45910 CVE-2021-45911}
+	[stretch] - gif2apng 1.9+srconly-2+deb9u2
+[07 Mar 2022] DLA-2936-1 libgit2 - security update
+	{CVE-2018-8098 CVE-2018-8099 CVE-2018-10887 CVE-2018-10888 CVE-2018-15501 CVE-2020-12278 CVE-2020-12279}
+	[stretch] - libgit2 0.25.1+really0.24.6-1+deb9u1
+[07 Mar 2022] DLA-2935-1 expat - security update
+	{CVE-2022-23852 CVE-2022-25235 CVE-2022-25236 CVE-2022-25313 CVE-2022-25315}
+	[stretch] - expat 2.2.0-2+deb9u5
+[07 Mar 2022] DLA-2934-1 freecad - security update
+	{CVE-2021-45844}
+	[stretch] - freecad 0.16+dfsg2-3+deb9u1
+[07 Mar 2022] DLA-2933-1 firefox-esr - security update
+	{CVE-2022-26485 CVE-2022-26486}
+	[stretch] - firefox-esr 91.6.1esr-1~deb9u1
+[06 Mar 2022] DLA-2932-1 tiff - security update
+	{CVE-2022-0561 CVE-2022-0562 CVE-2022-22844}
+	[stretch] - tiff 4.0.8-2+deb9u8
+[06 Mar 2022] DLA-2931-1 cyrus-sasl2 - security update
+	{CVE-2022-24407}
+	[stretch] - cyrus-sasl2 2.1.27~101-g0780600+dfsg-3+deb9u2
+[01 Mar 2022] DLA-2930-1 thunderbird - security update
+	{CVE-2022-0566}
+	[stretch] - thunderbird 1:91.6.1-1~deb9u1
+[26 Feb 2022] DLA-2929-1 ujson - security update
+	{CVE-2021-45958}
+	[stretch] - ujson 1.35-1+deb9u1
+[26 Feb 2022] DLA-2928-1 htmldoc - security update
+	{CVE-2021-40985 CVE-2021-43579 CVE-2022-0534}
+	[stretch] - htmldoc 1.8.27-8+deb9u2
+[19 Feb 2022] DLA-2927-1 twisted - security update
+	{CVE-2020-10108 CVE-2020-10109 CVE-2022-21712}
+	[stretch] - twisted 16.6.0-2+deb9u1
+[18 Feb 2022] DLA-2926-1 zsh - security update
+	{CVE-2021-45444}
+	[stretch] - zsh 5.3.1-4+deb9u5
+[16 Feb 2022] DLA-2925-1 drupal7 - security update
+	{CVE-2022-25271}
+	[stretch] - drupal7 7.52-2+deb9u18
+[15 Feb 2022] DLA-2924-1 libxstream-java - security update
+	{CVE-2021-43859}
+	[stretch] - libxstream-java 1.4.11.1-1+deb9u5
+[15 Feb 2022] DLA-2923-1 h2database - security update
+	{CVE-2021-42392 CVE-2022-23221}
+	[stretch] - h2database 1.4.193-1+deb9u1
+[14 Feb 2022] DLA-2922-1 pgbouncer - security update
+	{CVE-2021-3935}
+	[stretch] - pgbouncer 1.7.2-2+deb9u1
+[14 Feb 2022] DLA-2921-1 thunderbird - security update
+	{CVE-2022-22754 CVE-2022-22756 CVE-2022-22759 CVE-2022-22760 CVE-2022-22761 CVE-2022-22763 CVE-2022-22764}
+	[stretch] - thunderbird 1:91.6.0-1~deb9u1
+[14 Feb 2022] DLA-2920-1 varnish - security update
+	{CVE-2022-23959}
+	[stretch] - varnish 5.0.0-7+deb9u3
+[12 Feb 2022] DLA-2919-1 python2.7 - security update
+	{CVE-2021-3177 CVE-2021-4189}
+	[stretch] - python2.7 2.7.13-2+deb9u6
+[12 Feb 2022] DLA-2918-1 debian-edu-config - security update
+	{CVE-2021-20001}
+	[stretch] - debian-edu-config 1.929+deb9u5
+[10 Feb 2022] DLA-2917-1 openjdk-8 - security update
+	{CVE-2022-21248 CVE-2022-21282 CVE-2022-21283 CVE-2022-21293 CVE-2022-21294 CVE-2022-21296 CVE-2022-21299 CVE-2022-21305 CVE-2022-21340 CVE-2022-21341 CVE-2022-21349 CVE-2022-21360 CVE-2022-21365}
+	[stretch] - openjdk-8 8u322-b06-1~deb9u1
+[09 Feb 2022] DLA-2916-1 firefox-esr - security update
+	{CVE-2022-22754 CVE-2022-22756 CVE-2022-22759 CVE-2022-22760 CVE-2022-22761 CVE-2022-22763 CVE-2022-22764}
+	[stretch] - firefox-esr 91.6.0esr-1~deb9u1
+[09 Feb 2022] DLA-2915-1 connman - security update
+	{CVE-2021-33833 CVE-2022-23096 CVE-2022-23097 CVE-2022-23098}
+	[stretch] - connman 1.33-3+deb9u3
+[07 Feb 2022] DLA-2914-1 zabbix - security update
+	{CVE-2022-23134}
+	[stretch] - zabbix 1:3.0.32+dfsg-0+deb9u2
+[07 Feb 2022] DLA-2913-1 xterm - security update
+	{CVE-2022-24130}
+	[stretch] - xterm 327-2+deb9u2
+[06 Feb 2022] DLA-2912-1 libphp-adodb - security update
+	{CVE-2021-3850}
+	[stretch] - libphp-adodb 5.20.9-1+deb9u1
+[04 Feb 2022] DLA-2911-1 apng2gif - security update
+	{CVE-2017-6960 CVE-2017-6961 CVE-2017-6962}
+	[stretch] - apng2gif 1.8-0.1~deb9u1
+[03 Feb 2022] DLA-2910-1 ldns - security update
+	{CVE-2017-1000231 CVE-2017-1000232 CVE-2020-19860 CVE-2020-19861}
+	[stretch] - ldns 1.7.0-1+deb9u1
+[03 Feb 2022] DLA-2909-1 strongswan - security update
+	{CVE-2021-45079}
+	[stretch] - strongswan 5.5.1-4+deb9u6
+[03 Feb 2022] DLA-2908-1 librecad - security update
+	{CVE-2021-45341 CVE-2021-45342 CVE-2021-45343}
+	[stretch] - librecad 2.1.2-1+deb9u3
+[01 Feb 2022] DLA-2907-1 apache2 - security update
+	{CVE-2021-44224 CVE-2021-44790}
+	[stretch] - apache2 2.4.25-3+deb9u12
+[01 Feb 2022] DLA-2906-1 python-django - security update
+	{CVE-2022-22818 CVE-2022-23833}
+	[stretch] - python-django 1:1.10.7-2+deb9u15
+[31 Jan 2022] DLA-2905-1 apache-log4j1.2 - security update
+	{CVE-2021-4104 CVE-2022-23302 CVE-2022-23305 CVE-2022-23307}
+	[stretch] - apache-log4j1.2 1.2.17-7+deb9u2
+[30 Jan 2022] DLA-2904-1 expat - security update
+	{CVE-2021-45960 CVE-2021-46143 CVE-2022-22822 CVE-2022-22823 CVE-2022-22824 CVE-2022-22825 CVE-2022-22826 CVE-2022-22827 CVE-2022-23852 CVE-2022-23990}
+	[stretch] - expat 2.2.0-2+deb9u4
+[29 Jan 2022] DLA-2903-1 libraw - security update
+	{CVE-2017-13735 CVE-2017-14265 CVE-2017-14348 CVE-2017-14608 CVE-2017-16909 CVE-2017-16910 CVE-2018-5800 CVE-2018-5801 CVE-2018-5802 CVE-2018-5804 CVE-2018-5805 CVE-2018-5806 CVE-2018-5807 CVE-2018-5808 CVE-2018-5810 CVE-2018-5811 CVE-2018-5812 CVE-2018-5813 CVE-2018-5815 CVE-2018-5817 CVE-2018-5818 CVE-2018-5819 CVE-2018-20363 CVE-2018-20364 CVE-2018-20365}
+	[stretch] - libraw 0.17.2-6+deb9u2
+[27 Jan 2022] DLA-2902-1 graphicsmagick - security update
+	{CVE-2020-12672}
+	[stretch] - graphicsmagick 1.3.30+hg15796-1~deb9u5
+[26 Jan 2022] DLA-2883-2 uriparser - regression update
+	{CVE-2021-46141}
+	[stretch] - uriparser 0.8.4-1+deb9u4
+[25 Jan 2022] DLA-2901-1 libxfont - security update
+	{CVE-2017-16611}
+	[stretch] - libxfont 1:2.0.1-3+deb9u2
+[25 Jan 2022] DLA-2900-1 lrzsz - security update
+	{CVE-2018-10195}
+	[stretch] - lrzsz 0.12.21-8+deb9u1
+[25 Jan 2022] DLA-2899-1 policykit-1 - security update
+	{CVE-2021-4034}
+	[stretch] - policykit-1 0.105-18+deb9u2
+[25 Jan 2022] DLA-2898-1 nss - security update
+	{CVE-2022-22747}
+	[stretch] - nss 2:3.26.2-1.1+deb9u5
+[24 Jan 2022] DLA-2897-1 apr - security update
+	{CVE-2017-12613}
+	[stretch] - apr 1.5.2-5+deb9u1
+[24 Jan 2022] DLA-2896-1 ipython - security update
+	{CVE-2022-21699}
+	[stretch] - ipython 5.1.0-3+deb9u1
+[24 Jan 2022] DLA-2895-1 qt4-x11 - security update
+	{CVE-2021-3481 CVE-2021-45930}
+	[stretch] - qt4-x11 4:4.8.7+dfsg-11+deb9u3
+[24 Jan 2022] DLA-2894-1 aide - security update
+	{CVE-2021-45417}
+	[stretch] - aide 0.16-1+deb9u1
+[23 Jan 2022] DLA-2893-1 pillow - security update
+	{CVE-2022-22815 CVE-2022-22816 CVE-2022-22817}
+	[stretch] - pillow 4.0.0-4+deb9u4
+[21 Jan 2022] DLA-2892-1 golang-1.7 - security update
+	{CVE-2021-33196 CVE-2021-36221 CVE-2021-39293 CVE-2021-41771 CVE-2021-44716 CVE-2021-44717}
+	[stretch] - golang-1.7 1.7.4-2+deb9u4
+[21 Jan 2022] DLA-2891-1 golang-1.8 - security update
+	{CVE-2021-33196 CVE-2021-36221 CVE-2021-39293 CVE-2021-41771 CVE-2021-44716 CVE-2021-44717}
+	[stretch] - golang-1.8 1.8.1-1+deb9u4
+[21 Jan 2022] DLA-2890-1 libspf2 - security update
+	{CVE-2021-33912 CVE-2021-33913}
+	[stretch] - libspf2 1.2.10-7+deb9u2
+[19 Jan 2022] DLA-2889-1 drupal7 - security update
+	{CVE-2016-7103 CVE-2010-5312 CVE-2021-41182 CVE-2021-41183}
+	[stretch] - drupal7 7.52-2+deb9u17
+[18 Jan 2022] DLA-2888-1 nvidia-graphics-drivers - security update
+	{CVE-2021-1056 CVE-2021-1076 CVE-2021-1093 CVE-2021-1094 CVE-2021-1095}
+	[stretch] - nvidia-graphics-drivers 390.144-1~deb9u1
+[18 Jan 2022] DLA-2887-1 lighttpd - security update
+	{CVE-2018-19052}
+	[stretch] - lighttpd 1.4.45-1+deb9u1
+[17 Jan 2022] DLA-2886-1 slurm-llnl - security update
+	{CVE-2019-12838 CVE-2020-12693 CVE-2020-27745 CVE-2021-31215}
+	[stretch] - slurm-llnl 16.05.9-1+deb9u5
+[17 Jan 2022] DLA-2885-1 qtsvg-opensource-src - security update
+	{CVE-2021-3481 CVE-2021-45930}
+	[stretch] - qtsvg-opensource-src 5.7.1~20161021-2.1+deb9u1
+[17 Jan 2022] DLA-2884-1 wordpress - security update
+	{CVE-2022-21661 CVE-2022-21662 CVE-2022-21663 CVE-2022-21664}
+	[stretch] - wordpress 4.7.22+dfsg-0+deb9u1
+[17 Jan 2022] DLA-2883-1 uriparser - security update
+	{CVE-2021-46141 CVE-2021-46142}
+	[stretch] - uriparser 0.8.4-1+deb9u3
+[17 Jan 2022] DLA-2882-1 sphinxsearch - security update
+	{CVE-2020-29050}
+	[stretch] - sphinxsearch 2.2.11-1.1+deb9u1
+[16 Jan 2022] DLA-2881-1 thunderbird - security update
+	{CVE-2021-4140 CVE-2022-22737 CVE-2022-22738 CVE-2022-22739 CVE-2022-22740 CVE-2022-22741 CVE-2022-22742 CVE-2022-22743 CVE-2022-22745 CVE-2022-22747 CVE-2022-22748 CVE-2022-22751}
+	[stretch] - thunderbird 1:91.5.0-1~deb9u1
+[16 Jan 2022] DLA-2880-1 firefox-esr - security update
+	{CVE-2021-4140 CVE-2022-22737 CVE-2022-22738 CVE-2022-22739 CVE-2022-22740 CVE-2022-22741 CVE-2022-22742 CVE-2022-22743 CVE-2022-22745 CVE-2022-22747 CVE-2022-22748 CVE-2022-22751}
+	[stretch] - firefox-esr 91.5.0esr-1~deb9u1
+[14 Jan 2022] DLA-2879-1 ghostscript - security update
+	{CVE-2021-45944 CVE-2021-45949}
+	[stretch] - ghostscript 9.26a~dfsg-0+deb9u8
+[12 Jan 2022] DLA-2878-1 roundcube - security update
+	{CVE-2021-46144}
+	[stretch] - roundcube 1.2.3+dfsg.1-4+deb9u10
+[12 Jan 2022] DLA-2877-1 gdal - security update
+	{CVE-2019-17545 CVE-2021-45943}
+	[stretch] - gdal 2.1.2+dfsg-5+deb9u1
+[10 Jan 2022] DLA-2876-1 vim - security update
+	{CVE-2017-17087 CVE-2019-20807 CVE-2021-3778 CVE-2021-3796}
+	[stretch] - vim 2:8.0.0197-4+deb9u4
+[04 Jan 2022] DLA-2874-1 thunderbird - security update
+	{CVE-2021-4126 CVE-2021-38496 CVE-2021-38500 CVE-2021-38502 CVE-2021-38503 CVE-2021-38504 CVE-2021-38506 CVE-2021-38507 CVE-2021-38508 CVE-2021-38509 CVE-2021-43528 CVE-2021-43529 CVE-2021-43534 CVE-2021-43535 CVE-2021-43536 CVE-2021-43537 CVE-2021-43538 CVE-2021-43539 CVE-2021-43541 CVE-2021-43542 CVE-2021-43543 CVE-2021-43545 CVE-2021-43546 CVE-2021-44538}
+	[stretch] - thunderbird 1:91.4.1-1~deb9u1
+[31 Dec 2021] DLA-2873-1 aria2 - security update
+	{CVE-2019-3500}
+	[stretch] - aria2 1.30.0-2+deb9u1
+[31 Dec 2021] DLA-2872-1 agg - security update
+	{CVE-2019-6245}
+	[stretch] - agg 2.5+dfsg1-11+deb9u1
+[30 Dec 2021] DLA-2871-1 lxml - security update
+	{CVE-2021-43818}
+	[stretch] - lxml 3.7.1-1+deb9u5
+[29 Dec 2021] DLA-2870-1 apache-log4j2 - security update
+	{CVE-2021-44832}
+	[stretch] - apache-log4j2 2.12.4-0+deb9u1
+[29 Dec 2021] DLA-2869-1 xorg-server - security update
+	{CVE-2021-4008 CVE-2021-4009 CVE-2021-4011}
+	[stretch] - xorg-server 2:1.19.2-1+deb9u9
+[29 Dec 2021] DLA-2868-1 advancecomp - security update
+	{CVE-2018-1056 CVE-2019-8379 CVE-2019-8383 CVE-2019-9210}
+	[stretch] - advancecomp 1.20-1+deb9u1
+[29 Dec 2021] DLA-2867-1 spip - security update
+	{CVE-2021-44118 CVE-2021-44120 CVE-2021-44122 CVE-2021-44123}
+	[stretch] - spip 3.1.4-4~deb9u4+deb9u2
+[29 Dec 2021] DLA-2866-1 uw-imap - security update
+	{CVE-2018-19518}
+	[stretch] - uw-imap 8:2007f~dfsg-5+deb9u1
+[29 Dec 2021] DLA-2865-1 resiprocate - security update
+	{CVE-2017-11521 CVE-2018-12584}
+	[stretch] - resiprocate 1:1.11.0~beta1-3+deb9u2
+[29 Dec 2021] DLA-2864-1 ruby-haml - security update
+	{CVE-2017-1002201}
+	[stretch] - ruby-haml 4.0.7-1+deb9u1
+[29 Dec 2021] DLA-2863-1 firefox-esr - security update
+	{CVE-2021-38503 CVE-2021-38504 CVE-2021-38506 CVE-2021-38507 CVE-2021-38508 CVE-2021-38509 CVE-2021-43534 CVE-2021-43535 CVE-2021-43536 CVE-2021-43537 CVE-2021-43538 CVE-2021-43539 CVE-2021-43541 CVE-2021-43542 CVE-2021-43543 CVE-2021-43545 CVE-2021-43546}
+	[stretch] - firefox-esr 91.4.1esr-1~deb9u1
+[29 Dec 2021] DLA-2862-1 python-gnupg - security update
+	{CVE-2018-12020 CVE-2019-6690}
+	[stretch] - python-gnupg 0.3.9-1+deb9u1
+[28 Dec 2021] DLA-2861-1 rdflib - security update
+	{CVE-2019-7653}
+	[stretch] - rdflib 4.2.1-2+deb9u1
+[28 Dec 2021] DLA-2860-1 paramiko - security update
+	{CVE-2018-7750 CVE-2018-1000805}
+	[stretch] - paramiko 2.0.0-1+deb9u1
+[28 Dec 2021] DLA-2859-1 zziplib - security update
+	{CVE-2020-18442}
+	[stretch] - zziplib 0.13.62-3.2~deb9u2
+[28 Dec 2021] DLA-2858-1 libzip - security update
+	{CVE-2017-14107}
+	[stretch] - libzip 1.1.2-1.1+deb9u1
+[28 Dec 2021] DLA-2857-1 postgis - security update
+	{CVE-2017-18359}
+	[stretch] - postgis 2.3.1+dfsg-2+deb9u1
+[27 Dec 2021] DLA-2856-1 okular - security update
+	{CVE-2020-9359}
+	[stretch] - okular 4:16.08.2-1+deb9u2
+[27 Dec 2021] DLA-2855-1 monit - security update
+	{CVE-2019-11454 CVE-2019-11455}
+	[stretch] - monit 1:5.20.0-6+deb9u2
+[27 Dec 2021] DLA-2854-1 novnc - security update
+	{CVE-2017-18635}
+	[stretch] - novnc 1:0.4+dfsg+1+20131010+gitf68af8af3d-6+deb9u1
+[27 Dec 2021] DLA-2853-1 ruby2.3 - security update
+	{CVE-2021-41817 CVE-2021-41819}
+	[stretch] - ruby2.3 2.3.3-1+deb9u11
+[26 Dec 2021] DLA-2852-1 apache-log4j2 - security update
+	{CVE-2020-9488 CVE-2021-45105}
+	[stretch] - apache-log4j2 2.12.3-0+deb9u1
+[26 Dec 2021] DLA-2851-1 libextractor - security update
+	{CVE-2019-15531}
+	[stretch] - libextractor 1:1.3-4+deb9u4
+[26 Dec 2021] DLA-2850-1 libpcap - security update
+	{CVE-2019-15165}
+	[stretch] - libpcap 1.8.1-3+deb9u1
+[26 Dec 2021] DLA-2849-1 wireshark - security update
+	{CVE-2021-22207 CVE-2021-22235 CVE-2021-39921 CVE-2021-39922 CVE-2021-39923 CVE-2021-39924 CVE-2021-39925 CVE-2021-39928 CVE-2021-39929}
+	[stretch] - wireshark 2.6.20-0+deb9u2
+[17 Dec 2021] DLA-2848-1 libssh2 - security update
+	{CVE-2019-13115 CVE-2019-17498}
+	[stretch] - libssh2 1.7.0-1+deb9u2
+[15 Dec 2021] DLA-2847-1 mediawiki - security update
+	{CVE-2021-44858}
+	[stretch] - mediawiki 1:1.27.7-1+deb9u11
+[14 Dec 2021] DLA-2846-1 raptor2 - security update
+	{CVE-2020-25713}
+	[stretch] - raptor2 2.0.14-1+deb9u2
+[14 Dec 2021] DLA-2845-1 libsamplerate - security update
+	{CVE-2017-7697}
+	[stretch] - libsamplerate 0.1.8-8+deb9u1
+[13 Dec 2021] DLA-2844-1 privoxy - security update
+	{CVE-2021-44540 CVE-2021-44543}
+	[stretch] - privoxy 3.0.26-3+deb9u3
+[12 Dec 2021] DLA-2843-1 linux - security update
+	{CVE-2020-3702 CVE-2020-16119 CVE-2021-0920 CVE-2021-3612 CVE-2021-3653 CVE-2021-3655 CVE-2021-3679 CVE-2021-3732 CVE-2021-3753 CVE-2021-3760 CVE-2021-20317 CVE-2021-20321 CVE-2021-20322 CVE-2021-22543 CVE-2021-37159 CVE-2021-38160 CVE-2021-38198 CVE-2021-38199 CVE-2021-38204 CVE-2021-38205 CVE-2021-40490 CVE-2021-41864 CVE-2021-42008 CVE-2021-42739 CVE-2021-43389}
+	[stretch] - linux 4.9.290-1
+[12 Dec 2021] DLA-2842-1 apache-log4j2 - security update
+	{CVE-2021-44228}
+	[stretch] - apache-log4j2 2.7-2+deb9u1
+[06 Dec 2021] DLA-2841-1 runc - security update
+	{CVE-2021-43784}
+	[stretch] - runc 0.1.1+dfsg1-2+deb9u3
+[06 Dec 2021] DLA-2840-1 roundcube - security update
+	{CVE-2021-44025 CVE-2021-44026}
+	[stretch] - roundcube 1.2.3+dfsg.1-4+deb9u9
+[03 Dec 2021] DLA-2839-1 gerbv - security update
+	{CVE-2021-40391}
+	[stretch] - gerbv 2.6.1-2+deb9u1
+[03 Dec 2021] DLA-2838-1 librecad - security update
+	{CVE-2021-21898 CVE-2021-21899 CVE-2021-21900}
+	[stretch] - librecad 2.1.2-1+deb9u2
+[02 Dec 2021] DLA-2837-1 gmp - security update
+	{CVE-2021-43618}
+	[stretch] - gmp 2:6.1.2+dfsg-1+deb9u1
+[02 Dec 2021] DLA-2836-1 nss - security update
+	{CVE-2021-43527}
+	[stretch] - nss 2:3.26.2-1.1+deb9u3
+[30 Nov 2021] DLA-2835-1 rsyslog - security update
+	{CVE-2019-17041 CVE-2019-17042}
+	[stretch] - rsyslog 8.24.0-1+deb9u1
+[30 Nov 2021] DLA-2834-1 uriparser - security update
+	{CVE-2018-20721}
+	[stretch] - uriparser 0.8.4-1+deb9u2
+[30 Nov 2021] DLA-2833-1 rsync - security update
+	{CVE-2018-5764}
+	[stretch] - rsync 3.1.2-1+deb9u3
+[29 Nov 2021] DLA-2832-1 opensc - security update
+	{CVE-2019-15945 CVE-2019-15946 CVE-2019-19479 CVE-2020-26570 CVE-2020-26571 CVE-2020-26572}
+	[stretch] - opensc 0.16.0-3+deb9u2
+[28 Nov 2021] DLA-2831-1 libntlm - security update
+	{CVE-2019-17455}
+	[stretch] - libntlm 1.4-8+deb9u1
+[28 Nov 2021] DLA-2830-1 tar - security update
+	{CVE-2018-20482}
+	[stretch] - tar 1.29b-1.1+deb9u1
+[27 Nov 2021] DLA-2829-1 libvpx - security update
+	{CVE-2020-0034}
+	[stretch] - libvpx 1.6.1-3+deb9u3
+[27 Nov 2021] DLA-2828-1 libvorbis - security update
+	{CVE-2017-14160 CVE-2018-10392 CVE-2018-10393}
+	[stretch] - libvorbis 1.3.5-4+deb9u3
+[27 Nov 2021] DLA-2827-1 bluez - security update
+	{CVE-2019-8921 CVE-2019-8922 CVE-2021-41229}
+	[stretch] - bluez 5.43-2+deb9u5
+[23 Nov 2021] DLA-2826-1 mbedtls - security update
+	{CVE-2018-9988 CVE-2018-9989 CVE-2020-36475 CVE-2020-36476 CVE-2020-36478 CVE-2021-24119}
+	[stretch] - mbedtls 2.4.2-1+deb9u4
+[22 Nov 2021] DLA-2825-1 libmodbus - security update
+	{CVE-2019-14462 CVE-2019-14463}
+	[stretch] - libmodbus 3.0.6-2+deb9u1
+[20 Nov 2021] DLA-2824-1 firebird3.0 - security update
+	{CVE-2017-11509}
+	[stretch] - firebird3.0 3.0.1.32609.ds4-14+deb9u1
+[19 Nov 2021] DLA-2823-1 salt - security update
+	{CVE-2021-21996}
+	[stretch] - salt 2016.11.2+ds-1+deb9u8
+[19 Nov 2021] DLA-2822-1 netkit-rsh - security update
+	{CVE-2019-7282 CVE-2019-7283}
+	[stretch] - netkit-rsh 0.17-17+deb9u1
+[17 Nov 2021] DLA-2821-1 axis - security update
+	{CVE-2018-8032}
+	[stretch] - axis 1.4-25+deb9u1
+[17 Nov 2021] DLA-2820-1 atftp - security update
+	{CVE-2020-6097 CVE-2021-41054}
+	[stretch] - atftp 0.7.git20120829-3.1~deb9u2
+[16 Nov 2021] DLA-2819-1 ntfs-3g - security update
+	{CVE-2021-33285 CVE-2021-33286 CVE-2021-33287 CVE-2021-33289 CVE-2021-35266 CVE-2021-35267 CVE-2021-35268 CVE-2021-35269 CVE-2021-39251 CVE-2021-39252 CVE-2021-39253 CVE-2021-39254 CVE-2021-39255 CVE-2021-39256 CVE-2021-39257 CVE-2021-39258 CVE-2021-39259 CVE-2021-39260 CVE-2021-39261 CVE-2021-39262 CVE-2021-39263}
+	[stretch] - ntfs-3g 1:2016.2.22AR.1+dfsg-1+deb9u2
+[13 Nov 2021] DLA-2818-1 ffmpeg - security update
+	{CVE-2020-20445 CVE-2020-20446 CVE-2020-20451 CVE-2020-20453 CVE-2020-22037 CVE-2020-22041 CVE-2020-22044 CVE-2020-22046 CVE-2020-22048 CVE-2020-22049 CVE-2020-22054 CVE-2021-38171 CVE-2021-38291}
+	[stretch] - ffmpeg 7:3.2.16-1+deb9u1
+[12 Nov 2021] DLA-2817-1 postgresql-9.6 - security update
+	{CVE-2021-23214 CVE-2021-23222}
+	[stretch] - postgresql-9.6 9.6.24-0+deb9u1
+[10 Nov 2021] DLA-2816-1 icinga2 - security update
+	{CVE-2021-32739 CVE-2021-32743 CVE-2021-37698}
+	[stretch] - icinga2 2.6.0-2+deb9u2
+[10 Nov 2021] DLA-2815-1 salt - security update
+	{CVE-2020-28243 CVE-2020-28972 CVE-2020-35662 CVE-2021-3144 CVE-2021-3148 CVE-2021-3197 CVE-2021-25281 CVE-2021-25282 CVE-2021-25283 CVE-2021-25284 CVE-2021-31607}
+	[stretch] - salt 2016.11.2+ds-1+deb9u7
+[09 Nov 2021] DLA-2814-1 openjdk-8 - security update
+	{CVE-2021-35550 CVE-2021-35556 CVE-2021-35559 CVE-2021-35561 CVE-2021-35564 CVE-2021-35565 CVE-2021-35567 CVE-2021-35578 CVE-2021-35586 CVE-2021-35588 CVE-2021-35603}
+	[stretch] - openjdk-8 8u312-b07-1~deb9u1
+[09 Nov 2021] DLA-2813-1 ckeditor - security update
+	{CVE-2021-33829 CVE-2021-37695}
+	[stretch] - ckeditor 4.5.7+dfsg-2+deb9u1
+[08 Nov 2021] DLA-2812-1 botan1.10 - security update
+	{CVE-2017-14737}
+	[stretch] - botan1.10 1.10.17-1+deb9u1
+[06 Nov 2021] DLA-2811-1 sqlalchemy - security update
+	{CVE-2019-7164 CVE-2019-7548}
+	[stretch] - sqlalchemy 1.0.15+ds1-1+deb9u1
+[05 Nov 2021] DLA-2810-1 redis - security update
+	{CVE-2021-32626 CVE-2021-32672 CVE-2021-32675 CVE-2021-32687 CVE-2021-32762 CVE-2021-41099}
+	[stretch] - redis 3:3.2.6-3+deb9u8
+[05 Nov 2021] DLA-2809-1 udisks2 - security update
+	{CVE-2021-3802}
+	[stretch] - udisks2 2.1.8-1+deb9u1
+[05 Nov 2021] DLA-2808-1 python3.5 - security update
+	{CVE-2021-3733 CVE-2021-3737}
+	[stretch] - python3.5 3.5.3-1+deb9u5
+[01 Nov 2021] DLA-2807-1 bind9 - security update
+	{CVE-2018-5740 CVE-2021-25219}
+	[stretch] - bind9 1:9.10.3.dfsg.P4-12.3+deb9u10
+[01 Nov 2021] DLA-2806-1 glusterfs - security update
+	{CVE-2018-1088 CVE-2018-10841 CVE-2018-10904 CVE-2018-10907 CVE-2018-10911 CVE-2018-10913 CVE-2018-10914 CVE-2018-10923 CVE-2018-10926 CVE-2018-10927 CVE-2018-10928 CVE-2018-10929 CVE-2018-10930 CVE-2018-14652 CVE-2018-14653 CVE-2018-14654 CVE-2018-14659 CVE-2018-14660 CVE-2018-14661}
+	[stretch] - glusterfs 3.8.8-1+deb9u1
+[31 Oct 2021] DLA-2805-1 libmspack - security update
+	{CVE-2019-1010305}
+	[stretch] - libmspack 0.5-1+deb9u4
+[31 Oct 2021] DLA-2804-1 libsdl1.2 - security update
+	{CVE-2019-7572 CVE-2019-7573 CVE-2019-7574 CVE-2019-7575 CVE-2019-7576 CVE-2019-7577 CVE-2019-7578 CVE-2019-7635 CVE-2019-7636 CVE-2019-7637 CVE-2019-7638 CVE-2019-13616}
+	[stretch] - libsdl1.2 1.2.15+dfsg1-4+deb9u1
+[31 Oct 2021] DLA-2803-1 libsdl2 - security update
+	{CVE-2017-2888 CVE-2019-7637}
+	[stretch] - libsdl2 2.0.5+dfsg1-2+deb9u2
+[30 Oct 2021] DLA-2802-1 elfutils - security update
+	{CVE-2018-16062 CVE-2018-16402 CVE-2018-18310 CVE-2018-18520 CVE-2018-18521 CVE-2019-7150 CVE-2019-7665}
+	[stretch] - elfutils 0.168-1+deb9u1
+[30 Oct 2021] DLA-2801-1 cron - security update
+	{CVE-2017-9525 CVE-2019-9704 CVE-2019-9705 CVE-2019-9706}
+	[stretch] - cron 3.0pl1-128+deb9u2
+[30 Oct 2021] DLA-2800-1 cups - security update
+	{CVE-2020-10001}
+	[stretch] - cups 2.2.1-8+deb9u7
+[29 Oct 2021] DLA-2799-1 opencv - security update
+	{CVE-2016-1516 CVE-2017-12597 CVE-2017-12598 CVE-2017-12599 CVE-2017-12601 CVE-2017-12603 CVE-2017-12604 CVE-2017-12605 CVE-2017-12606 CVE-2017-12862 CVE-2017-12863 CVE-2017-12864 CVE-2017-17760 CVE-2017-1000450 CVE-2018-5268 CVE-2018-5269 CVE-2019-14493 CVE-2019-15939}
+	[stretch] - opencv 2.4.9.1+dfsg1-2+deb9u1
+[29 Oct 2021] DLA-2796-1 jbig2dec - security update
+	{CVE-2017-9216 CVE-2020-12268}
+	[stretch] - jbig2dec 0.13-4.1+deb9u1
+[29 Oct 2021] DLA-2795-1 gpsd - security update
+	{CVE-2018-17937}
+	[stretch] - gpsd 3.16-4+deb9u1
+[27 Oct 2021] DLA-2794-1 php7.0 - security update
+	{CVE-2021-21703}
+	[stretch] - php7.0 7.0.33-0+deb9u12
+[26 Oct 2021] DLA-2793-1 mosquitto - security update
+	{CVE-2017-7655}
+	[stretch] - mosquitto 1.4.10-3+deb9u5
+[24 Oct 2021] DLA-2792-1 faad2 - security update
+	{CVE-2018-20199 CVE-2018-20360 CVE-2019-6956 CVE-2021-32274 CVE-2021-32276 CVE-2021-32277 CVE-2021-32278}
+	[stretch] - faad2 2.8.0~cvs20161113-1+deb9u3
+[23 Oct 2021] DLA-2791-1 mailman - security update
+	{CVE-2021-42096 CVE-2021-42097}
+	[stretch] - mailman 1:2.1.23-1+deb9u7
+[21 Oct 2021] DLA-2790-1 python-babel - security update
+	{CVE-2021-42771}
+	[stretch] - python-babel 2.3.4+dfsg.1-2+deb9u1
+[20 Oct 2021] DLA-2789-1 squashfs-tools - security update
+	{CVE-2021-41072}
+	[stretch] - squashfs-tools 1:4.3-3+deb9u3
+[20 Oct 2021] DLA-2788-1 strongswan - security update
+	{CVE-2021-41991}
+	[stretch] - strongswan 5.5.1-4+deb9u5
+[18 Oct 2021] DLA-2787-1 redmine - security update
+	{CVE-2021-42326}
+	[stretch] - redmine 3.3.1-4+deb9u5
+[16 Oct 2021] DLA-2786-1 nghttp2 - security update
+	{CVE-2018-1000168 CVE-2020-11080}
+	[stretch] - nghttp2 1.18.1-1+deb9u2
+[12 Oct 2021] DLA-2785-1 linux-4.19 - security update
+	{CVE-2020-3702 CVE-2020-16119 CVE-2021-3444 CVE-2021-3600 CVE-2021-3612 CVE-2021-3653 CVE-2021-3655 CVE-2021-3656 CVE-2021-3679 CVE-2021-3732 CVE-2021-3743 CVE-2021-3753 CVE-2021-22543 CVE-2021-33624 CVE-2021-34556 CVE-2021-35039 CVE-2021-35477 CVE-2021-37159 CVE-2021-37576 CVE-2021-38160 CVE-2021-38198 CVE-2021-38199 CVE-2021-38204 CVE-2021-38205 CVE-2021-40490 CVE-2021-42008 CVE-2021-42252}
+	[stretch] - linux-4.19 4.19.208-1~deb9u1
+[12 Oct 2021] DLA-2784-1 icu - security update
+	{CVE-2020-21913}
+	[stretch] - icu 57.1-6+deb9u5
+[12 Oct 2021] DLA-2783-1 hiredis - security update
+	{CVE-2021-32765}
+	[stretch] - hiredis 0.13.3-1+deb9u1
+[11 Oct 2021] DLA-2782-1 firefox-esr - security update
+	{CVE-2021-38496 CVE-2021-38500}
+	[stretch] - firefox-esr 78.15.0esr-1~deb9u1
+[11 Oct 2021] DLA-2780-1 ruby2.3 - security update
+	{CVE-2021-31799 CVE-2021-31810 CVE-2021-32066}
+	[stretch] - ruby2.3 2.3.3-1+deb9u10
+[09 Oct 2021] DLA-2779-1 mediawiki - security update
+	{CVE-2021-35197 CVE-2021-41798 CVE-2021-41799}
+	[stretch] - mediawiki 1:1.27.7-1~deb9u10
+[04 Oct 2021] DLA-2778-1 fig2dev - security update
+	{CVE-2019-19797 CVE-2020-21529 CVE-2020-21530 CVE-2020-21531 CVE-2020-21532 CVE-2020-21533 CVE-2020-21534 CVE-2020-21535 CVE-2020-21675 CVE-2020-21676 CVE-2021-3561 CVE-2021-32280}
+	[stretch] - fig2dev 1:3.2.6a-2+deb9u4
+[03 Oct 2021] DLA-2777-1 tiff - security update
+	{CVE-2020-19131 CVE-2020-19144}
+	[stretch] - tiff 4.0.8-2+deb9u7
+[02 Oct 2021] DLA-2776-1 apache2 - security update
+	{CVE-2021-34798 CVE-2021-39275 CVE-2021-40438}
+	[stretch] - apache2 2.4.25-3+deb9u11
+[02 Oct 2021] DLA-2775-1 plib - security update
+	{CVE-2021-38714}
+	[stretch] - plib 1.8.5-7+deb9u1
+[30 Sep 2021] DLA-2774-1 openssl1.0 - security update
+	{CVE-2021-3712}
+	[stretch] - openssl1.0 1.0.2u-1~deb9u6
+[30 Sep 2021] DLA-2773-1 curl - security update
+	{CVE-2021-22946 CVE-2021-22947}
+	[stretch] - curl 7.52.1-5+deb9u16
+[30 Sep 2021] DLA-2772-1 taglib - security update
+	{CVE-2017-12678 CVE-2018-11439}
+	[stretch] - taglib 1.11.1+dfsg.1-0.3+deb9u1
+[30 Sep 2021] DLA-2771-1 krb5 - security update
+	{CVE-2018-5729 CVE-2018-5730 CVE-2018-20217 CVE-2021-37750}
+	[stretch] - krb5 1.15-1+deb9u3
+[30 Sep 2021] DLA-2770-1 weechat - security update
+	{CVE-2020-8955 CVE-2020-9759 CVE-2020-9760 CVE-2021-40516}
+	[stretch] - weechat 1.6-1+deb9u3
+[29 Sep 2021] DLA-2769-1 libxstream-java - security update
+	{CVE-2021-39139 CVE-2021-39140 CVE-2021-39141 CVE-2021-39144 CVE-2021-39145 CVE-2021-39146 CVE-2021-39147 CVE-2021-39148 CVE-2021-39149 CVE-2021-39150 CVE-2021-39151 CVE-2021-39152 CVE-2021-39153 CVE-2021-39154}
+	[stretch] - libxstream-java 1.4.11.1-1+deb9u4
+[29 Sep 2021] DLA-2768-1 uwsgi - security update
+	{CVE-2021-36160}
+	[stretch] - uwsgi 2.0.14+20161117-3+deb9u4
+[27 Sep 2021] DLA-2767-1 libxml-security-java - security update
+	{CVE-2021-40690}
+	[stretch] - libxml-security-java 1.5.8-2+deb9u1
+[27 Sep 2021] DLA-2766-1 openssl - security update
+	{CVE-2021-3712}
+	[stretch] - openssl 1.1.0l-1~deb9u4
+[23 Sep 2021] DLA-2765-1 mupdf - security update
+	{CVE-2016-10246 CVE-2016-10247 CVE-2017-6060 CVE-2018-10289 CVE-2018-1000036 CVE-2020-19609}
+	[stretch] - mupdf 1.14.0+ds1-4+deb9u1
+[22 Sep 2021] DLA-2764-1 tomcat8 - security update
+	{CVE-2021-41079}
+	[stretch] - tomcat8 8.5.54-0+deb9u8
+[22 Sep 2021] DLA-2763-1 ruby-kaminari - security update
+	{CVE-2020-11082}
+	[stretch] - ruby-kaminari 0.17.0-3+deb9u1
+[22 Sep 2021] DLA-2762-1 grilo - security update
+	{CVE-2021-39365}
+	[stretch] - grilo 0.3.2-2+deb9u1
+[18 Sep 2021] DLA-2760-1 nettle - security update
+	{CVE-2021-3580 CVE-2021-20305}
+	[stretch] - nettle 3.3-1+deb9u1
+[15 Sep 2021] DLA-2758-1 sssd - security update
+	{CVE-2021-3621}
+	[stretch] - sssd 1.15.0-3+deb9u2
+[13 Sep 2021] DLA-2757-1 thunderbird - security update
+	{CVE-2021-38493}
+	[stretch] - thunderbird 1:78.14.0-1~deb9u1
+[10 Sep 2021] DLA-2756-1 firefox-esr - security update
+	{CVE-2021-38493}
+	[stretch] - firefox-esr 78.14.0esr-1~deb9u1
+[05 Sep 2021] DLA-2755-1 btrbk - security update
+	{CVE-2021-38173}
+	[stretch] - btrbk 0.24.0-1+deb9u1
+[04 Sep 2021] DLA-2754-1 pywps - security update
+	{CVE-2021-39371}
+	[stretch] - pywps 4.0.0-3+deb9u1
+[01 Sep 2021] DLA-2753-1 qemu - security update
+	{CVE-2021-3527 CVE-2021-3594 CVE-2021-3595 CVE-2021-3682 CVE-2021-3713}
+	[stretch] - qemu 1:2.8+dfsg-6+deb9u15
+[31 Aug 2021] DLA-2752-1 squashfs-tools - security update
+	{CVE-2021-40153}
+	[stretch] - squashfs-tools 1:4.3-3+deb9u2
+[30 Aug 2021] DLA-2750-1 exiv2 - security update
+	{CVE-2019-20421 CVE-2021-3482 CVE-2021-29457 CVE-2021-29473 CVE-2021-31292}
+	[stretch] - exiv2 0.25-3.1+deb9u3
+[29 Aug 2021] DLA-2749-1 gthumb - security update
+	{CVE-2019-20326}
+	[stretch] - gthumb 3:3.4.4.1-5+deb9u2
+[27 Aug 2021] DLA-2717-2 redis - regression update
+	{CVE-2021-32761}
+	[stretch] - redis 3:3.2.6-3+deb9u6
+[23 Aug 2021] DLA-2748-1 tnef - security update
+	{CVE-2019-18849}
+	[stretch] - tnef 1.4.12-1.2+deb9u1
+[22 Aug 2021] DLA-2747-1 ircii - security update
+	{CVE-2021-29376}
+	[stretch] - ircii 20151120-1+deb9u1
+[21 Aug 2021] DLA-2746-1 scrollz - security update
+	{CVE-2021-29376}
+	[stretch] - scrollz 2.2.3-1+deb9u1
+[16 Aug 2021] DLA-2745-1 thunderbird - security update
+	{CVE-2021-29980 CVE-2021-29984 CVE-2021-29985 CVE-2021-29986 CVE-2021-29988 CVE-2021-29989}
+	[stretch] - thunderbird 1:78.13.0-1~deb9u1
+[16 Aug 2021] DLA-2743-1 amd64-microcode - security update
+	{CVE-2017-5715}
+	[stretch] - amd64-microcode 3.20181128.1~deb9u1
+[14 Aug 2021] DLA-2742-1 ffmpeg - security update
+	{CVE-2020-21041 CVE-2020-22015 CVE-2020-22016 CVE-2020-22020 CVE-2020-22021 CVE-2020-22022 CVE-2020-22023 CVE-2020-22025 CVE-2020-22026 CVE-2020-22028 CVE-2020-22031 CVE-2020-22032 CVE-2020-22036 CVE-2021-3566 CVE-2021-38114}
+	[stretch] - ffmpeg 7:3.2.15-0+deb9u3
+[12 Aug 2021] DLA-2741-1 commons-io - security update
+	{CVE-2021-29425}
+	[stretch] - commons-io 2.5-1+deb9u1
+[12 Aug 2021] DLA-2740-1 firefox-esr - security update
+	{CVE-2021-29980 CVE-2021-29984 CVE-2021-29985 CVE-2021-29986 CVE-2021-29988 CVE-2021-29989}
+	[stretch] - firefox-esr 78.13.0esr-1~deb9u1
+[11 Aug 2021] DLA-2739-1 libspf2 - security update
+	{CVE-2021-20314}
+	[stretch] - libspf2 1.2.10-7+deb9u1
+[10 Aug 2021] DLA-2738-1 c-ares - security update
+	{CVE-2021-3672}
+	[stretch] - c-ares 1.12.0-1+deb9u2
+[09 Aug 2021] DLA-2737-1 openjdk-8 - security update
+	{CVE-2021-2341 CVE-2021-2369 CVE-2021-2388}
+	[stretch] - openjdk-8 8u302-b08-1~deb9u1
+[09 Aug 2021] DLA-2736-1 lynx - security update
+	{CVE-2021-38165}
+	[stretch] - lynx 2.8.9dev11-1+deb9u1
+[09 Aug 2021] DLA-2735-1 ceph - security update
+	{CVE-2018-14662 CVE-2018-16846 CVE-2020-1760 CVE-2020-10753 CVE-2021-3524}
+	[stretch] - ceph 10.2.11-2+deb9u1
+[09 Aug 2021] DLA-2734-1 curl - security update
+	{CVE-2021-22898 CVE-2021-22924}
+	[stretch] - curl 7.52.1-5+deb9u15
+[05 Aug 2021] DLA-2733-1 tomcat8 - security update
+	{CVE-2021-30640 CVE-2021-33037}
+	[stretch] - tomcat8 8.5.54-0+deb9u7
+[04 Aug 2021] DLA-2732-1 openexr - security update
+	{CVE-2021-3605 CVE-2021-20299 CVE-2021-20300 CVE-2021-20302 CVE-2021-20303}
+	[stretch] - openexr 2.2.0-11+deb9u4
+[04 Aug 2021] DLA-2730-1 libpam-tacplus - security update
+	{CVE-2020-13881}
+	[stretch] - libpam-tacplus 1.3.8-2+deb9u1
+[04 Aug 2021] DLA-2729-1 asterisk - security update
+	{CVE-2021-32558}
+	[stretch] - asterisk 1:13.14.1~dfsg-2+deb9u5
+[03 Aug 2021] DLA-2728-1 vlc - security update
+	{CVE-2021-25801 CVE-2021-25802 CVE-2021-25803 CVE-2021-25804}
+	[stretch] - vlc 3.0.11-0+deb9u2
+[03 Aug 2021] DLA-2727-1 pyxdg - security update
+	{CVE-2019-12761}
+	[stretch] - pyxdg 0.25-4+deb9u1
+[02 Aug 2021] DLA-2726-1 shiro - security update
+	{CVE-2020-13933 CVE-2020-17510}
+	[stretch] - shiro 1.3.2-1+deb9u2
+[01 Aug 2021] DLA-2725-1 lrzip - security update
+	{CVE-2017-8842 CVE-2017-8843 CVE-2017-8844 CVE-2017-8845 CVE-2017-8846 CVE-2017-8847 CVE-2017-9928 CVE-2017-9929 CVE-2018-5650 CVE-2018-5747 CVE-2018-9058 CVE-2018-10685 CVE-2018-11496}
+	[stretch] - lrzip 0.631-1+deb9u1
+[01 Aug 2021] DLA-2724-1 condor - security update
+	{CVE-2019-18823}
+	[stretch] - condor 8.4.11~dfsg.1-1+deb9u1
+[31 Jul 2021] DLA-2723-1 linuxptp - security update
+	{CVE-2021-3570}
+	[stretch] - linuxptp 1.8-1+deb9u1
+[30 Jul 2021] DLA-2722-1 libsndfile - security update
+	{CVE-2021-3246}
+	[stretch] - libsndfile 1.0.27-3+deb9u2
+[26 Jul 2021] DLA-2721-1 drupal7 - security update
+	{CVE-2021-32610}
+	[stretch] - drupal7 7.52-2+deb9u16
+[26 Jul 2021] DLA-2720-1 aspell - security update
+	{CVE-2019-17544 CVE-2019-25051}
+	[stretch] - aspell 0.60.7~20110707-3+deb9u1
+[23 Jul 2021] DLA-2719-1 ruby-actionpack-page-caching - security update
+	{CVE-2020-8159}
+	[stretch] - ruby-actionpack-page-caching 1.0.2-4+deb9u1
+[23 Jul 2021] DLA-2718-1 intel-microcode - security update
+	{CVE-2020-24489 CVE-2020-24511 CVE-2020-24512 CVE-2020-24513}
+	[stretch] - intel-microcode 3.20210608.2~deb9u2
+[22 Jul 2021] DLA-2717-1 redis - security update
+	{CVE-2021-32761}
+	[stretch] - redis 3:3.2.6-3+deb9u5
+[22 Jul 2021] DLA-2716-1 pillow - security update
+	{CVE-2020-35653 CVE-2021-25290 CVE-2021-28676 CVE-2021-28677 CVE-2021-34552}
+	[stretch] - pillow 4.0.0-4+deb9u3
+[20 Jul 2021] DLA-2715-1 systemd - security update
+	{CVE-2021-33910}
+	[stretch] - systemd 232-25+deb9u13
+[20 Jul 2021] DLA-2714-1 linux-4.19 - security update
+	{CVE-2020-36311 CVE-2021-3609 CVE-2021-33909 CVE-2021-34693}
+	[stretch] - linux-4.19 4.19.194-3~deb9u1
+[20 Jul 2021] DLA-2713-1 linux - security update
+	{CVE-2021-3609 CVE-2021-21781 CVE-2021-33909 CVE-2021-34693}
+	[stretch] - linux 4.9.272-2
+[20 Jul 2021] DLA-2712-1 libjdom1-java - security update
+	{CVE-2021-33813}
+	[stretch] - libjdom1-java 1.1.3-1+deb9u1
+[19 Jul 2021] DLA-2711-1 thunderbird - security update
+	{CVE-2021-29969 CVE-2021-29970 CVE-2021-29976 CVE-2021-30547}
+	[stretch] - thunderbird 1:78.12.0-1~deb9u1
+[19 Jul 2021] DLA-2710-1 rabbitmq-server - security update
+	{CVE-2017-4965 CVE-2017-4966 CVE-2017-4967 CVE-2019-11281 CVE-2019-11287 CVE-2021-22116}
+	[stretch] - rabbitmq-server 3.6.6-1+deb9u1
+[15 Jul 2021] DLA-2709-1 firefox-esr - security update
+	{CVE-2021-29970 CVE-2021-29976 CVE-2021-30547}
+	[stretch] - firefox-esr 78.12.0esr-1~deb9u1
+[15 Jul 2021] DLA-2708-1 php7.0 - security update
+	{CVE-2019-18218 CVE-2020-7071 CVE-2021-21702 CVE-2021-21704 CVE-2021-21705}
+	[stretch] - php7.0 7.0.33-0+deb9u11
+[12 Jul 2021] DLA-2707-1 sogo - security update
+	{CVE-2021-33054}
+	[stretch] - sogo 3.2.6-2+deb9u1
+[09 Jul 2021] DLA-2706-1 apache2 - security update
+	{CVE-2020-1927 CVE-2020-1934 CVE-2020-35452 CVE-2021-26690 CVE-2021-26691 CVE-2021-30641 CVE-2021-31618}
+	[stretch] - apache2 2.4.25-3+deb9u10
+[07 Jul 2021] DLA-2705-1 scilab - security update
+	{CVE-2021-30485 CVE-2021-31229 CVE-2021-31347 CVE-2021-31348 CVE-2021-31598}
+	[stretch] - scilab 5.5.2-4+deb9u1
+[05 Jul 2021] DLA-2704-1 libxstream-java - security update
+	{CVE-2021-29505}
+	[stretch] - libxstream-java 1.4.11.1-1+deb9u3
+[03 Jul 2021] DLA-2702-1 djvulibre - security update
+	{CVE-2021-3630}
+	[stretch] - djvulibre 3.5.27.1-7+deb9u2
+[03 Jul 2021] DLA-2701-1 openexr - security update
+	{CVE-2020-16587 CVE-2021-3474 CVE-2021-3475 CVE-2021-3476 CVE-2021-3477 CVE-2021-3478 CVE-2021-3479 CVE-2021-3598 CVE-2021-20296 CVE-2021-23215 CVE-2021-26260}
+	[stretch] - openexr 2.2.0-11+deb9u3
+[01 Jul 2021] DLA-2700-1 htmldoc - security update
+	{CVE-2019-19630 CVE-2021-20308 CVE-2021-23158 CVE-2021-23165 CVE-2021-23180 CVE-2021-23191 CVE-2021-23206 CVE-2021-26252 CVE-2021-26259 CVE-2021-26948}
+	[stretch] - htmldoc 1.8.27-8+deb9u1
+[01 Jul 2021] DLA-2699-1 ipmitool - security update
+	{CVE-2020-5208}
+	[stretch] - ipmitool 1.8.18-3+deb9u1
+[01 Jul 2021] DLA-2698-1 node-bl - security update
+	{CVE-2020-8244}
+	[stretch] - node-bl 1.1.2-1+deb9u1
+[29 Jun 2021] DLA-2697-1 fluidsynth - security update
+	{CVE-2021-21417}
+	[stretch] - fluidsynth 1.1.6-4+deb9u1
+[29 Jun 2021] DLA-2696-1 libjdom2-java - security update
+	{CVE-2021-33813}
+	[stretch] - libjdom2-java 2.0.6-1+deb9u1
+[28 Jun 2021] DLA-2695-1 klibc - security update
+	{CVE-2021-31870 CVE-2021-31871 CVE-2021-31872 CVE-2021-31873}
+	[stretch] - klibc 2.0.4-9+deb9u1
+[28 Jun 2021] DLA-2694-1 tiff - security update
+	{CVE-2020-35523 CVE-2020-35524}
+	[stretch] - tiff 4.0.8-2+deb9u6
+[28 Jun 2021] DLA-2693-1 xmlbeans - security update
+	{CVE-2021-23926}
+	[stretch] - xmlbeans 2.6.0+dfsg-1+deb9u1
+[27 Jun 2021] DLA-2692-1 bluez - security update
+	{CVE-2020-26558 CVE-2021-0129}
+	[stretch] - bluez 5.43-2+deb9u4
+[25 Jun 2021] DLA-2691-1 libgcrypt20 - security update
+	{CVE-2021-40528}
+	[stretch] - libgcrypt20 1.7.6-2+deb9u4
+[22 Jun 2021] DLA-2690-1 linux-4.19 - security update
+	{CVE-2020-24586 CVE-2020-24587 CVE-2020-24588 CVE-2020-25670 CVE-2020-25671 CVE-2020-25672 CVE-2020-26139 CVE-2020-26147 CVE-2020-26558 CVE-2020-29374 CVE-2021-0129 CVE-2021-23133 CVE-2021-23134 CVE-2021-28688 CVE-2021-28964 CVE-2021-28971 CVE-2021-28972 CVE-2021-29154 CVE-2021-29155 CVE-2021-29264 CVE-2021-29647 CVE-2021-29650 CVE-2021-31829 CVE-2021-31916 CVE-2021-32399 CVE-2021-33034 CVE-2021-3483 CVE-2021-3506 CVE-2021-3564 CVE-2021-3573 CVE-2021-38208}
+	[stretch] - linux-4.19 4.19.194-1~deb9u1
+[22 Jun 2021] DLA-2689-1 linux - security update
+	{CVE-2020-24586 CVE-2020-24587 CVE-2020-24588 CVE-2020-25670 CVE-2020-25671 CVE-2020-25672 CVE-2020-26139 CVE-2020-26147 CVE-2020-26558 CVE-2020-29374 CVE-2020-36322 CVE-2021-0129 CVE-2021-0512 CVE-2021-20292 CVE-2021-23133 CVE-2021-23134 CVE-2021-28660 CVE-2021-28688 CVE-2021-28950 CVE-2021-28964 CVE-2021-28971 CVE-2021-29154 CVE-2021-29265 CVE-2021-29647 CVE-2021-29650 CVE-2021-30002 CVE-2021-31916 CVE-2021-32399 CVE-2021-33034 CVE-2021-3428 CVE-2021-3483 CVE-2021-3564 CVE-2021-3573 CVE-2021-38208}
+	[stretch] - linux 4.9.272-1
+[17 Jun 2021] DLA-2688-1 jetty9 - security update
+	{CVE-2021-28169}
+	[stretch] - jetty9 9.2.30-0+deb9u2
+[15 Jun 2021] DLA-2687-1 prosody - security update
+	{CVE-2021-32917 CVE-2021-32921}
+	[stretch] - prosody 0.9.12-2+deb9u3
+[15 Jun 2021] DLA-2686-1 python-urllib3 - security update
+	{CVE-2018-20060 CVE-2019-11236 CVE-2019-11324 CVE-2020-26137}
+	[stretch] - python-urllib3 1.19.1-1+deb9u1
+[14 Jun 2021] DLA-2685-1 squid3 - security update
+	{CVE-2021-28651 CVE-2021-28652 CVE-2021-31806 CVE-2021-31807 CVE-2021-31808 CVE-2021-33620}
+	[stretch] - squid3 3.5.23-5+deb9u7
+[10 Jun 2021] DLA-2684-1 lasso - security update
+	{CVE-2021-28091}
+	[stretch] - lasso 2.5.0-5+deb9u1
+[09 Jun 2021] DLA-2683-1 rxvt - security update
+	{CVE-2017-7483 CVE-2021-33477}
+	[stretch] - rxvt 1:2.7.10-7+deb9u2
+[09 Jun 2021] DLA-2682-1 mrxvt - security update
+	{CVE-2021-33477}
+	[stretch] - mrxvt 0.5.4-2+deb9u1
+[09 Jun 2021] DLA-2681-1 eterm - security update
+	{CVE-2021-33477}
+	[stretch] - eterm 0.9.6-5+deb9u1
+[07 Jun 2021] DLA-2680-1 nginx - security update
+	{CVE-2017-20005}
+	[stretch] - nginx 1.10.3-1+deb9u7
+[07 Jun 2021] DLA-2679-1 thunderbird - security update
+	{CVE-2021-29956 CVE-2021-29957 CVE-2021-29967}
+	[stretch] - thunderbird 1:78.11.0-1~deb9u1
+[06 Jun 2021] DLA-2678-1 ruby-nokogiri - security update
+	{CVE-2020-26247}
+	[stretch] - ruby-nokogiri 1.6.8.1-1+deb9u1
+[05 Jun 2021] DLA-2677-1 libwebp - security update
+	{CVE-2018-25009 CVE-2018-25010 CVE-2018-25011 CVE-2018-25012 CVE-2018-25013 CVE-2018-25014 CVE-2020-36328 CVE-2020-36329 CVE-2020-36330 CVE-2020-36331}
+	[stretch] - libwebp 0.5.2-1+deb9u1
+[05 Jun 2021] DLA-2676-1 python-django - security update
+	{CVE-2021-33203 CVE-2021-33571}
+	[stretch] - python-django 1:1.10.7-2+deb9u14
+[03 Jun 2021] DLA-2674-1 isc-dhcp - security update
+	{CVE-2021-25217}
+	[stretch] - isc-dhcp 4.3.5-3+deb9u2
+[03 Jun 2021] DLA-2673-1 firefox-esr - security update
+	{CVE-2021-29967}
+	[stretch] - firefox-esr 78.11.0esr-1~deb9u1
+[02 Jun 2021] DLA-2672-1 imagemagick - security update
+	{CVE-2020-27751 CVE-2021-20243 CVE-2021-20245 CVE-2021-20309 CVE-2021-20312 CVE-2021-20313}
+	[stretch] - imagemagick 8:6.9.7.4+dfsg-11+deb9u13
+[30 May 2021] DLA-2671-1 rxvt-unicode - security update
+	{CVE-2021-33477}
+	[stretch] - rxvt-unicode 9.22-1+deb9u1
+[30 May 2021] DLA-2670-1 nginx - security update
+	{CVE-2021-23017}
+	[stretch] - nginx 1.10.3-1+deb9u6
+[30 May 2021] DLA-2669-1 libxml2 - security update
+	{CVE-2021-3541}
+	[stretch] - libxml2 2.9.4+dfsg1-2.2+deb9u5
+[29 May 2021] DLA-2668-1 samba - security update
+	{CVE-2019-10218 CVE-2019-14833 CVE-2019-14847 CVE-2019-14861 CVE-2019-14870 CVE-2019-14902 CVE-2019-14907 CVE-2021-20254}
+	[stretch] - samba 2:4.5.16+dfsg-1+deb9u4
+[26 May 2021] DLA-2667-1 djvulibre - security update
+	{CVE-2019-15142 CVE-2019-15143 CVE-2019-15144 CVE-2019-15145 CVE-2019-18804 CVE-2021-3500 CVE-2021-32490 CVE-2021-32491 CVE-2021-32492 CVE-2021-32493}
+	[stretch] - djvulibre 3.5.27.1-7+deb9u1
+[24 May 2021] DLA-2666-1 libx11 - security update
+	{CVE-2021-31535}
+	[stretch] - libx11 2:1.6.4-3+deb9u4
+[23 May 2021] DLA-2665-1 ring - security update
+	{CVE-2021-21375}
+	[stretch] - ring 20161221.2.7bd7d91~dfsg1-1+deb9u1
+[17 May 2021] DLA-2664-1 curl - security update
+	{CVE-2021-22876}
+	[stretch] - curl 7.52.1-5+deb9u14
+[16 May 2021] DLA-2663-1 libimage-exiftool-perl - security update
+	{CVE-2021-22204}
+	[stretch] - libimage-exiftool-perl 10.40-1+deb9u1
+[15 May 2021] DLA-2662-1 postgresql-9.6 - security update
+	{CVE-2021-32027 CVE-2021-32028}
+	[stretch] - postgresql-9.6 9.6.22-0+deb9u1
+[14 May 2021] DLA-2661-1 jetty9 - security update
+	{CVE-2017-9735 CVE-2018-12536 CVE-2019-10241 CVE-2019-10247 CVE-2020-27216}
+	[stretch] - jetty9 9.2.30-0+deb9u1
+[13 May 2021] DLA-2660-1 libgetdata - security update
+	{CVE-2021-20204}
+	[stretch] - libgetdata 0.9.4-1+deb9u1
+[13 May 2021] DLA-2659-1 graphviz - security update
+	{CVE-2018-10196 CVE-2020-18032}
+	[stretch] - graphviz 2.38.0-17+deb9u1
+[13 May 2021] DLA-2658-1 redmine - security update
+	{CVE-2019-25026 CVE-2020-36306 CVE-2020-36307 CVE-2020-36308 CVE-2021-30163 CVE-2021-30164 CVE-2021-31863 CVE-2021-31864 CVE-2021-31865 CVE-2021-31866}
+	[stretch] - redmine 3.3.1-4+deb9u4
+[12 May 2021] DLA-2657-1 lz4 - security update
+	{CVE-2021-3520}
+	[stretch] - lz4 0.0~r131-2+deb9u1
+[12 May 2021] DLA-2656-1 hivex - security update
+	{CVE-2021-3504}
+	[stretch] - hivex 1.3.13-2+deb9u1
+[12 May 2021] DLA-2655-1 rails - security update
+	{CVE-2021-22885 CVE-2021-22904}
+	[stretch] - rails 2:4.2.7.1-1+deb9u5
+[12 May 2021] DLA-2654-1 composer - security update
+	{CVE-2021-29472}
+	[stretch] - composer 1.2.2-1+deb9u1
+[10 May 2021] DLA-2653-1 libxml2 - security update
+	{CVE-2021-3516 CVE-2021-3517 CVE-2021-3518 CVE-2021-3537}
+	[stretch] - libxml2 2.9.4+dfsg1-2.2+deb9u4
+[06 May 2021] DLA-2652-1 unbound1.9 - security update
+	{CVE-2019-25031 CVE-2019-25032 CVE-2019-25033 CVE-2019-25034 CVE-2019-25035 CVE-2019-25036 CVE-2019-25037 CVE-2019-25038 CVE-2019-25039 CVE-2019-25040 CVE-2019-25041 CVE-2019-25042}
+	[stretch] - unbound1.9 1.9.0-2+deb10u2~deb9u2
+[06 May 2021] DLA-2651-1 python-django - security update
+	{CVE-2021-31542}
+	[stretch] - python-django 1:1.10.7-2+deb9u13
+[05 May 2021] DLA-2650-1 exim4 - security update
+	{CVE-2020-28007 CVE-2020-28008 CVE-2020-28009 CVE-2020-28011 CVE-2020-28012 CVE-2020-28013 CVE-2020-28014 CVE-2020-28015 CVE-2020-28017 CVE-2020-28019 CVE-2020-28020 CVE-2020-28021 CVE-2020-28022 CVE-2020-28023 CVE-2020-28024 CVE-2020-28025 CVE-2020-28026}
+	[stretch] - exim4 4.89-2+deb9u8
+[04 May 2021] DLA-2649-1 cgal - security update
+	{CVE-2020-28601 CVE-2020-35633 CVE-2020-35634 CVE-2020-35635 CVE-2020-28636 CVE-2020-35628 CVE-2020-35636}
+	[stretch] - cgal 4.9-1+deb9u1
+[05 May 2021] DLA-2648-1 mediawiki - security update
+	{CVE-2021-20270 CVE-2021-27291 CVE-2021-30152 CVE-2021-30155 CVE-2021-30158 CVE-2021-30159}
+	[stretch] - mediawiki 1:1.27.7-1~deb9u8
+[04 May 2021] DLA-2647-1 bind9 - security update
+	{CVE-2021-25214 CVE-2021-25215 CVE-2021-25216}
+	[stretch] - bind9 1:9.10.3.dfsg.P4-12.3+deb9u9
+[03 May 2021] DLA-2646-1 subversion - security update
+	{CVE-2020-17525}
+	[stretch] - subversion 1.9.5-1+deb9u6
+[29 Apr 2021] DLA-2645-1 edk2 - security update
+	{CVE-2019-0161 CVE-2019-14558 CVE-2019-14559 CVE-2019-14562 CVE-2019-14563 CVE-2019-14575 CVE-2019-14584 CVE-2019-14586 CVE-2019-14587 CVE-2021-28210 CVE-2021-28211}
+	[stretch] - edk2 0~20161202.7bbe0b3e-1+deb9u2
+[27 Apr 2021] DLA-2641-1 gst-plugins-base1.0 - security update
+	{CVE-2021-3522}
+	[stretch] - gst-plugins-base1.0 1.10.4-1+deb9u2
+[26 Apr 2021] DLA-2640-1 gst-plugins-good1.0 - security update
+	{CVE-2021-3497}
+	[stretch] - gst-plugins-good1.0 1.10.4-1+deb9u1
+[25 Apr 2021] DLA-2639-1 opendmarc - security update
+	{CVE-2020-12460}
+	[stretch] - opendmarc 1.3.2-2+deb9u3
+[25 Apr 2021] DLA-2638-1 jackson-databind - security update
+	{CVE-2020-24616 CVE-2020-24750 CVE-2020-35490 CVE-2020-35491 CVE-2020-35728 CVE-2020-36179 CVE-2020-36180 CVE-2020-36181 CVE-2020-36182 CVE-2020-36183 CVE-2020-36184 CVE-2020-36185 CVE-2020-36186 CVE-2020-36187 CVE-2020-36188 CVE-2020-36189 CVE-2021-20190}
+	[stretch] - jackson-databind 2.8.6-1+deb9u9
+[23 Apr 2021] DLA-2637-1 drupal7 - security update
+	{CVE-2020-13672}
+	[stretch] - drupal7 7.52-2+deb9u15
+[23 Apr 2021] DLA-2636-1 pjproject - security update
+	{CVE-2021-21375}
+	[stretch] - pjproject 2.5.5~dfsg-6+deb9u2
+[23 Apr 2021] DLA-2635-1 libspring-java - security update
+	{CVE-2018-1270 CVE-2018-11039 CVE-2018-11040 CVE-2018-15756}
+	[stretch] - libspring-java 4.3.5-1+deb9u1
+[23 Apr 2021] DLA-2634-1 openjdk-8 - security update
+	{CVE-2021-2163}
+	[stretch] - openjdk-8 8u292-b10-0+deb9u1
+[23 Apr 2021] DLA-2633-1 firefox-esr - security update
+	{CVE-2021-23961 CVE-2021-23994 CVE-2021-23995 CVE-2021-23998 CVE-2021-23999 CVE-2021-24002 CVE-2021-29945 CVE-2021-29946}
+	[stretch] - firefox-esr 78.10.0esr-1~deb9u1
+[22 Apr 2021] DLA-2632-1 thunderbird - security update
+	{CVE-2021-23961 CVE-2021-23991 CVE-2021-23992 CVE-2021-23993 CVE-2021-23994 CVE-2021-23995 CVE-2021-23998 CVE-2021-23999 CVE-2021-24002 CVE-2021-29945 CVE-2021-29946 CVE-2021-29948 CVE-2021-29949}
+	[stretch] - thunderbird 1:78.10.0-1~deb9u1
+[21 Apr 2021] DLA-2631-1 zabbix - security update
+	{CVE-2019-15132 CVE-2020-15803}
+	[stretch] - zabbix 1:3.0.32+dfsg-0+deb9u1
+[21 Apr 2021] DLA-2630-1 wordpress - security update
+	{CVE-2021-29447 CVE-2021-29450}
+	[stretch] - wordpress 4.7.20+dfsg-1+deb9u1
+[18 Apr 2021] DLA-2629-1 libebml - security update
+	{CVE-2021-3405}
+	[stretch] - libebml 1.3.4-1+deb9u2
+[17 Apr 2021] DLA-2628-1 python2.7 - security update
+	{CVE-2019-16935 CVE-2021-23336}
+	[stretch] - python2.7 2.7.13-2+deb9u5
+[15 Apr 2021] DLA-2627-1 xorg-server - security update
+	{CVE-2021-3472}
+	[stretch] - xorg-server 2:1.19.2-1+deb9u8
+[14 Apr 2021] DLA-2626-1 clamav - security update
+	{CVE-2021-1405}
+	[stretch] - clamav 0.102.4+dfsg-0+deb9u2
+[14 Apr 2021] DLA-2625-1 courier-authlib - security update
+	{CVE-2021-28374}
+	[stretch] - courier-authlib 0.66.4-9+deb9u1
+[12 Apr 2021] DLA-2624-1 libpano13 - security update
+	{CVE-2021-20307}
+	[stretch] - libpano13 2.9.19+dfsg-2+deb9u1
+[10 Apr 2021] DLA-2623-1 qemu - security update
+	{CVE-2020-17380 CVE-2021-3392 CVE-2021-3409 CVE-2021-3416 CVE-2021-20203 CVE-2021-20255 CVE-2021-20257}
+	[stretch] - qemu 1:2.8+dfsg-6+deb9u14
+[09 Apr 2021] DLA-2622-1 python-django - security update
+	{CVE-2021-28658}
+	[stretch] - python-django 1:1.10.7-2+deb9u12
+[08 Apr 2021] DLA-2621-1 php-pear - security update
+	{CVE-2020-36193}
+	[stretch] - php-pear 1:1.10.1+submodules+notgz-9+deb9u3
+[06 Apr 2021] DLA-2620-1 python-bleach - security update
+	{CVE-2021-23980}
+	[stretch] - python-bleach 2.0-1+deb9u1
+[05 Apr 2021] DLA-2619-1 python3.5 - security update
+	{CVE-2021-3177 CVE-2021-3426 CVE-2021-23336}
+	[stretch] - python3.5 3.5.3-1+deb9u4
+[05 Apr 2021] DLA-2618-1 smarty3 - security update
+	{CVE-2018-13982 CVE-2018-16831 CVE-2021-26119 CVE-2021-26120}
+	[stretch] - smarty3 3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u2
+[04 Apr 2021] DLA-2617-1 php-nette - security update
+	{CVE-2020-15227}
+	[stretch] - php-nette 2.4-20160731-1+deb9u1
+[03 Apr 2021] DLA-2616-1 libxstream-java - security update
+	{CVE-2021-21341 CVE-2021-21342 CVE-2021-21343 CVE-2021-21344 CVE-2021-21345 CVE-2021-21346 CVE-2021-21347 CVE-2021-21348 CVE-2021-21349 CVE-2021-21350 CVE-2021-21351}
+	[stretch] - libxstream-java 1.4.11.1-1+deb9u2
+[02 Apr 2021] DLA-2615-1 spamassassin - security update
+	{CVE-2020-1946}
+	[stretch] - spamassassin 3.4.2-1~deb9u4
+[01 Apr 2021] DLA-2614-1 busybox - security update
+	{CVE-2021-28831}
+	[stretch] - busybox 1:1.22.0-19+deb9u2
+[31 Mar 2021] DLA-2613-1 underscore - security update
+	{CVE-2021-23358}
+	[stretch] - underscore 1.8.3~dfsg-1+deb9u1
+[31 Mar 2021] DLA-2612-1 leptonlib - security update
+	{CVE-2020-36277 CVE-2020-36278 CVE-2020-36279 CVE-2020-36281}
+	[stretch] - leptonlib 1.74.1-1+deb9u1
+[31 Mar 2021] DLA-2611-1 ldb - security update
+	{CVE-2020-27840 CVE-2021-20277}
+	[stretch] - ldb 2:1.1.27-1+deb9u2
+[29 Mar 2021] DLA-2610-1 linux-4.19 - security update
+	{CVE-2020-27170 CVE-2020-27171 CVE-2021-3348 CVE-2021-3428 CVE-2021-26930 CVE-2021-26931 CVE-2021-26932 CVE-2021-27363 CVE-2021-27364 CVE-2021-27365 CVE-2021-28038 CVE-2021-28660}
+	[stretch] - linux-4.19 4.19.181-1~deb9u1
+[26 Mar 2021] DLA-2609-1 thunderbird - security update
+	{CVE-2021-23981 CVE-2021-23982 CVE-2021-23984 CVE-2021-23987 CVE-2021-29950}
+	[stretch] - thunderbird 1:78.9.0-1~deb9u1
+[25 Mar 2021] DLA-2608-1 jquery - security update
+	{CVE-2020-11022 CVE-2020-11023}
+	[stretch] - jquery 3.1.1-2+deb9u2
+[25 Mar 2021] DLA-2607-1 firefox-esr - security update
+	{CVE-2021-23981 CVE-2021-23982 CVE-2021-23984 CVE-2021-23987 CVE-2021-29955}
+	[stretch] - firefox-esr 78.9.0esr-1~deb9u1
+[24 Mar 2021] DLA-2606-1 lxml - security update
+	{CVE-2021-28957}
+	[stretch] - lxml 3.7.1-1+deb9u4
+[22 Mar 2021] DLA-2605-1 mariadb-10.1 - security update
+	{CVE-2021-27928}
+	[stretch] - mariadb-10.1 10.1.48-0+deb9u2
+[22 Mar 2021] DLA-2604-1 dnsmasq - security update
+	{CVE-2020-25681 CVE-2020-25682 CVE-2020-25683 CVE-2020-25684 CVE-2020-25687}
+	[stretch] - dnsmasq 2.76-5+deb9u3
+[22 Mar 2021] DLA-2603-1 libmediainfo - security update
+	{CVE-2019-11372 CVE-2019-11373 CVE-2020-15395 CVE-2020-26797}
+	[stretch] - libmediainfo 0.7.91-1+deb9u1
+[22 Mar 2021] DLA-2602-1 imagemagick - security update
+	{CVE-2020-25666 CVE-2020-25675 CVE-2020-25676 CVE-2020-27754 CVE-2020-27757 CVE-2020-27758 CVE-2020-27759 CVE-2020-27761 CVE-2020-27762 CVE-2020-27764 CVE-2020-27766 CVE-2020-27767 CVE-2020-27768 CVE-2020-27769 CVE-2020-27770 CVE-2020-27771 CVE-2020-27772 CVE-2020-27774 CVE-2020-27775 CVE-2020-27776 CVE-2021-20176 CVE-2021-20241 CVE-2021-20244 CVE-2021-20246}
+	[stretch] - imagemagick 8:6.9.7.4+dfsg-11+deb9u12
+[20 Mar 2021] DLA-2601-1 cloud-init - security update
+	{CVE-2021-3429}
+	[stretch] - cloud-init 0.7.9-2+deb9u1
+[19 Mar 2021] DLA-2600-1 pygments - security update
+	{CVE-2021-27291}
+	[stretch] - pygments 2.2.0+dfsg-1+deb9u2
+[19 Mar 2021] DLA-2599-1 shibboleth-sp2 - security update
+	{CVE-2021-28963}
+	[stretch] - shibboleth-sp2 2.6.0+dfsg1-4+deb9u2
+[19 Mar 2021] DLA-2598-1 squid3 - security update
+	{CVE-2020-25097}
+	[stretch] - squid3 3.5.23-5+deb9u6
+[17 Mar 2021] DLA-2597-1 velocity-tools - security update
+	{CVE-2020-13959}
+	[stretch] - velocity-tools 2.0-6+deb9u1
+[17 Mar 2021] DLA-2596-1 shadow - security update
+	{CVE-2017-12424 CVE-2017-20002}
+	[stretch] - shadow 1:4.4-4.1+deb9u1
+[17 Mar 2021] DLA-2595-1 velocity - security update
+	{CVE-2020-13936}
+	[stretch] - velocity 1.7-5+deb9u1
+[15 Mar 2021] DLA-2594-1 tomcat8 - security update
+	{CVE-2021-24122 CVE-2021-25122 CVE-2021-25329}
+	[stretch] - tomcat8 8.5.54-0+deb9u6
+[13 Mar 2021] DLA-2592-1 golang-1.8 - security update
+	{CVE-2017-15041 CVE-2018-16873 CVE-2018-16874 CVE-2019-9741 CVE-2019-16276 CVE-2019-17596 CVE-2021-3114}
+	[stretch] - golang-1.8 1.8.1-1+deb9u3
+[13 Mar 2021] DLA-2591-1 golang-1.7 - security update
+	{CVE-2017-15041 CVE-2018-16873 CVE-2018-16874 CVE-2019-9741 CVE-2019-16276 CVE-2019-17596 CVE-2021-3114}
+	[stretch] - golang-1.7 1.7.4-2+deb9u3
+[12 Mar 2021] DLA-2590-1 pygments - security update
+	{CVE-2021-20270}
+	[stretch] - pygments 2.2.0+dfsg-1+deb9u1
+[12 Mar 2021] DLA-2589-1 mupdf - security update
+	{CVE-2020-26519 CVE-2021-3407}
+	[stretch] - mupdf 1.9a+ds1-4+deb9u6
+[09 Mar 2021] DLA-2588-1 zeromq3 - security update
+	{CVE-2021-20234 CVE-2021-20235}
+	[stretch] - zeromq3 4.2.1-4+deb9u4
+[09 Mar 2021] DLA-2587-1 privoxy - security update
+	{CVE-2021-20272 CVE-2021-20273 CVE-2021-20275 CVE-2021-20276}
+	[stretch] - privoxy 3.0.26-3+deb9u2
+[08 Mar 2021] DLA-2586-1 linux - security update
+	{CVE-2019-19318 CVE-2019-19813 CVE-2019-19816 CVE-2020-27815 CVE-2020-27825 CVE-2020-28374 CVE-2020-29568 CVE-2020-29569 CVE-2020-29660 CVE-2020-29661 CVE-2020-36158 CVE-2021-3178 CVE-2021-3347 CVE-2021-26930 CVE-2021-26931 CVE-2021-26932 CVE-2021-27363 CVE-2021-27364 CVE-2021-27365 CVE-2021-28038}
+	[stretch] - linux 4.9.258-1
+[08 Mar 2021] DLA-2585-1 libupnp - security update
+	{CVE-2020-13848}
+	[stretch] - libupnp 1:1.6.19+git20160116-1.2+deb9u1
+[07 Mar 2021] DLA-2584-1 libcaca - security update
+	{CVE-2021-3410}
+	[stretch] - libcaca 0.99.beta19-2.1~deb9u2
+[05 Mar 2021] DLA-2583-1 activemq - security update
+	{CVE-2017-15709 CVE-2018-11775 CVE-2019-0222 CVE-2021-26117}
+	[stretch] - activemq 5.14.3-3+deb9u2
+[05 Mar 2021] DLA-2582-1 mqtt-client - security update
+	{CVE-2019-0222}
+	[stretch] - mqtt-client 1.14-1+deb9u1
+[03 Mar 2021] DLA-2581-1 wpa - security update
+	{CVE-2021-27803}
+	[stretch] - wpa 2:2.4-1+deb9u9
+[03 Mar 2021] DLA-2580-1 adminer - security update
+	{CVE-2021-21311}
+	[stretch] - adminer 4.2.5-3+deb9u2
+[01 Mar 2021] DLA-2578-1 thunderbird - security update
+	{CVE-2021-23968 CVE-2021-23969 CVE-2021-23973 CVE-2021-23978}
+	[stretch] - thunderbird 1:78.8.0-1~deb9u1
+[26 Feb 2021] DLA-2577-1 python-pysaml2 - security update
+	{CVE-2017-1000433 CVE-2021-21239}
+	[stretch] - python-pysaml2 3.0.0-5+deb9u2
+[25 Feb 2021] DLA-2576-1 redis - security update
+	{CVE-2021-21309}
+	[stretch] - redis 3:3.2.6-3+deb9u4
+[25 Feb 2021] DLA-2575-1 firefox-esr - security update
+	{CVE-2021-23968 CVE-2021-23969 CVE-2021-23973 CVE-2021-23978}
+	[stretch] - firefox-esr 78.8.0esr-1~deb9u1
+[21 Feb 2021] DLA-2574-1 openldap - security update
+	{CVE-2021-27212}
+	[stretch] - openldap 2.4.44+dfsg-5+deb9u8
+[20 Feb 2021] DLA-2573-1 libzstd - security update
+	{CVE-2021-24031}
+	[stretch] - libzstd 1.1.2-1+deb9u1
+[20 Feb 2021] DLA-2572-1 wpa - security update
+	{CVE-2021-0326}
+	[stretch] - wpa 2:2.4-1+deb9u8
+[19 Feb 2021] DLA-2571-1 openvswitch - security update
+	{CVE-2015-8011 CVE-2017-9214 CVE-2018-17204 CVE-2018-17206 CVE-2020-27827 CVE-2020-35498}
+	[stretch] - openvswitch 2.6.10-0+deb9u1
+[20 Feb 2021] DLA-2570-1 screen - security update
+	{CVE-2021-26937}
+	[stretch] - screen 4.5.0-6+deb9u1
+[19 Feb 2021] DLA-2569-1 python-django - security update
+	{CVE-2021-23336}
+	[stretch] - python-django 1:1.10.7-2+deb9u11
+[19 Feb 2021] DLA-2568-1 bind9 - security update
+	{CVE-2020-8625}
+	[stretch] - bind9 1:9.10.3.dfsg.P4-12.3+deb9u8
+[18 Feb 2021] DLA-2567-1 unrar-free - security update
+	{CVE-2017-14120 CVE-2017-14121 CVE-2017-14122}
+	[stretch] - unrar-free 1:0.0.1+cvs20140707-1+deb9u1
+[18 Feb 2021] DLA-2566-1 libbsd - security update
+	{CVE-2019-20367}
+	[stretch] - libbsd 0.8.3-1+deb9u1
+[18 Feb 2021] DLA-2565-1 openssl1.0 - security update
+	{CVE-2021-23840 CVE-2021-23841}
+	[stretch] - openssl1.0 1.0.2u-1~deb9u4
+[18 Feb 2021] DLA-2564-1 php-horde-text-filter - security update
+	{CVE-2021-26929}
+	[stretch] - php-horde-text-filter 2.3.5-1+deb9u1
+[18 Feb 2021] DLA-2563-1 openssl - security update
+	{CVE-2021-23840 CVE-2021-23841}
+	[stretch] - openssl 1.1.0l-1~deb9u3
+[18 Feb 2021] DLA-2562-1 mumble - security update
+	{CVE-2021-27229}
+	[stretch] - mumble 1.2.18-1+deb9u2
+[17 Feb 2021] DLA-2561-1 ruby-mechanize - security update
+	{CVE-2021-21289}
+	[stretch] - ruby-mechanize 2.7.5-1+deb9u1
+[16 Feb 2021] DLA-2560-1 qemu - security update
+	{CVE-2020-15469 CVE-2020-15859 CVE-2020-25084 CVE-2020-28916 CVE-2020-29130 CVE-2020-29443 CVE-2021-20181 CVE-2021-20221}
+	[stretch] - qemu 1:2.8+dfsg-6+deb9u13
+[15 Feb 2021] DLA-2559-1 busybox - security update
+	{CVE-2011-5325 CVE-2015-9261 CVE-2016-2147 CVE-2016-2148 CVE-2017-15873 CVE-2017-16544 CVE-2018-1000517}
+	[stretch] - busybox 1:1.22.0-19+deb9u1
+[14 Feb 2021] DLA-2558-1 xterm - security update
+	{CVE-2021-27135}
+	[stretch] - xterm 327-2+deb9u1
+[12 Feb 2021] DLA-2557-1 linux-4.19 - security update
+	{CVE-2020-27815 CVE-2020-27825 CVE-2020-27830 CVE-2020-28374 CVE-2020-29568 CVE-2020-29569 CVE-2020-29660 CVE-2020-29661 CVE-2020-36158 CVE-2021-3347 CVE-2021-20177}
+	[stretch] - linux-4.19 4.19.171-2~deb9u1
+[12 Feb 2021] DLA-2556-1 unbound1.9 - security update
+	{CVE-2020-12662 CVE-2020-12663 CVE-2020-28935}
+	[stretch] - unbound1.9 1.9.0-2+deb10u2~deb9u1
+[11 Feb 2021] DLA-2555-1 netty - security update
+	{CVE-2021-21290}
+	[stretch] - netty 1:4.1.7-2+deb9u3
+[11 Feb 2021] DLA-2554-1 firejail - security update
+	{CVE-2021-26910}
+	[stretch] - firejail 0.9.44.8-2+deb9u2
+[09 Feb 2021] DLA-2553-1 xcftools - security update
+	{CVE-2019-5086 CVE-2019-5087}
+	[stretch] - xcftools 1.0.7-6+deb9u1
+[09 Feb 2021] DLA-2552-1 connman - security update
+	{CVE-2021-26675 CVE-2021-26676}
+	[stretch] - connman 1.33-3+deb9u2
+[09 Feb 2021] DLA-2551-1 slirp - security update
+	{CVE-2020-7039 CVE-2020-8608}
+	[stretch] - slirp 1:1.0.17-8+deb9u1
+[09 Feb 2021] DLA-2550-1 openjpeg2 - security update
+	{CVE-2020-27814 CVE-2020-27823 CVE-2020-27824 CVE-2020-27841 CVE-2020-27845}
+	[stretch] - openjpeg2 2.1.2-1.1+deb9u6
+[08 Feb 2021] DLA-2549-1 gdisk - security update
+	{CVE-2020-0256 CVE-2021-0308}
+	[stretch] - gdisk 1.0.1-1+deb9u1
+[07 Feb 2021] DLA-2548-1 privoxy - security update
+	{CVE-2020-35502 CVE-2021-20209 CVE-2021-20210 CVE-2021-20211 CVE-2021-20212 CVE-2021-20213 CVE-2021-20215 CVE-2021-20216 CVE-2021-20217}
+	[stretch] - privoxy 3.0.26-3+deb9u1
+[06 Feb 2021] DLA-2547-1 wireshark - security update
+	{CVE-2019-12295 CVE-2019-13619 CVE-2019-16319 CVE-2019-19553 CVE-2020-7045 CVE-2020-9428 CVE-2020-9430 CVE-2020-9431 CVE-2020-11647 CVE-2020-13164 CVE-2020-15466 CVE-2020-25862 CVE-2020-25863 CVE-2020-26418 CVE-2020-26421 CVE-2020-26575 CVE-2020-28030}
+	[stretch] - wireshark 2.6.20-0+deb9u1
+[06 Feb 2021] DLA-2546-1 intel-microcode - security update
+	{CVE-2020-8695 CVE-2020-8696 CVE-2020-8698}
+	[stretch] - intel-microcode 3.20201118.1~deb9u1
+[03 Feb 2021] DLA-2545-1 open-build-service - security update
+	{CVE-2020-8020 CVE-2020-8021}
+	[stretch] - open-build-service 2.7.1-10+deb9u1
+[03 Feb 2021] DLA-2544-1 openldap - security update
+	{CVE-2020-36221 CVE-2020-36222 CVE-2020-36223 CVE-2020-36224 CVE-2020-36225 CVE-2020-36226 CVE-2020-36227 CVE-2020-36228 CVE-2020-36229 CVE-2020-36230}
+	[stretch] - openldap 2.4.44+dfsg-5+deb9u7
+[02 Feb 2021] DLA-2541-1 thunderbird - security update
+	{CVE-2020-15685 CVE-2020-16044 CVE-2020-26976 CVE-2021-23953 CVE-2021-23954 CVE-2021-23960 CVE-2021-23964}
+	[stretch] - thunderbird 1:78.7.0-1~deb9u1
+[01 Feb 2021] DLA-2540-1 python-django - security update
+	{CVE-2021-3281}
+	[stretch] - python-django 1:1.10.7-2+deb9u10
+[02 Feb 2021] DLA-2539-1 firefox-esr - security update
+	{CVE-2020-26976 CVE-2021-23953 CVE-2021-23954 CVE-2021-23960 CVE-2021-23964}
+	[stretch] - firefox-esr 78.7.0esr-1~deb9u1
+[31 Jan 2021] DLA-2538-1 mariadb-10.1 - security update
+	{CVE-2020-14765 CVE-2020-14812}
+	[stretch] - mariadb-10.1 10.1.48-0+deb9u1
+[31 Jan 2021] DLA-2537-1 ffmpeg - security update
+	{CVE-2019-17539 CVE-2020-35965}
+	[stretch] - ffmpeg 7:3.2.15-0+deb9u2
+[30 Jan 2021] DLA-2536-1 libsdl2 - security update
+	{CVE-2019-7575 CVE-2019-7577 CVE-2019-7578 CVE-2019-7635 CVE-2019-7636 CVE-2019-7638 CVE-2019-13616 CVE-2020-14409 CVE-2020-14410}
+	[stretch] - libsdl2 2.0.5+dfsg1-2+deb9u1
+[27 Jan 2021] DLA-2535-1 ansible - security update
+	{CVE-2017-7481 CVE-2019-10156 CVE-2019-14846 CVE-2019-14904}
+	[stretch] - ansible 2.2.1.0-2+deb9u2
+[26 Jan 2021] DLA-2534-1 sudo - security update
+	{CVE-2021-3156}
+	[stretch] - sudo 1.8.19p1-2.1+deb9u3
+[25 Jan 2021] DLA-2533-1 crmsh - security update
+	{CVE-2020-35459}
+	[stretch] - crmsh 2.3.2-4+deb9u1
+[24 Jan 2021] DLA-2531-1 python-bottle - security update
+	{CVE-2020-28473}
+	[stretch] - python-bottle 0.12.13-1+deb9u1
+[21 Jan 2021] DLA-2530-1 drupal7 - security update
+	{CVE-2020-36193}
+	[stretch] - drupal7 7.52-2+deb9u14
+[21 Jan 2021] DLA-2529-1 mutt - security update
+	{CVE-2021-3181}
+	[stretch] - mutt 1.7.2-1+deb9u5
+[19 Jan 2021] DLA-2528-1 gst-plugins-bad1.0 - security update
+	{CVE-2021-3185}
+	[stretch] - gst-plugins-bad1.0 1.10.4-1+deb9u1
+[18 Jan 2021] DLA-2527-1 snapd - security update
+	{CVE-2019-11840}
+	[stretch] - snapd 2.21-2+deb9u1
+[15 Jan 2021] DLA-2526-1 ruby-redcarpet - security update
+	{CVE-2020-26298}
+	[stretch] - ruby-redcarpet 3.3.4-2+deb9u1
+[15 Jan 2021] DLA-2525-1 wavpack - security update
+	{CVE-2018-19840 CVE-2018-19841 CVE-2019-11498 CVE-2019-1010315 CVE-2019-1010317 CVE-2019-1010319 CVE-2020-35738}
+	[stretch] - wavpack 5.0.0-2+deb9u3
+[13 Jan 2021] DLA-2524-1 spice-vdagent - security update
+	{CVE-2017-15108 CVE-2020-25650 CVE-2020-25651 CVE-2020-25652 CVE-2020-25653}
+	[stretch] - spice-vdagent 0.17.0-1+deb9u1
+[12 Jan 2021] DLA-2523-1 imagemagick - security update
+	{CVE-2017-14528 CVE-2020-19667 CVE-2020-25665 CVE-2020-25674 CVE-2020-27560 CVE-2020-27750 CVE-2020-27760 CVE-2020-27763 CVE-2020-27765 CVE-2020-27773 CVE-2020-29599}
+	[stretch] - imagemagick 8:6.9.7.4+dfsg-11+deb9u11
+[12 Jan 2021] DLA-2522-1 coturn - security update
+	{CVE-2020-26262}
+	[stretch] - coturn 4.5.0.5-1+deb9u3
+[08 Jan 2021] DLA-2521-1 firefox-esr - security update
+	{CVE-2020-16044}
+	[stretch] - firefox-esr 78.6.1esr-1~deb9u1
+[07 Jan 2021] DLA-2520-1 golang-websocket - security update
+	{CVE-2020-27813}
+	[stretch] - golang-websocket 1.1.0-1+deb9u1
+[06 Jan 2021] DLA-2519-1 pacemaker - security update
+	{CVE-2018-16877 CVE-2018-16878 CVE-2020-25654}
+	[stretch] - pacemaker 1.1.24-0+deb9u1
+[06 Jan 2021] DLA-2518-1 cairo - security update
+	{CVE-2020-35492}
+	[stretch] - cairo 1.14.8-1+deb9u1
+[05 Jan 2021] DLA-2517-1 dovecot - security update
+	{CVE-2020-24386 CVE-2020-25275}
+	[stretch] - dovecot 1:2.2.27-3+deb9u7
+[04 Jan 2021] DLA-2516-1 gssproxy - security update
+	{CVE-2020-12658}
+	[stretch] - gssproxy 0.5.1-2+deb9u1
+[04 Jan 2021] DLA-2515-1 csync2 - security update
+	{CVE-2019-15523}
+	[stretch] - csync2 2.0-8-g175a01c-4+deb9u2
+[04 Jan 2021] DLA-2514-1 flac - security update
+	{CVE-2017-6888 CVE-2020-0499}
+	[stretch] - flac 1.3.2-2+deb9u1
+[04 Jan 2021] DLA-2513-1 p11-kit - security update
+	{CVE-2020-29361 CVE-2020-29362}
+	[stretch] - p11-kit 0.23.3-2+deb9u1
+[03 Jan 2021] DLA-2512-1 libhibernate3-java - security update
+	{CVE-2020-25638}
+	[stretch] - libhibernate3-java 3.6.10.Final-6+deb9u1
+[30 Dec 2020] DLA-2511-1 highlight.js - security update
+	{CVE-2020-26237}
+	[stretch] - highlight.js 8.2+ds-5+deb9u1
+[28 Dec 2020] DLA-2508-1 roundcube - security update
+	{CVE-2020-35730}
+	[stretch] - roundcube 1.2.3+dfsg.1-4+deb9u8
+[31 Dec 2020] DLA-2507-1 libxstream-java - security update
+	{CVE-2020-26258 CVE-2020-26259}
+	[stretch] - libxstream-java 1.4.11.1-1+deb9u1
+[23 Dec 2020] DLA-2506-1 awstats - security update
+	{CVE-2020-29600 CVE-2020-35176}
+	[stretch] - awstats 7.6+dfsg-1+deb9u2
+[23 Dec 2020] DLA-2505-1 spip - security update
+	{CVE-2020-28984}
+	[stretch] - spip 3.1.4-4~deb9u4
+[22 Dec 2020] DLA-2504-1 mediawiki - security update
+	{CVE-2020-15005 CVE-2020-35477 CVE-2020-35479 CVE-2020-35480}
+	[stretch] - mediawiki 1:1.27.7-1~deb9u7
+[21 Dec 2020] DLA-2503-1 node-ini - security update
+	{CVE-2020-7788}
+	[stretch] - node-ini 1.1.0-1+deb9u1
+[20 Dec 2020] DLA-2502-1 postsrsd - security update
+	{CVE-2020-35573}
+	[stretch] - postsrsd 1.4-1+deb9u1
+[20 Dec 2020] DLA-2501-1 influxdb - security update
+	{CVE-2019-20933}
+	[stretch] - influxdb 1.1.1+dfsg1-4+deb9u1
+[18 Dec 2020] DLA-2500-1 curl - security update
+	{CVE-2020-8284 CVE-2020-8285 CVE-2020-8286}
+	[stretch] - curl 7.52.1-5+deb9u13
+[17 Dec 2020] DLA-2499-1 sympa - security update
+	{CVE-2020-29668}
+	[stretch] - sympa 6.2.16~dfsg-3+deb9u5
+[17 Dec 2020] DLA-2498-1 xerces-c - security update
+	{CVE-2018-1311}
+	[stretch] - xerces-c 3.1.4+debian-2+deb9u2
+[17 Dec 2020] DLA-2497-1 thunderbird - security update
+	{CVE-2020-16042 CVE-2020-26971 CVE-2020-26973 CVE-2020-26974 CVE-2020-26978 CVE-2020-35111 CVE-2020-35113}
+	[stretch] - thunderbird 1:78.6.0-1~deb9u1
+[16 Dec 2020] DLA-2496-1 firefox-esr - security update
+	{CVE-2020-16042 CVE-2020-26971 CVE-2020-26973 CVE-2020-26974 CVE-2020-26978 CVE-2020-35111 CVE-2020-35113}
+	[stretch] - firefox-esr 78.6.0esr-1~deb9u1
+[16 Dec 2020] DLA-2495-1 tomcat8 - security update
+	{CVE-2020-17527}
+	[stretch] - tomcat8 8.5.54-0+deb9u5
+[14 Dec 2020] DLA-2494-1 linux - security update
+	{CVE-2020-0427 CVE-2020-8694 CVE-2020-14351 CVE-2020-25645 CVE-2020-25656 CVE-2020-25668 CVE-2020-25669 CVE-2020-25704 CVE-2020-25705 CVE-2020-27673 CVE-2020-27675 CVE-2020-28974}
+	[stretch] - linux 4.9.246-1
+[14 Dec 2020] DLA-2493-1 openssl1.0 - security update
+	{CVE-2020-1971}
+	[stretch] - openssl1.0 1.0.2u-1~deb9u3
+[14 Dec 2020] DLA-2492-1 openssl - security update
+	{CVE-2020-1971}
+	[stretch] - openssl 1.1.0l-1~deb9u2
+[13 Dec 2020] DLA-2491-1 openexr - security update
+	{CVE-2020-16588 CVE-2020-16589}
+	[stretch] - openexr 2.2.0-11+deb9u2
+[10 Dec 2020] DLA-2490-1 x11vnc - security update
+	{CVE-2020-29074}
+	[stretch] - x11vnc 0.9.13-2+deb9u2
+[10 Dec 2020] DLA-2489-1 minidlna - security update
+	{CVE-2020-12695 CVE-2020-28926}
+	[stretch] - minidlna 1.1.6+dfsg-1+deb9u1
+[10 Dec 2020] DLA-2340-2 sqlite3 - regression update
+	{CVE-2019-20218}
+	[stretch] - sqlite3 3.16.2-5+deb9u3
+[10 Dec 2020] DLA-2488-1 python-apt - security update
+	{CVE-2020-27351}
+	[stretch] - python-apt 1.4.2
+[10 Dec 2020] DLA-2487-1 apt - security update
+	{CVE-2020-27350}
+	[stretch] - apt 1.4.11
+[09 Dec 2020] DLA-2486-1 xorg-server - security update
+	{CVE-2020-14360 CVE-2020-25712}
+	[stretch] - xorg-server 2:1.19.2-1+deb9u7
+[09 Dec 2020] DLA-2485-1 golang-golang-x-net-dev - security update
+	{CVE-2019-9512 CVE-2019-9514}
+	[stretch] - golang-golang-x-net-dev 1:0.0+git20161013.8b4af36+dfsg-3+deb9u1
+[05 Dec 2020] DLA-2483-1 linux-4.19 - security update
+	{CVE-2019-19039 CVE-2019-19377 CVE-2019-19770 CVE-2019-19816 CVE-2020-0423 CVE-2020-4788 CVE-2020-8694 CVE-2020-14351 CVE-2020-25656 CVE-2020-25668 CVE-2020-25669 CVE-2020-25704 CVE-2020-25705 CVE-2020-27673 CVE-2020-27675 CVE-2020-27777 CVE-2020-28941 CVE-2020-28974}
+	[stretch] - linux-4.19 4.19.160-2~deb9u1
+[04 Dec 2020] DLA-2481-1 openldap - security update
+	{CVE-2020-25709 CVE-2020-25710}
+	[stretch] - openldap 2.4.44+dfsg-5+deb9u6
+[04 Dec 2020] DLA-2480-1 salt - security update
+	{CVE-2020-16846 CVE-2020-17490 CVE-2020-25592}
+	[stretch] - salt 2016.11.2+ds-1+deb9u6
+[04 Dec 2020] DLA-2479-1 thunderbird - security update
+	{CVE-2020-26970}
+	[stretch] - thunderbird 1:78.5.1-1~deb9u1
+[02 Dec 2020] DLA-2478-1 postgresql-9.6 - security update
+	{CVE-2020-25694 CVE-2020-25695 CVE-2020-25696}
+	[stretch] - postgresql-9.6 9.6.20-0+deb9u1
+[02 Dec 2020] DLA-2477-1 jupyter-notebook - security update
+	{CVE-2020-26215}
+	[stretch] - jupyter-notebook 4.2.3-4+deb9u2
+[01 Dec 2020] DLA-2476-1 brotli - security update
+	{CVE-2020-8927}
+	[stretch] - brotli 0.5.2+dfsg-2+deb9u1
+[01 Dec 2020] DLA-2475-1 pdfresurrect - security update
+	{CVE-2019-14934 CVE-2020-20740}
+	[stretch] - pdfresurrect 0.12-6+deb9u1
+[01 Dec 2020] DLA-2474-1 musl - security update
+	{CVE-2020-28928}
+	[stretch] - musl 1.1.16-3+deb9u1
+[30 Nov 2020] DLA-2473-1 vips - security update
+	{CVE-2020-20739}
+	[stretch] - vips 8.4.5-1+deb9u2
+[30 Nov 2020] DLA-2472-1 mutt - security update
+	{CVE-2020-28896}
+	[stretch] - mutt 1.7.2-1+deb9u4
+[30 Nov 2020] DLA-2471-1 libxstream-java - security update
+	{CVE-2020-26217}
+	[stretch] - libxstream-java 1.4.9-2+deb9u1
+[30 Nov 2020] DLA-2470-1 zsh - security update
+	{CVE-2017-18206 CVE-2018-0502 CVE-2018-1071 CVE-2018-1083 CVE-2018-1100 CVE-2018-13259 CVE-2019-20044}
+	[stretch] - zsh 5.3.1-4+deb9u1
+[29 Nov 2020] DLA-2469-1 qemu - security update
+	{CVE-2020-25085 CVE-2020-25624 CVE-2020-25625 CVE-2020-25723 CVE-2020-27617}
+	[stretch] - qemu 1:2.8+dfsg-6+deb9u12
+[29 Nov 2020] DLA-2468-1 tcpflow - security update
+	{CVE-2018-14938}
+	[stretch] - tcpflow 1.4.4+repack1-3+deb8u1
+[26 Nov 2020] DLA-2467-1 lxml - security update
+	{CVE-2018-19787 CVE-2020-27783}
+	[stretch] - lxml 3.7.1-1+deb9u1
+[26 Nov 2020] DLA-2466-1 drupal7 - security update
+	{CVE-2020-28948 CVE-2020-28949}
+	[stretch] - drupal7 7.52-2+deb9u13
+[23 Nov 2020] DLA-2465-1 php-pear - security update
+	{CVE-2020-28948 CVE-2020-28949}
+	[stretch] - php-pear 1:1.10.1+submodules+notgz-9+deb9u2
+[23 Nov 2020] DLA-2464-1 thunderbird - security update
+	{CVE-2020-16012 CVE-2020-26951 CVE-2020-26953 CVE-2020-26956 CVE-2020-26958 CVE-2020-26959 CVE-2020-26960 CVE-2020-26961 CVE-2020-26965 CVE-2020-26968}
+	[stretch] - thunderbird 1:78.5.0-1~deb9u1
+[22 Nov 2020] DLA-2463-1 samba - security update
+	{CVE-2020-1472 CVE-2020-10704 CVE-2020-10730 CVE-2020-10745 CVE-2020-10760 CVE-2020-14303 CVE-2020-14318 CVE-2020-14323 CVE-2020-14383}
+	[stretch] - samba 2:4.5.16+dfsg-1+deb9u3
+[23 Nov 2020] DLA-2462-1 cimg - security update
+	{CVE-2020-25693}
+	[stretch] - cimg 1.7.9+dfsg-1+deb9u2
+[21 Nov 2020] DLA-2461-1 zabbix - security update
+	{CVE-2016-10742 CVE-2020-11800}
+	[stretch] - zabbix 1:3.0.31+dfsg-0+deb9u1
+[21 Nov 2020] DLA-2460-1 golang-1.8 - security update
+	{CVE-2020-15586 CVE-2020-16845 CVE-2020-28367}
+	[stretch] - golang-1.8 1.8.1-1+deb9u2
+[21 Nov 2020] DLA-2459-1 golang-1.7 - security update
+	{CVE-2020-15586 CVE-2020-16845}
+	[stretch] - golang-1.7 1.7.4-2+deb9u2
+[19 Nov 2020] DLA-2458-1 drupal7 - security update
+	{CVE-2020-13666 CVE-2020-13671}
+	[stretch] - drupal7 7.52-2+deb9u12
+[19 Nov 2020] DLA-2457-1 firefox-esr - security update
+	{CVE-2020-16012 CVE-2020-26951 CVE-2020-26953 CVE-2020-26956 CVE-2020-26958 CVE-2020-26959 CVE-2020-26960 CVE-2020-26961 CVE-2020-26965 CVE-2020-26968}
+	[stretch] - firefox-esr 78.5.0esr-1~deb9u1
+[18 Nov 2020] DLA-2456-1 python3.5 - security update
+	{CVE-2019-20907 CVE-2020-26116}
+	[stretch] - python3.5 3.5.3-1+deb9u3
+[19 Nov 2020] DLA-2455-1 packer - security update
+	{CVE-2020-9283}
+	[stretch] - packer 0.10.2+dfsg-6+deb9u1
+[19 Nov 2020] DLA-2454-1 rclone - security update
+	{CVE-2019-11840}
+	[stretch] - rclone 1.35-1+deb8u1
+[17 Nov 2020] DLA-2453-1 restic - security update
+	{CVE-2020-9283}
+	[stretch] - restic 0.3.3-1+deb9u1
+[15 Nov 2020] DLA-2451-1 libvncserver - security update
+	{CVE-2020-25708}
+	[stretch] - libvncserver 0.9.11+dfsg-1.3~deb9u6
+[13 Nov 2020] DLA-2450-1 libproxy - security update
+	{CVE-2020-26154}
+	[stretch] - libproxy 0.4.14-2+deb9u2
+[13 Nov 2020] DLA-2449-1 thunderbird - security update
+	{CVE-2020-26950}
+	[stretch] - thunderbird 1:78.4.2-1~deb9u1
+[11 Nov 2020] DLA-2448-1 firefox-esr - security update
+	{CVE-2020-26950}
+	[stretch] - firefox-esr 78.4.1esr-1~deb9u1
+[10 Nov 2020] DLA-2446-1 moin - security update
+	{CVE-2020-15275 CVE-2020-25074}
+	[stretch] - moin 1.9.9-1+deb9u2
+[10 Nov 2020] DLA-2445-1 libmaxminddb - security update
+	{CVE-2020-28241}
+	[stretch] - libmaxminddb 1.2.0-1+deb9u1
+[10 Nov 2020] DLA-2444-1 tcpdump - security update
+	{CVE-2020-8037}
+	[stretch] - tcpdump 4.9.3-1~deb9u2
+[10 Nov 2020] DLA-2443-1 zeromq3 - security update
+	{CVE-2020-15166}
+	[stretch] - zeromq3 4.2.1-4+deb9u3
+[10 Nov 2020] DLA-2442-1 obfs4proxy - security update
+	{CVE-2019-11840}
+	[stretch] - obfs4proxy 0.0.7-1+deb8u1
+[09 Nov 2020] DLA-2441-1 sympa - security update
+	{CVE-2018-1000671}
+	[stretch] - sympa 6.2.16~dfsg-3+deb9u4
+[08 Nov 2020] DLA-2440-1 poppler - security update
+	{CVE-2017-14926 CVE-2017-14928 CVE-2018-19058 CVE-2018-20650 CVE-2018-20662 CVE-2019-7310 CVE-2019-9959 CVE-2019-10018 CVE-2019-14494}
+	[stretch] - poppler 0.48.0-2+deb9u4
+[07 Nov 2020] DLA-2439-1 libexif - security update
+	{CVE-2020-0452}
+	[stretch] - libexif 0.6.21-2+deb9u5
+[07 Nov 2020] DLA-2438-1 raptor2 - security update
+	{CVE-2017-18926}
+	[stretch] - raptor2 2.0.14-1+deb9u1
+[07 Nov 2020] DLA-2437-1 krb5 - security update
+	{CVE-2020-28196}
+	[stretch] - krb5 1.15-1+deb9u2
+[06 Nov 2020] DLA-2436-1 sddm - security update
+	{CVE-2020-28049}
+	[stretch] - sddm 0.14.0-4+deb9u2
+[05 Nov 2020] DLA-2435-1 guacamole-server - security update
+	{CVE-2020-9497 CVE-2020-9498}
+	[stretch] - guacamole-server 0.9.9-2+deb9u1
+[05 Nov 2020] DLA-2434-1 gdm3 - security update
+	{CVE-2020-16125}
+	[stretch] - gdm3 3.22.3-3+deb9u3
+[05 Nov 2020] DLA-2433-1 bouncycastle - security update
+	{CVE-2020-26939}
+	[stretch] - bouncycastle 1.56-1+deb9u3
+[04 Nov 2020] DLA-2432-1 jupyter-notebook - security update
+	{CVE-2018-8768 CVE-2018-19351 CVE-2018-21030}
+	[stretch] - jupyter-notebook 4.2.3-4+deb9u1
+[03 Nov 2020] DLA-2431-1 libonig - security update
+	{CVE-2019-13224 CVE-2019-16163 CVE-2019-19012 CVE-2019-19203 CVE-2019-19204 CVE-2019-19246}
+	[stretch] - libonig 6.1.3-2+deb9u1
+[03 Nov 2020] DLA-2430-1 blueman - security update
+	{CVE-2020-15238}
+	[stretch] - blueman 2.0.4-1+deb9u1
+[03 Nov 2020] DLA-2429-1 wordpress - security update
+	{CVE-2020-28032 CVE-2020-28033 CVE-2020-28034 CVE-2020-28035 CVE-2020-28036 CVE-2020-28037 CVE-2020-28038 CVE-2020-28039 CVE-2020-28040}
+	[stretch] - wordpress 4.7.19+dfsg-1+deb9u1
+[01 Nov 2020] DLA-2428-1 spice-gtk - security update
+	{CVE-2020-14355}
+	[stretch] - spice-gtk 0.33-3.3+deb9u2
+[01 Nov 2020] DLA-2427-1 spice - security update
+	{CVE-2020-14355}
+	[stretch] - spice 0.12.8-2.1+deb9u4
+[01 Nov 2020] DLA-2426-1 junit4 - security update
+	{CVE-2020-15250}
+	[stretch] - junit4 4.12-4+deb9u1
+[01 Nov 2020] DLA-2425-1 openldap - security update
+	{CVE-2020-25692}
+	[stretch] - openldap 2.4.44+dfsg-5+deb9u5
+[31 Oct 2020] DLA-2423-1 wireshark - security update
+	{CVE-2019-10894 CVE-2019-10895 CVE-2019-10896 CVE-2019-10899 CVE-2019-10901 CVE-2019-10903 CVE-2019-12295}
+	[stretch] - wireshark 2.6.8-1.1~deb9u1
+[31 Oct 2020] DLA-2422-1 qtsvg-opensource-src - security update
+	{CVE-2018-19869}
+	[stretch] - qtsvg-opensource-src 5.7.1~20161021-2.1
+[30 Oct 2020] DLA-2421-1 cimg - security update
+	{CVE-2018-7588 CVE-2018-7589 CVE-2018-7637 CVE-2018-7638 CVE-2018-7639 CVE-2018-7640 CVE-2018-7641 CVE-2019-1010174}
+	[stretch] - cimg 1.7.9+dfsg-1+deb9u1
+[29 Oct 2020] DLA-2420-1 linux - security update
+	{CVE-2019-9445 CVE-2019-19073 CVE-2019-19074 CVE-2019-19448 CVE-2020-12351 CVE-2020-12352 CVE-2020-12655 CVE-2020-12771 CVE-2020-12888 CVE-2020-14305 CVE-2020-14314 CVE-2020-14331 CVE-2020-14356 CVE-2020-14386 CVE-2020-14390 CVE-2020-15393 CVE-2020-16166 CVE-2020-24490 CVE-2020-25211 CVE-2020-25212 CVE-2020-25220 CVE-2020-25284 CVE-2020-25285 CVE-2020-25641 CVE-2020-25643 CVE-2020-26088}
+	[stretch] - linux 4.9.240-1
+[29 Oct 2020] DLA-2419-1 dompurify.js - security update
+	{CVE-2019-16728 CVE-2020-26870}
+	[stretch] - dompurify.js 0.8.2~dfsg1-1+deb9u1
+[29 Oct 2020] DLA-2418-1 libsndfile - security update
+	{CVE-2017-6892 CVE-2017-14245 CVE-2017-14246 CVE-2017-14634 CVE-2018-19661 CVE-2018-19662 CVE-2018-19758 CVE-2019-3832}
+	[stretch] - libsndfile 1.0.27-3+deb9u1
+[27 Oct 2020] DLA-2417-1 linux-4.19 - security update
+	{CVE-2020-12351 CVE-2020-12352 CVE-2020-25211 CVE-2020-25643 CVE-2020-25645}
+	[stretch] - linux-4.19 4.19.152-1~deb9u1
+[27 Oct 2020] DLA-2416-1 thunderbird - security update
+	{CVE-2020-15683 CVE-2020-15969}
+	[stretch] - thunderbird 1:78.4.0-1~deb9u1
+[25 Oct 2020] DLA-2415-1 freetype - security update
+	{CVE-2020-15999}
+	[stretch] - freetype 2.6.3-3.2+deb9u2
+[25 Oct 2020] DLA-2414-1 fastd - security update
+	{CVE-2020-27638}
+	[stretch] - fastd 18-2+deb9u1
+[25 Oct 2020] DLA-2413-1 phpmyadmin - security update
+	{CVE-2019-19617 CVE-2020-26934 CVE-2020-26935}
+	[stretch] - phpmyadmin 4:4.6.6-4+deb9u2
+[23 Oct 2020] DLA-2412-1 openjdk-8 - security update
+	{CVE-2020-14779 CVE-2020-14781 CVE-2020-14782 CVE-2020-14792 CVE-2020-14796 CVE-2020-14797 CVE-2020-14798 CVE-2020-14803}
+	[stretch] - openjdk-8 8u272-b10-0+deb9u1
+[21 Oct 2020] DLA-2411-1 firefox-esr - security update
+	{CVE-2020-15683 CVE-2020-15969}
+	[stretch] - firefox-esr 78.4.0esr-1~deb9u1
+[21 Oct 2020] DLA-2410-1 bluez - security update
+	{CVE-2020-27153}
+	[stretch] - bluez 5.43-2+deb9u3
+[21 Oct 2020] DLA-2409-1 mariadb-10.1 - security update
+	{CVE-2020-15180}
+	[stretch] - mariadb-10.1 10.1.47-0+deb9u1
+[17 Oct 2020] DLA-2408-1 thunderbird - security update
+	{CVE-2020-15673 CVE-2020-15676 CVE-2020-15677 CVE-2020-15678}
+	[stretch] - thunderbird 1:78.3.1-2~deb9u1
+[14 Oct 2020] DLA-2407-1 tomcat8 - security update
+	{CVE-2020-13943}
+	[stretch] - tomcat8 8.5.54-0+deb9u4
+[14 Oct 2020] DLA-2406-1 jackson-databind - security update
+	{CVE-2020-25649}
+	[stretch] - jackson-databind 2.8.6-1+deb9u8
+[10 Oct 2020] DLA-2405-1 httpcomponents-client - security update
+	{CVE-2020-13956}
+	[stretch] - httpcomponents-client 4.5.2-2+deb9u1
+[09 Oct 2020] DLA-2404-1 eclipse-wtp - security update
+	{CVE-2019-17637}
+	[stretch] - eclipse-wtp 3.6.3-3+deb9u1
+[09 Oct 2020] DLA-2403-1 rails - security update
+	{CVE-2020-15169}
+	[stretch] - rails 2:4.2.7.1-1+deb9u4
+[08 Oct 2020] DLA-2402-1 golang-go.crypto - security update
+	{CVE-2019-11840 CVE-2019-11841 CVE-2020-9283}
+	[stretch] - golang-go.crypto 1:0.0~git20170407.0.55a552f+REALLY.0.0~git20161012.0.5f31782-1+deb8u1
+[07 Oct 2020] DLA-2401-1 sympa - security update
+	{CVE-2020-10936 CVE-2020-26932}
+	[stretch] - sympa 6.2.16~dfsg-3+deb9u3
+[07 Oct 2020] DLA-2400-1 activemq - security update
+	{CVE-2020-13920}
+	[stretch] - activemq 5.14.3-3+deb9u1
+[07 Oct 2020] DLA-2399-1 packagekit - security update
+	{CVE-2020-16121 CVE-2020-16122}
+	[stretch] - packagekit 1.1.5-2+deb9u2
+[07 Oct 2020] DLA-2398-1 puma - security update
+	{CVE-2020-11076 CVE-2020-11077}
+	[stretch] - puma 3.6.0-1+deb9u1
+[06 Oct 2020] DLA-2397-1 php7.0 - security update
+	{CVE-2020-7070}
+	[stretch] - php7.0 7.0.33-0+deb9u10
+[06 Oct 2020] DLA-2396-1 tigervnc - security update
+	{CVE-2020-26117}
+	[stretch] - tigervnc 1.7.0+dfsg-7+deb9u2
+[02 Oct 2020] DLA-2395-1 libvirt - security update
+	{CVE-2020-25637}
+	[stretch] - libvirt 3.0.0-4+deb9u5
+[02 Oct 2020] DLA-2394-1 squid3 - security update
+	{CVE-2020-15049 CVE-2020-15810 CVE-2020-15811 CVE-2020-24606}
+	[stretch] - squid3 3.5.23-5+deb9u5
+[01 Oct 2020] DLA-2393-1 snmptt - security update
+	{CVE-2020-24361}
+	[stretch] - snmptt 1.4-1+deb9u1
+[01 Oct 2020] DLA-2392-1 jruby - security update
+	{CVE-2020-25613}
+	[stretch] - jruby 1.7.26-1+deb9u3
+[01 Oct 2020] DLA-2391-1 ruby2.3 - security update
+	{CVE-2020-25613}
+	[stretch] - ruby2.3 2.3.3-1+deb9u9
+[01 Oct 2020] DLA-2390-1 ruby-json-jwt - security update
+	{CVE-2019-18848}
+	[stretch] - ruby-json-jwt 1.6.2-1+deb9u2
+[01 Oct 2020] DLA-2389-1 ruby-rack-cors - security update
+	{CVE-2019-18978}
+	[stretch] - ruby-rack-cors 0.4.0-1+deb9u2
+[29 Sep 2020] DLA-2388-1 nss - security update
+	{CVE-2018-12404 CVE-2018-18508 CVE-2019-11719 CVE-2019-11729 CVE-2019-11745 CVE-2019-17006 CVE-2019-17007 CVE-2020-6829 CVE-2020-12399 CVE-2020-12400 CVE-2020-12401 CVE-2020-12402 CVE-2020-12403}
+	[stretch] - nss 2:3.26.2-1.1+deb9u2
+[28 Sep 2020] DLA-2387-1 firefox-esr - security update
+	{CVE-2020-15673 CVE-2020-15676 CVE-2020-15677 CVE-2020-15678}
+	[stretch] - firefox-esr 78.3.0esr-1~deb9u1
+[28 Sep 2020] DLA-2386-1 libdbi-perl - security update
+	{CVE-2019-20919 CVE-2020-14392 CVE-2020-14393}
+	[stretch] - libdbi-perl 1.636-1+deb9u1
+[26 Sep 2020] DLA-2385-1 linux-4.19 - security update
+	{CVE-2019-3874 CVE-2019-19448 CVE-2019-19813 CVE-2019-19816 CVE-2020-10781 CVE-2020-12888 CVE-2020-14314 CVE-2020-14331 CVE-2020-14356 CVE-2020-14385 CVE-2020-14386 CVE-2020-14390 CVE-2020-16166 CVE-2020-25212 CVE-2020-25284 CVE-2020-25285 CVE-2020-25641 CVE-2020-26088}
+	[stretch] - linux-4.19 4.19.146-1~deb9u1
+[26 Sep 2020] DLA-2384-1 yaws - security update
+	{CVE-2020-24379 CVE-2020-24916}
+	[stretch] - yaws 2.0.4+dfsg-1+deb9u1
+[26 Sep 2020] DLA-2383-1 nfdump - security update
+	{CVE-2019-14459 CVE-2019-1010057}
+	[stretch] - nfdump 1.6.15-3+deb9u1
+[26 Sep 2020] DLA-2382-1 curl - security update
+	{CVE-2020-8231}
+	[stretch] - curl 7.52.1-5+deb9u12
+[26 Sep 2020] DLA-2381-1 lua5.3 - security update
+	{CVE-2020-24370}
+	[stretch] - lua5.3 5.3.3-1+deb9u1
+[26 Sep 2020] DLA-2380-1 ruby-gon - security update
+	{CVE-2020-25739}
+	[stretch] - ruby-gon 6.1.0-1+deb9u1
+[25 Sep 2020] DLA-2379-1 mediawiki - security update
+	{CVE-2020-25813 CVE-2020-25814 CVE-2020-25827 CVE-2020-25828}
+	[stretch] - mediawiki 1:1.27.7-1~deb9u4
+[25 Sep 2020] DLA-2378-1 openssl1.0 - security update
+	{CVE-2020-1968}
+	[stretch] - openssl1.0 1.0.2u-1~deb9u2
+[21 Sep 2020] DLA-2377-1 qt4-x11 - security update
+	{CVE-2018-15518 CVE-2018-19869 CVE-2018-19870 CVE-2018-19871 CVE-2018-19872 CVE-2018-19873 CVE-2020-17507}
+	[stretch] - qt4-x11 4:4.8.7+dfsg-11+deb9u1
+[21 Sep 2020] DLA-2376-1 qtbase-opensource-src - security update
+	{CVE-2018-19872 CVE-2020-17507}
+	[stretch] - qtbase-opensource-src 5.7.1+dfsg-3+deb9u3
+[19 Sep 2020] DLA-2375-1 inspircd - security update
+	{CVE-2019-20917 CVE-2020-25269}
+	[stretch] - inspircd 2.0.23-2+deb9u1
+[15 Sep 2020] DLA-2374-1 gnome-shell - security update
+	{CVE-2020-17489}
+	[stretch] - gnome-shell 3.22.3-3+deb9u1
+[13 Sep 2020] DLA-2373-1 qemu - security update
+	{CVE-2020-1711 CVE-2020-13253 CVE-2020-14364 CVE-2020-16092}
+	[stretch] - qemu 1:2.8+dfsg-6+deb9u11
+[12 Sep 2020] DLA-2372-1 libproxy - security update
+	{CVE-2020-25219}
+	[stretch] - libproxy 0.4.14-2+deb9u1
+[11 Sep 2020] DLA-2371-1 wordpress - security update
+	{CVE-2019-17670 CVE-2020-4047 CVE-2020-4048 CVE-2020-4049 CVE-2020-4050 CVE-2020-25286}
+	[stretch] - wordpress 4.7.18+dfsg-1+deb9u1
+[11 Sep 2020] DLA-2370-1 python-pip - security update
+	{CVE-2019-20916}
+	[stretch] - python-pip 9.0.1-2+deb9u2
+[09 Sep 2020] DLA-2369-1 libxml2 - security update
+	{CVE-2017-8872 CVE-2017-18258 CVE-2018-14404 CVE-2018-14567 CVE-2019-19956 CVE-2019-20388 CVE-2020-7595 CVE-2020-24977}
+	[stretch] - libxml2 2.9.4+dfsg1-2.2+deb9u3
+[09 Sep 2020] DLA-2368-1 grunt - security update
+	{CVE-2020-7729}
+	[stretch] - grunt 1.0.1-5+deb9u1
+[07 Sep 2020] DLA-2367-1 lemonldap-ng - security update
+	{CVE-2020-24660}
+	[stretch] - lemonldap-ng 1.9.7-3+deb9u4
+[07 Sep 2020] DLA-2366-1 imagemagick - security update
+	{CVE-2017-12140 CVE-2017-12429 CVE-2017-12430 CVE-2017-12435 CVE-2017-12563 CVE-2017-12643 CVE-2017-12674 CVE-2017-12691 CVE-2017-12692 CVE-2017-12693 CVE-2017-12806 CVE-2017-12875 CVE-2017-13061 CVE-2017-13133 CVE-2017-13658 CVE-2017-13768 CVE-2017-14060 CVE-2017-14172 CVE-2017-14173 CVE-2017-14174 CVE-2017-14175 CVE-2017-14249 CVE-2017-14341 CVE-2017-14400 CVE-2017-14505 CVE-2017-14532 CVE-2017-14624 CVE-2017-14625 CVE-2017-14626 CVE-2017-14739 CVE-2017-14741 CVE-2017-15015 CVE-2017-15017 CVE-2017-15281 CVE-2017-17682 CVE-2017-17914 CVE-2017-18209 CVE-2017-18211 CVE-2017-18271 CVE-2017-18273 CVE-2017-1000445 CVE-2017-1000476 CVE-2018-16643 CVE-2018-16749 CVE-2018-18025 CVE-2019-11598 CVE-2019-13135 CVE-2019-13308 CVE-2019-13391 CVE-2019-15139}
+	[stretch] - imagemagick 8:6.9.7.4+dfsg-11+deb9u10
+[04 Sep 2020] DLA-2365-1 netty-3.9 - security update
+	{CVE-2019-16869 CVE-2019-20444 CVE-2019-20445}
+	[stretch] - netty-3.9 3.9.9.Final-1+deb9u1
+[04 Sep 2020] DLA-2364-1 netty - security update
+	{CVE-2019-20444 CVE-2019-20445 CVE-2020-7238 CVE-2020-11612}
+	[stretch] - netty 1:4.1.7-2+deb9u2
+[03 Sep 2020] DLA-2363-1 asyncpg - security update
+	{CVE-2020-17446}
+	[stretch] - asyncpg 0.8.4-1+deb9u1
+[03 Sep 2020] DLA-2362-1 uwsgi - security update
+	{CVE-2020-11984}
+	[stretch] - uwsgi 2.0.14+20161117-3+deb9u3
+[01 Sep 2020] DLA-2361-1 libx11 - security update
+	{CVE-2020-14363}
+	[stretch] - libx11 2:1.6.4-3+deb9u3
+[31 Aug 2020] DLA-2360-1 thunderbird - security update
+	{CVE-2020-15664 CVE-2020-15669}
+	[stretch] - thunderbird 1:68.12.0-1~deb9u1
+[30 Aug 2020] DLA-2359-1 xorg-server - security update
+	{CVE-2020-14345 CVE-2020-14346 CVE-2020-14347 CVE-2020-14361 CVE-2020-14362}
+	[stretch] - xorg-server 2:1.19.2-1+deb9u6
+[30 Aug 2020] DLA-2358-1 openexr - security update
+	{CVE-2017-9110 CVE-2017-9111 CVE-2017-9112 CVE-2017-9113 CVE-2017-9114 CVE-2017-9115 CVE-2017-9116 CVE-2017-12596 CVE-2018-18444 CVE-2020-11758 CVE-2020-11759 CVE-2020-11760 CVE-2020-11761 CVE-2020-11762 CVE-2020-11763 CVE-2020-11764 CVE-2020-11765 CVE-2020-15305 CVE-2020-15306}
+	[stretch] - openexr 2.2.0-11+deb9u1
+[30 Aug 2020] DLA-2357-1 ros-actionlib - security update
+	{CVE-2020-10289}
+	[stretch] - ros-actionlib 1.11.7-1+deb9u1
+[30 Aug 2020] DLA-2356-1 freerdp - security update
+	{CVE-2014-0791 CVE-2020-11042 CVE-2020-11045 CVE-2020-11046 CVE-2020-11048 CVE-2020-11058 CVE-2020-11521 CVE-2020-11522 CVE-2020-11523 CVE-2020-11525 CVE-2020-11526 CVE-2020-13396 CVE-2020-13397 CVE-2020-13398}
+	[stretch] - freerdp 1.1.0~git20140921.1.440916e+dfsg1-13+deb9u4
+[29 Aug 2020] DLA-2355-1 bind9 - security update
+	{CVE-2020-8622 CVE-2020-8623}
+	[stretch] - bind9 1:9.10.3.dfsg.P4-12.3+deb9u7
+[29 Aug 2020] DLA-2354-1 ndpi - security update
+	{CVE-2020-15476}
+	[stretch] - ndpi 1.8-1+deb9u1
+[29 Aug 2020] DLA-2353-1 bacula - security update
+	{CVE-2020-11061}
+	[stretch] - bacula 7.4.4+dfsg-6+deb9u2
+[29 Aug 2020] DLA-2352-1 php-horde-gollem - security update
+	{CVE-2017-15235}
+	[stretch] - php-horde-gollem 3.0.10-1+deb9u2
+[29 Aug 2020] DLA-2351-1 php-horde-kronolith - security update
+	{CVE-2017-16906}
+	[stretch] - php-horde-kronolith 4.2.19-1+deb9u2
+[29 Aug 2020] DLA-2350-1 php-horde-kronolith - security update
+	{CVE-2017-16908}
+	[stretch] - php-horde-kronolith 4.2.19-1+deb9u1
+[29 Aug 2020] DLA-2349-1 php-horde - security update
+	{CVE-2017-16907}
+	[stretch] - php-horde 5.2.13+debian0-1+deb9u3
+[29 Aug 2020] DLA-2348-1 php-horde-core - security update
+	{CVE-2017-16907}
+	[stretch] - php-horde-core 2.27.6+debian1-2+deb9u1
+[28 Aug 2020] DLA-2347-1 libvncserver - security update
+	{CVE-2019-20839 CVE-2020-14397 CVE-2020-14399 CVE-2020-14400 CVE-2020-14401 CVE-2020-14402 CVE-2020-14403 CVE-2020-14404 CVE-2020-14405}
+	[stretch] - libvncserver 0.9.11+dfsg-1.3~deb9u5
+[27 Aug 2020] DLA-2346-1 firefox-esr - security update
+	{CVE-2020-15664 CVE-2020-15669}
+	[stretch] - firefox-esr 68.12.0esr-1~deb9u1
+[26 Aug 2020] DLA-2345-1 php7.0 - security update
+	{CVE-2020-7068}
+	[stretch] - php7.0 7.0.33-0+deb9u9
+[24 Aug 2020] DLA-2344-1 mongodb - security update
+	{CVE-2020-7923}
+	[stretch] - mongodb 1:3.2.11-2+deb9u2
+[24 Aug 2020] DLA-2343-1 icingaweb2 - security update
+	{CVE-2020-24368}
+	[stretch] - icingaweb2 2.4.1-1+deb9u1
+[24 Aug 2020] DLA-2342-1 libjackson-json-java - security update
+	{CVE-2017-7525 CVE-2017-15095 CVE-2019-10172}
+	[stretch] - libjackson-json-java 1.9.2-8+deb9u1
+[24 Aug 2020] DLA-2341-1 inetutils - security update
+	{CVE-2020-10188}
+	[stretch] - inetutils 2:1.9.4-2+deb9u1
+[22 Aug 2020] DLA-2340-1 sqlite3 - security update
+	{CVE-2018-8740 CVE-2018-20346 CVE-2018-20506 CVE-2019-5827 CVE-2019-9936 CVE-2019-9937 CVE-2019-16168 CVE-2020-11655 CVE-2020-13434 CVE-2020-13630 CVE-2020-13632 CVE-2020-13871}
+	[stretch] - sqlite3 3.16.2-5+deb9u2
+[22 Aug 2020] DLA-2339-1 software-properties - security update
+	{CVE-2020-15709}
+	[stretch] - software-properties 0.96.20.2-1+deb9u1
+[22 Aug 2020] DLA-2337-1 python2.7 - security update
+	{CVE-2018-20852 CVE-2019-5010 CVE-2019-9636 CVE-2019-9740 CVE-2019-9947 CVE-2019-9948 CVE-2019-16056 CVE-2019-20907}
+	[stretch] - python2.7 2.7.13-2+deb9u4
+[22 Aug 2020] DLA-2336-1 firejail - security update
+	{CVE-2020-17367 CVE-2020-17368}
+	[stretch] - firejail 0.9.44.8-2+deb9u1
+[20 Aug 2020] DLA-2335-1 ghostscript - security update
+	{CVE-2020-16287 CVE-2020-16288 CVE-2020-16289 CVE-2020-16290 CVE-2020-16291 CVE-2020-16292 CVE-2020-16293 CVE-2020-16294 CVE-2020-16295 CVE-2020-16296 CVE-2020-16297 CVE-2020-16298 CVE-2020-16299 CVE-2020-16300 CVE-2020-16301 CVE-2020-16302 CVE-2020-16303 CVE-2020-16304 CVE-2020-16305 CVE-2020-16306 CVE-2020-16307 CVE-2020-16308 CVE-2020-16309 CVE-2020-16310 CVE-2020-17538}
+	[stretch] - ghostscript 9.26a~dfsg-0+deb9u7
+[19 Aug 2020] DLA-2334-1 ruby-websocket-extensions - security update
+	{CVE-2020-7663}
+	[stretch] - ruby-websocket-extensions 0.1.2-1+deb9u1
+[18 Aug 2020] DLA-2333-1 imagemagick - security update
+	{CVE-2017-12805 CVE-2017-17681 CVE-2017-18252 CVE-2018-7443 CVE-2018-8804 CVE-2018-8960 CVE-2018-9133 CVE-2018-10177 CVE-2018-14551 CVE-2018-18024 CVE-2018-20467 CVE-2019-10131 CVE-2019-11472 CVE-2019-11597 CVE-2019-12974 CVE-2019-12977 CVE-2019-12978 CVE-2019-12979 CVE-2019-13295 CVE-2019-13297 CVE-2019-11470 CVE-2019-13454 CVE-2019-14981 CVE-2019-19949}
+	[stretch] - imagemagick 8:6.9.7.4+dfsg-11+deb9u9
+[17 Aug 2020] DLA-2332-1 sane-backends - security update
+	{CVE-2020-12862 CVE-2020-12863 CVE-2020-12865 CVE-2020-12867}
+	[stretch] - sane-backends 1.0.25-4.1+deb9u1
+[17 Aug 2020] DLA-2331-1 postgresql-9.6 - security update
+	{CVE-2020-14350}
+	[stretch] - postgresql-9.6 9.6.19-0+deb9u1
+[16 Aug 2020] DLA-2330-1 jruby - security update
+	{CVE-2017-17742 CVE-2019-8320 CVE-2019-8321 CVE-2019-8322 CVE-2019-8323 CVE-2019-8324 CVE-2019-8325 CVE-2019-16201 CVE-2019-16254 CVE-2019-16255}
+	[stretch] - jruby 1.7.26-1+deb9u2
+[16 Aug 2020] DLA-2329-1 libetpan - security update
+	{CVE-2020-15953}
+	[stretch] - libetpan 1.6-3+deb9u1
+[15 Aug 2020] DLA-2328-1 dovecot - security update
+	{CVE-2020-12100 CVE-2020-12673 CVE-2020-12674}
+	[stretch] - dovecot 1:2.2.27-3+deb9u6
+[15 Aug 2020] DLA-2327-1 lucene-solr - security update
+	{CVE-2019-0193}
+	[stretch] - lucene-solr 3.6.2+dfsg-10+deb9u3
+[15 Aug 2020] DLA-2326-1 htmlunit - security update
+	{CVE-2020-5529}
+	[stretch] - htmlunit 2.8-2+deb9u1
+[13 Aug 2020] DLA-2325-1 openjdk-8 - security update
+	{CVE-2020-14556 CVE-2020-14577 CVE-2020-14578 CVE-2020-14579 CVE-2020-14581 CVE-2020-14583 CVE-2020-14593 CVE-2020-14621}
+	[stretch] - openjdk-8 8u265-b01-0+deb9u1
+[12 Aug 2020] DLA-2323-1 linux-4.19 - new package
+	{CVE-2019-18814 CVE-2019-18885 CVE-2019-20810 CVE-2020-10766 CVE-2020-10767 CVE-2020-10768 CVE-2020-12655 CVE-2020-12771 CVE-2020-13974 CVE-2020-15393}
+	[stretch] - linux-4.19 4.19.132-1~deb9u2
+[11 Aug 2020] DLA-2322-1 roundcube - security update
+	{CVE-2020-16145}
+	[stretch] - roundcube 1.2.3+dfsg.1-4+deb9u7
+[10 Aug 2020] DLA-2320-1 golang-github-seccomp-libseccomp-golang - security update
+	{CVE-2017-18367}
+	[stretch] - golang-github-seccomp-libseccomp-golang 0.0~git20150813.0.1b506fc-2+deb9u1
+[09 Aug 2020] DLA-2319-1 xrdp - security update
+	{CVE-2020-4044}
+	[stretch] - xrdp 0.9.1-9+deb9u4
+[09 Aug 2020] DLA-2318-1 wpa - security update
+	{CVE-2019-10064 CVE-2020-12695}
+	[stretch] - wpa 2:2.4-1+deb9u7
+[08 Aug 2020] DLA-2317-1 pillow - security update
+	{CVE-2020-10177}
+	[stretch] - pillow 4.0.0-4+deb9u2
+[08 Aug 2020] DLA-2316-1 ruby-kramdown - security update
+	{CVE-2020-14001}
+	[stretch] - ruby-kramdown 1.12.0-1+deb9u1
+[06 Aug 2020] DLA-2315-1 gupnp - security update
+	{CVE-2020-12695}
+	[stretch] - gupnp 1.0.1-1+deb9u1
+[06 Aug 2020] DLA-2314-1 clamav - security update
+	{CVE-2020-3327 CVE-2020-3350 CVE-2020-3481}
+	[stretch] - clamav 0.102.4+dfsg-0+deb9u1
+[04 Aug 2020] DLA-2313-1 net-snmp - security update
+	{CVE-2020-15861}
+	[stretch] - net-snmp 5.7.3+dfsg-1.7+deb9u3
+[04 Aug 2020] DLA-2312-1 libx11 - security update
+	{CVE-2020-14344}
+	[stretch] - libx11 2:1.6.4-3+deb9u2
+[03 Aug 2020] DLA-2311-1 zabbix - security update
+	{CVE-2020-15803}
+	[stretch] - zabbix 1:3.0.7+dfsg-3+deb9u1
+[02 Aug 2020] DLA-2310-1 thunderbird - security update
+	{CVE-2020-6463 CVE-2020-6514 CVE-2020-15652 CVE-2020-15659}
+	[stretch] - thunderbird 1:68.11.0-1~deb9u1
+[02 Aug 2020] DLA-2309-1 evolution-data-server - security update
+	{CVE-2020-16117}
+	[stretch] - evolution-data-server 3.22.7-1+deb9u2
+[02 Aug 2020] DLA-2308-1 libopenmpt - security update
+	{CVE-2019-17113}
+	[stretch] - libopenmpt 0.2.7386~beta20.3-3+deb9u4
+[02 Aug 2020] DLA-2307-1 ruby-zip - security update
+	{CVE-2018-1000544}
+	[stretch] - ruby-zip 1.2.0-1.1+deb9u1
+[01 Aug 2020] DLA-2306-1 libphp-phpmailer - security update
+	{CVE-2020-13625}
+	[stretch] - libphp-phpmailer 5.2.14+dfsg-2.3+deb9u2
+[01 Aug 2020] DLA-2305-1 transmission - security update
+	{CVE-2018-10756}
+	[stretch] - transmission 2.92-2+deb9u2
+[01 Aug 2020] DLA-2304-1 libpam-radius-auth - security update
+	{CVE-2015-9542}
+	[stretch] - libpam-radius-auth 1.3.16-5+deb9u1
+[31 Jul 2020] DLA-2303-1 libssh - security update
+	{CVE-2020-16135}
+	[stretch] - libssh 0.7.3-2+deb9u3
+[31 Jul 2020] DLA-2302-1 libjpeg-turbo - security update
+	{CVE-2018-1152 CVE-2018-14498 CVE-2020-13790 CVE-2020-14152}
+	[stretch] - libjpeg-turbo 1:1.5.1-2+deb9u1
+[30 Jul 2020] DLA-2301-1 json-c - security update
+	{CVE-2020-12762}
+	[stretch] - json-c 0.12.1-1.1+deb9u1
+[30 Jul 2020] DLA-2300-1 kdepim-runtime - security update
+	{CVE-2020-15954}
+	[stretch] - kdepim-runtime 4:16.04.2-2+deb9u1
+[30 Jul 2020] DLA-2299-1 net-snmp - security update
+	{CVE-2020-15862}
+	[stretch] - net-snmp 5.7.3+dfsg-1.7+deb9u2
+[29 Jul 2020] DLA-2298-1 libapache2-mod-auth-openidc - security update
+	{CVE-2019-14857 CVE-2019-20479 CVE-2019-1010247}
+	[stretch] - libapache2-mod-auth-openidc 2.1.6-1+deb9u1
+[29 Jul 2020] DLA-2297-1 firefox-esr - security update
+	{CVE-2020-6463 CVE-2020-6514 CVE-2020-15652 CVE-2020-15659}
+	[stretch] - firefox-esr 68.11.0esr-1~deb9u1
+[28 Jul 2020] DLA-2296-1 luajit - security update
+	{CVE-2020-15890}
+	[stretch] - luajit 2.0.4+dfsg-1+deb9u1
+[28 Jul 2020] DLA-2295-1 curl - security update
+	{CVE-2020-8177}
+	[stretch] - curl 7.52.1-5+deb9u11
+[28 Jul 2020] DLA-2294-1 salt - security update
+	{CVE-2018-15750 CVE-2018-15751}
+	[stretch] - salt 2016.11.2+ds-1+deb9u5
+[27 Jul 2020] DLA-2293-1 mercurial - security update
+	{CVE-2017-17458 CVE-2018-13346 CVE-2018-13347 CVE-2018-13348 CVE-2018-1000132 CVE-2019-3902}
+	[stretch] - mercurial 4.0-1+deb9u2
+[27 Jul 2020] DLA-2292-1 milkytracker - security update
+	{CVE-2019-14464 CVE-2019-14496 CVE-2019-14497 CVE-2020-15569}
+	[stretch] - milkytracker 0.90.86+dfsg-2+deb9u1
+[27 Jul 2020] DLA-2291-1 ffmpeg - security update
+	{CVE-2019-13390 CVE-2019-17542 CVE-2020-13904}
+	[stretch] - ffmpeg 7:3.2.15-0+deb9u1
+[26 Jul 2020] DLA-2290-1 e2fsprogs - security update
+	{CVE-2019-5188}
+	[stretch] - e2fsprogs 1.43.4-2+deb9u2
+[26 Jul 2020] DLA-2289-1 mupdf - security update
+	{CVE-2018-16647 CVE-2018-16648 CVE-2018-18662 CVE-2019-6130 CVE-2019-13290}
+	[stretch] - mupdf 1.9a+ds1-4+deb9u5
+[25 Jul 2020] DLA-2288-1 qemu - security update
+	{CVE-2017-9503 CVE-2019-12068 CVE-2019-20382 CVE-2020-1983 CVE-2020-8608 CVE-2020-10756 CVE-2020-13361 CVE-2020-13362 CVE-2020-13659 CVE-2020-13754 CVE-2020-13765 CVE-2020-15863 CVE-2020-11947}
+	[stretch] - qemu 1:2.8+dfsg-6+deb9u10
+[23 Jul 2020] DLA-2287-1 poppler - security update
+	{CVE-2017-18267 CVE-2018-16646 CVE-2018-20481 CVE-2018-21009 CVE-2019-9200 CVE-2019-9631 CVE-2019-10872 CVE-2019-12293}
+	[stretch] - poppler 0.48.0-2+deb9u3
+[22 Jul 2020] DLA-2286-1 tomcat8 - security update
+	{CVE-2020-13934 CVE-2020-13935}
+	[stretch] - tomcat8 8.5.54-0+deb9u3
+[22 Jul 2020] DLA-2285-1 librsvg - security update
+	{CVE-2017-11464 CVE-2019-20446}
+	[stretch] - librsvg 2.40.21-0+deb9u1
+[21 Jul 2020] DLA-2284-1 ksh - security update
+	{CVE-2019-14868}
+	[stretch] - ksh 93u+20120801-3.1+deb9u1
+[20 Jul 2020] DLA-2283-1 nginx - security update
+	{CVE-2020-11724}
+	[stretch] - nginx 1.10.3-1+deb9u5
+[20 Jul 2020] DLA-2282-1 rails - security update
+	{CVE-2020-8163 CVE-2020-8164 CVE-2020-8165}
+	[stretch] - rails 2:4.2.7.1-1+deb9u3
+[16 Jul 2020] DLA-2281-1 evolution-data-server - security update
+	{CVE-2020-14928}
+	[stretch] - evolution-data-server 3.22.7-1+deb9u1
+[15 Jul 2020] DLA-2280-1 python3.5 - security update
+	{CVE-2018-20406 CVE-2018-20852 CVE-2019-5010 CVE-2019-9636 CVE-2019-9740 CVE-2019-9947 CVE-2019-9948 CVE-2019-10160 CVE-2019-16056 CVE-2019-16935 CVE-2019-18348 CVE-2020-8492 CVE-2020-14422}
+	[stretch] - python3.5 3.5.3-1+deb9u2
+[12 Jul 2020] DLA-2279-1 tomcat8 - security update
+	{CVE-2020-9484 CVE-2020-11996}
+	[stretch] - tomcat8 8.5.54-0+deb9u2
+[10 Jul 2020] DLA-2278-1 squid3 - security update
+	{CVE-2018-19132 CVE-2019-12519 CVE-2019-12520 CVE-2019-12521 CVE-2019-12523 CVE-2019-12524 CVE-2019-12525 CVE-2019-12526 CVE-2019-12528 CVE-2019-12529 CVE-2019-13345 CVE-2019-18676 CVE-2019-18677 CVE-2019-18678 CVE-2019-18679 CVE-2019-18860 CVE-2020-8449 CVE-2020-8450 CVE-2020-11945}
+	[stretch] - squid3 3.5.23-5+deb9u2
+[11 Jul 2020] DLA-2277-1 openjpeg2 - security update
+	{CVE-2019-12973 CVE-2020-6851 CVE-2020-8112 CVE-2020-15389}
+	[stretch] - openjpeg2 2.1.2-1.1+deb9u5
+[10 Jul 2020] DLA-2276-1 mailman - security update
+	{CVE-2020-12108 CVE-2020-15011}
+	[stretch] - mailman 1:2.1.23-1+deb9u6
+[10 Jul 2020] DLA-2275-1 ruby-rack - security update
+	{CVE-2020-8161 CVE-2020-8184}
+	[stretch] - ruby-rack 1.6.4-4+deb9u2
+[09 Jul 2020] DLA-2274-1 fwupd - security update
+	{CVE-2020-10759}
+	[stretch] - fwupd 0.7.4-2+deb9u1
+[08 Jul 2020] DLA-2273-1 shiro - security update
+	{CVE-2020-1957 CVE-2020-11989}
+	[stretch] - shiro 1.3.2-1+deb9u1

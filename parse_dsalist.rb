@@ -117,6 +117,33 @@ class DSA
     to_h.to_json(*options)
   end
 
+  # Recreate data from original DSA-list file
+  # param release_filter Array of relase_name String, e.g. `[ 'bullseye', 'stretch' ]`
+  # returns String e.g.:
+  # [11 Dec 2021] DSA-5020-1 apache-log4j2 - security update
+  # \t{CVE-2021-44228}
+  # \t[buster] - apache-log4j2 2.15.0-1~deb10u1
+  # \t[bullseye] - apache-log4j2 2.15.0-1~deb11u1
+  def to_orig(release_filter=nil)
+    e = StringIO.new
+    e.puts "[#{@date}] #{@id} #{@package} - #{@type}"
+    e.puts "\t{#{@cve.join(' ')}}"
+
+    versions = @versions
+    # filter releases and return nil if no remaining releases
+    if release_filter.respond_to? :include?
+      versions = versions.select { |v| release_filter.include?(v) }
+      return nil if versions.empty?
+    end
+
+    versions.each do |rel, packages|
+      packages.each do |name, version|
+        e.puts "\t[#{rel}] - #{name} #{version}"
+      end
+    end
+    e.string
+  end
+
   ## Class methods expects IO
   def self.parse_dsa_list_str(string)
     parse_dsa_list(StringIO.new(string))
@@ -173,5 +200,14 @@ if $PROGRAM_NAME == __FILE__
   File.open('test/data/dsa.list', 'r') do |f|
     dsa_list = DSA.parse_dsa_list(f)
   end
-  puts JSON.generate(dsa_list)
+
+  if ENV['FILTERED_ORIGINAL']
+    release_whitelist = ['bullseye']
+    dsa_list.each do |dsa|
+      s = dsa.to_orig(release_whitelist)
+      puts s unless s.nil?
+    end
+  else
+    puts JSON.generate(dsa_list)
+  end
 end
