@@ -18,7 +18,7 @@ class TestDebianErrata < Test::Unit::TestCase
       DSA.parse_dsa_list_str(File.read(dsa_list_path)),
       JSON.parse(File.read(cve_json_path))
     )
-    parser.add_binary_packages_from_file(errata, pkg_json_path, ['bullseye', 'stretch'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, pkg_json_path, ['bullseye', 'stretch'], ['amd64'], ['bullseye'])
 
     assert_instance_of(Array, errata)
 
