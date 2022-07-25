@@ -2276,6 +2276,51 @@
     architecture: all
     component: main
     release: bullseye
+  - name: linux-headers-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-headers-cloud-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-headers-rt-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-15-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-15-cloud-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-15-rt-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-cloud-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-rt-amd64
+    version: 5.10.120-1
+    architecture: amd64
+    component: main
+    release: bullseye
   description: |
     A kernel information leak flaw was identified in the scsi_ioctl function in
     drivers/scsi/scsi_ioctl.c in the Linux kernel. This flaw allows a local attacker with a
@@ -2409,7 +2454,7 @@
     release: bullseye
   description: 'Bottle before 0.12.20 mishandles errors during early request binding.
 
-    '
+'
   cves:
   - CVE-2022-31799
   scope: local
@@ -6903,6 +6948,21 @@
     architecture: all
     component: main
     release: bullseye
+  - name: linux-image-5.10.0-14-amd64
+    version: 5.10.113-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-14-cloud-amd64
+    version: 5.10.113-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-14-rt-amd64
+    version: 5.10.113-1
+    architecture: amd64
+    component: main
+    release: bullseye
   description: |
     An unprivileged write to the file handler flaw in the Linux kernel's control groups and
     namespaces subsystem was found in the way users have access to some less privileged
@@ -10088,6 +10148,21 @@
     architecture: all
     component: main
     release: bullseye
+  - name: linux-image-5.10.0-12-amd64
+    version: 5.10.103-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-12-cloud-amd64
+    version: 5.10.103-1
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-12-rt-amd64
+    version: 5.10.103-1
+    architecture: amd64
+    component: main
+    release: bullseye
   description: |
     An issue was discovered in the Linux kernel before 5.8. arch/x86/kvm/svm/svm.c allows a
     set_memory_region_test infinite loop for certain nested page faults, aka CID-e72436bc3a52.
@@ -10485,6 +10560,79 @@
   cves:
   - CVE-2022-26846
   - CVE-2022-26847
+  scope: local
+- name: DSA-5092-1
+  title: linux -- security update
+  issued: 07 Mar 2022
+  affected_source_package: linux
+  packages:
+  - name: linux-image-5.10.0-11-amd64
+    version: 5.10.92-2
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-11-cloud-amd64
+    version: 5.10.92-2
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-11-rt-amd64
+    version: 5.10.92-2
+    architecture: amd64
+    component: main
+    release: bullseye
+  description: |
+    In the Linux kernel through 5.15.2, mwifiex_usb_recv in
+    drivers/net/wireless/marvell/mwifiex/usb.c allows an attacker (who can connect a crafted
+    USB device) to cause a denial of service (skb_over_panic).
+
+    A random memory access flaw was found in the Linux kernel's GPU i915 kernel driver
+    functionality in the way a user may run malicious code on the GPU. This flaw allows a
+    local user to crash the system or escalate their privileges on the system.
+
+    A stack overflow flaw was found in the Linux kernel's TIPC protocol functionality in the
+    way a user sends a packet with malicious content where the number of domain member nodes
+    is higher than the 64 allowed. This flaw allows a remote user to crash the system or
+    possibly escalate their privileges if they have access to the TIPC network.
+
+    A vulnerability was found in kvm_s390_guest_sida_op in the arch/s390/kvm/kvm-s390.c
+    function in KVM for s390 in the Linux kernel. This flaw allows a local attacker with a
+    normal user privilege to obtain unauthorized memory write access. This flaw affects Linux
+    kernel versions prior to 5.17-rc4.
+
+    A flaw was found in the way the "flags" member of the new pipe buffer structure was
+    lacking proper initialization in copy_page_to_iter_pipe and push_pipe functions in the
+    Linux kernel and could thus contain stale values. An unprivileged local user could use
+    this flaw to write to pages in the page cache backed by read only files and as such
+    escalate their privileges on the system.
+
+    An issue was discovered in fs/nfs/dir.c in the Linux kernel before 5.16.5. If an
+    application sets the O_DIRECTORY flag, and tries to open a regular file, nfs_atomic_open()
+    performs a regular lookup. If a regular file is found, ENOTDIR should occur, but the
+    server instead returns uninitialized data in the file descriptor.
+
+    An issue was discovered in the Linux kernel before 5.16.5. There is a memory leak in
+    yam_siocdevprivate in drivers/net/hamradio/yam.c.
+
+    An issue was discovered in drivers/usb/gadget/composite.c in the Linux kernel before
+    5.16.10. The USB Gadget subsystem lacks certain validation of interface OS descriptor
+    requests (ones with a large array index and ones associated with NULL function pointer
+    retrieval). Memory corruption might occur.
+
+    An issue was discovered in drivers/usb/gadget/function/rndis.c in the Linux kernel before
+    5.16.10. The RNDIS USB gadget lacks validation of the size of the RNDIS_MSG_SET command.
+    Attackers can obtain sensitive information from kernel memory.
+  cves:
+  - CVE-2021-43976
+  - CVE-2022-0330
+  - CVE-2022-0435
+  - CVE-2022-0516
+  - CVE-2022-0847
+  - CVE-2022-22942
+  - CVE-2022-24448
+  - CVE-2022-24959
+  - CVE-2022-25258
+  - CVE-2022-25375
   scope: local
 - name: DSA-5091-1
   title: containerd -- security update
@@ -14815,6 +14963,126 @@
   cves:
   - CVE-2021-45417
   severity: not yet assigned
+  scope: local
+- name: DSA-5050-1
+  title: linux -- security update
+  issued: 20 Jan 2022
+  affected_source_package: linux
+  packages:
+  - name: linux-image-5.10.0-11-amd64
+    version: 5.10.92-2
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-11-cloud-amd64
+    version: 5.10.92-2
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-11-rt-amd64
+    version: 5.10.92-2
+    architecture: amd64
+    component: main
+    release: bullseye
+  description: |
+    Rogue backends can cause DoS of guests via high frequency events T[his CNA information
+    record relates to multiple CVEs; the text explains which aspects/vulnerabilities
+    correspond to which CVE.] Xen offers the ability to run PV backends in regular
+    unprivileged guests, typically referred to as "driver domains". Running PV backends in
+    driver domains has one primary security advantage: if a driver domain gets compromised, it
+    doesn't have the privileges to take over the system. However, a malicious driver domain
+    could try to attack other guests via sending events at a high frequency leading to a
+    Denial of Service in the guest due to trying to service interrupts for elongated amounts
+    of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront
+    patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713
+
+    Rogue backends can cause DoS of guests via high frequency events T[his CNA information
+    record relates to multiple CVEs; the text explains which aspects/vulnerabilities
+    correspond to which CVE.] Xen offers the ability to run PV backends in regular
+    unprivileged guests, typically referred to as "driver domains". Running PV backends in
+    driver domains has one primary security advantage: if a driver domain gets compromised, it
+    doesn't have the privileges to take over the system. However, a malicious driver domain
+    could try to attack other guests via sending events at a high frequency leading to a
+    Denial of Service in the guest due to trying to service interrupts for elongated amounts
+    of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront
+    patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713
+
+    Rogue backends can cause DoS of guests via high frequency events T[his CNA information
+    record relates to multiple CVEs; the text explains which aspects/vulnerabilities
+    correspond to which CVE.] Xen offers the ability to run PV backends in regular
+    unprivileged guests, typically referred to as "driver domains". Running PV backends in
+    driver domains has one primary security advantage: if a driver domain gets compromised, it
+    doesn't have the privileges to take over the system. However, a malicious driver domain
+    could try to attack other guests via sending events at a high frequency leading to a
+    Denial of Service in the guest due to trying to service interrupts for elongated amounts
+    of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront
+    patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713
+
+    Guest can force Linux netback driver to hog large amounts of kernel memory T[his CNA
+    information record relates to multiple CVEs; the text explains which
+    aspects/vulnerabilities correspond to which CVE.] Incoming data packets for a guest in the
+    Linux kernel's netback driver are buffered until the guest is ready to process them. There
+    are some measures taken for avoiding to pile up too much data, but those can be bypassed
+    by the guest: There is a timeout how long the client side of an interface can stop
+    consuming new packets before it is assumed to have stalled, but this timeout is rather
+    long (60 seconds by default). Using a UDP connection on a fast interface can easily
+    accumulate gigabytes of data in that time. (CVE-2021-28715) The timeout could even never
+    trigger if the guest manages to have only one free slot in its RX queue ring page and the
+    next package would require more than one free slot, which may be the case when using GSO,
+    XDP, or software hashing. (CVE-2021-28714)
+
+    Guest can force Linux netback driver to hog large amounts of kernel memory T[his CNA
+    information record relates to multiple CVEs; the text explains which
+    aspects/vulnerabilities correspond to which CVE.] Incoming data packets for a guest in the
+    Linux kernel's netback driver are buffered until the guest is ready to process them. There
+    are some measures taken for avoiding to pile up too much data, but those can be bypassed
+    by the guest: There is a timeout how long the client side of an interface can stop
+    consuming new packets before it is assumed to have stalled, but this timeout is rather
+    long (60 seconds by default). Using a UDP connection on a fast interface can easily
+    accumulate gigabytes of data in that time. (CVE-2021-28715) The timeout could even never
+    trigger if the guest manages to have only one free slot in its RX queue ring page and the
+    next package would require more than one free slot, which may be the case when using GSO,
+    XDP, or software hashing. (CVE-2021-28714)
+
+    In various setup methods of the USB gadget subsystem, there is a possible out of bounds
+    write due to an incorrect flag check. This could lead to local escalation of privilege
+    with no additional execution privileges needed. User interaction is not needed for
+    exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-210292376References:
+    Upstream kernel
+
+    pep_sock_accept in net/phonet/pep.c in the Linux kernel through 5.15.8 has a refcount
+    leak.
+
+    In __f2fs_setxattr in fs/f2fs/xattr.c in the Linux kernel through 5.15.11, there is an
+    out-of-bounds memory access when an inode has an invalid last xattr entry.
+
+    An issue was discovered in the Linux kernel before 5.15.11. There is a memory leak in the
+    __rds_conn_create() function in net/rds/connection.c in a certain combination of
+    circumstances.
+
+    A heap-based buffer overflow flaw was found in the way the legacy_parse_param function in
+    the Filesystem Context functionality of the Linux kernel verified the supplied parameters
+    length. An unprivileged (in case of unprivileged user namespaces enabled, otherwise needs
+    namespaced CAP_SYS_ADMIN privilege) local user able to open a filesystem that does not
+    support the Filesystem Context API (and thus fallbacks to legacy handling) could use this
+    flaw to escalate their privileges on the system.
+
+    kernel/bpf/verifier.c in the Linux kernel through 5.15.14 allows local users to gain
+    privileges because of the availability of pointer arithmetic via certain *_OR_NULL pointer
+    types.
+  cves:
+  - CVE-2021-4155
+  - CVE-2021-28711
+  - CVE-2021-28712
+  - CVE-2021-28713
+  - CVE-2021-28714
+  - CVE-2021-28715
+  - CVE-2021-39685
+  - CVE-2021-45095
+  - CVE-2021-45469
+  - CVE-2021-45480
+  - CVE-2022-0185
+  - CVE-2022-23222
   scope: local
 - name: DSA-5049-1
   title: flatpak -- security update
@@ -22704,6 +22972,123 @@
   - CVE-2021-41799
   - CVE-2021-41800
   - CVE-2021-41801
+  scope: local
+- name: DSA-4978-1
+  title: linux -- security update
+  issued: 25 Sep 2021
+  affected_source_package: linux
+  packages:
+  - name: linux-image-5.10.0-8-amd64
+    version: 5.10.46-5
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-8-cloud-amd64
+    version: 5.10.46-5
+    architecture: amd64
+    component: main
+    release: bullseye
+  - name: linux-image-5.10.0-8-rt-amd64
+    version: 5.10.46-5
+    architecture: amd64
+    component: main
+    release: bullseye
+  description: |
+    u'Specifically timed and handcrafted traffic can cause internal errors in a WLAN device
+    that lead to improper layer 2 Wi-Fi encryption with a consequent possibility of
+    information disclosure over the air for a discrete set of traffic' in Snapdragon Auto,
+    Snapdragon Compute, Snapdragon Connectivity, Snapdragon Consumer IOT, Snapdragon
+    Industrial IOT, Snapdragon Mobile, Snapdragon Voice & Music, Snapdragon Wearables,
+    Snapdragon Wired Infrastructure and Networking in APQ8053, IPQ4019, IPQ8064, MSM8909W,
+    MSM8996AU, QCA9531, QCN5502, QCS405, SDX20, SM6150, SM7150
+
+    Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to
+    reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a listener after being
+    released. Fixed in Ubuntu Linux kernel 5.4.0-51.56, 5.3.0-68.63, 4.15.0-121.123,
+    4.4.0-193.224, 3.13.0.182.191 and 3.2.0-149.196.
+
+    A flaw was found in the KVM's AMD code for supporting SVM nested virtualization. The flaw
+    occurs when processing the VMCB (virtual machine control block) provided by the L1 guest
+    to spawn/handle a nested guest (L2). Due to improper validation of the "int_ctl" field,
+    this issue could allow a malicious L1 to enable AVIC support (Advanced Virtual Interrupt
+    Controller) for the L2 guest. As a result, the L2 guest would be allowed to read/write
+    physical pages of the host, resulting in a crash of the entire system, leak of sensitive
+    data or potential guest-to-host escape. This flaw affects Linux kernel versions prior to
+    5.14-rc7.
+
+    A flaw was found in the KVM's AMD code for supporting SVM nested virtualization. The flaw
+    occurs when processing the VMCB (virtual machine control block) provided by the L1 guest
+    to spawn/handle a nested guest (L2). Due to improper validation of the "virt_ext" field,
+    this issue could allow a malicious L1 to disable both VMLOAD/VMSAVE intercepts and VLS
+    (Virtual VMLOAD/VMSAVE) for the L2 guest. As a result, the L2 guest would be allowed to
+    read/write physical pages of the host, resulting in a crash of the entire system, leak of
+    sensitive data or potential guest-to-host escape.
+
+    A lack of CPU resource in the Linux kernel tracing module functionality in versions prior
+    to 5.14-rc3 was found in the way user uses trace ring buffer in a specific way. Only
+    privileged local users (with CAP_SYS_ADMIN capability) could use this flaw to starve the
+    resources causing denial of service.
+
+    A security issue was found in Linux kernel’s OverlayFS subsystem where a local attacker
+    who has the ability to mount the TmpFS filesystem with OverlayFS can abuse a logic bug in
+    the overlayfs code which can inadvertently reveal files hidden in the original mount.
+
+    A NULL pointer dereference flaw was found in the btrfs_rm_device function in
+    fs/btrfs/volumes.c in the Linux Kernel, where triggering the bug requires ‘CAP_SYS_ADMIN’.
+    This flaw allows a local attacker to crash the system or leak kernel internal information.
+    The highest threat from this vulnerability is to system availability.
+
+    An out-of-bounds (OOB) memory read flaw was found in the Qualcomm IPC router protocol in
+    the Linux kernel. A missing sanity check allows a local attacker to gain access to
+    out-of-bounds memory, leading to a system crash or a leak of internal kernel information.
+    The highest threat from this vulnerability is to system availability.
+
+    A race problem was seen in the vt_k_ioctl in drivers/tty/vt/vt_ioctl.c in the Linux
+    kernel, which may cause an out of bounds read in vt as the write access to vc_mode is not
+    protected by lock-in vt_ioctl (KDSETMDE). The highest threat from this vulnerability is to
+    data confidentiality.
+
+    arch/powerpc/kvm/book3s_rtas.c in the Linux kernel through 5.13.5 on the powerpc platform
+    allows KVM guest OS users to cause host OS memory corruption via rtas_args.nargs, aka
+    CID-f62f3c20647e.
+
+    ** DISPUTED ** In drivers/char/virtio_console.c in the Linux kernel before 5.13.4, data
+    corruption or loss can be triggered by an untrusted device that supplies a buf->len value
+    exceeding the buffer size. NOTE: the vendor indicates that the cited data corruption is
+    not a vulnerability in any existing use case; the length validation was added solely for
+    robustness in the face of anomalous host OS behavior.
+
+    In kernel/bpf/hashtab.c in the Linux kernel through 5.13.8, there is an integer overflow
+    and out-of-bounds write when many elements are placed in a single bucket. NOTE:
+    exploitation might be impractical without the CAP_SYS_ADMIN capability.
+
+    fs/nfs/nfs4client.c in the Linux kernel before 5.13.4 has incorrect connection-setup
+    ordering, which allows operators of remote NFSv4 servers to cause a denial of service
+    (hanging of mounts) by arranging for those servers to be unreachable during trunking
+    detection.
+
+    A race condition was discovered in ext4_write_inline_data_end in fs/ext4/inline.c in the
+    ext4 subsystem in the Linux kernel through 5.13.13.
+
+    loop_rw_iter in fs/io_uring.c in the Linux kernel 5.10 through 5.14.6 allows local users
+    to gain privileges by using IORING_OP_PROVIDE_BUFFERS to trigger a free of a kernel
+    buffer, as demonstrated by using /proc/<pid>/maps for exploitation.
+  cves:
+  - CVE-2020-3702
+  - CVE-2020-16119
+  - CVE-2021-3653
+  - CVE-2021-3656
+  - CVE-2021-3679
+  - CVE-2021-3732
+  - CVE-2021-3739
+  - CVE-2021-3743
+  - CVE-2021-3753
+  - CVE-2021-37576
+  - CVE-2021-38160
+  - CVE-2021-38166
+  - CVE-2021-38199
+  - CVE-2021-40490
+  - CVE-2021-41073
   scope: local
 - name: DSA-4977-1
   title: xen -- security update
@@ -64594,7 +64979,7 @@
     release: stretch
   description: 'LemonLDAP::NG -2.0.3 has Incorrect Access Control.
 
-    '
+'
   cves:
   - CVE-2019-12046
   scope: local
@@ -77682,7 +78067,7 @@
   description: 'PHPMailer before 5.2.27 and 6.x before 6.0.6 is vulnerable to an object
     injection attack.
 
-    '
+'
   cves:
   - CVE-2018-19296
   scope: local
@@ -84136,7 +84521,7 @@
   description: 'The gmp plugin in strongSwan before 5.7.1 has a Buffer Overflow via
     a crafted certificate.
 
-    '
+'
   cves:
   - CVE-2018-17540
   scope: local
@@ -99465,7 +99850,7 @@
   description: 'corosync before version 2.4.4 is vulnerable to an integer overflow
     in exec/totemcrypto.c.
 
-    '
+'
   cves:
   - CVE-2018-1084
   scope: local
