@@ -228,7 +228,8 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
       errata,
       packages,
       releases: get_whitelist(cfg, 'releases'),
-      architecture_whitelist: whitelist_arch
+      architecture_whitelist: whitelist_arch,
+      special_kernel_pkg_collection: cfg['special-kernel-pkg-collection']
     )
 
     write_errata_file(

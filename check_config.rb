@@ -37,7 +37,10 @@ ERRATAPARSER_CONFIG_SCHEMA = {
     'cve_list_url' => { type: String, mandatory: true },
     'repository' => ERRATAPARSER_REPOSITORY_SCHEMA,
     'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
-    'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA
+    'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA,
+    'special-kernel-pkg-collection' => { type: Array, mandatory: false, child: {
+      type: String, mandatory: true
+    } }
   } },
   'ubuntu' => { type: Hash, mandatory: false, child: {
     'usn_list_url' => { type: String, mandatory: true },

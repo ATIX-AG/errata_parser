@@ -426,16 +426,17 @@ class DebianErrataParser
     errata
   end
 
-  def add_binary_packages_from_file(errata, package_json_path, releases=nil, architecture_whitelist=nil)
+  def add_binary_packages_from_file(errata, package_json_path, releases=nil, architecture_whitelist=nil, special_kernel_pkg_collection=nil)
     add_binary_packages(
       errata,
       JSON.parse(File.read(package_json_path)),
       releases: releases,
-      architecture_whitelist: architecture_whitelist
+      architecture_whitelist: architecture_whitelist,
+      special_kernel_pkg_collection: special_kernel_pkg_collection
     )
   end
 
-  def add_binary_packages(errata, packages, releases: ['stretch'], architecture_whitelist: nil)
+  def add_binary_packages(errata, packages, releases: ['stretch'], architecture_whitelist: nil, special_kernel_pkg_collection: nil)
     @info_state = :add_binaries
     @info_state_cmplt = 0
     info_step = 1.0 / errata.length
@@ -455,6 +456,22 @@ class DebianErrataParser
               packages[p[:name]],
               architecture_whitelist
             )
+            #  On Debian, there are differnet source packages which are used to build the linux kernel packages
+            #    linux -> is used to create the unsigned linux images
+            #    linux-signed-XX (e.g. linux-signed-amd64) is used to build signed linux image which runs on secureboot enabled systems
+            if erratum.source_package == 'linux' && special_kernel_pkg_collection&.include?(p[:release])
+              architecture_whitelist.each do |arch|
+                source_pkg = "linux-signed-#{arch}"
+                packages.keys.select { |package_name| package_name.start_with? source_pkg }.each do |package_name|
+                  new += get_binary_packages_for_erratum_package(
+                    source_pkg,
+                    p,
+                    packages[package_name],
+                    architecture_whitelist
+                  )
+                end
+              end
+            end
           end
           # return new value to append to package list in erratum
           new
@@ -483,7 +500,7 @@ class DebianErrataParser
         # - A Debian DSA is released based on a specific version like 4.19.171-2 which should fix the issue.
         # - The erratum should only contain packages of this linux kernel stream '4.19.171' and not e.g. for '4.19.194'
         # - The Debian DSA can be fixed with versions greater or equal '4.19.171-2' (4.19.171-3 or 4.19.171-4)
-        if source_pkg == 'linux'
+        if source_pkg == 'linux' || source_pkg.start_with?('linux-signed')
           deb_main_version = deb['version'].rpartition('-')[0]
           deb_main_version = deb['version'] if deb_main_version.empty?
           pkg_main_version = pkg[:version].rpartition('-')[0]
@@ -542,7 +559,7 @@ if $PROGRAM_NAME == __FILE__
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
     errata += parser.gen_debian_errata(DSA.parse_dsa_list_str(dla_list), JSON.parse(cve_file))
     # parser.add_binary_packages_from_file(errata, 'packages_everything.json')
-    parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['bullseye'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, 'packages_everything.json', ['bullseye'], ['amd64'], ['bullseye'])
 
     # filter empty package-lists
     # errata.delete_if { |x| x['packages'].nil? || x['packages'].empty? }
@@ -551,7 +568,7 @@ if $PROGRAM_NAME == __FILE__
     dsa_list = File.read('test/data/dsa.list')
     cve_file = File.read('test/data/cve.json')
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
-    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything_debian.json', ['stretch', 'bullseye'], ['amd64'])
+    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything_debian.json', ['stretch', 'bullseye'], ['amd64'], ['bullseye'])
 
   when 'ubuntu'
     ## Ubuntu

@@ -37,7 +37,11 @@
         "stretch": [ "stretch/updates", "stretch-updates" , "stretch-backports" ],
         "jessie": [ "jessie/updates", "jessie-updates" , "jessie-backports" ]
       }
-    }
+    },
+    "special-kernel-pkg-collection": [
+      "bullseye",
+      "buster"
+    ]
   },
   "ubuntu": {
     "usn_list_url": "https://usn.ubuntu.com/usn-db/database.json.bz2",
