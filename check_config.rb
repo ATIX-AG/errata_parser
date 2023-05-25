@@ -93,7 +93,7 @@ def check_config_array(cfg, schema, path='')
   cfg.each_index do |i|
     raise "#{path}: Item##{i} has type #{cfg[i].class.name} but should be #{child_type}" if cfg[i].class != child_type
 
-    check_config_child(cfg, schema, path) if schema.key?(:child)
+    check_config_child(cfg[i], schema, path) if schema.key?(:child)
   end
 end
 
