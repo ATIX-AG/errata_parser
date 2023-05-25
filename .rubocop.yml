@@ -1,5 +1,7 @@
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 3.3
+  NewCops: enable
+
 
 Style/WordArray:
   EnforcedStyle: brackets
@@ -9,6 +11,9 @@ Style/MutableConstant:
 
 Style/MixinUsage:
   Enabled: False
+
+Layout/LineLength:
+  Max: 159
 
 # not my style ;-)
 Layout/SpaceAroundEqualsInParameterDefault:
@@ -22,16 +27,15 @@ Style/StringLiterals:
   Exclude:
     - 'Gemfile'
 
+Style/OptionalBooleanParameter:
+  Enabled: False
+
 # we want that for better
 Style/TrailingCommaInHashLiteral:
   Enabled: False
 
-
 Metrics/CyclomaticComplexity:
-  Max: 20
-
-Metrics/LineLength:
-  Max: 159
+  Max: 22
 
 Metrics/ClassLength:
   Max: 300
@@ -43,13 +47,13 @@ Metrics/BlockLength:
   Max: 65
 
 Metrics/AbcSize:
-  Max: 60
+  Max: 70
 
 Metrics/BlockNesting:
   Max: 5
 
 Metrics/PerceivedComplexity:
-  Max: 20
+  Max: 22
 
 Style/ClassVars:
   Exclude:

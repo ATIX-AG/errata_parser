@@ -38,7 +38,8 @@ module Downloader
       end
     end
 
-    if res.is_a? Net::HTTPSuccess
+    case res
+    when Net::HTTPSuccess
       mode = 'wb'
       body = res.body
       # check for content type; use 'wb' for images
@@ -53,11 +54,11 @@ module Downloader
           io.write body
         end
       end
-      return body
-    elsif res.is_a? Net::HTTPNotModified
+      body
+    when Net::HTTPNotModified
       # Use already downloaded version
-      return File.read path
-    elsif res.is_a? Net::HTTPFound
+      File.read path
+    when Net::HTTPFound
       # Redirect!
       warn "REDIRECTed to #{res['location'].inspect}"
       raise "Max redirect-depth reached (#{MAXREDIRECTHOPS} hops)" if maxhop.zero?

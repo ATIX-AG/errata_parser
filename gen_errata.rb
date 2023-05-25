@@ -6,7 +6,6 @@ require 'yaml'
 require 'time'
 require 'debian'
 require 'pathname'
-require 'set'
 
 require_relative 'parse_dsalist'
 require_relative 'downloader'
@@ -44,8 +43,7 @@ end
 
 # The erratum main class
 class Erratum
-  attr_accessor :title, :name, :cves, :source_package, :fixed_version
-  attr_accessor :dbts_bugs
+  attr_accessor :title, :name, :cves, :source_package, :fixed_version, :dbts_bugs
   attr_writer :description
 
   def initialize
@@ -82,11 +80,11 @@ class Erratum
 
   def add_package(name, version, architecture: nil, release: nil, component: nil)
     hsh = {
-      name: name,
-      version: version,
-      architecture: architecture,
-      release: release,
-      component: component
+      name:,
+      version:,
+      architecture:,
+      release:,
+      component:
     }
     @packages << hsh unless @packages.include? hsh
   end
@@ -196,7 +194,7 @@ end
 class DebianErrataParser
   attr_reader :info_state, :info_state_cmplt
 
-  def initialize(verbose=false)
+  def initialize(verbose: false)
     @info_state = :init
     @info_state_cmplt = 1
 
@@ -331,7 +329,7 @@ class DebianErrataParser
               versions[match['version']] || match['version'],
               architecture: match['arch'],
               component: match['comp'],
-              release: release
+              release:
             )
             metadata_add_entry(release, match['arch'], match['comp'])
           elsif @verbose
@@ -359,11 +357,9 @@ class DebianErrataParser
         erratum.description = usn['description']
         if usn.key? 'cves'
           usn['cves'].each do |cve|
-            begin
-              erratum.add_cve cve
-            rescue RuntimeError => e
-              raise unless e.message.start_with? 'Invalid CVE'
-            end
+            erratum.add_cve cve
+          rescue RuntimeError => e
+            raise unless e.message.start_with? 'Invalid CVE'
           end
         end
         erratum.issued = usn['timestamp']
@@ -431,9 +427,9 @@ class DebianErrataParser
     add_binary_packages(
       errata,
       JSON.parse(File.read(package_json_path)),
-      releases: releases,
-      architecture_whitelist: architecture_whitelist,
-      special_kernel_pkg_collection: special_kernel_pkg_collection
+      releases:,
+      architecture_whitelist:,
+      special_kernel_pkg_collection:
     )
   end
 
@@ -537,14 +533,14 @@ if $PROGRAM_NAME == __FILE__
   type = ARGV[0]
   parser = DebianErrataParser.new
   Thread.new do
-    STDERR.puts
+    $stderr.puts
     line = ''
     loop do
       # clean line
-      STDERR.print "#{' ' * line.length}\r"
+      $stderr.print "#{' ' * line.length}\r"
 
       line = "#{(parser.info_state_cmplt * 100).round}% #{parser.info_state}"
-      STDERR.print "#{line}\r"
+      $stderr.print "#{line}\r"
       sleep 0.1
     end
   end
