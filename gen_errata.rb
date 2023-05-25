@@ -6,6 +6,7 @@ require 'yaml'
 require 'time'
 require 'debian'
 require 'pathname'
+require 'set'
 
 require_relative 'parse_dsalist'
 require_relative 'downloader'
