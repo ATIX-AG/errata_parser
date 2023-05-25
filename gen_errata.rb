@@ -568,7 +568,7 @@ if $PROGRAM_NAME == __FILE__
     dsa_list = File.read('test/data/dsa.list')
     cve_file = File.read('test/data/cve.json')
     errata = parser.gen_debian_errata(DSA.parse_dsa_list_str(dsa_list), JSON.parse(cve_file))
-    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything_debian.json', ['stretch', 'bullseye'], ['amd64'], ['bullseye'])
+    parser.add_binary_packages_from_file(errata, 'test/data/packages_everything_debian.json', ['buster', 'bullseye'], ['amd64'], ['bullseye'])
 
   when 'ubuntu'
     ## Ubuntu
