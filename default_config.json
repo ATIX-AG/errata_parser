@@ -4,15 +4,22 @@
     "dsa_list_url": "https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DSA/list",
     "dla_list_url": "https://salsa.debian.org/security-tracker-team/security-tracker/raw/master/data/DLA/list",
     "cve_list_url": "https://security-tracker.debian.org/tracker/data/json",
-    "repository": {
-      "repo_url": "http://security.debian.org/debian-security",
-      "releases": [
-        "bullseye-security",
-        "buster/updates",
-        "stretch/updates",
-        "jessie/updates"
-      ]
-    },
+    "repositories": [
+      {
+        "repo_url": "http://security.debian.org/debian-security",
+        "releases": [
+          "bullseye-security",
+          "buster/updates"
+        ]
+      },
+      {
+        "repo_url": "http://archive.debian.org/debian-security",
+        "releases": [
+          "stretch/updates",
+          "jessie/updates"
+        ]
+      }
+    ],
     "whitelists": {
       "releases": [
         "bullseye",

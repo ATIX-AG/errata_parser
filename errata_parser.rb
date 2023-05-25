@@ -172,40 +172,46 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
     ## Download package-lists
     DebRelease.tempdir = tempdir
-    fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
-    fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
-    fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
-    repo_url = cfg['repository']['repo_url']
-    if cfg['repository'].key?('credentials')
-      url = URI.parse(repo_url)
-      url.user = cfg['repository']['credentials']['user']
-      url.password = cfg['repository']['credentials']['pass']
-      repo_url = url.to_s
+    fatal('Config-error missing \'repositories\'-section', 4) unless cfg.key?('repositories') &&
+                                                                     cfg['repositories'].is_a?(Array) &&
+                                                                     !cfg['repositories'].empty?
+    cfg['repositories'].each_index do |repo_id|
+      fatal("Config-error 'repo_url' missing in 'repository' ##{repo_id}", 5) unless cfg['repositories'][repo_id].key? 'repo_url'
+      fatal("Config-error 'releases' missing in 'repository' ##{repo_id}", 6) unless cfg['repositories'][repo_id].key? 'releases'
     end
-    cfg['repository']['releases'].each do |s|
-      threads << Thread.new do
-        warn "START  Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
-        deb_rel = DebRelease.new(repo_url, s)
-        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
-        # necessary for 'bullseye', for release_name would be 'bullseye-security' instead of 'bullseye'
-        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
-        deb_rel.whitelist_arch = whitelist_arch
-        pkgs = deb_rel.all_packages
+    cfg['repositories'].each do |repository|
+      repo_url = repository['repo_url']
+      if repository.key?('credentials')
+        url = URI.parse(repo_url)
+        url.user = repository['credentials']['user']
+        url.password = repository['credentials']['pass']
+        repo_url = url.to_s
+      end
+      repository['releases'].each do |s|
+        threads << Thread.new do
+          warn "START  Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+          deb_rel = DebRelease.new(repo_url, s)
+          deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+          # necessary for 'bullseye', for release_name would be 'bullseye-security' instead of 'bullseye'
+          deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+          deb_rel.whitelist_arch = whitelist_arch
+          pkgs = deb_rel.all_packages
 
-        # merge package-list
-        mutex.synchronize do
-          # save Meta-data
-          metadata[:releases][deb_rel.release_name] = {
-            'architectures': deb_rel.architectures,
-            'components': deb_rel.components
-          }
-          metadata[:releases][deb_rel.release_name][:aliases] = cfg['aliases']['releases'][deb_rel.release_name] if
+          # merge package-list
+          mutex.synchronize do
+            # save Meta-data
+            metadata[:releases][deb_rel.release_name] = {
+              'architectures': deb_rel.architectures,
+              'components': deb_rel.components
+            }
+            metadata[:releases][deb_rel.release_name][:aliases] = cfg['aliases']['releases'][deb_rel.release_name] if
             cfg.key?('aliases') && cfg['aliases'].key?('releases') && cfg['aliases']['releases'].key?(deb_rel.release_name)
 
-          # merge packages
-          DebRelease.assemble_debian_packages(packages, pkgs)
+            # merge packages
+            DebRelease.assemble_debian_packages(packages, pkgs)
+          end
+          warn "FINISH Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
         end
-        warn "FINISH Download #{s.inspect} from #{repo_url.sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
       end
     end
 
