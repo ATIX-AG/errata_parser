@@ -1,14 +1,9 @@
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 3.3
+  NewCops: enable
 
-Style/WordArray:
-  EnforcedStyle: brackets
-
-Style/MutableConstant:
-  EnforcedStyle: strict
-
-Style/MixinUsage:
-  Enabled: False
+Layout/LineLength:
+  Max: 159
 
 # not my style ;-)
 Layout/SpaceAroundEqualsInParameterDefault:
@@ -18,39 +13,52 @@ Layout/SpaceAroundEqualsInParameterDefault:
 Layout/SpaceInsideBlockBraces:
   Exclude:
     - 'Gemfile'
-Style/StringLiterals:
-  Exclude:
-    - 'Gemfile'
-
-# we want that for better
-Style/TrailingCommaInHashLiteral:
-  Enabled: False
 
 
-Metrics/CyclomaticComplexity:
-  Max: 20
-
-Metrics/LineLength:
-  Max: 159
-
-Metrics/ClassLength:
-  Max: 300
-
-Metrics/MethodLength:
+Metrics/AbcSize:
   Max: 70
 
 Metrics/BlockLength:
   Max: 65
 
-Metrics/AbcSize:
-  Max: 60
-
 Metrics/BlockNesting:
   Max: 5
 
+Metrics/ClassLength:
+  Max: 300
+
+Metrics/CyclomaticComplexity:
+  Max: 22
+
+Metrics/MethodLength:
+  Max: 70
+
 Metrics/PerceivedComplexity:
-  Max: 20
+  Max: 22
+
 
 Style/ClassVars:
   Exclude:
     - 'debRelease.rb'
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: 'never'
+
+Style/OptionalBooleanParameter:
+  Enabled: False
+
+Style/MixinUsage:
+  Enabled: False
+
+Style/MutableConstant:
+  EnforcedStyle: strict
+
+Style/StringLiterals:
+  Exclude:
+    - 'Gemfile'
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: True
+
+Style/WordArray:
+  EnforcedStyle: brackets

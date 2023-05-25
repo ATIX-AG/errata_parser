@@ -6,7 +6,6 @@ require 'yaml'
 require 'time'
 require 'debian'
 require 'pathname'
-require 'set'
 
 require_relative 'parse_dsalist'
 require_relative 'downloader'
@@ -44,8 +43,7 @@ end
 
 # The erratum main class
 class Erratum
-  attr_accessor :title, :name, :cves, :source_package, :fixed_version
-  attr_accessor :dbts_bugs
+  attr_accessor :title, :name, :cves, :source_package, :fixed_version, :dbts_bugs
   attr_writer :description
 
   def initialize
@@ -196,7 +194,7 @@ end
 class DebianErrataParser
   attr_reader :info_state, :info_state_cmplt
 
-  def initialize(verbose=false)
+  def initialize(verbose: false)
     @info_state = :init
     @info_state_cmplt = 1
 
@@ -359,11 +357,9 @@ class DebianErrataParser
         erratum.description = usn['description']
         if usn.key? 'cves'
           usn['cves'].each do |cve|
-            begin
-              erratum.add_cve cve
-            rescue RuntimeError => e
-              raise unless e.message.start_with? 'Invalid CVE'
-            end
+            erratum.add_cve cve
+          rescue RuntimeError => e
+            raise unless e.message.start_with? 'Invalid CVE'
           end
         end
         erratum.issued = usn['timestamp']
@@ -537,14 +533,14 @@ if $PROGRAM_NAME == __FILE__
   type = ARGV[0]
   parser = DebianErrataParser.new
   Thread.new do
-    STDERR.puts
+    $stderr.puts
     line = ''
     loop do
       # clean line
-      STDERR.print "#{' ' * line.length}\r"
+      $stderr.print "#{' ' * line.length}\r"
 
       line = "#{(parser.info_state_cmplt * 100).round}% #{parser.info_state}"
-      STDERR.print "#{line}\r"
+      $stderr.print "#{line}\r"
       sleep 0.1
     end
   end

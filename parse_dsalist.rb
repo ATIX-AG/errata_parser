@@ -2,14 +2,14 @@
 
 require 'json'
 
-REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9\-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/.freeze
-REGEX_CVE_LINE = /\s+{(?<cves>[^}]*)}/.freeze
-REGEX_REL_LINE = /\s+\[(?<release>[^\]]*)\]\s*-\s*(?<package>\S+)\s*(?<version>\S*)/.freeze
-REGEX_NOT_LINE = /\s+NOTE:/.freeze
+REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/
+REGEX_CVE_LINE = /\s+{(?<cves>[^}]*)}/
+REGEX_REL_LINE = /\s+\[(?<release>[^\]]*)\]\s*-\s*(?<package>\S+)\s*(?<version>\S*)/
+REGEX_NOT_LINE = /\s+NOTE:/
 
 # Base-Parser Exception
 class ParserException < RuntimeError
-  def initialize(lnum = -1, line = nil, msg = 'ParserException', critical = true)
+  def initialize(lnum = -1, line = nil, msg = 'ParserException', critical: true)
     super("at #{lnum}: #{msg} (#{line})")
     @lnum = lnum
     @line = line
@@ -49,6 +49,7 @@ end
 class DSAList < Array
   def initialize
     @opt_ignore_empty_cve = true
+    super
   end
 
   def secure_push(item)
@@ -157,38 +158,36 @@ class DSA
     i = 0
 
     io.each_line do |line|
-      begin
-        i += 1
-        res1 = REGEX_1ST_LINE.match(line)
-        if res1
-          dsa_list.secure_push dsa
-          dsa = DSA.new(**symbolize_hash_keys(res1.named_captures))
-        elsif dsa
-          res = REGEX_REL_LINE.match(line)
-          if res
-            dsa.add_release(**symbolize_hash_keys(res.named_captures))
-            next
-          end
-          res = REGEX_CVE_LINE.match(line)
-          if res
-            dsa.add_cve(res[:cves].split(' ')) unless res[:cves].empty?
-            next
-          end
-          if REGEX_NOT_LINE.match(line)
-            # ignore 'NOTE:' lines
-            next
-          end
-
-          raise ParserWarning.new(i, line, 'Unknown Line in DSA')
-
-        else
-          raise ParserWarning.new(i, line, 'Unknown Line')
+      i += 1
+      res1 = REGEX_1ST_LINE.match(line)
+      if res1
+        dsa_list.secure_push dsa
+        dsa = DSA.new(**symbolize_hash_keys(res1.named_captures))
+      elsif dsa
+        res = REGEX_REL_LINE.match(line)
+        if res
+          dsa.add_release(**symbolize_hash_keys(res.named_captures))
+          next
         end
-      rescue ParserException => e
-        raise if e.critical
+        res = REGEX_CVE_LINE.match(line)
+        if res
+          dsa.add_cve(res[:cves].split) unless res[:cves].empty?
+          next
+        end
+        if REGEX_NOT_LINE.match(line)
+          # ignore 'NOTE:' lines
+          next
+        end
 
-        warn(e)
+        raise ParserWarning.new(i, line, 'Unknown Line in DSA')
+
+      else
+        raise ParserWarning.new(i, line, 'Unknown Line')
       end
+    rescue ParserException => e
+      raise if e.critical
+
+      warn(e)
     end
 
     dsa_list.secure_push dsa
