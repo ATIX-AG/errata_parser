@@ -35,7 +35,9 @@ ERRATAPARSER_CONFIG_SCHEMA = {
     'dsa_list_url' => { type: String, mandatory: true },
     'dla_list_url' => { type: String, mandatory: false },
     'cve_list_url' => { type: String, mandatory: true },
-    'repository' => ERRATAPARSER_REPOSITORY_SCHEMA,
+    'repositories' => {
+      type: Array, mandatory: true, child: ERRATAPARSER_REPOSITORY_SCHEMA
+    },
     'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
     'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA,
     'special-kernel-pkg-collection' => { type: Array, mandatory: false, child: {
@@ -93,7 +95,7 @@ def check_config_array(cfg, schema, path='')
   cfg.each_index do |i|
     raise "#{path}: Item##{i} has type #{cfg[i].class.name} but should be #{child_type}" if cfg[i].class != child_type
 
-    check_config_child(cfg, schema, path) if schema.key?(:child)
+    check_config_child(cfg[i], schema, path) if schema.key?(:child)
   end
 end
 

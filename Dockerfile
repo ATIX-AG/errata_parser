@@ -1,4 +1,4 @@
-FROM ruby:2.5-stretch
+FROM ruby:2.5-buster
 
 LABEL maintainer="Markus Bucher <bucher@atix.de>" \
       description="This container provides an errata-parser for Debian and Ubuntu" \

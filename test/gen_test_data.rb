@@ -8,7 +8,7 @@ require_relative '../errata_parser'
 require_relative '../downloader'
 require_relative '../debRelease'
 
-releases = ['stretch', 'bullseye']
+releases = ['buster', 'bullseye']
 test_path = File.dirname __FILE__
 data_path = File.join test_path, 'data'
 
@@ -94,10 +94,10 @@ HTTPDEBUG = true
   case type
   when 'debian'
     suites = [
-      'stretch/updates',
+      'buster/updates',
       'bullseye-security'
     ]
-    repository_url = config_debian['repository']['repo_url']
+    repository_url = config_debian['repositories'].select { |x| x['releases'].include? suites[0] }[0]['repo_url']
   when 'ubuntu'
     suites = [
       'bionic-security'
