@@ -1,0 +1,29 @@
+---
+stages:
+  - lint
+  - test
+
+variables:
+  RUBY_VERSION: "2.5"
+  RUBY_IMAGE: "ruby:${RUBY_VERSION}-buster"
+
+.common:
+  image: ${RUBY_IMAGE}
+  before_script:
+    - apt-get update
+    - apt-get install -y libapt-pkg-dev
+
+lint:
+  extends: .common
+  stage: lint
+  script:
+    - bundle install -j $(nproc) --with=rubocop
+    - bundle exec rubocop
+
+test:
+  extends: .common
+  stage: test
+  script:
+    - bundle install -j $(nproc)
+    - bundle exec ruby test/all.rb
+...
