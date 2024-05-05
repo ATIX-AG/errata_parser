@@ -112,7 +112,7 @@ class DebRelease
         end
         return Debian::Packages.new(plainfile)
       rescue StandardError => e
-        warn "#{e} for #{p.inspect}"
+        warn "#{e} for #{release_base_url}/#{p.inspect}"
         File.unlink path if File.exist? path
       ensure
         File.unlink plainfile if plainfile && File.exist?(plainfile)
