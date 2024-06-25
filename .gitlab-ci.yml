@@ -4,8 +4,8 @@ stages:
   - test
 
 variables:
-  RUBY_VERSION: "2.5"
-  RUBY_IMAGE: "ruby:${RUBY_VERSION}-buster"
+  RUBY_VERSION: "3.3"
+  RUBY_IMAGE: "ruby:${RUBY_VERSION}-bookworm"
 
 .common:
   image: ${RUBY_IMAGE}

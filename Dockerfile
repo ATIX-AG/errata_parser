@@ -1,4 +1,4 @@
-FROM ruby:2.5-buster
+FROM ruby:3.3-bookworm
 
 LABEL maintainer="Markus Bucher <bucher@atix.de>" \
       description="This container provides an errata-parser for Debian and Ubuntu" \
@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
 # Add and install the errata parser:
 COPY . /errata_parser/
 WORKDIR /errata_parser
-RUN bundle install --deployment --without rubocop
+RUN bundle config set --local deployment 'true'
+RUN bundle config set --local without 'rubocop'
+RUN bundle install
 
 # Configure and run the errata parser:
 VOLUME /errata

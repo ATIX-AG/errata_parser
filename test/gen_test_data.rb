@@ -62,9 +62,7 @@ cve_list.each do |package, cves|
   cve_list_filtered[package] = cves_filtered unless cves_filtered.empty?
 end
 
-File.open(File.join(data_path, 'cve.json'), 'w') do |f|
-  f.write JSON.dump cve_list_filtered
-end
+File.write(File.join(data_path, 'cve.json'), JSON.dump(cve_list_filtered))
 
 # gen USN-database
 warn 'receive USN list (Ubuntu)...'

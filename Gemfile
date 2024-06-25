@@ -16,14 +16,14 @@ gem "ruby-xz", "~> 1.0", group: %i[build test]
 gem "bzip2-ffi", "~> 1.0", group: %i[build test]
 
 # Added at 2018-09-07 16:41:14 +0200 by markus:
-gem "test-unit", "~> 3.2", group: [:test]
+gem "test-unit", "~> 3.5", group: [:test]
 
 # Added at 2021-11-12 17:19:23 +0200 by bernhard:
 gem 'parallel', '~> 1.20', '< 1.21', group: %i[build test]
 
 # Added at 2018-12-05 19:28:10 +0100 by markus:
 group :rubocop, optional: true do
-  gem "rubocop", "~> 0.61.0"
+  gem "rubocop", "~> 1.51.0"
 end
 
 group :development, optional: true do
