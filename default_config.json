@@ -8,6 +8,7 @@
       {
         "repo_url": "http://security.debian.org/debian-security",
         "releases": [
+          "bookworm-security",
           "bullseye-security",
           "buster/updates"
         ]
@@ -22,6 +23,7 @@
     ],
     "whitelists": {
       "releases": [
+        "bookworm",
         "bullseye",
         "buster",
         "stretch",
@@ -39,6 +41,7 @@
     },
     "aliases": {
       "releases": {
+        "bookworm": [ "bookworm-security" ],
         "bullseye": [ "bullseye-security" ],
         "buster": [ "buster/updates", "buster-updates" , "buster-backports" ],
         "stretch": [ "stretch/updates", "stretch-updates" , "stretch-backports" ],
@@ -46,6 +49,7 @@
       }
     },
     "special-kernel-pkg-collection": [
+      "bookworm",
       "bullseye",
       "buster"
     ]
@@ -55,6 +59,8 @@
     "repository": {
       "repo_url": "http://security.ubuntu.com/ubuntu",
       "releases": [
+        "noble-security",
+        "jammy-security",
         "focal-security",
         "bionic-security",
         "xenial-security"
@@ -62,9 +68,13 @@
     },
     "whitelists": {
       "releases": [
+        "noble",
+        "jammy",
         "focal",
         "bionic",
         "xenial",
+        "noble-security",
+        "jammy-security",
         "focal-security",
         "bionic-security",
         "xenial-infra-security",
@@ -83,6 +93,8 @@
     },
     "aliases": {
       "releases": {
+        "noble": [ "noble-security", "noble-updates" ],
+        "jammy": [ "jammy-security", "jammy-updates" ],
         "focal": [ "focal-security", "focal-updates" ],
         "bionic": [ "bionic-security", "bionic-updates" ],
         "xenial": [ "xenial-security", "xenial-updates" ]

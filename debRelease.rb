@@ -215,17 +215,16 @@ if $PROGRAM_NAME == __FILE__
   case type
   when 'debian'
     suites = [
-      'jessie/updates',
-      'stretch/updates',
       'buster/updates',
-      'bullseye-security'
+      'bullseye-security',
+      'bookworm-security'
     ]
     repository_url = 'http://security.debian.org/debian-security'
   when 'ubuntu', 'ubuntu_debstyle'
     suites = [
-      'bionic-security',
       'focal-security',
-      'hirsute-security'
+      'jammy-security',
+      'noble-security'
     ]
     repository_url = 'http://security.ubuntu.com/ubuntu'
   else
