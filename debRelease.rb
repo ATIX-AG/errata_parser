@@ -5,6 +5,8 @@ require 'debian'
 require 'fileutils'
 require 'time'
 require 'pathname'
+require 'xz'
+require 'zlib'
 
 require_relative 'downloader'
 
@@ -99,16 +101,14 @@ class DebRelease
       data = download_file_cached "#{release_base_url}/#{p}", path
       plainfile = "#{cache_dir}/Packages.plain"
       File.open(plainfile, 'w') do |f|
-        case basefilename.downcase
-        when 'packages.xz'
-          require 'xz'
-          f << XZ.decompress(data)
-        when 'packages.gz'
-          require 'zlib'
-          f << Zlib.gunzip(data)
-        else
-          f << data
-        end
+        f << case basefilename.downcase
+             when 'packages.xz'
+               XZ.decompress(data)
+             when 'packages.gz'
+               Zlib.gunzip(data)
+             else
+               data
+             end
         return Debian::Packages.new(plainfile)
       rescue StandardError => e
         warn "#{e} for #{release_base_url}/#{p.inspect}"

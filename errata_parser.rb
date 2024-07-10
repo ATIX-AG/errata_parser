@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'bzip2/ffi'
 require 'optparse'
+require 'stringio'
+
 require_relative 'gen_errata'
 require_relative 'debRelease'
 require_relative 'check_config'
@@ -258,9 +261,6 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
   if options.key? :ubuntu
     ## Ubuntu
-    require 'bzip2/ffi'
-    require 'stringio'
-
     cfg = @config['ubuntu']
     whitelist_arch = get_whitelist(cfg, 'architectures')
     tempdir = Pathname.new(File.join(@config['tempdir'], 'ubuntu'))
@@ -349,9 +349,6 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
   if options.key? :ubuntu_esm
     ## ubuntu_esm
-    require 'bzip2/ffi'
-    require 'stringio'
-
     cfg = @config['ubuntu-esm']
     whitelist_arch = get_whitelist(cfg, 'architectures')
     tempdir = Pathname.new(File.join(@config['tempdir'], 'ubuntu-esm'))
