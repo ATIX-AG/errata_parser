@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'bzip2/ffi'
 require 'optparse'
+require 'stringio'
+
 require_relative 'gen_errata'
 require_relative 'debRelease'
 require_relative 'check_config'
@@ -14,7 +17,7 @@ DEFAULT_CONF = {
   'tempdir' => '/tmp/errata_parser_cache'
 }.freeze
 
-def fatal(message, code=42, show_help=false)
+def fatal(message, code=42, show_help: false)
   warn message
   warn @opts if show_help
   exit code
@@ -138,7 +141,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
   ## Sanity checks
   fatal('No Errata-type specified!', 2, true) unless options.key?(:ubuntu) || options.key?(:ubuntu_esm) || options.key?(:debian)
 
-  parser = DebianErrataParser.new(options[:verbose])
+  parser = DebianErrataParser.new(verbose: options[:verbose])
   extend Downloader
 
   if options.key? :debian
@@ -201,8 +204,8 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
           mutex.synchronize do
             # save Meta-data
             metadata[:releases][deb_rel.release_name] = {
-              'architectures': deb_rel.architectures,
-              'components': deb_rel.components
+              architectures: deb_rel.architectures,
+              components: deb_rel.components
             }
             metadata[:releases][deb_rel.release_name][:aliases] = cfg['aliases']['releases'][deb_rel.release_name] if
             cfg.key?('aliases') && cfg['aliases'].key?('releases') && cfg['aliases']['releases'].key?(deb_rel.release_name)
@@ -258,9 +261,6 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
   if options.key? :ubuntu
     ## Ubuntu
-    require 'bzip2/ffi'
-    require 'stringio'
-
     cfg = @config['ubuntu']
     whitelist_arch = get_whitelist(cfg, 'architectures')
     tempdir = Pathname.new(File.join(@config['tempdir'], 'ubuntu'))
@@ -286,30 +286,28 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
     repository['releases'].each do |s|
       threads << Thread.new do
-        begin
-          Thread.current[:repo_url] = repository['repo_url']
-          if repository.key?('credentials')
-            url = URI.parse(Thread.current[:repo_url])
-            url.user = repository['credentials']['user']
-            url.password = repository['credentials']['pass']
-            Thread.current[:repo_url] = url.to_s
-          end
-          warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
-          deb_rel = DebRelease.new(Thread.current[:repo_url], s)
-          deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
-          deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
-          deb_rel.whitelist_arch = whitelist_arch
-          pkgs = deb_rel.all_packages
-
-          # merge package-list
-          mutex.synchronize do
-            DebRelease.assemble_ubuntu_packages(packages, pkgs)
-          end
-          warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
-        rescue Net::HTTPServerException => e
-          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
-          raise e
+        Thread.current[:repo_url] = repository['repo_url']
+        if repository.key?('credentials')
+          url = URI.parse(Thread.current[:repo_url])
+          url.user = repository['credentials']['user']
+          url.password = repository['credentials']['pass']
+          Thread.current[:repo_url] = url.to_s
         end
+        warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        deb_rel = DebRelease.new(Thread.current[:repo_url], s)
+        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+        deb_rel.whitelist_arch = whitelist_arch
+        pkgs = deb_rel.all_packages
+
+        # merge package-list
+        mutex.synchronize do
+          DebRelease.assemble_ubuntu_packages(packages, pkgs)
+        end
+        warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+      rescue Net::HTTPClientException => e
+        warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+        raise e
       end
     end
 
@@ -351,9 +349,6 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
   if options.key? :ubuntu_esm
     ## ubuntu_esm
-    require 'bzip2/ffi'
-    require 'stringio'
-
     cfg = @config['ubuntu-esm']
     whitelist_arch = get_whitelist(cfg, 'architectures')
     tempdir = Pathname.new(File.join(@config['tempdir'], 'ubuntu-esm'))
@@ -379,31 +374,29 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
     repository['releases'].each do |s|
       threads << Thread.new do
-        begin
-          Thread.current[:repo_url] = repository['repo_url']
-          if repository.key?('credentials')
-            url = URI.parse(Thread.current[:repo_url])
-            url.user = repository['credentials']['user']
-            url.password = repository['credentials']['pass']
-            Thread.current[:repo_url] = url.to_s
-          end
-          warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
-          deb_rel = DebRelease.new(Thread.current[:repo_url], s)
-          deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
-          deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
-          deb_rel.whitelist_arch = whitelist_arch
-          pkgs = deb_rel.all_packages
-
-          # merge package-list
-          mutex.synchronize do
-            # ESM-Errata need debian style package-struct
-            DebRelease.assemble_debian_packages(packages_by_name, pkgs)
-          end
-          warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
-        rescue Net::HTTPServerException => e
-          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
-          raise e
+        Thread.current[:repo_url] = repository['repo_url']
+        if repository.key?('credentials')
+          url = URI.parse(Thread.current[:repo_url])
+          url.user = repository['credentials']['user']
+          url.password = repository['credentials']['pass']
+          Thread.current[:repo_url] = url.to_s
         end
+        warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        deb_rel = DebRelease.new(Thread.current[:repo_url], s)
+        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+        deb_rel.whitelist_arch = whitelist_arch
+        pkgs = deb_rel.all_packages
+
+        # merge package-list
+        mutex.synchronize do
+          # ESM-Errata need debian style package-struct
+          DebRelease.assemble_debian_packages(packages_by_name, pkgs)
+        end
+        warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+      rescue Net::HTTPClientException => e
+        warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+        raise e
       end
     end
 

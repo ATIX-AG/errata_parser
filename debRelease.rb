@@ -2,8 +2,11 @@
 # frozen_string_literal: true
 
 require 'debian'
+require 'fileutils'
 require 'time'
 require 'pathname'
+require 'xz'
+require 'zlib'
 
 require_relative 'downloader'
 
@@ -13,10 +16,10 @@ class DebRelease
   @@tempdir = '/tmp/errata_parser_cache/debian'
 
   attr_reader :data, :files
-  attr_accessor :suite, :base_url
+  attr_accessor :suite, :base_url, :whitelist_arch, :whitelist_comp
   attr_writer :release_name
-  attr_accessor :whitelist_arch, :whitelist_comp
-  RE_FILES = /^\s*(?<digest>[0-9a-f]+)\s+(?<size>\d+)\s*(?<path>\S.*)$/.freeze
+
+  RE_FILES = /^\s*(?<digest>[0-9a-f]+)\s+(?<size>\d+)\s*(?<path>\S.*)$/
 
   def initialize(uri=nil, suite='stable')
     init
@@ -58,7 +61,7 @@ class DebRelease
                 when 'date', 'valid-until'
                   Time.parse value
                 when 'architectures', 'components'
-                  value.split ' '
+                  value.split
                 when 'md5sum', 'sha1', 'sha256'
                   state = key
                   next
@@ -93,30 +96,32 @@ class DebRelease
     paths = paths_exist + (paths - paths_exist)
 
     paths.each do |p|
-      begin
-        basefilename = p.split('/').last
-        path = "#{cache_dir}/#{basefilename}"
-        data = download_file_cached "#{release_base_url}/#{p}", path
-        plainfile = "#{cache_dir}/Packages.plain"
-        File.open(plainfile, 'w') do |f|
-          case basefilename.downcase
-          when 'packages.xz'
-            require 'xz'
-            f << XZ.decompress(data)
-          when 'packages.gz'
-            require 'zlib'
-            f << Zlib.gunzip(data)
-          else
-            f << data
-          end
-        end
+      basefilename = p.split('/').last
+      path = "#{cache_dir}/#{basefilename}"
+      data = download_file_cached "#{release_base_url}/#{p}", path
+      plainfile = "#{cache_dir}/Packages.plain"
+      File.open(plainfile, 'w') do |f|
+        f << case basefilename.downcase
+             when 'packages.xz'
+               XZ.decompress(data)
+             when 'packages.gz'
+               Zlib.gunzip(data)
+             else
+               data
+             end
         return Debian::Packages.new(plainfile)
       rescue StandardError => e
         warn "#{e} for #{release_base_url}/#{p.inspect}"
-        File.unlink path if File.exist? path
+        FileUtils.rm_f path
       ensure
-        File.unlink plainfile if plainfile && File.exist?(plainfile)
+        FileUtils.rm_f plainfile if plainfile
       end
+      return Debian::Packages.new(plainfile)
+    rescue StandardError => e
+      warn "#{e} for #{p.inspect}"
+      FileUtils.rm_f path
+    ensure
+      FileUtils.rm_f plainfile if plainfile
     end
   end
 
@@ -210,17 +215,16 @@ if $PROGRAM_NAME == __FILE__
   case type
   when 'debian'
     suites = [
-      'jessie/updates',
-      'stretch/updates',
       'buster/updates',
-      'bullseye-security'
+      'bullseye-security',
+      'bookworm-security'
     ]
     repository_url = 'http://security.debian.org/debian-security'
   when 'ubuntu', 'ubuntu_debstyle'
     suites = [
-      'bionic-security',
       'focal-security',
-      'hirsute-security'
+      'jammy-security',
+      'noble-security'
     ]
     repository_url = 'http://security.ubuntu.com/ubuntu'
   else
