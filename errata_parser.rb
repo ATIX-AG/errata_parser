@@ -306,7 +306,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
         end
         warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
       rescue Net::HTTPClientException => e
-        warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+        warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}"
         raise e
       end
     end
@@ -404,7 +404,7 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
           end
           warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
         rescue Net::HTTPClientException => e
-          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}"
           raise e
         end
       end
