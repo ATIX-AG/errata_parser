@@ -366,37 +366,47 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
     ## Download package-lists
     DebRelease.tempdir = tempdir
-    fatal('Config-error missing \'repository\'-section', 4) unless cfg.key?('repository') && cfg['repository'].is_a?(Hash)
-    fatal('Config-error \'repo_url\' missing in \'repository\'', 5) unless cfg['repository'].key? 'repo_url'
-    fatal('Config-error \'releases\' missing in \'repository\'', 6) unless cfg['repository'].key? 'releases'
+    fatal('Config-error missing \'repositories\'-section', 4) unless cfg.key?('repositories') &&
+                                                                     cfg['repositories'].is_a?(Array) &&
+                                                                     !cfg['repositories'].empty?
+    cfg['repositories'].each_index do |repo_id|
+      fatal("Config-error 'repo_url' missing in 'repository' ##{repo_id}", 5) unless cfg['repositories'][repo_id].key? 'repo_url'
+      fatal("Config-error 'releases' missing in 'repository' ##{repo_id}", 6) unless cfg['repositories'][repo_id].key? 'releases'
+    end
+    cfg['repositories'].each do |repo|
+      repo_url = repo['repo_url']
+      if repo.key?('credentials')
+        url = URI.parse(repo_url)
+        url.user = repo['credentials']['user']
+        url.password = repo['credentials']['pass']
+        repo_url = url.to_s
+      end
+      repo['releases'].each do |s|
+        threads << Thread.new do
+          Thread.current[:repo_url] = repo_url
+          if repo.key?('credentials')
+            url = URI.parse(Thread.current[:repo_url])
+            url.user = repo['credentials']['user']
+            url.password = repo['credentials']['pass']
+            Thread.current[:repo_url] = url.to_s
+          end
+          warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+          deb_rel = DebRelease.new(Thread.current[:repo_url], s)
+          deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
+          deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
+          deb_rel.whitelist_arch = whitelist_arch
+          pkgs = deb_rel.all_packages
 
-    repository = cfg['repository']
-
-    repository['releases'].each do |s|
-      threads << Thread.new do
-        Thread.current[:repo_url] = repository['repo_url']
-        if repository.key?('credentials')
-          url = URI.parse(Thread.current[:repo_url])
-          url.user = repository['credentials']['user']
-          url.password = repository['credentials']['pass']
-          Thread.current[:repo_url] = url.to_s
+          # merge package-list
+          mutex.synchronize do
+            # ESM-Errata need debian style package-struct
+            DebRelease.assemble_debian_packages(packages_by_name, pkgs)
+          end
+          warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
+        rescue Net::HTTPClientException => e
+          warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
+          raise e
         end
-        warn "START  Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
-        deb_rel = DebRelease.new(Thread.current[:repo_url], s)
-        deb_rel.release_name = fix_release(deb_rel.release_name, cfg['aliases']) if deb_rel.release_name.include? '-'
-        deb_rel.whitelist_comp = get_whitelist(cfg, 'components')
-        deb_rel.whitelist_arch = whitelist_arch
-        pkgs = deb_rel.all_packages
-
-        # merge package-list
-        mutex.synchronize do
-          # ESM-Errata need debian style package-struct
-          DebRelease.assemble_debian_packages(packages_by_name, pkgs)
-        end
-        warn "FINISH Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}" if options[:verbose]
-      rescue Net::HTTPClientException => e
-        warn "FAILED Download #{s.inspect} from #{Thread.current[:repo_url].sub(/:[^:@]+@/, ':*****@')}: #{e}" if options[:verbose]
-        raise e
       end
     end
 

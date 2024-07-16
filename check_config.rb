@@ -52,7 +52,7 @@ ERRATAPARSER_CONFIG_SCHEMA = {
   } },
   'ubuntu-esm' => { type: Hash, mandatory: false, child: {
     'usn_list_url' => { type: String, mandatory: true },
-    'repository' => ERRATAPARSER_REPOSITORY_SCHEMA,
+    'repositories' => { type: Array, mandatory: true, child: ERRATAPARSER_REPOSITORY_SCHEMA },
     'aliases' => ERRATAPARSER_ALIASES_SCHEMA,
     'whitelists' => ERRATAPARSER_WHITELIST_SCHEMA
   } }
