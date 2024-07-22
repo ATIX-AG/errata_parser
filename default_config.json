@@ -76,6 +76,7 @@
         "noble-security",
         "jammy-security",
         "focal-security",
+        "focal-apps-security",
         "bionic-security",
         "xenial-infra-security",
         "xenial-security"
@@ -103,23 +104,40 @@
   },
   "ubuntu-esm": {
     "usn_list_url": "https://usn.ubuntu.com/usn-db/database.json.bz2",
-    "repository": {
-      "repo_url": "https://esm.ubuntu.com/infra/ubuntu",
-      "credentials": {
-        "user": "user",
-        "pass": "pass"
+    "repositories": [
+      {
+        "repo_url": "https://esm.ubuntu.com/infra/ubuntu",
+        "credentials": {
+          "user": "bearer",
+          "pass": ""
+        },
+        "releases": [
+          "bionic-infra-security",
+          "xenial-infra-security"
+        ]
       },
-      "releases": [
-        "xenial-infra-security"
-      ]
-    },
+      {
+        "repo_url": "https://esm.ubuntu.com/apps/ubuntu",
+        "credentials": {
+          "user": "bearer",
+          "pass": ""
+        },
+        "releases": [
+          "bionic-apps-security",
+          "xenial-apps-security"
+        ]
+      }
+    ],
     "whitelists": {
       "releases": [
         "focal",
         "bionic",
         "xenial",
         "focal-security",
+        "bionic-apps-security",
+        "bionic-infra-security",
         "bionic-security",
+        "xenial-apps-security",
         "xenial-infra-security",
         "xenial-security"
       ],
@@ -137,8 +155,8 @@
     "aliases": {
       "releases": {
         "focal": [ "focal-security", "focal-updates" ],
-        "bionic": [ "bionic-security", "bionic-updates" ],
-        "xenial": [ "xenial-security", "xenial-updates" ]
+        "bionic": [ "bionic-security", "bionic-updates", "bionic-apps-security", "bionic-infra-security" ],
+        "xenial": [ "xenial-security", "xenial-updates", "xenial-apps-security", "xenial-infra-security" ]
       }
     }
   }
