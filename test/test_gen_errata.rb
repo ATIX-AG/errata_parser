@@ -28,6 +28,7 @@ class TestDebianErrata < Test::Unit::TestCase
       next if erratum.packages.empty?
 
       hsh[erratum.name] = erratum.to_h
+      hsh[erratum.name]['packages'].sort_by! { |pkg| [pkg['name'], pkg['version'], pkg['release']] }
       erratum.packages.each do |p|
         assert_include(['buster', 'bullseye'], p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
         assert_include(['amd64', 'all'], p['architecture'], "Offending data was in #{erratum.name}: #{p.inspect}")
@@ -77,6 +78,7 @@ class TestDebianErrata < Test::Unit::TestCase
       next if erratum.packages.empty?
 
       hsh[erratum.name] = erratum.to_h
+      hsh[erratum.name]['packages'].sort_by! { |pkg| [pkg['name'], pkg['version'], pkg['release']] }
       erratum.packages.each do |p|
         assert_equal('bionic', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
         assert_include(['amd64', 'all'], p['architecture'], "Offending data was in #{erratum.name}: #{p.inspect}")
@@ -124,6 +126,7 @@ class TestDebianErrata < Test::Unit::TestCase
       next if erratum.packages.empty?
 
       hsh[erratum.name] = erratum.to_h
+      hsh[erratum.name]['packages'].sort_by! { |pkg| [pkg['name'], pkg['version'], pkg['release']] }
       erratum.packages.each do |p|
         assert_equal('xenial', p['release'], "Offending data was in #{erratum.name}: #{p.inspect}")
         assert_include(['amd64', 'all'], p['architecture'], "Offending data was in #{erratum.name}: #{p.inspect}")

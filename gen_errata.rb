@@ -612,10 +612,14 @@ if $PROGRAM_NAME == __FILE__
   end
 
   arr = []
-  # errata.sort{ |x, y| y.name <=> x.name }.each do |e|
-  errata.each do |e|
+  errata.sort { |x, y| y.name <=> x.name }.each do |e|
     # remove Errata without packages
-    arr << e.to_h unless e.packages.empty?
+    next if e.packages.empty?
+
+    erratum_hash = e.to_h
+    # sort packages roughly to make comparing changes of test-data easier.
+    erratum_hash['packages'].sort_by! { |pkg| [pkg['name'], pkg['version'], pkg['release']] }
+    arr << erratum_hash
   end
   puts arr.to_yaml
   # puts errata.to_json
