@@ -367,7 +367,7 @@ class DebianErrataParser
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
 
           # ESM-Updates do not have 'archs' -> Fallback to alternative handling
-          if dat.key?('archs')
+          if dat.key?('archs') && !packages.empty?
             add_packages_ubuntu(erratum, rel, dat, architecture_whitelist, packages)
           elsif dat.key?('sources')
             # try to do it the debian-way: get_binary_packages_for_erratum_package()
