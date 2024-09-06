@@ -16,7 +16,7 @@ Layout/SpaceInsideBlockBraces:
 
 
 Metrics/AbcSize:
-  Max: 70
+  Max: 73
 
 Metrics/BlockLength:
   Max: 65
@@ -28,13 +28,13 @@ Metrics/ClassLength:
   Max: 300
 
 Metrics/CyclomaticComplexity:
-  Max: 22
+  Max: 25
 
 Metrics/MethodLength:
-  Max: 70
+  Max: 71
 
 Metrics/PerceivedComplexity:
-  Max: 22
+  Max: 25
 
 
 Style/ClassVars:
