@@ -270,3 +270,15 @@ The `<ubuntu_dict>` is somewhat simpler than that for Debian:
 
 A single USN URL will suffice as an upstream source of information.
 `whitelists` and `aliases` are structurally identical to those for Debian.
+
+
+## Analyze created JSON files
+
+To have an idea about how many errata and also how many packages per errata on avarage were created the following tool can be used:
+
+    bundle exec analyzer.rb <errata-json>
+
+This requires the development gem-group to be installed by bundler
+
+    bundle config set with 'development'
+    bundle
