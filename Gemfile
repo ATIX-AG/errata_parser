@@ -33,6 +33,9 @@ group :rubocop, optional: true do
   gem "rubocop-rspec", "~> 3.0"
 end
 
+gem "json-streamer", "~> 2.1"
+
 group :development, optional: true do
   gem "byebug", "~> 11.1"
+  gem "pry", "~> 0.14.2"
 end
