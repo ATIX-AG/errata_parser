@@ -40,6 +40,11 @@ Metrics/PerceivedComplexity:
   Max: 25
 
 
+RSpec/MultipleDescribes:
+  Exclude:
+    - 'spec/lib/deb_erratum_rss_spec.rb'
+
+
 Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'

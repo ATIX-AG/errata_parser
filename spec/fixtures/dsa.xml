@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel rdf:about="https://www.debian.org/security/dsa.rdf">
+<title>Debian Security</title>
+<link>https://www.debian.org/security/dsa.rdf</link>
+<dc:date>2024-10-25T11:32:10Z</dc:date>
+<description>Debian Security Advisories</description>
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00209.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00208.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00207.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00206.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00205.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00204.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00203.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00202.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00201.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00200.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00199.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00198.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00197.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00196.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00195.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00194.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00193.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00192.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00191.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00190.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00189.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00188.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00187.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00186.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00185.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00184.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00183.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00182.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00181.html" />
+<rdf:li rdf:resource="https://lists.debian.org/debian-security-announce/2024/msg00180.html" />
+</rdf:Seq>
+</items>
+</channel>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00209.html">
+<title>DSA-5795-1 python-sql - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00209.html</link>
+<dc:date>2024-10-21</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5795-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5795-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00208.html">
+<title>DSA-5794-1 openjdk-17 - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00208.html</link>
+<dc:date>2024-10-21</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5794-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5794-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00207.html">
+<title>DSA-5793-1 chromium - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00207.html</link>
+<dc:date>2024-10-20</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5793-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5793-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00206.html">
+<title>DSA-5792-1 webkit2gtk - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00206.html</link>
+<dc:date>2024-10-14</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5792-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5792-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00205.html">
+<title>DSA-5791-1 python-reportlab - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00205.html</link>
+<dc:date>2024-10-13</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5791-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5791-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00204.html">
+<title>DSA-5790-1 node-dompurify - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00204.html</link>
+<dc:date>2024-10-13</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5790-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5790-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00203.html">
+<title>DSA-5789-1 thunderbird - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00203.html</link>
+<dc:date>2024-10-12</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5789-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5789-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00202.html">
+<title>DSA-5788-1 firefox-esr - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00202.html</link>
+<dc:date>2024-10-10</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5788-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5788-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00201.html">
+<title>DSA-5787-1 chromium - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00201.html</link>
+<dc:date>2024-10-09</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5787-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5787-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00200.html">
+<title>DSA-5729-2 apache2 - regression update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00200.html</link>
+<dc:date>2024-10-08</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5729-2&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5729-2&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00199.html">
+<title>DSA-5786-1 libgsf - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00199.html</link>
+<dc:date>2024-10-05</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5786-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5786-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00198.html">
+<title>DSA-5785-1 mediawiki - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00198.html</link>
+<dc:date>2024-10-05</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5785-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5785-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00197.html">
+<title>DSA-5784-1 oath-toolkit - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00197.html</link>
+<dc:date>2024-10-04</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5784-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5784-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00196.html">
+<title>DSA-5783-1 firefox-esr - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00196.html</link>
+<dc:date>2024-10-04</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5783-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5783-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00195.html">
+<title>DSA-5782-1 linux - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00195.html</link>
+<dc:date>2024-10-03</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5782-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5782-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00194.html">
+<title>DSA-5781-1 chromium - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00194.html</link>
+<dc:date>2024-10-03</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5781-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5781-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00193.html">
+<title>DSA-5780-1 php8.2 - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00193.html</link>
+<dc:date>2024-10-02</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5780-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5780-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00192.html">
+<title>DSA-5779-1 cups - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00192.html</link>
+<dc:date>2024-09-29</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5779-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5779-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00191.html">
+<title>DSA-5778-1 cups-filters - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00191.html</link>
+<dc:date>2024-09-29</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5778-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5778-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00190.html">
+<title>DSA-5777-1 booth - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00190.html</link>
+<dc:date>2024-09-27</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5777-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5777-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00189.html">
+<title>DSA-5776-1 tryton-server - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00189.html</link>
+<dc:date>2024-09-27</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5776-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5776-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00188.html">
+<title>DSA-5775-1 chromium - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00188.html</link>
+<dc:date>2024-09-26</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5775-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5775-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00187.html">
+<title>DSA-5774-1 ruby-saml - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00187.html</link>
+<dc:date>2024-09-20</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5774-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5774-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00186.html">
+<title>DSA-5773-1 chromium - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00186.html</link>
+<dc:date>2024-09-19</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5773-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5773-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00185.html">
+<title>DSA-5772-1 libreoffice - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00185.html</link>
+<dc:date>2024-09-17</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5772-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5772-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00184.html">
+<title>DSA-5771-1 php-twig - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00184.html</link>
+<dc:date>2024-09-17</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5771-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5771-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00183.html">
+<title>DSA-5770-1 expat - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00183.html</link>
+<dc:date>2024-09-17</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5770-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5770-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00182.html">
+<title>DSA-5769-1 git - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00182.html</link>
+<dc:date>2024-09-13</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5769-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5769-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00181.html">
+<title>DSA-5768-1 chromium - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00181.html</link>
+<dc:date>2024-09-11</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5768-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5768-1&lt;/a&gt;</description>
+</item>
+<item rdf:about="https://lists.debian.org/debian-security-announce/2024/msg00180.html">
+<title>DSA-5767-1 thunderbird - security update</title>
+<link>https://lists.debian.org/debian-security-announce/2024/msg00180.html</link>
+<dc:date>2024-09-08</dc:date>
+<description>&lt;a href=&quot;https://security-tracker.debian.org/tracker/DSA-5767-1&quot;&gt;https://security-tracker.debian.org/tracker/DSA-5767-1&lt;/a&gt;</description>
+</item>
+</rdf:RDF>

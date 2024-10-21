@@ -24,6 +24,8 @@ gem "simplecov-lcov", "~> 0.8.0", group: :test
 
 gem "simplecov", "~> 0.22.0", group: :test
 
+gem "rspec-collection_matchers", "~> 1.2", group: :test
+
 # Added at 2021-11-12 17:19:23 +0200 by bernhard:
 gem 'parallel', '~> 1.20', '< 1.21', group: %i[build test]
 
@@ -39,3 +41,5 @@ group :development, optional: true do
   gem "byebug", "~> 11.1"
   gem "pry", "~> 0.14.2"
 end
+
+gem "feedjira", "~> 3.2", group: :monitor
