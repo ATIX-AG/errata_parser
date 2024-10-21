@@ -35,3 +35,5 @@ group :development, optional: true do
   gem "byebug", "~> 11.1"
   gem "pry", "~> 0.14.2"
 end
+
+gem "feedjira", "~> 3.2", :group => :monitor
