@@ -37,3 +37,5 @@ group :development, optional: true do
 end
 
 gem "feedjira", "~> 3.2", :group => :monitor
+
+gem "faraday", "~> 2.12", :group => :monitor
