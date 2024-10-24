@@ -1,0 +1,26 @@
+name: Spec Tests
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libapt-pkg-dev
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+      - name: Setup bundle
+        run: |
+          bundle install --with=test
+      - name: Run rspec
+        run: |
+          bundle exec rspec
