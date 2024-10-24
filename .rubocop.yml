@@ -2,6 +2,9 @@ AllCops:
   TargetRubyVersion: 3.3
   NewCops: enable
 
+require:
+  - rubocop-rspec
+
 Layout/LineLength:
   Max: 159
 
