@@ -1,4 +1,4 @@
-name: Tests
+name: rubocop Linting
 on:
   pull_request:
   push:
@@ -21,6 +21,6 @@ jobs:
       - name: Setup rubocop
         run: |
           bundle install --with=rubocop
-      - name: Run tests
+      - name: Execute rubocop
         run: |
-          bundle exec ruby test/all.rb
+          bundle exec rubocop
