@@ -1,4 +1,4 @@
-name: Tests
+name: Spec Tests
 on:
   pull_request:
   push:
@@ -18,9 +18,9 @@ jobs:
         with:
           ruby-version: 3.3
           bundler-cache: true
-      - name: Setup rubocop
+      - name: Setup bundle
         run: |
-          bundle install --with=rubocop
-      - name: Run tests
+          bundle install --with=test
+      - name: Run rspec
         run: |
-          bundle exec ruby test/all.rb
+          bundle exec rspec

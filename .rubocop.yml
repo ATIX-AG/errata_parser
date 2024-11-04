@@ -2,6 +2,9 @@ AllCops:
   TargetRubyVersion: 3.3
   NewCops: enable
 
+require:
+  - rubocop-rspec
+
 Layout/LineLength:
   Max: 159
 
@@ -36,6 +39,15 @@ Metrics/MethodLength:
 Metrics/PerceivedComplexity:
   Max: 25
 
+
+RSpec/MultipleDescribes:
+  Exclude:
+    - 'spec/lib/deb_erratum_rss_spec.rb'
+
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
 
 Style/ClassVars:
   Exclude:

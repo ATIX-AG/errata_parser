@@ -10,3 +10,4 @@ debian_config.json
 debian_errata.json
 ubuntu_config.json
 ubuntu_errata.json
+coverage/
