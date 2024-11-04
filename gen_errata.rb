@@ -367,44 +367,50 @@ class DebianErrataParser
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)
 
           # ESM-Updates do not have 'archs' -> Fallback to alternative handling
-          if dat.key?('archs')
+          if dat.key?('archs') && !packages.empty?
             add_packages_ubuntu(erratum, rel, dat, architecture_whitelist, packages)
           elsif dat.key?('sources')
             # try to do it the debian-way: get_binary_packages_for_erratum_package()
             warn "#{name} has no architectures for release #{rel} -> using source-packages as fallback" if @verbose
             dat['sources'].each do |source_pkg, pkg|
+              source_packages = [source_pkg]
+              # make sure we use signed linux-images instead of unsigned ones!
+              source_packages.unshift source_pkg.sub(/^linux/, 'linux-signed') if source_pkg =~ /^linux/
+
               package = {}
               pkg.each do |k, v|
                 package[k.to_sym || key] = v
               end
               package[:release] = rel
 
-              # skip if source_pkg not in packages_by_name
-              unless packages_by_name.key? source_pkg
-                warn "#{source_pkg} not in package-list; for #{name} and release #{rel} -> skipping" if @verbose
-                next
-              end
+              source_packages.each do |source|
+                # skip if source not in packages_by_name
+                unless packages_by_name.key? source
+                  warn "#{source} not in package-list; for #{name} and release #{rel} -> skipping" if @verbose
+                  next
+                end
 
-              # set source-package
-              # if multiple sources are specified by USN, we currently only take the last one!
-              # which should not be the case :fingerscrossed:
-              erratum.source_package = source_pkg
+                # set source-package
+                # if multiple sources are specified by USN, we currently only take the last one!
+                # which should not be the case :fingerscrossed:
+                erratum.source_package = source
 
-              pkgs = get_binary_packages_for_erratum_package(
-                source_pkg,
-                package,
-                packages_by_name[source_pkg],
-                architecture_whitelist
-              )
-              pkgs.each do |binpkg|
-                erratum.add_package(
-                  binpkg[:name],
-                  binpkg[:version],
-                  architecture: binpkg[:architecture],
-                  release: binpkg[:release],
-                  component: binpkg[:component]
+                pkgs = get_binary_packages_for_erratum_package(
+                  source,
+                  package,
+                  packages_by_name[source],
+                  architecture_whitelist
                 )
-                metadata_add_entry(binpkg[:release], binpkg[:architecture], binpkg[:component])
+                pkgs.each do |binpkg|
+                  erratum.add_package(
+                    binpkg[:name],
+                    binpkg[:version],
+                    architecture: binpkg[:architecture],
+                    release: binpkg[:release],
+                    component: binpkg[:component]
+                  )
+                  metadata_add_entry(binpkg[:release], binpkg[:architecture], binpkg[:component])
+                end
               end
             end
           elsif @verbose
@@ -612,10 +618,14 @@ if $PROGRAM_NAME == __FILE__
   end
 
   arr = []
-  # errata.sort{ |x, y| y.name <=> x.name }.each do |e|
-  errata.each do |e|
+  errata.sort { |x, y| y.name <=> x.name }.each do |e|
     # remove Errata without packages
-    arr << e.to_h unless e.packages.empty?
+    next if e.packages.empty?
+
+    erratum_hash = e.to_h
+    # sort packages roughly to make comparing changes of test-data easier.
+    erratum_hash['packages'].sort_by! { |pkg| [pkg['name'], pkg['version'], pkg['release']] }
+    arr << erratum_hash
   end
   puts arr.to_yaml
   # puts errata.to_json
