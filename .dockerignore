@@ -3,6 +3,7 @@
 
 # Now whitelist the specific files we want:
 !check_config.rb
+!check_latest_errata.rb
 !default_config.json
 !debRelease.rb
 !downloader.rb
@@ -10,6 +11,7 @@
 !Gemfile
 !Gemfile.lock
 !gen_errata.rb
+!lib/
 !parse_dsalist.rb
 !.rubocop_todo.yml
 !.rubocop.yml
