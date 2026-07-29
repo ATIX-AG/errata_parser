@@ -31,7 +31,7 @@ gem 'parallel', '~> 1.20', '< 1.21', group: %i[build test]
 
 # Added at 2018-12-05 19:28:10 +0100 by markus:
 group :rubocop, optional: true do
-  gem "rubocop", "~> 1.51.0"
+  gem "rubocop", "~> 1.88.0"
   gem "rubocop-rspec", "~> 3.0"
 end
 
@@ -45,3 +45,5 @@ end
 gem "feedjira", "~> 3.2", group: :monitor
 
 gem "faraday", "~> 2.14", group: :monitor
+
+gem "fiddle", "~> 1.1", group: %i[build test]
