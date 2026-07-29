@@ -5,7 +5,6 @@ require 'json'
 require 'yaml'
 require 'time'
 require 'debian'
-require 'pathname'
 
 require_relative 'parse_dsalist'
 require_relative 'downloader'
@@ -379,7 +378,7 @@ class DebianErrataParser
 
               package = {}
               pkg.each do |k, v|
-                package[k.to_sym || key] = v
+                package[k.to_sym] = v
               end
               package[:release] = rel
 
@@ -596,21 +595,19 @@ if $PROGRAM_NAME == __FILE__
     require 'bzip2/ffi'
     require 'stringio'
 
-    usn_db_f = File.open('test/data/database.json.bz2', 'rb')
-
-    packages = JSON.parse(File.read('test/data/packages_everything_ubuntu.json'))
-    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, {}, ['bionic'], ['amd64'])
-    usn_db_f.close
+    File.open('test/data/database.json.bz2', 'rb') do |usn_db_f|
+      packages = JSON.parse(File.read('test/data/packages_everything_ubuntu.json'))
+      errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), packages, {}, ['bionic'], ['amd64'])
+    end
 
   when 'ubuntu-esm_test_record'
     require 'bzip2/ffi'
     require 'stringio'
 
-    usn_db_f = File.open('test/data/database.json.bz2', 'rb')
-
-    packages_by_name = JSON.parse(File.read('test/data/packages_everything_ubuntu_debstyle.json'))
-    errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), {}, packages_by_name, ['xenial'], ['amd64'])
-    usn_db_f.close
+    File.open('test/data/database.json.bz2', 'rb') do |usn_db_f|
+      packages_by_name = JSON.parse(File.read('test/data/packages_everything_ubuntu_debstyle.json'))
+      errata = parser.gen_ubuntu_errata(JSON.parse(Bzip2::FFI::Reader.read(usn_db_f)), {}, packages_by_name, ['xenial'], ['amd64'])
+    end
 
   else
     warn "Unsupported option #{type}"

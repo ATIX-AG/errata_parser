@@ -1,4 +1,4 @@
-FROM ruby:3.3-bookworm
+FROM ruby:4.0-trixie
 
 LABEL maintainer="Markus Bucher <bucher@atix.de>" \
       description="This container provides an errata-parser for Debian and Ubuntu" \
