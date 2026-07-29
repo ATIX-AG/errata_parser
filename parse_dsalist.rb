@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 require 'json'
+require 'stringio'
 
-REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-z0-9-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/
+REGEX_1ST_LINE = /^\[(?<date>[^\]]+)\]\s*(?<ident>[A-Za-z0-9-]+)\s*(?<package>\S+)\s*-*\s*(?<typ>.*)$/
 REGEX_CVE_LINE = /\s+{(?<cves>[^}]*)}/
 REGEX_REL_LINE = /\s+\[(?<release>[^\]]*)\]\s*-\s*(?<package>\S+)\s*(?<version>\S*)/
 REGEX_NOT_LINE = /\s+NOTE:/
@@ -82,7 +83,7 @@ class DSA
   end
 
   def cve_empty?
-    (@cve.nil? || @cve.empty?)
+    @cve.nil? || @cve.empty?
   end
 
   def add_release(release:, package:, version:)

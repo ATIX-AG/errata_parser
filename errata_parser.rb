@@ -284,7 +284,9 @@ if File.basename($PROGRAM_NAME) == File.basename(__FILE__)
 
     repository = cfg['repository']
 
+    # rubocop:disable Style/MapIntoArray
     repository['releases'].each do |s|
+      # rubocop:enable Style/MapIntoArray
       threads << Thread.new do
         Thread.current[:repo_url] = repository['repo_url']
         if repository.key?('credentials')

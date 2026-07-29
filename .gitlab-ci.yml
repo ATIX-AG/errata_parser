@@ -4,7 +4,7 @@ stages:
   - test
 
 variables:
-  RUBY_VERSION: "3.3"
+  RUBY_VERSION: "4.0"
   RUBY_IMAGE: "ruby:${RUBY_VERSION}-bookworm"
 
 .common:
