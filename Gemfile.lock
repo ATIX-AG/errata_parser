@@ -20,7 +20,7 @@ GEM
       loofah (>= 2.3.1, < 3)
       sax-machine (>= 1.0, < 2)
     ffi (1.17.4-x86_64-linux-gnu)
-    json (2.21.1)
+    json (2.21.2)
     json-stream (1.0.0)
     json-streamer (2.1.0)
       json-stream
