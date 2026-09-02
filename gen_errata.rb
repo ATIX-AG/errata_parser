@@ -301,6 +301,28 @@ class DebianErrataParser
     ret
   end
 
+  # parse list or other type of CVE(s) in 'cves' and add to 'erratum'
+  # supports 'cves' to be a
+  #   - Array (the default)
+  #   - String (apparently Ubuntu now(2026-09-01) does that
+  def parse_cves(erratum, cves)
+    if cves.is_a? String
+      begin
+        erratum.add_cve cves
+      rescue RuntimeError => e
+        raise unless e.message.start_with? 'Invalid CVE'
+      end
+    elsif cves.is_a? Array
+      cves.each do |cve|
+        erratum.add_cve cve
+      rescue RuntimeError => e
+        raise unless e.message.start_with? 'Invalid CVE'
+      end
+    else
+      warn "#{erratum.name} has incompatible type in 'cves'-field: #{cves.class.name}"
+    end
+  end
+
   def add_packages_ubuntu(erratum, release, data, architecture_whitelist, packages)
     versions = get_versions(data['sources'])
     versions.merge(get_versions(data['binaries']))
@@ -355,13 +377,8 @@ class DebianErrataParser
         erratum.name = name
         erratum.title = usn['title']
         erratum.description = usn['description']
-        if usn.key? 'cves'
-          usn['cves'].each do |cve|
-            erratum.add_cve cve
-          rescue RuntimeError => e
-            raise unless e.message.start_with? 'Invalid CVE'
-          end
-        end
+        parse_cves(erratum, usn['cves']) if usn.key? 'cves'
+
         erratum.issued = usn['timestamp']
         usn['releases'].each do |rel, dat|
           next if release_whitelist.is_a?(Array) && !release_whitelist.include?(rel)

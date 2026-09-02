@@ -43,6 +43,7 @@ Metrics/PerceivedComplexity:
 RSpec/MultipleDescribes:
   Exclude:
     - 'spec/lib/deb_erratum_rss_spec.rb'
+    - 'spec/gen_errata_spec.rb'
 
 
 Style/BlockComments:
