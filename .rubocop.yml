@@ -45,6 +45,10 @@ RSpec/MultipleDescribes:
     - 'spec/lib/deb_erratum_rss_spec.rb'
     - 'spec/gen_errata_spec.rb'
 
+RSpec/SubjectStub:
+  Exclude:
+    - 'spec/gen_errata_spec.rb'
+
 
 Style/BlockComments:
   Exclude:
