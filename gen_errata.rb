@@ -385,6 +385,8 @@ class DebianErrataParser
 
           # ESM-Updates do not have 'archs' -> Fallback to alternative handling
           if dat.key?('archs') && !packages.empty?
+            next unless dat.key?('binaries') # skip if no binaries are listed for this release. Happend in USN-8779-2
+
             add_packages_ubuntu(erratum, rel, dat, architecture_whitelist, packages)
           elsif dat.key?('sources')
             # try to do it the debian-way: get_binary_packages_for_erratum_package()
