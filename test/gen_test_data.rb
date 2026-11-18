@@ -53,7 +53,7 @@ cve_list_filtered = {}
 cve_list.each do |package, cves|
   cves_filtered = {}
   cves.each do |cve_id, cve|
-    releases = cve['releases'].select { |release, _pkgs| releases.include? release }
+    releases = cve['releases'].slice(*releases)
     if cve_ids.include?(cve_id) || !releases.empty?
       cves_filtered[cve_id] = cve.clone
       cves_filtered[cve_id]['releases'] = releases
@@ -71,7 +71,7 @@ rel_whitelist = ['bionic', 'xenial']
 usn_db = Download.new.download_file_cached(config_ubuntu['usn_list_url'])
 usn_db_filtered = {}
 JSON.parse(Bzip2::FFI::Reader.read(StringIO.new(usn_db))).each do |usn_id, usn_data|
-  releases_data = usn_data['releases'].select { |r, _dat| rel_whitelist.include? r }
+  releases_data = usn_data['releases'].slice(*rel_whitelist)
   next if releases_data.empty?
 
   usn_db_filtered[usn_id] = usn_data.clone.merge('releases' => releases_data)
@@ -121,8 +121,7 @@ HTTPDEBUG = true
   end
 
   threads = []
-  pckgs = []
-  suites.each do |s|
+  pckgs = suites.map do |s|
     threads << Thread.new do
       warn "Loading Release for #{s.inspect}"
       debrel = DebRelease.new(repository_url, s)
@@ -133,7 +132,7 @@ HTTPDEBUG = true
 
       warn "From #{s.inspect} get archs:#{debrel.architectures.inspect} and comps: #{debrel.components.inspect}"
 
-      pckgs << debrel.all_packages
+      debrel.all_packages
     end
   end
 

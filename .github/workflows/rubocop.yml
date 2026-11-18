@@ -16,11 +16,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3
+          ruby-version: 4.0
           bundler-cache: true
       - name: Setup rubocop
         run: |
-          bundle install --with=rubocop
+          bundle config set with rubocop
+          bundle install
       - name: Execute rubocop
         run: |
           bundle exec rubocop

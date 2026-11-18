@@ -4,7 +4,6 @@
 require 'debian'
 require 'fileutils'
 require 'time'
-require 'pathname'
 require 'xz'
 require 'zlib'
 
@@ -13,6 +12,7 @@ require_relative 'downloader'
 # Debian / Ubuntu release file download / parsing
 class DebRelease
   include Downloader
+
   @@tempdir = '/tmp/errata_parser_cache/debian'
 
   attr_reader :data, :files
@@ -233,8 +233,7 @@ if $PROGRAM_NAME == __FILE__
   end
 
   threads = []
-  pckgs = []
-  suites.each do |s|
+  pckgs = suites.map do |s|
     threads << Thread.new do
       warn "Loading Release for #{s.inspect}"
       debrel = DebRelease.new(repository_url, s)
@@ -245,7 +244,7 @@ if $PROGRAM_NAME == __FILE__
 
       warn "From #{s.inspect} get archs:#{debrel.architectures.inspect} and comps: #{debrel.components.inspect}"
 
-      pckgs << debrel.all_packages
+      debrel.all_packages
     end
   end
 

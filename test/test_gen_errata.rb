@@ -59,17 +59,18 @@ class TestDebianErrata < Test::Unit::TestCase
     packages = JSON.parse(File.read(pkg_json_path))
     packages_by_name = JSON.parse(File.read(pkg_deb_json_path))
 
-    f = File.open usn_list_path, 'rb'
-    errata = parser.gen_ubuntu_errata(
-      JSON.parse(
-        Bzip2::FFI::Reader.read(f)
-      ),
-      packages,
-      packages_by_name,
-      ['bionic'],
-      ['amd64']
-    )
-    f.close
+    errata = nil
+    File.open usn_list_path, 'rb' do |f|
+      errata = parser.gen_ubuntu_errata(
+        JSON.parse(
+          Bzip2::FFI::Reader.read(f)
+        ),
+        packages,
+        packages_by_name,
+        ['bionic'],
+        ['amd64']
+      )
+    end
     assert_instance_of(Array, errata)
 
     hsh = {}
@@ -107,17 +108,18 @@ class TestDebianErrata < Test::Unit::TestCase
 
     packages_by_name = JSON.parse(File.read(pkg_json_path))
 
-    f = File.open usn_list_path, 'rb'
-    errata = parser.gen_ubuntu_errata(
-      JSON.parse(
-        Bzip2::FFI::Reader.read(f)
-      ),
-      {},
-      packages_by_name,
-      ['xenial'],
-      ['amd64']
-    )
-    f.close
+    errata = nil
+    File.open usn_list_path, 'rb' do |f|
+      errata = parser.gen_ubuntu_errata(
+        JSON.parse(
+          Bzip2::FFI::Reader.read(f)
+        ),
+        {},
+        packages_by_name,
+        ['xenial'],
+        ['amd64']
+      )
+    end
     assert_instance_of(Array, errata)
 
     hsh = {}

@@ -1,8 +1,8 @@
 AllCops:
-  TargetRubyVersion: 3.3
+  TargetRubyVersion: 4.0
   NewCops: enable
 
-require:
+plugins:
   - rubocop-rspec
 
 Layout/LineLength:
@@ -16,6 +16,13 @@ Layout/SpaceAroundEqualsInParameterDefault:
 Layout/SpaceInsideBlockBraces:
   Exclude:
     - 'Gemfile'
+
+Style/OneClassPerFile:
+  Exclude:
+    - parse_dsalist.rb
+    - lib/deb_erratum_rss.rb
+    - gen_errata.rb
+    - debRelease.rb
 
 
 Metrics/AbcSize:
